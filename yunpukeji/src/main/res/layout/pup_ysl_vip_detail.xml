@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="290dp"
+    android:background="@mipmap/ysl_vip_detail">
+
+    <RelativeLayout
+        android:id="@+id/mean_r1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/im_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ysl_change_password" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重置密码"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/im_1"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_toRightOf="@id/im_1"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/ysl_gray"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/mean_r2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/mean_r1">
+
+        <ImageView
+            android:id="@+id/im_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ysl_vip_delay" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会员延期"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/im_2"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_toRightOf="@id/im_2"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/ysl_gray"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/mean_r3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/mean_r2">
+
+        <ImageView
+            android:id="@+id/im_3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ysl_vip_change_card" />
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会员换卡"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/im_3"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/im_3"
+            android:layout_marginLeft="20dp"
+            android:background="@color/ysl_gray"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/mean_r4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/mean_r3">
+
+        <ImageView
+            android:id="@+id/im_4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ysl_vip_card_service" />
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="挂失/解挂"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/im_4"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/im_4"
+            android:layout_marginLeft="20dp"
+            android:background="@color/ysl_gray"/>
+    </RelativeLayout>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/mean_r5"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_below="@id/mean_r4">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/im_5"-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:src="@mipmap/ysl_vip_card_service" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_5"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="会员充值"-->
+            <!--android:textColor="@color/black"-->
+            <!--android:layout_toRightOf="@id/im_5"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:textSize="15sp"/>-->
+    <!--</RelativeLayout>-->
+</RelativeLayout>

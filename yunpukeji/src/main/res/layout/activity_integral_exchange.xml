@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.member.consume.activity.IntegralExchangeActivity">
+
+    <include
+        layout="@layout/activity_title_member">
+
+    </include>
+
+
+    <LinearLayout
+        android:id="@+id/l_layouta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/r_layout"
+        android:layout_marginBottom="5dp"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_border_view_radius"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_integral_exchange_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:digits="@string/NumberOrLetter"
+                android:gravity="left|center_vertical"
+                android:hint="请输入礼品名称/编号"
+                android:inputType="number"
+                android:maxLength="50"
+                android:padding="@dimen/editText_textview_padding"
+                android:singleLine="true"
+                android:textColor="@color/color_main_text_black"
+                android:textColorHint="@color/color_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <ImageView
+                android:id="@+id/iv_scan_integralexchangeactivity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:src="@mipmap/ysl_ma_black" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <include
+        layout="@layout/member_info_layout"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ExpandableListView
+            android:id="@+id/elv_integral_exchange"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice"
+            android:listSelector="#00000000" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/ysl_gray" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+            android:id="@+id/srl_freshgiftmng_activity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            app:above_wave_color="@color/yunpu"
+            app:blow_wave_color="@color/yunpu">
+
+            <com.zhiluo.android.yunpu.ui.view.BaseListView
+                android:id="@+id/lv_giftdmgt_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:listSelector="#00000000" />
+
+        </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+
+
+    </LinearLayout>
+
+    <!--收款-->
+    <LinearLayout
+        android:id="@+id/l_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_border_footer_stroke"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical"
+            android:text="合计积分:"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_integral_exchange_total"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:textColor="@color/red"
+            android:textSize="17sp" />
+
+        <CheckBox
+            android:id="@+id/cb_short_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/rember_password"
+            android:drawablePadding="5dp"
+            android:text="短信" />
+
+        <CheckBox
+            android:id="@+id/cb_print"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/rember_password"
+            android:drawablePadding="5dp"
+            android:text="打印" />
+
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/cb_short_message"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="短信"-->
+             <!--/>-->
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/cb_print"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="打印"-->
+             <!--/>-->
+
+        <TextView
+            android:id="@+id/btn_exchange"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ysl_get_go"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="兑换"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

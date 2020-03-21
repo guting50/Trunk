@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhiluo.android.yunpu.consume.activity.StaffCommissionActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_recommend_sign_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="会员标签"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_sign_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+
+    <com.zhiluo.android.yunpu.ui.view.BaseListView
+        android:id="@+id/lv_sign_commission"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_recommend_sign_title"
+        android:background="@color/white"/>
+
+
+</RelativeLayout>

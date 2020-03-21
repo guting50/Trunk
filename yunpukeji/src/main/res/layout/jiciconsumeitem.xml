@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rela"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="5dp">
+
+        <com.zhiluo.android.yunpu.goods.consume.view.ShapedImageView
+            android:id="@+id/img_goods_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/ysl_add_goods"
+            app:round_radius="8dp"
+            app:shape_mode="round_rect"
+            app:stroke_color="@color/white"
+            app:stroke_width="0.6dp" />
+
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="105dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/img_goods_img"
+            android:gravity="center_vertical"
+            android:text="护肤品"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_left_overtime"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:gravity="center_vertical|left"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/tv_type"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:maxLines="1"
+            android:text="到期时间：2012-10-20"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_right_times_rules"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:gravity="center_vertical|left"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@id/tv_type"
+            android:layout_below="@id/tv_type"
+            android:layout_marginRight="8dp"
+            android:maxLines="1"
+            android:text="计次规则：每天消费3次"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_left_counts"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_below="@id/tv_type"
+            android:layout_toRightOf="@id/img_goods_img"
+            android:gravity="center_vertical"
+            android:text="剩余次数:0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/ed_left_counts"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_below="@id/tv_type"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_left_counts"
+            android:gravity="center_vertical"
+            android:textColor="@color/red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_total_counts"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_below="@id/tv_right_times_rules"
+            android:layout_toRightOf="@id/img_goods_img"
+            android:gravity="center_vertical"
+            android:text="总次数:0"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/ed_total_counts"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_below="@id/tv_right_times_rules"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_total_counts"
+            android:gravity="center_vertical"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_add_reduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_right_times_rules"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_reduce"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/newsales_delete"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_goods_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/iv_reduce"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="30dp"
+            android:layout_height="70dp"
+            android:layout_alignBottom="@+id/rl_add_reduce"
+            android:paddingRight="10dp"
+            android:paddingTop="50dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/newsales_add" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rela"
+        android:layout_marginLeft="10dp"
+        android:background="@color/ysl_gray" />
+</RelativeLayout>

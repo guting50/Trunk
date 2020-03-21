@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_member"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhiluo.android.yunpu.member.manager.activity.AddMemberActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:id="@+id/tv_add_member_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新增会员"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:layout_below="@id/rl_title"
+        android:layout_above="@id/ll_bottom"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:id="@+id/rl_add_member_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_add_member_head"
+                    android:layout_width="@dimen/head_image_height"
+                    android:layout_height="@dimen/head_image_height"
+                    android:layout_alignParentEnd="true"
+                    android:padding="10dp"
+                    android:src="@mipmap/ysl_member_head_imgs" />
+
+                <LinearLayout
+                    android:id="@+id/rl_add_member_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_toStartOf="@+id/civ_add_member_head"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_add_member_num"
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="手机" />
+
+                    <TextView
+                        android:id="@+id/istel_view"
+                        style="@style/Flag" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_phone"
+                        style="@style/EditTextStyleAddMember"
+                        android:hint="请输入手机号码"
+                        android:inputType="phone"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:maxLength="11"
+                        android:paddingRight="@dimen/adduser">
+                    </EditText>
+
+                    <ImageView
+                        android:id="@+id/iv_add_member_phone"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="5dp"
+                        android:padding="3dp"
+                        android:src="@mipmap/iv_phone"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_add_member_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/rl_add_member_num"
+                    android:layout_marginStart="14dp"
+                    android:layout_toLeftOf="@+id/civ_add_member_head"
+                    android:background="@color/ysl_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_below="@+id/view_add_member_line"
+                    android:layout_toStartOf="@+id/civ_add_member_head"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_name"
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="姓名" />
+
+                    <TextView style="@style/Flag" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_name"
+                        style="@style/EditTextStyleAddMember"
+                        android:focusable="true"
+                        android:hint="请输入姓名"
+                        android:inputType="text"
+                        android:maxLength="50" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--第二部分-->
+            <LinearLayout
+                android:id="@+id/ll_add_member_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_add_member_1"
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="14dp"
+                    android:background="@color/ysl_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_add_member_phone"
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="卡号" />
+
+                    <TextView style="@style/Flag" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_num"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:hint="请输入卡号"
+                        android:digits="0123456789zxcvbnmasdfghjklqwertyuiopZXCVBNMASDFGHJKLQWERTYUIOP"
+                        android:inputType="number"
+                        android:maxLength="50" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_member_scan"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp"
+                        android:src="@mipmap/ysl_ma_black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/background" />
+
+                <LinearLayout
+                    android:id="@+id/rl_add_member_face_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="卡面号码" />
+                    <TextView
+                        android:id="@+id/isfacenum_view"
+                        style="@style/Flag" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_face_num"
+                        style="@style/EditTextStyleAddMember"
+                        android:hint="请输入卡面号码"
+                        android:inputType="text"
+                        android:maxLength="15" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/rl_add_member_num"
+                    android:layout_marginStart="14dp"
+                    android:layout_toLeftOf="@+id/civ_add_member_head"
+                    android:background="@color/ysl_gray" />
+                <!--会员等级-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="等级" />
+
+                    <TextView style="@style/Flag" />
+
+                    <TextView
+                        android:id="@+id/tv_vip_level"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableRight="@mipmap/right_tw"
+                        android:gravity="right|center_vertical"
+                        android:hint="请点击选择" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="14dp"
+                    android:background="@color/ysl_gray" />
+
+                <LinearLayout
+                    android:id="@+id/rl_add_member_init_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="初始密码" />
+
+                    <TextView style="@style/Flag" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_password"
+                        style="@style/EditTextStyleAddMember"
+                        android:focusable="true"
+                        android:hint="请输入初始密码"
+                        android:inputType="textPassword"
+                        android:maxLength="50" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_paw_line"
+                    style="@style/BottomViewStyle" />
+                <!--性别-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="性别" />
+
+                    <TextView
+                        android:id="@+id/tv_sex"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableRight="@mipmap/right_tw"
+                        android:gravity="center_vertical|right"
+                        android:hint="请点击选择" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/background" />
+
+                <!--开卡费用-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14sp"
+                        android:text="开卡费用" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_money"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_weight="1"
+                        android:hint="请输入开卡金额"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="9"
+                        android:text="" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/ysl_gray" />
+
+                    <TextView
+                        android:id="@+id/tv_pay_way"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@mipmap/right_tw"
+                        android:gravity="center_vertical|right"
+                        android:hint="选择支付方式"
+                        android:textColor="@color/text_black" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_add_member_init_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--初始金额-->
+                    <View style="@style/BottomViewStyle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextViewAddMember"
+                            android:layout_marginStart="14sp"
+                            android:text="初始金额" />
+
+                        <EditText
+                            android:id="@+id/et_add_member_init_money"
+                            style="@style/EditTextStyleAddMember"
+                            android:hint="0"
+                            android:inputType="numberDecimal"
+                            android:maxLength="15"
+                            android:text="0" />
+
+                    </LinearLayout>
+                    <!--初始积分-->
+                    <View style="@style/BottomViewStyle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextViewAddMember"
+                            android:layout_marginStart="14dp"
+                            android:text="初始积分" />
+
+                        <EditText
+                            android:id="@+id/et_add_member_init_point"
+                            style="@style/EditTextStyleAddMember"
+                            android:hint="0.00"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:text="0" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--会员过期时间-->
+                <View style="@style/BottomViewStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="过期时间" />
+
+                    <TextView
+                        android:id="@+id/et_add_member_overdue_date"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:hint="不选默认永久有效"
+                        android:inputType="date"
+                        android:maxLength="20" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_member_overdue_date"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="5dp"
+                        android:src="@mipmap/ysl_canlander" />
+                </LinearLayout>
+
+                <!--提成员工-->
+                <View style="@style/BottomViewStyle" />
+
+                <LinearLayout
+                    android:id="@+id/rl_recommend_staff"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="开卡人员" />
+
+                    <TextView
+                        android:id="@+id/tv_add_member_commission"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/adduser"
+                        android:drawableEnd="@mipmap/right_tw"
+                        android:gravity="end|center_vertical"
+                        android:hint="请选择员工"
+                        android:textColor="@color/color_main_text_black"
+                        android:textColorHint="@color/color_text_hint_gray" />
+                </LinearLayout>
+
+                <!--上拉填写更多信息-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/background"
+                        android:gravity="center"
+                        android:text="上拉填写更多信息"
+                        android:textColor="@color/color_text_hint_gray"
+                        android:textSize="@dimen/dimen_info_size" />
+
+                </RelativeLayout>
+                <!--生日-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="会员生日" />
+
+                    <TextView
+                        android:id="@+id/tv_add_member_birthday"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/adduser"
+                        android:layout_weight="8"
+                        android:gravity="end|center_vertical"
+                        android:hint="请选择生日"
+                        android:textColor="@color/color_main_text_black"
+                        android:textColorHint="@color/color_text_hint_gray" />
+
+                    <ImageView
+                        android:id="@+id/iv_vip_biryjday"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="5dp"
+                        android:src="@mipmap/ysl_canlander" />
+                </LinearLayout>
+
+                <View style="@style/BottomViewStyle" />
+                <!--推荐人-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="推荐人" />
+
+                    <TextView
+                        android:id="@+id/et_add_member_recommend"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/adduser"
+                        android:drawableEnd="@mipmap/right_tw"
+                        android:gravity="end|center_vertical"
+                        android:hint="请选择推荐人"
+                        android:textColor="@color/color_main_text_black"
+                        android:textColorHint="@color/color_text_hint_gray" />
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_add_member_recommend"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:paddingEnd="10dp"-->
+                        <!--android:paddingStart="10dp"-->
+                        <!--android:text=""-->
+                        <!--android:textColor="@color/yunpu" />-->
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_add_member_recommend"-->
+                        <!--style="@style/EditTextStyleAddMember"-->
+                        <!--android:hint="请输入推荐人卡号"-->
+                        <!--android:inputType="number"-->
+                        <!--android:maxLength="15" />-->
+                </LinearLayout>
+
+                <!--邮箱-->
+                <View style="@style/BottomViewStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="电子邮箱" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_email"
+                        style="@style/EditTextStyleAddMember"
+                        android:hint="请输入电子邮箱"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="20" />
+
+                </LinearLayout>
+
+                <!--身份证号-->
+                <View style="@style/BottomViewStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="身份证号" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_id"
+                        style="@style/EditTextStyleAddMember"
+                        android:hint="请输入身份证号"
+                        android:maxLength="50" />
+
+                </LinearLayout>
+
+                <!--会员地址-->
+                <View style="@style/BottomViewStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="会员地址" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_address"
+                        style="@style/EditTextStyleAddMember"
+                        android:hint="请输入会员地址"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+                <!--会员标签-->
+                <View style="@style/BottomViewStyle" />
+
+                <LinearLayout
+                    android:id="@+id/rl_recommend_sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="会员标签" />
+
+                    <TextView
+                        android:id="@+id/tv_add_member_sign"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/adduser"
+                        android:drawableEnd="@mipmap/right_tw"
+                        android:gravity="end|center_vertical"
+                        android:hint="请选择标签"
+                        android:textColor="@color/color_main_text_black"
+                        android:textColorHint="@color/color_text_hint_gray" />
+                </LinearLayout>
+                <!--备注-->
+                <View style="@style/BottomViewStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="备注信息" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_remark"
+                        style="@style/EditTextStyleAddMember"
+                        android:hint="请输入备注信息"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/ysl_gray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="14dp"
+                    android:paddingTop="5dp"
+                    android:text="自定义属性"
+                    />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lv_add_costomfiled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+                <!--<com.zhiluo.android.yunpu.ui.view.BaseListView-->
+                    <!--android:id="@+id/lv_add_costomfiled"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:paddingStart="10dp"-->
+                    <!--android:descendantFocusability="afterDescendants"-->
+                    <!--android:background="@color/white"/>-->
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="保存"
+            android:background="@drawable/button_ysl_style"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:text="继续添加"
+            android:background="@drawable/button_ysl_style"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+    </LinearLayout>
+</RelativeLayout>

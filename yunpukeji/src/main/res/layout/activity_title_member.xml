@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_pay_confirm_title"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/head_height"
+    android:background="@drawable/ysl_main_style">
+
+    <include layout="@layout/overall_backbutton_single_head" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="支付确认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_title_size" />
+
+    <RelativeLayout
+        android:id="@+id/r_choise_vip"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@id/tv_title">
+        <ImageView
+            android:id="@+id/iv_delete_vip"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@mipmap/ysl_choise_vip_x"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/iv_choise_vip_right"
+            android:layout_width="15dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@mipmap/ysl_choise_vip_down" />
+
+        <TextView
+            android:id="@+id/tv_choose_member"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/iv_delete_vip"
+            android:gravity="center"
+            android:text="选择会员"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_choise_vip_left"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_choose_member"
+            android:src="@mipmap/ysl_shoise_vip"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

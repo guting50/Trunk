@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.member.manager.activity.CheckMemberInfoActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_check_member_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/ysl_main_style">
+
+        <TextView
+            android:id="@+id/tv_check_member_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@mipmap/left_btn_n"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:text="   "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="项目查找"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:id="@+id/ll_check_member_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_check_member_back"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_border_view_radius"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_check_member_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="start|center_vertical"
+                android:hint="请输入项目名称/项目编号"
+                android:maxLength="50"
+                android:padding="@dimen/editText_textview_padding"
+                android:singleLine="true"
+                android:textColor="@color/color_main_text_black"
+                android:textColorHint="@color/color_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+        android:id="@+id/refresh_check_member"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:above_wave_color="@color/yunpu"
+        app:blow_wave_color="@color/yunpu">
+
+        <com.zhiluo.android.yunpu.ui.view.BaseListView
+            android:id="@+id/lv_check_member_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/white" />
+
+    </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+</LinearLayout>

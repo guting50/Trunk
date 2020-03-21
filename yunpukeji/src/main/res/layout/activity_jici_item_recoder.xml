@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.statistics.account.activity.TimesRechargeDetailActivity">
+
+    <!--<include layout="@layout/no_confirm_title_layout" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <TextView
+            android:id="@+id/tv_no_confirm_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/left_btn_n"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:text="   "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_no_confirm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:padding="3dp"
+            android:src="@mipmap/more" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="510dp"
+                android:orientation="vertical"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/ysl_inout_detail">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="订单编号" />
+
+                    <TextView
+                        android:id="@+id/tv_times_consume_order"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/xuxian"
+                    android:layerType="software" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="会员姓名" />
+
+                    <TextView
+                        android:id="@+id/tv_times_consume_vip_name"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="会员卡号" />
+
+                    <TextView
+                        android:id="@+id/tv_times_consume_vip_card"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="会员手机号" />
+
+                    <TextView
+                        android:id="@+id/tv_times_consume_vip_phone"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+
+                    android:background="@drawable/xuxian"
+                    android:layerType="software" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="店铺名称" />
+
+                    <TextView
+                        android:id="@+id/tv_times_consume_shop_name"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="创建者" />
+
+                    <TextView
+                        android:id="@+id/tv_times_consume_create_name"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="联系电话" />
+
+                    <TextView
+                        android:id="@+id/tv_times_consume_con_phone"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="设备" />
+
+                    <TextView
+                        android:id="@+id/tv_times_consume_device"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="状态" />
+
+                    <TextView
+                        android:id="@+id/tv_times_consume_status"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="创建时间" />
+
+                    <TextView
+                        android:id="@+id/tv_times_consume_create_time"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="操作员" />
+
+                    <TextView
+                        android:id="@+id/tv_times_consume_operation"
+                        style="@style/wareTextStyleRight" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_remark_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="消费备注" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_remark"
+                        style="@style/wareTextStyleRight" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/xuxian"
+                    android:layerType="software" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_goods_order_detail_name"
+                    style="@style/TextViewAddMember"
+                    android:text="服务详情：" />
+
+                <TextView
+                    android:id="@+id/tv_service_order_detail"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_goods_order_detail_name"
+                    android:text="点击查看服务商品详情"
+                    android:textColor="@color/yunpu" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:layout_marginBottom="15dp">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

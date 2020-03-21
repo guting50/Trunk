@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical"
+              tools:context="com.zhiluo.android.yunpu.goodsmanage.goods.activity.SearchForGoodsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_head_goodssearchactivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/yunpu">
+
+        <TextView
+            android:id="@+id/tv_back_goodssearchactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/left_btn_n"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:text="   "
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_back_font_size"/>
+
+        <TextView
+            android:id="@+id/tv_title_goodssearchactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="搜索商品"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_title_font_size"/>
+
+        <LinearLayout
+            android:id="@+id/ll_scan_goodssearchactivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_back_goodssearchactivity"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_border_view_radius"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_membercard_goodssearchactivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="left|center_vertical"
+                android:hint="请输入商品编号进行查询..."
+                android:inputType="number"
+                android:maxLength="50"
+                android:padding="@dimen/editText_textview_padding"
+                android:singleLine="true"
+                android:textColorHint="@color/lightgray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/edittext_textview_font_size"/>
+
+            <ImageView
+                android:id="@+id/iv_saoma_goodssearchactivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/add_code"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/head_height"-->
+    <!--android:background="@color/yunpu">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imv_goodsmanegeback_activity"-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_margin="@dimen/loginmagin"-->
+    <!--android:background="@mipmap/left_btn_n"-->
+    <!--android:scaleType="centerCrop"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:gravity="center"-->
+    <!--android:text="搜索商品"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="18sp"/>-->
+
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/imv_addgoods_activity"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_marginRight="@dimen/loginmagin2"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:background="@mipmap/add_member" />&ndash;&gt;-->
+    <!--</RelativeLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="@dimen/loginmagin"-->
+    <!--android:background="@drawable/myborder"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/edi_heardvipmanage_list"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@null"-->
+    <!--android:cursorVisible="true"-->
+    <!--android:gravity="left|center_vertical"-->
+    <!--android:hint="请输入商品编号进行查询..."-->
+    <!--android:maxLength="50"-->
+    <!--android:padding="@dimen/loginmagin"-->
+    <!--android:singleLine="true"-->
+    <!--android:textColorHint="@color/lightgray"-->
+    <!--android:textSize="13sp"/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_saoma"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:src="@drawable/add_code"/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imv_searchheardvipmanage_list"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginRight="@dimen/loginmagin"-->
+    <!--android:background="@mipmap/abc_ic_search_api_holo_light"-->
+    <!--android:visibility="gone"/>-->
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <!--<ListView-->
+        <!--android:id="@+id/lv_shoptypegdmgt_activity"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:listSelector="#00000000"-->
+        <!--android:layout_height="match_parent">-->
+        <!--</ListView>-->
+        <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+            android:id="@+id/srl_freshgoodsmng_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:above_wave_color="@color/yunpu"
+            app:blow_wave_color="@color/yunpu">
+
+            <ListView
+                android:id="@+id/lv_shopgdmgt_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/lightgray"
+                android:dividerHeight="1px"
+                android:background="@color/white"
+                android:scrollbars="none"/>
+        </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+    </LinearLayout>
+
+</LinearLayout>

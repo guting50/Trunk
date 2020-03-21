@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_gifts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.gift.activity.AddGiftsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:id="@+id/tv_add_gift_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="添加礼品"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_add_gift_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/loginmagin2"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            style="@style/AddGoodImage"
+                            android:src="@mipmap/ic_good_tiaoma" />
+
+                        <TextView style="@style/Flag" />
+
+                        <TextView
+                            style="@style/TextViewAddMember"
+                            android:layout_marginStart="0dp"
+                            android:text="编码" />
+
+                        <EditText
+                            android:id="@+id/et_add_gift_code"
+                            style="@style/EditTextStyleAddMember"
+                            android:layout_weight="1"
+                            android:digits="@string/goodscode"
+                            android:focusable="true"
+                            android:hint="请输入礼品编码"
+                            android:paddingRight="10dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_add_gift_scan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/add_code" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/LineStyle_add"
+                        android:layout_marginStart="34dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            style="@style/AddGoodImage"
+                            android:src="@mipmap/ic_good_name" />
+
+                        <TextView style="@style/Flag" />
+
+                        <TextView
+                            style="@style/TextViewAddMember"
+                            android:layout_marginStart="0dp"
+                            android:text="名称" />
+
+                        <EditText
+                            android:id="@+id/et_add_gift_name"
+                            style="@style/EditTextStyleAddMember"
+                            android:hint="请输入礼品名称"
+                            android:maxLength="10"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.zhiluo.android.yunpu.goods.consume.view.ShapedImageView
+                    android:id="@+id/iv_upload_gift_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/defalut_goods" />
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/LineStyle_add"
+                android:layout_marginStart="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/AddGoodImage"
+                    android:src="@mipmap/ic_good_fenlei" />
+
+                <TextView style="@style/Flag" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginStart="0dp"
+                    android:text="礼品分类" />
+
+                <TextView
+                    android:id="@+id/tv_add_gift_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableRight="@mipmap/right_tw"
+                    android:gravity="right|center_vertical"
+                    android:hint="请选择所属分类"
+                    android:paddingRight="@dimen/adduser"
+                    android:textColor="@color/color_main_text_black"
+                    android:textColorHint="@color/color_text_hint_gray"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/dimen_main_size" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/LineStyle"
+                android:layout_marginStart="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/AddGoodImage"
+                    android:src="@mipmap/ic_good_jianma" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginStart="14dp"
+                    android:text="礼品简码" />
+
+                <EditText
+                    android:id="@+id/et_add_gift_simple_code"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入礼品简码"
+                    android:inputType="text"
+                    android:maxLength="40"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/AddGoodImage"
+                    android:src="@mipmap/ic_good_price" />
+
+                <TextView style="@style/Flag" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginStart="0dp"
+                    android:text="兑换积分" />
+
+                <EditText
+                    android:id="@+id/et_add_gift_need_integral"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="0.00"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/LineStyle_add"
+                android:layout_marginStart="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/AddGoodImage"
+                    android:src="@mipmap/ic_good_in_price" />
+
+                <TextView style="@style/Flag" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginStart="0dp"
+                    android:text="参考进价" />
+
+                <EditText
+                    android:id="@+id/et_gift_reference_price"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="0.00"
+                    android:inputType="number"
+                    android:maxLength="7"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/LineStyle_add"
+                android:layout_marginStart="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/AddGoodImage"
+                    android:src="@mipmap/ic_good_kucun" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginStart="14dp"
+                    android:text="礼品库存" />
+
+                <EditText
+                    android:id="@+id/et_gift_stock"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入礼品库存"
+                    android:inputType="number"
+                    android:maxLength="40"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View
+                style="@style/LineStyle_add"
+                android:layout_marginStart="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/AddGoodImage"
+                    android:src="@mipmap/ic_good_unit" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginStart="14dp"
+                    android:text="计量单位" />
+
+                <EditText
+                    android:id="@+id/et_gift_unit"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入计量单位"
+                    android:inputType="text"
+                    android:maxLength="40"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/LineStyle_add"
+                android:layout_marginStart="34dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/AddGoodImage"
+                    android:src="@mipmap/ic_good_model" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginStart="14dp"
+                    android:text="规格型号" />
+
+                <EditText
+                    android:id="@+id/et_gift_model"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入礼品规格"
+                    android:inputType="text"
+                    android:maxLength="40"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="礼品品牌" />
+
+                <EditText
+                    android:id="@+id/et_gift_brand"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入礼品品牌"
+                    android:inputType="text"
+                    android:maxLength="40"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle_add" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="库存警戒值" />
+
+                <EditText
+                    android:id="@+id/et_gift_stock_warn_num"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入库存警戒值"
+                    android:inputType="number"
+                    android:maxLength="40"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle_add" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="同步状态" />
+
+                <Spinner
+                    android:id="@+id/sp_gift_sys_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical|right" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

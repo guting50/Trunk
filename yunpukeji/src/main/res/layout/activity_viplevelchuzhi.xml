@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ysl_gray"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/loginmagin"
+            android:drawableLeft="@mipmap/left_btn_n"
+            android:gravity="center"
+            android:text="    "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_titel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="储值设定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <ImageView
+            android:id="@+id/img_ok"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/ysl_save_ok"
+            android:layout_centerVertical="true"
+            android:padding="3dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="初始金额" />
+
+        <TextView
+            style="@style/Flag"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/et_content"
+            style="@style/EditTextStyleAddMember"
+            android:inputType="number"
+            android:hint="请输入初始金额" />
+    </LinearLayout>
+</LinearLayout>

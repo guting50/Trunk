@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.recharge.KRechargeDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_recharge_detail_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="计次规则详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+
+        <ImageView
+            android:id="@+id/iv_recharge_detail_menu"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:src="@mipmap/more" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="规则名称" />
+
+        <TextView
+            android:id="@+id/tv_recharge_detail_name"
+            style="@style/EditTextStyleAddMember" />
+    </LinearLayout>
+
+    <TextView style="@style/LineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="消费次数" />
+
+        <TextView
+            android:id="@+id/tv_recharge_detail_money"
+            style="@style/EditTextStyleAddMember"
+            android:inputType="number" />
+    </LinearLayout>
+
+
+    <TextView style="@style/LineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="次数限制" />
+
+
+        <TextView
+            android:id="@+id/tv_recharge_detail_give_integral"
+            style="@style/EditTextStyleAddMember"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <TextView style="@style/LineStyle" />
+
+</LinearLayout>

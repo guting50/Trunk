@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.zhiluo.android.yunpu.home.activity.MoreActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_more_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <TextView
+            android:id="@+id/tv_more_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@mipmap/left_btn_n"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:text="   "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_no_confirm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="我的工具"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_more_manage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="管理"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/rl_more_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="我的工具"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <com.zhiluo.android.yunpu.ui.view.CustomGridView
+                android:id="@+id/gv_my_util"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="更多工具"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <com.zhiluo.android.yunpu.ui.view.CustomGridView
+                android:id="@+id/gv_more_util"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="4" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

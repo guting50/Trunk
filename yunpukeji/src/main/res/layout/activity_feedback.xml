@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.home.activity.FeedbackActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:id="@+id/adduser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="意见反馈"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <ImageView
+            android:id="@+id/iv_feedback_confirm"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@mipmap/ysl_save_ok" />
+    </RelativeLayout>
+    <!--
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                android:id="@+id/tv_feedback_contact"
+                style="@style/TextViewAddMember"
+                android:text="联系人" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/tv_feedback_contact"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="*"
+                android:textColor="@color/red" />
+
+            <EditText
+                android:id="@+id/et_feedback_contact"
+                style="@style/EditTextStyleAddMember"
+                android:focusable="true"
+                android:inputType="phone"
+                android:maxLength="11" />
+
+        </RelativeLayout>
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="1dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_add_member_phone"
+            style="@style/TextViewAddMember"
+            android:text="联系方式" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/tv_add_member_phone"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="*"
+            android:textColor="@color/red" />
+
+        <EditText
+            android:id="@+id/et_feedback_contact_type"
+            style="@style/EditTextStyleAddMember"
+            android:focusable="true"
+            android:inputType="phone"
+            android:maxLength="11" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="1dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_add_member_grade"
+            style="@style/TextViewAddMember"
+            android:text="问题类型" />
+
+        <TextView
+            android:id="@+id/te_w"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/tv_add_member_grade"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="*"
+            android:textColor="@color/red" />
+
+        <Spinner
+            android:id="@+id/sp_feedback_type"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/te_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/te_w"
+            android:gravity="right|center_vertical"
+            android:hint="点击选择问题类型"
+            android:textColor="@color/text_black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="1dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_feedback_emergency"
+            style="@style/TextViewAddMember"
+            android:text="紧急程度" />
+
+        <TextView
+            android:id="@+id/te_ww"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/tv_feedback_emergency"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="*"
+            android:textColor="@color/red" />
+
+        <Spinner
+            android:id="@+id/sp_feedback_emergency"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/te_chengdu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/te_ww"
+            android:gravity="right|center_vertical"
+            android:hint="点击选择紧急程度"
+            android:textColor="@color/text_black" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="1dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_feedback_subject"
+            style="@style/TextViewAddMember"
+            android:text="主题" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/tv_feedback_subject"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="*"
+            android:textColor="@color/red" />
+
+        <EditText
+            android:id="@+id/et_feedback_subject"
+            style="@style/EditTextStyleAddMember"
+            android:focusable="true"
+            android:inputType="text"
+            android:maxLength="20" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_feedback_detail"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="@dimen/loginmagin"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:gravity="top|left"
+        android:hint="描述"
+        android:padding="4dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/color_main_text_black"
+        android:textColorHint="@color/color_text_hint_gray"
+        android:textCursorDrawable="@drawable/shape_color_cursor"
+        android:textSize="@dimen/dimen_main_size" />
+
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+              android:background="@color/background"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edi_addgifttypename_dia"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_margin="@dimen/loginmagin"
+        android:gravity="center_vertical"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:textColorHint="@color/lightgray"
+        android:hint="输入分类名称"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/edi_addgifttyperemark_dia"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_margin="@dimen/loginmagin"
+        android:textColorHint="@color/lightgray"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:hint="备注"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:maxLines="2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_addgifttypeok_dia"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector_yunpu"
+            android:text="确定"
+            android:textSize="@dimen/big_button_font_size"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_addgifttypeno_dia"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@drawable/shape_border_common_radius_stroke"
+            android:text="取消"
+            android:textSize="@dimen/big_button_font_size"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+</LinearLayout>

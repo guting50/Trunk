@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.AddChildTypeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="同步类型："
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+
+        <RadioGroup
+            android:id="@+id/rg_add_child_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:checkedButton="@+id/rb_sync_no"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_sync_no"
+                style="@style/RadioButton"
+                android:text="不同步" />
+
+            <RadioButton
+                android:id="@+id/rb_sync_yes"
+                style="@style/RadioButton"
+                android:text="同步" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/et_add_child_type_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_margin="10dp"
+        android:background="@drawable/common_edit_background"
+        android:enabled="false"
+        android:hint="主分类"
+        android:paddingStart="4dp"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="@dimen/dimen_main_size" />
+
+    <EditText
+        android:id="@+id/et_add_child_type_child"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_margin="10dp"
+        android:background="@drawable/common_edit_background"
+        android:hint="请输入子分类名称"
+        android:paddingStart="4dp"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="@dimen/dimen_main_size" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#c1c0c0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_add_child_type_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#c1c0c0" />
+
+        <TextView
+            android:id="@+id/tv_add_child_type_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.zhiluo.android.yunpu.login.activity.SignupContentActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_goods_comsume_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/loginmagin"
+            android:drawableLeft="@mipmap/backlight"
+            android:text="返回"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/edittext_font_size" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@mipmap/singuptwo"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tet_signcontentphone_activity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/head_height"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <EditText
+                android:id="@+id/edi_passwordtwosupc_activity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/head_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_border_common_radius_stroke"
+                android:hint="输入6-20位密码"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/loginmagin"
+                android:singleLine="true"
+                android:textColor="@color/color_main_text_black"
+                android:textColorHint="@color/color_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size"
+
+                />
+
+            <EditText
+                android:id="@+id/edi_passwordsupc_activity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/head_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_border_common_radius_stroke"
+                android:hint="请确认密码"
+                android:inputType="textPassword"
+                android:padding="@dimen/loginmagin"
+                android:singleLine="true"
+                android:textColor="@color/color_main_text_black"
+                android:textColorHint="@color/color_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_singupcontent_activity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="20dp"
+            android:background="@drawable/button_selector_yunpu"
+            android:gravity="center"
+            android:text="确定注册"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_button_size" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/loginmagin"
+        android:text="@string/bottom"
+        android:textSize="10sp" />
+</RelativeLayout>

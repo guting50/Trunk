@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.statistics.order.activity.GoodsOrderDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <TextView
+            android:id="@+id/tv_no_confirm_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/left_btn_n"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:text="   "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_no_confirm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:padding="3dp"
+            android:src="@mipmap/more" />
+
+    </RelativeLayout>
+
+
+    <!--<include layout="@layout/no_confirm_title_layout" />-->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="650dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/ysl_inout_detail"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_num_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="订单编号" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_num"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_name_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="会员姓名" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_name"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_card_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="会员卡号" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_card"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/xuxian"
+                    android:layerType="software" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="油品名称" />
+
+                    <TextView
+                        android:id="@+id/tv_yjjy_order_oil_name"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="加油数量" />
+
+                    <TextView
+                        android:id="@+id/tv_yjjy_order_oil_number"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_consume"
+                        style="@style/wareTextStyleLeft"
+                        android:text="加油金额" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_consume_money"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_rebate_list_balance_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="账户余额" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_balance"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_rebate_list_point_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="获得积分" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_point"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_rebate_detail_depict_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="支付方式" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_pay_way"
+                        style="@style/wareTextStyleRight"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|right"
+                        android:layout_toRightOf="@id/tv_rebate_detail_depict_name"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_rebate_detail_time_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="消费时间" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_time"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/xuxian"
+                    android:layerType="software" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_device_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="设备" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_device"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_staff_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="操作员" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_staff"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_stusta_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="状态" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_stusta"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_remark_name"
+                        style="@style/wareTextStyleLeft"
+                        android:text="消费备注" />
+
+                    <TextView
+                        android:id="@+id/tv_goods_order_remark"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

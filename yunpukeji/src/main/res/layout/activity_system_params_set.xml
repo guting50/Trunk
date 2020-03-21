@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.SystemParamsSetActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="参数设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_system_set_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/img_save"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:src="@mipmap/ysl_save_ok"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="基础设置"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_card_equal_phone"
+                    style="@style/RadioButton"
+                    android:text="会员卡号同手机号" />
+                <CheckBox
+                    android:id="@+id/cb_system_set_issamenumber"
+                    style="@style/RadioButton"
+                    android:text="手机号可重复" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_fixed_card"
+                    style="@style/RadioButton"
+                    android:text="卡面卡号" />
+                <CheckBox
+                    android:id="@+id/cb_system_set_toast"
+                    style="@style/RadioButton"
+                    android:text="会员查询弹窗" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_ismember"
+                    style="@style/RadioButton"
+                    android:text="显示他店会员" />
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_istel"
+                    style="@style/RadioButton"
+                    android:checked="true"
+                    android:text="手机号必填" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_mastto_card"
+                    style="@style/RadioButton"
+                    android:text="必须刷卡" />
+                <CheckBox
+                    android:id="@+id/cb_system_set_modify_money"
+                    style="@style/RadioButton"
+                    android:text="商品消费改单价折扣小计" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_zdppyyhd"
+                    style="@style/RadioButton"
+                    android:text="自动匹配优惠活动" />
+
+                <CheckBox
+                    android:id="@+id/cb_no_zero"
+                    style="@style/RadioButton"
+                    android:text="禁止0库存销售" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_fading_double_integral"
+                    style="@style/RadioButton"
+                    android:text="法定假日积分翻倍" />
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_timesrule"
+                    style="@style/RadioButton"
+                    android:text="计次消费规则" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="抹零设置"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_zero_fredom"
+                    style="@style/RadioButton"
+                    android:text="自由抹零" />
+                <CheckBox
+                    android:id="@+id/cb_zero_yuan"
+                    style="@style/RadioButton"
+                    android:text="四舍五入到元" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_zero_jiao"
+                    style="@style/RadioButton"
+                    android:text="四舍五入到角" />
+                <CheckBox
+                    android:id="@+id/cb_zero_jiao_no"
+                    style="@style/RadioButton"
+                    android:text="直接舍弃角" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_zero_fen_no"
+                    style="@style/RadioButton"
+                    android:text="直接舍弃分" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="员工设置"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_staff_commission"
+                    style="@style/RadioButton"
+                    android:text="员工提成" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="密码配置"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_cancel_paw"
+                    style="@style/RadioButton"
+                    android:text="开启撤单密码    " />
+
+                <EditText
+                    android:id="@+id/et_system_set_cansel_paw"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_width="200dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="4dp"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:text="123456"
+                    android:paddingStart="4dp"
+                    android:hint="请输入撤单密码"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/ysl_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_init_paw"
+                    style="@style/RadioButton"
+                    android:text="开启开卡初始密码" />
+
+                <EditText
+                    android:id="@+id/et_system_set_init_paw"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_width="200dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="4dp"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:text="123456"
+                    android:maxLength="10"
+                    android:paddingStart="4dp"
+                    android:hint="请输入开卡默认密码"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/ysl_gray" />
+
+            <LinearLayout
+                android:id="@+id/l_pay_switch_one"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_consume_paw"
+                    style="@style/RadioButton"
+                    android:text="消费密码验证" />
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_zhuanzhang_paw"
+                    style="@style/RadioButton"
+                    android:text="转账密码验证" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l_pay_switch_two"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_exchange_paw"
+                    style="@style/RadioButton"
+                    android:text="积分兑换密码验证" />
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_huanka_paw"
+                    style="@style/RadioButton"
+                    android:text="换卡密码验证" />
+
+            </LinearLayout>
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/edittext_height"-->
+                <!--android:background="@color/background"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:paddingStart="10dp"-->
+                <!--android:text="返利开关"-->
+                <!--android:textColor="@color/color_main_text_black"-->
+                <!--android:textSize="16sp" />-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/cb_system_set_hytj"-->
+                    <!--style="@style/RadioButton"-->
+                    <!--android:text="会员推荐返利" />-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_system_set_hytj"-->
+                    <!--style="@style/EditTextStyleAddMember"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_margin="2dp"-->
+                    <!--android:layout_marginEnd="10dp"-->
+                    <!--android:layout_weight="1.5"-->
+                    <!--android:focusable="true"-->
+                    <!--android:gravity="center"-->
+                    <!--android:hint="推荐会员可以获得多少积分"-->
+                    <!--android:inputType="numberDecimal"-->
+                    <!--android:maxLength="10" />-->
+
+            <!--</LinearLayout>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:background="@color/ysl_gray"/>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/cb_system_set_consume_fl"-->
+                    <!--style="@style/RadioButton"-->
+                    <!--android:text="按消费金额返利" />-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_system_set_consume_fl"-->
+                    <!--style="@style/EditTextStyleAddMember"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_margin="2dp"-->
+                    <!--android:layout_weight="1.5"-->
+                    <!--android:focusable="true"-->
+                    <!--android:gravity="center"-->
+                    <!--android:hint="下线每消费多少元，上线获得1积分"-->
+                    <!--android:inputType="numberDecimal"-->
+                    <!--android:maxLength="10" />-->
+            <!--</LinearLayout>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:background="@color/ysl_gray"/>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<CheckBox-->
+                    <!--android:id="@+id/cb_system_set_integral_fl"-->
+                    <!--style="@style/RadioButton"-->
+                    <!--android:text="按获得积分返利" />-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_system_set_integral_fl"-->
+                    <!--style="@style/EditTextStyleAddMember"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_margin="2dp"-->
+                    <!--android:layout_weight="1.5"-->
+                    <!--android:focusable="true"-->
+                    <!--android:gravity="center"-->
+                    <!--android:hint="下线获得多少积分，上线获得1积分"-->
+                    <!--android:inputType="numberDecimal"-->
+                    <!--android:maxLength="10" />-->
+            <!--</LinearLayout>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:background="@color/ysl_gray"/>-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

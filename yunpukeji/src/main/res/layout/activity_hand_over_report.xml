@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/have_screen_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/ll_handover_date_selector"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_marginTop="6dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_start_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="3"
+            android:background="@drawable/shape_border_common_radius_stroke"
+            android:drawableEnd="@drawable/icon_calendar"
+            android:gravity="center"
+            android:paddingEnd="8dp"
+            android:hint="选择开始日期"
+            android:textColor="@color/color_main_text_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="至"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+
+        <TextView
+            android:id="@+id/tv_end_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/shape_border_common_radius_stroke"
+            android:drawableEnd="@drawable/icon_calendar"
+            android:gravity="center"
+            android:paddingEnd="8dp"
+            android:hint="选择结束日期"
+            android:textColor="@color/color_main_text_black" />
+
+        <Button
+            android:id="@+id/btn_date_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1.5"
+            android:background="@color/yunpu"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_button_size" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_null"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:text="暂无数据"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        />
+
+
+    <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:above_wave_color="@color/yunpu"
+        app:blow_wave_color="@color/yunpu">
+
+        <com.zhiluo.android.yunpu.ui.view.BaseListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+
+</LinearLayout>

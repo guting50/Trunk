@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PatternView">
+        <!-- Defines the aspect to use when drawing PatternView. -->
+        <attr name="pl_aspect">
+            <!-- Square; the default value. -->
+            <enum name="square" value="0" />
+            <enum name="lock_width" value="1" />
+            <enum name="lock_height" value="2" />
+        </attr>
+        <!-- Defines the regular pattern color. -->
+        <attr name="pl_regularColor" format="color|reference" />
+        <!-- Defines the error color. -->
+        <attr name="pl_errorColor" format="color|reference" />
+        <!-- Defines the success color. -->
+        <attr name="pl_successColor" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PatternLockTheme">
+        <!-- Default PatternView style. -->
+        <attr name="patternViewStyle" format="reference" />
+    </declare-styleable>
+    <string-array name="GoodsType">
+        <item>普通商品</item>
+        <item>服务商品</item>
+    </string-array>
+    <string-array name="data">
+        <item>现金支付</item>
+        <item>银联支付</item>
+    </string-array>
+
+    <string-array name="Sync">
+        <item>不同步</item>
+        <item>同步</item>
+    </string-array>
+
+    <string-array name="limit_time_type">
+        <item>天</item>
+        <item>月</item>
+        <item>年</item>
+    </string-array>
+
+    <string-array name="delay_type">
+        <item>天</item>
+        <item>月</item>
+        <item>年</item>
+    </string-array>
+
+    <string-array name="vip_state">
+        <item>正常</item>
+        <item>锁定</item>
+        <item>挂失</item>
+    </string-array>
+
+    <string-array name="dis_type">
+        <item>减少金额</item>
+        <item>赠送金额</item>
+    </string-array>
+
+    <!--自定义圆角图片相关-->
+    <declare-styleable name="ShapedImageView">
+        <attr name="shape_mode" format="enum">
+            <enum name="round_rect" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <attr name="round_radius" format="dimension" />
+
+        <attr name="stroke_width" format="dimension" />
+        <attr name="stroke_color" format="color|reference" />
+    </declare-styleable>
+</resources>

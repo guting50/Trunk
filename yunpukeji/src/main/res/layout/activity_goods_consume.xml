@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.zhiluo.android.yunpu.goods.consume.activity.GoodsConsumeActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_goods_consume_head"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ysl_main_style">
+
+        <TextView
+            android:id="@+id/tv_goods_comsume_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/left_btn_n"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:text="  "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_head_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="商品消费"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_choose_member"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_circle_write"
+            android:gravity="center"
+            android:textColor="@color/yunpu"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/iv_choose_member"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/icon_member_head"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_goods_consume_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_goods_consume_head"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_border_view_radius"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_goods_consume_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="left|center_vertical"
+                android:hint="请输入商品名称/编号"
+                android:inputType="text"
+                android:maxLength="50"
+                android:padding="@dimen/editText_textview_padding"
+                android:singleLine="true"
+                android:textColor="@color/color_main_text_black"
+                android:textColorHint="@color/color_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <ImageView
+                android:id="@+id/iv_goods_consume_scan"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:src="@mipmap/ysl_ma_black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_cart"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/shape_border_footer_stroke"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            >
+            <ImageView
+                android:id="@+id/iv_shop_car"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/ysl_shop_car" />
+
+
+            <TextView
+                android:id="@+id/tv_goods_consume_num"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="4dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_shop_car"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_main_size"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.3">
+
+            <TextView
+                android:id="@+id/tv_goods_consume_aa"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical"
+                android:text="¥："
+                android:textColor="@color/red"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <TextView
+                android:id="@+id/tv_goods_consume_total_money"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@+id/tv_goods_consume_aa"
+                android:gravity="center_vertical"
+                android:text="0.00"
+                android:textColor="@color/red"
+                android:textSize="@dimen/dimen_main_size" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_goods_consume_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ysl_get_go"
+            android:text="结账"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dimen_button_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_cart"
+        android:layout_below="@id/ll_goods_consume_scan"
+        android:orientation="horizontal">
+
+        <ExpandableListView
+            android:id="@+id/lv_goods_consume_type"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/background"
+            android:choiceMode="singleChoice"
+            android:listSelector="#00000000" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/ysl_gray" />
+
+        <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+            android:id="@+id/refresh_goods_consume"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_weight="3"
+            app:above_wave_color="@color/yunpu"
+            app:blow_wave_color="@color/yunpu">
+
+            <com.zhiluo.android.yunpu.ui.view.BaseListView
+                android:id="@+id/lv_goods_consume_goods"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:scrollbars="none" />
+
+        </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+    </LinearLayout>
+
+</RelativeLayout>

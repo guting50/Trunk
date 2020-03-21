@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ysl_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/ysl_main_style">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/loginmagin"
+            android:drawableLeft="@mipmap/left_btn_n"
+            android:gravity="center"
+            android:text="    "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_titel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新增二级分类"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <ImageView
+            android:id="@+id/img_ok"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:padding="3dp"
+            android:src="@mipmap/ysl_save_ok"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:text="一级分类"
+        android:textColor="@color/text_black"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/te_main_type_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ysl_f"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:text="二级分类"
+        android:textColor="@color/text_black"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/ed_child_type_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ysl_f"
+        android:textCursorDrawable="@drawable/shape_color_cursor"
+        android:hint="二级分类名称"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textSize="15sp"
+        android:textColor="@color/text_black"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/ysl_gray">
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="备    注"
+            />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_remark_detail"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:gravity="top|left"
+        android:hint="请填写备注..."
+        android:padding="4dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/color_main_text_black"
+        android:textColorHint="@color/color_text_hint_gray"
+        android:textCursorDrawable="@drawable/shape_color_cursor"
+        android:textSize="@dimen/dimen_main_size" />
+
+    <TextView
+        android:id="@+id/te_save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_ysl_style"
+        android:gravity="center"
+        android:text="保存"
+        android:textSize="18sp"
+        android:textColor="@color/white" />
+</LinearLayout>

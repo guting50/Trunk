@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_keyboard_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="8dp"
+        android:text="修改数量进价"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:textColor="@color/color_main_text_black"
+        android:id="@+id/et_keyboard_num"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_marginEnd="@dimen/loginmagin"
+        android:layout_marginStart="@dimen/loginmagin"
+        android:layout_marginTop="@dimen/loginmagin"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:hint="输入商品数量"
+        android:inputType="numberDecimal"
+        android:maxLength="15"
+        android:paddingLeft="@dimen/loginmagin"
+        android:singleLine="true"
+        android:textColorHint="@color/color_text_hint_gray"
+        android:textSize="@dimen/dimen_main_size" />
+
+    <EditText
+        android:id="@+id/et_keyboard_price"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_marginEnd="@dimen/loginmagin"
+        android:layout_marginStart="@dimen/loginmagin"
+        android:layout_marginTop="@dimen/loginmagin"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:hint="输入商品进价"
+        android:inputType="numberDecimal"
+        android:maxLength="15"
+        android:paddingLeft="@dimen/loginmagin"
+        android:singleLine="true"
+        android:textColor="@color/color_main_text_black"
+        android:textColorHint="@color/color_text_hint_gray"
+        android:textSize="@dimen/dimen_main_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_keyboard_confirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector_yunpu"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_button_size" />
+
+        <Button
+            android:id="@+id/btn_keyboard_cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@drawable/shape_border_common_radius_stroke"
+            android:text="取消"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_button_size" />
+
+    </LinearLayout>
+</LinearLayout>

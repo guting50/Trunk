@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhiluo.android.yunpu.ui.fragment.GoodsValueFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+            android:id="@+id/refresh_goods_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_custom_goods_value"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_goods_value"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:src="@drawable/icon_add_member"
+            app:backgroundTint="@color/yunpu"
+            app:rippleColor="#fd6401" />
+    </FrameLayout>
+</FrameLayout>

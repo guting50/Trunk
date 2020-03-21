@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_member"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.member.manager.activity.ModifyMemberActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:id="@+id/tv_add_member_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="修改会员"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_add_member_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="6dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_add_member_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_add_member_head"
+                    android:layout_width="@dimen/head_image_height"
+                    android:layout_height="@dimen/head_image_height"
+                    android:layout_alignParentEnd="true"
+                    android:padding="10dp"
+                    android:src="@mipmap/ysl_member_head_imgs" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_member_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_toStartOf="@+id/civ_add_member_head">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_phone"
+                        style="@style/TextViewAddMember"
+                        android:text="手机" />
+
+                    <TextView
+                        android:id="@+id/istel_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/tv_add_member_phone"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="*"
+                        android:textColor="@color/red" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_phone"
+                        style="@style/EditTextStyleAddMember"
+                        android:focusable="true"
+                        android:hint="请输入手机号码"
+                        android:inputType="phone"
+                        android:maxLength="11" />
+
+                </RelativeLayout>
+
+
+
+                <View
+                    android:id="@+id/view_add_member_line"
+                    style="@style/LineStyle"
+                    android:layout_below="@+id/rl_add_member_phone"
+                    android:layout_toStartOf="@+id/civ_add_member_head" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_below="@+id/view_add_member_line"
+                    android:layout_toStartOf="@+id/civ_add_member_head">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_name"
+                        style="@style/TextViewAddMember"
+                        android:text="姓名" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/tv_add_member_name"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="*"
+                        android:textColor="@color/red" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_name"
+                        style="@style/EditTextStyleAddMember"
+                        android:focusable="true"
+                        android:hint="请输入姓名"
+                        android:inputType="text"
+                        android:maxLength="50" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--第二部分-->
+            <LinearLayout
+                android:id="@+id/ll_add_member_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_add_member_1"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!--电话号码-->
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_member_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_toStartOf="@+id/civ_add_member_head">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_num"
+                        style="@style/TextViewAddMember"
+                        android:text="卡号" />
+
+                    <TextView
+                        android:id="@+id/tv_start_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/tv_add_member_num"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="*"
+                        android:textColor="@color/red" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_num"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_toRightOf="@+id/tv_start_num"
+                        android:layout_marginLeft="5dp"
+                        android:focusable="true"
+                        android:hint="请输入卡号"
+                        android:inputType="number"
+                        android:maxLength="50"
+                        android:paddingRight="@dimen/adduser">
+
+                    </EditText>
+
+                </RelativeLayout>
+
+
+                <View style="@style/LineStyle" />
+                <!--会员等级-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_grade"
+                        style="@style/TextViewAddMember"
+                        android:text="等级" />
+
+                    <TextView
+                        android:id="@+id/tv_t1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/tv_add_member_grade"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="*"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/tv_vip_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/tv_t1"
+                        android:drawableRight="@mipmap/right_tw"
+                        android:gravity="right|center_vertical"
+                        android:hint="请点击选择"
+                        android:textColor="@color/text_black" />
+
+                    <Spinner
+                        android:id="@+id/sp_add_member_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+                <!--卡面号码 -->
+                <View style="@style/LineStyle" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_add_card_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_add_card_num"
+                        style="@style/TextViewAddMember"
+                        android:text="卡面号码" />
+                    <TextView
+                        android:id="@+id/tv_num_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/tv_add_card_num"
+                        android:gravity="center"
+                        android:padding="3dp"
+                        android:text="*"
+                        android:textColor="@color/red" />
+
+                    <EditText
+                        android:id="@+id/et_add_card_num"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_toEndOf="@+id/tv_add_card_num"
+                        android:hint="请输入卡面号码"
+                        android:maxLength="50" />
+
+                </RelativeLayout>
+
+                <View style="@style/LineStyle" />
+                <!--性别-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_sex"
+                        style="@style/TextViewAddMember"
+                        android:text="性别" />
+
+                    <TextView
+                        android:id="@+id/tv_vip_sex"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/tv_add_member_sex"
+                        android:drawableRight="@mipmap/right_tw"
+                        android:gravity="right|center_vertical"
+                        android:hint="请点击选择"
+                        android:textColor="@color/text_black" />
+
+                </RelativeLayout>
+
+                <!--会员过期时间-->
+                <View style="@style/LineStyle" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_overdue"
+                        style="@style/TextViewAddMember"
+                        android:text="过期时间" />
+
+                    <TextView
+                        android:id="@+id/et_modify_member_overdue_date"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_toEndOf="@+id/tv_add_member_overdue"
+                        android:layout_toStartOf="@+id/iv_modify_member_overdue_date"
+                        android:layout_marginLeft="5dp"
+                        android:hint="不选默认永久有效"
+                        android:inputType="date"
+                        android:maxLength="20" />
+
+                    <ImageView
+                        android:id="@+id/iv_modify_member_overdue_date"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:padding="5dp"
+                        android:src="@mipmap/ysl_canlander"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <View style="@style/LineStyle" />
+
+                <!--生日-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_birthday_title"
+                        style="@style/TextViewAddMember"
+                        android:text="会员生日" />
+                    <ImageView
+                        android:id="@+id/img_vip_birthday"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:padding="5dp"
+                        android:src="@mipmap/ysl_canlander"
+                        android:layout_centerVertical="true" />
+                    <TextView
+                        android:id="@+id/tv_add_member_birthday"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/adduser"
+                       android:layout_toRightOf="@id/tv_add_member_birthday_title"
+                        android:gravity="end|center_vertical"
+                        android:hint="请选择生日"
+                        android:textColor="@color/color_main_text_black"
+                        android:textColorHint="@color/color_text_hint_gray"
+                        android:layout_toLeftOf="@id/img_vip_birthday"/>
+
+
+                </RelativeLayout>
+
+                <!--邮箱-->
+                <View style="@style/LineStyle" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_email"
+                        style="@style/TextViewAddMember"
+                        android:text="电子邮箱" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_email"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_toEndOf="@+id/tv_add_member_email"
+                        android:hint="请输入电子邮箱"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="20" />
+
+                </RelativeLayout>
+
+                <!--身份证号-->
+                <View style="@style/LineStyle" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_id"
+                        style="@style/TextViewAddMember"
+                        android:text="身份证号" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_id"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_toEndOf="@+id/tv_add_member_id"
+                        android:hint="请输入身份证号"
+                        android:maxLength="50" />
+
+                </RelativeLayout>
+
+                <!--固定电话 -->
+                <View style="@style/LineStyle" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_tel"
+                        style="@style/TextViewAddMember"
+                        android:text="固定电话" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_tel"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_toEndOf="@+id/tv_add_member_tel"
+                        android:hint="请输入固定电话"
+                        android:maxLength="50" />
+
+                </RelativeLayout>
+
+                <!--会员地址-->
+                <View style="@style/LineStyle" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_address"
+                        style="@style/TextViewAddMember"
+                        android:text="会员地址" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_address"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/tv_add_member_address"
+                        android:hint="请输入会员地址"
+                        android:inputType="text" />
+
+                </RelativeLayout>
+
+                <View style="@style/BottomViewStyle" />
+                <!--推荐人-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="推荐人" />
+
+                    <TextView
+                        android:id="@+id/et_add_member_recommend"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/adduser"
+                        android:drawableEnd="@mipmap/right_tw"
+                        android:gravity="end|center_vertical"
+                        android:hint="请选择推荐人"
+                        android:textColor="@color/color_main_text_black"
+                        android:textColorHint="@color/color_text_hint_gray" />
+
+                </LinearLayout>
+                <!--备注-->
+                <View style="@style/LineStyle" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_add_member_remark"
+                        style="@style/TextViewAddMember"
+                        android:text="请输入备注信息" />
+
+                    <EditText
+                        android:id="@+id/et_add_member_remark"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/tv_add_member_remark"
+                        android:gravity="center|right"
+                        android:hint="备注信息"
+                        android:inputType="text" />
+
+                </RelativeLayout>
+
+                <!--会员标签-->
+                <View style="@style/BottomViewStyle" />
+
+                <LinearLayout
+                    android:id="@+id/rl_recommend_sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="14dp"
+                        android:text="会员标签" />
+
+                    <TextView
+                        android:id="@+id/tv_add_member_sign"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/adduser"
+                        android:drawableEnd="@mipmap/right_tw"
+                        android:gravity="end|center_vertical"
+                        android:hint="请选择标签"
+                        android:textColor="@color/color_main_text_black"
+                        android:textColorHint="@color/color_text_hint_gray" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/ysl_gray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="14dp"
+                    android:paddingTop="5dp"
+                    android:text="自定义属性"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/lv_add_costomfiled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/ysl_gray"-->
+                    <!--android:paddingBottom="5dp"-->
+                    <!--android:paddingLeft="14dp"-->
+                    <!--android:paddingTop="5dp"-->
+                    <!--android:text="会员标签" />-->
+
+                <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:id="@+id/re_lab_recycle"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:background="@color/white">-->
+
+                <!--</android.support.v7.widget.RecyclerView>-->
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

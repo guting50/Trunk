@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_send_msg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.sms.activity.SendMsgActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:id="@+id/tv_titlerg_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="添加短信模板"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_title_font_size" />
+
+        <TextView
+            android:id="@+id/tv_title_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_title_font_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_surplus_sms_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="模板标题" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_msg_content_title"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:gravity="center_vertical|left"
+        android:hint="请输入模板标题"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@drawable/shape_color_cursor"
+        android:maxLength="8"
+        android:textColorHint="@color/lightgray"
+        android:textSize="@dimen/edittext_font_size" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="模板内容" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_msg_content_name"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:gravity="start"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:minLines="4"
+        android:textColor="@color/name"
+        android:hint="请输入模板内容"
+        android:textColorHint="@color/lightgray"
+        android:textCursorDrawable="@drawable/shape_color_cursor"
+        android:textSize="@dimen/edittext_font_size" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="插入通配符" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <Spinner
+            android:id="@+id/sp_sms_wildcard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:spinnerMode="dropdown"
+            android:dropDownVerticalOffset="46dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp" />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

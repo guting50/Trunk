@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.mamengmami.android:waveswiperefreshlayout:1.0.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f58f0707b6e66637504a0641c5d0f949/waveswiperefreshlayout-1.0.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f58f0707b6e66637504a0641c5d0f949/waveswiperefreshlayout-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f58f0707b6e66637504a0641c5d0f949/waveswiperefreshlayout-1.0.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mamengmami.android/waveswiperefreshlayout/1.0.0/4bf30398049adc9ae63cf31d9d11909f8f1cb311/waveswiperefreshlayout-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mamengmami.android/waveswiperefreshlayout/1.0.0/4ec223987880ef8c8412b2debfd84a0fe312daae/waveswiperefreshlayout-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

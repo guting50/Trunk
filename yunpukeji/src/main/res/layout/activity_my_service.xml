@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_service"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.home.activity.CustomerServiceActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="我的客服"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:text="专属客服："
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <TextView style="@style/LineStyle" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_service_qq"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="80dp"
+                    android:gravity="center_vertical"
+                    android:text="QQ交谈"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_service_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:drawablePadding="6dp"
+                    android:drawableStart="@drawable/icon_qq"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_service_we_chat"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="80dp"
+                    android:gravity="center_vertical"
+                    android:text="微信交谈"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_service_we_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:drawablePadding="6dp"
+                    android:drawableStart="@drawable/icon_wechat"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:id="@+id/rl_service_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="80dp"
+                    android:gravity="center_vertical"
+                    android:text="电话号码"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_service_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:drawablePadding="6dp"
+                    android:drawableStart="@drawable/members_btn_phone"
+                    android:gravity="center_vertical"
+                    android:text="4006302577"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:id="@+id/rl_service_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="服务电话："
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_service_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:drawablePadding="6dp"
+                    android:drawableStart="@drawable/members_btn_phone"
+                    android:gravity="center_vertical"
+                    android:text="4006302577"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

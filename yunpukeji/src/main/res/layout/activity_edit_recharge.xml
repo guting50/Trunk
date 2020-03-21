@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.recharge.EditRechargeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="编辑快捷充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_edit_recharge_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="充值名称" />
+
+        <TextView style="@style/Flag" />
+
+        <EditText
+            android:id="@+id/et_edit_recharge_name"
+            style="@style/EditTextStyleAddMember"
+            android:hint="如：充值满100送20" />
+    </LinearLayout>
+
+    <TextView style="@style/LineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="充值金额" />
+
+        <TextView style="@style/Flag" />
+
+        <EditText
+            android:id="@+id/et_edit_recharge_money"
+            style="@style/EditTextStyleAddMember"
+            android:hint="请输入充值金额"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <TextView style="@style/LineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="赠送金额" />
+
+        <TextView style="@style/Flag" />
+
+        <EditText
+            android:id="@+id/et_edit_recharge_give_money"
+            style="@style/EditTextStyleAddMember"
+            android:hint="请输入赠送金额"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <TextView style="@style/LineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="赠送积分" />
+
+        <TextView style="@style/Flag" />
+
+        <EditText
+            android:id="@+id/et_edit_recharge_give_integral"
+            style="@style/EditTextStyleAddMember"
+            android:hint="请输入赠送积分"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <TextView style="@style/LineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="有效时间" />
+
+        <TextView style="@style/Flag" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6" />
+
+        <RadioGroup
+            android:id="@+id/rg_edit_recharge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.2"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_edit_recharge_forever"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:text="永久有效" />
+
+            <RadioButton
+                android:id="@+id/rb_edit_recharge_birthday"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:text="会员生日当天" />
+
+            <RadioButton
+                android:id="@+id/rb_edit_recharge_fixed"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:text="固定时间" />
+
+            <RadioButton
+                android:id="@+id/rb_edit_recharge_week"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:text="按每周" />
+
+            <RadioButton
+                android:id="@+id/rb_edit_recharge_month"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:text="按每月" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="92dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_edit_recharge_start"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/common_edit_background"
+                    android:gravity="center"
+                    android:hint="请选择"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="2dp"
+                    android:gravity="center"
+                    android:text="至"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_edit_recharge_end"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/common_edit_background"
+                    android:gravity="center"
+                    android:hint="请选择"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <EditText
+                    android:id="@+id/et_edit_recharge_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/common_edit_background"
+                    android:digits="1234567,"
+                    android:ellipsize="end"
+                    android:hint="如：1,3,7(半角逗号，有效范围1-7)"
+                    android:maxLines="1"
+                    android:paddingEnd="4dp"
+                    android:paddingStart="4dp"
+                    android:textSize="@dimen/dimen_main_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <EditText
+                    android:id="@+id/et_edit_recharge_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/common_edit_background"
+                    android:digits="123456789,"
+                    android:ellipsize="end"
+                    android:hint="如：8,15,30(半角逗号，有效范围1-31)"
+                    android:maxLines="1"
+                    android:paddingEnd="4dp"
+                    android:paddingStart="4dp"
+                    android:textSize="@dimen/dimen_main_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

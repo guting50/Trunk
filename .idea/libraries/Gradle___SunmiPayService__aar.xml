@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: :SunmiPayService:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0e4a35cb7d73435e7e188ef0f22d36ee/SunmiPayService/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0e4a35cb7d73435e7e188ef0f22d36ee/SunmiPayService/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

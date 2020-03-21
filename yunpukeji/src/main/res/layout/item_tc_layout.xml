@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="@dimen/goods_picture_height"
+        android:layout_height="@dimen/goods_picture_height"
+        android:padding="4dp">
+
+        <com.zhiluo.android.yunpu.goods.consume.view.ShapedImageView
+            android:id="@+id/iv_item_tc_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ysl_goods"
+            app:round_radius="8dp"
+            app:shape_mode="round_rect"
+            app:stroke_color="@color/white"
+            app:stroke_width="0.6dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/goods_picture_height"
+        android:layout_marginLeft="4dp"
+        android:orientation="vertical"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
+
+        <TextView
+            android:id="@+id/tv_item_tc_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_item_tc_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/red"
+                android:textSize="@dimen/dimen_main_size" />
+            <ImageView
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/right_tw"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_item_tc_code"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+    </LinearLayout>
+</LinearLayout>

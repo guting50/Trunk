@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical"
+              tools:context="com.zhiluo.android.yunpu.goods.manager.activity.GoodsChooseCategoryListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <include layout="@layout/overall_backbutton_single_head"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="选择商品分类"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/color_main_text_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="主分类"/>
+
+        <TextView
+            android:textColor="@color/color_main_text_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="子分类"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/loginmagin2"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:orientation="horizontal">
+
+        <com.zhiluo.android.yunpu.ui.view.BaseListView
+            android:id="@+id/lv_goodstype_activity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/background"/>
+
+        <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+            android:id="@+id/srl_freshgoodslisttmng_activity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            app:above_wave_color="@color/yunpu"
+            app:blow_wave_color="@color/yunpu">
+
+            <com.zhiluo.android.yunpu.ui.view.BaseListView
+                android:id="@+id/lv_goodslistdmgt_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/loginmagin"/>
+
+        </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+    </LinearLayout>
+</LinearLayout>

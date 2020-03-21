@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/head_height"
+                android:background="@drawable/ysl_main_style">
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/loginmagin"
+                    android:drawableLeft="@mipmap/left_btn_n"
+                    android:gravity="center"
+                    android:text="    "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_title_size" />
+
+                <TextView
+                    android:id="@+id/tv_titel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="积分设置"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_title_size" />
+
+                <ImageView
+                    android:id="@+id/img_ok"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:padding="3dp"
+                    android:src="@mipmap/ysl_save_ok" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="初始积分" />
+
+
+                <EditText
+                    android:id="@+id/et_origin_intergal"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="0.00"
+                    android:inputType="number" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/ysl_gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_oil"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="一键加油" />
+
+
+                <EditText
+                    android:id="@+id/et_onekey_oil"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="每消费多少元可积1分"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_oil"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/ysl_gray"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="快速消费" />
+
+
+                <EditText
+                    android:id="@+id/et_fast_shop"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="每消费多少元可积1分"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/ysl_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="会员充值" />
+
+                <EditText
+                    android:id="@+id/et_vip_rechange"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="每充值多少元可积1分"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/ysl_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="商品积分" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_unitfied_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="2dp"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="统一设置"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <EditText
+                    android:id="@+id/et_unified_set"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="每消费多少元可积1分"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:background="@color/ysl_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_detail_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="2dp"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="详细设置"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_integral_set"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

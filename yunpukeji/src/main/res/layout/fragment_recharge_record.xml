@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhiluo.android.yunpu.member.manager.fragment.RechargeRecordFragment">
+
+    <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+        android:id="@+id/refresh_recharge_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:above_wave_color="@color/yunpu"
+        app:blow_wave_color="@color/yunpu">
+
+        <ListView
+            android:id="@+id/lv_recharge_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+
+</FrameLayout>

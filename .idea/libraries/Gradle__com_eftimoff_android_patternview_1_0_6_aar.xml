@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.eftimoff:android-patternview:1.0.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/792a64ce1b2a3ee61a51ae89a659a023/android-patternview-1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/792a64ce1b2a3ee61a51ae89a659a023/android-patternview-1.0.6/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

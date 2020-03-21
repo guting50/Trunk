@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.zhiluo.android.yunpu.login.activity.SignupActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_head"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/singupone" />
+
+        <TextView
+            android:id="@+id/tv_singupback_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/loginmagin"
+            android:drawableLeft="@mipmap/backlight"
+            android:gravity="center_vertical"
+            android:text="   "
+            android:textColor="@color/gray"
+            android:textSize="@dimen/dimen_main_size" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_below="@id/fl_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:textColor="@color/color_main_text_black"
+                android:id="@+id/edi_singupphone_activity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/head_height"
+                android:layout_margin="30dp"
+                android:background="@drawable/shape_border_common_radius_stroke"
+                android:hint="输入手机号或邮箱"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/color_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:textColor="@color/color_main_text_black"
+                    android:id="@+id/edi_yzmsignup_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/head_height"
+                    android:background="@drawable/shape_border_common_radius_stroke"
+                    android:hint="请输入验证码"
+                    android:maxLength="5"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColorHint="@color/color_text_hint_gray"
+                    android:textCursorDrawable="@drawable/shape_color_cursor"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <WebView
+                    android:id="@+id/web_yzmsignup_activity"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp">
+
+                </WebView>
+
+                <Button
+                    android:id="@+id/btn_freshyzmsignup_activity"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@null" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_singupnext_activity"
+                style="?android:attr/actionButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/head_height"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button_selector_yunpu"
+                android:gravity="center"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_button_size" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

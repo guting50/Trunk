@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="360dp"
+    android:background="@mipmap/ysl_vip_detail">
+
+    <RelativeLayout
+        android:id="@+id/mean_r1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/im_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ysl_goods_analysis" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/im_1"
+            android:text="商品分析"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/im_1"
+            android:background="@color/ysl_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mean_r2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/mean_r1"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/im_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ysl_vip_analysis" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/im_2"
+            android:text="会员分析"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/im_2"
+            android:background="@color/ysl_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mean_r3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/mean_r2"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/im_3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ysl_vip_account" />
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/im_3"
+            android:text="会员账户"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/im_3"
+            android:background="@color/ysl_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mean_r4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/mean_r3"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/im_4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ysl_oder_recoder" />
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/im_4"
+            android:text="订单记录"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/im_4"
+            android:background="@color/ysl_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mean_r5"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/mean_r4"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/im_5"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ysl_staff_ticheng" />
+
+        <TextView
+            android:id="@+id/tv_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/im_5"
+            android:text="员工提成"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/im_5"
+            android:background="@color/ysl_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mean_r6"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/mean_r5"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/im_6"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ysl_tuijian_fanli" />
+
+        <TextView
+            android:id="@+id/tv_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/im_6"
+            android:text="推荐返利"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/im_6"
+            android:background="@color/ysl_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mean_r7"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/mean_r6"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/im_7"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/jiaoban_tongji" />
+
+        <TextView
+            android:id="@+id/tv_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/im_7"
+            android:text="交班记录"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,178 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    defaultConfig {
+        applicationId "com.zhiluo.android.yunpu"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 168
+        versionName "1.9.8.8"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a','x86', 'x86_64', 'mips', 'mips64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        //--云上铺 79b73855cd88b2c3543ec83a  中性 73efcf8494e21828b1e05630
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "79b73855cd88b2c3543ec83a", //JPush上注册的包名对应的appkey.云上铺 79b73855cd88b2c3543ec83a  中性 73efcf8494e21828b1e05630
+//                JPUSH_APPKEY : "73efcf8494e21828b1e05630", //JPush上注册的包名对应的appkey.云上铺 79b73855cd88b2c3543ec83a  中性 73efcf8494e21828b1e05630
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../mykey.jks")
+            storePassword "android"
+            keyAlias "Coder-pig"
+            keyPassword "android"
+        }
+
+        debug  {
+            storeFile file("../zx.jks")
+            storePassword "android"
+            keyAlias "key0"
+            keyPassword "android"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            debuggable true
+            minifyEnabled false  //不启用Proguard
+            shrinkResources false //是否清理无用资源,依赖于minifyEnabled
+            zipAlignEnabled false //是否启用zipAlign压缩
+            signingConfig signingConfigs.release
+//            signingConfig signingConfigs.debug
+        }
+
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    compileOptions {
+    }
+}
+repositories {
+    flatDir { dirs 'libs' }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //联动
+    implementation project(':mypicker')
+    compileOnly files('external_libs/classes_2.1.11_20160907.jar')
+    //pos包
+    compileOnly files('external_libs/bw_odm_20160526.jar')
+    //网络请求
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    //下拉刷新
+    implementation 'com.mamengmami.android:waveswiperefreshlayout:1.0.0'
+    //RecyclerView类库减少许多工作量
+    implementation 'com.github.iwgang:familiarrecyclerview:1.3.2'
+    implementation 'com.youth.banner:banner:1.4.8'
+    //SVG动画
+    implementation 'com.eftimoff:android-patternview:1.0.6@aar'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-v4:26.1.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    //Material控件
+    implementation 'com.github.rey5137:material:1.2.4'
+    implementation 'com.android.support:multidex:1.0.2'
+    //AndPermission权限适配
+    implementation 'com.yanzhenjie:permission:1.0.5'
+    //手势密码锁
+    implementation 'com.takwolf.android:lock9view:0.0.11'
+    implementation 'com.blankj:utilcode:1.25.9'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:26.1.0'
+    //对话框
+    implementation 'me.drakeet.materialdialog:library:1.3.1'
+    testImplementation  'junit:junit:4.12'
+    //拉卡拉
+    implementation files('libs/LklMidServiceAidl_V1.0.4.7785.0_20170120.jar')
+    implementation files('libs/LklPosUtil.jar')
+    //mob通用公共库
+    implementation files('libs/MobCommons-2017.0412.1554.jar')
+    //    compile 'org.jetbrains.kotlin:kotlin-stdlib-jre7:1.1.51'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    //图片圆形化工具
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    //标签流式布局
+    implementation 'com.zhy:flowlayout-lib:1.0.3'
+    //小红点
+    implementation files('libs/badgeview.jar')
+    //商米sdk
+    implementation files('libs/sunmipaylib_v1.0.23.jar')
+    //百度语音合成
+    implementation files('libs/com.baidu.tts_2.3.0.jar')
+    //右下角按钮
+    implementation 'com.melnykov:floatingactionbutton:1.3.0'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //Android数据库框架（就Banner存数据）
+    implementation 'org.litepal.android:core:1.6.0'
+    //两级结构
+    implementation 'com.drawthink:expandable-recyclerview:0.0.3'
+    //折线图、扇形图等工具
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    //多种弹出框
+    implementation 'com.dou361.dialogui:jjdxm-dialogui:1.0.3'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+    //java与js的相互调用
+    implementation 'com.github.lzyzsd:jsbridge:1.0.4'
+    //开关按钮
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation(name: 'SunmiPayService', ext: 'aar')
+    //okhttp网络框架
+    //    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    //    compile 'com.squareup.okio:okio:1.7.0'
+    //    implementation files('libs/pinyin4j-2.5.0.jar')
+
+    //弹框(用的最多)
+    implementation project(':library')
+    //    compile 'com.wdullae r:swipeactionadapter:2.0.0'
+    //解决读取联系人apk》=23权限问题
+    //    compile "com.github.hotchemi:permissionsdispatcher:2.1.2"
+    //    apt "com.github.hotchemi:permissionsdispatcher-processor:2.1.2"
+    //二维码
+    implementation files('libs/zxing.jar')
+    //极光推送
+    implementation 'cn.jiguang.sdk:jpush:3.3.1'
+    // 此处以JPush 3.3.1 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.0.1'
+    // 此处以JCore 2.0.1 版本为例。
+    //    implementation(name: 'PayLib-release-1.4.18', ext: 'aar')
+    //    //商米P1_G4刷卡
+
+
+    implementation 'com.lzy.net:okgo:3.0.4'
+}
+

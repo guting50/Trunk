@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<commu>
+    <type>socket</type>
+    <ip>61.141.235.66</ip>
+    <port>43110</port>
+    <timeout>60</timeout>
+</commu>
+  

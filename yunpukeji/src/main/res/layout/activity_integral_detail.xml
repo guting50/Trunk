@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.statistics.account.activity.IntegralDetailActivity">
+
+    <include layout="@layout/no_confirm_title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_goods_order_name_name"
+                    style="@style/TextViewAddMember"
+                    android:text="会员姓名：" />
+
+                <TextView
+                    android:id="@+id/tv_money_detail_name"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_goods_order_name_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_goods_order_card_name"
+                    style="@style/TextViewAddMember"
+                    android:text="会员卡号：" />
+
+                <TextView
+                    android:id="@+id/tv_money_detail_card"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_goods_order_card_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_goods_order_consume"
+                    style="@style/TextViewAddMember"
+                    android:text="积分类型：" />
+
+                <TextView
+                    android:id="@+id/tv_money_detail_money_type"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_goods_order_consume"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_rebate_list_time_name"
+                    style="@style/TextViewAddMember"
+                    android:text="积分数量：" />
+
+                <TextView
+                    android:id="@+id/tv_money_detail_pay_total"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_rebate_list_time_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_rebate_list_balance_name"
+                    style="@style/TextViewAddMember"
+                    android:text="积分途径：" />
+
+                <TextView
+                    android:id="@+id/tv_money_detail_account_yu"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_rebate_list_balance_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_rebate_list_point_name"
+                    style="@style/TextViewAddMember"
+                    android:text="积分说明：" />
+
+                <TextView
+                    android:id="@+id/tv_money_detail_pay_cash"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_rebate_list_point_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_rebate_detail_depict_name"
+                    style="@style/TextViewAddMember"
+                    android:text="积分时间：" />
+
+                <TextView
+                    android:id="@+id/tv_money_detail_pay_yue"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_rebate_detail_depict_name"
+                    android:singleLine="true"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_rebate_detail_time_name"
+                    style="@style/TextViewAddMember"
+                    android:text="操作员：" />
+
+                <TextView
+                    android:id="@+id/tv_money_detail_pay_bank"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_rebate_detail_time_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

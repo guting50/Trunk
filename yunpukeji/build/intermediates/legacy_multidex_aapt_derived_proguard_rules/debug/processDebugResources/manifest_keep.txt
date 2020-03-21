@@ -1,0 +1,2 @@
+# Referenced at D:\project\project_gt\Trunk\yunpukeji\build\intermediates\merged_manifests\debug\AndroidManifest.xml:120
+-keep class com.zhiluo.android.yunpu.config.MyApplication { <init>(); }

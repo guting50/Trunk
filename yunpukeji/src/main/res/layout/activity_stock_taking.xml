@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.zhiluo.android.yunpu.goods.manager.activity.StockTakingActivity">
+    <!--头部-->
+    <RelativeLayout
+        android:id="@+id/rl_analysis_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <TextView
+            android:id="@+id/tv_stock_taking_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@mipmap/left_btn_n"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:text="  "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="库存盘点"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_stock_pandian_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_analysis_head"
+        android:background="@color/ysl_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_border_view_radius"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_stock_taking_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="left|center_vertical"
+                android:hint="请输入商品编号"
+                android:inputType="number"
+                android:maxLength="50"
+                android:padding="@dimen/editText_textview_padding"
+                android:singleLine="true"
+                android:textColor="@color/color_main_text_black"
+                android:textColorHint="@color/color_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <ImageView
+                android:id="@+id/iv_stock_taking_scan"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:src="@mipmap/ysl_ma_black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_border_footer_stroke"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical"
+            android:text="盘点商品："
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_stock_taking_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:textColor="@color/red"
+            android:textSize="17sp" />
+
+        <CheckBox
+            android:id="@+id/cb_short_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="短信"
+            android:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/cb_print"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="打印"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/btn_stock_taking"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ysl_get_go"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="保存 "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_button_size"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/l_layout"
+        android:layout_below="@+id/ll_stock_pandian_search"
+        android:orientation="horizontal">
+
+        <com.zhiluo.android.yunpu.ui.view.BaseListView
+            android:id="@+id/lv_stock_taking_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/background"
+            android:scrollbars="none" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/ysl_gray" />
+
+        <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+            android:id="@+id/refresh_stock_taking"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            app:above_wave_color="@color/yunpu"
+            app:blow_wave_color="@color/yunpu">
+
+            <com.zhiluo.android.yunpu.ui.view.BaseListView
+                android:id="@+id/lv_stock_taking_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingStart="@dimen/loginmagin"
+                android:scrollbars="none" />
+        </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+    </LinearLayout>
+
+</RelativeLayout>

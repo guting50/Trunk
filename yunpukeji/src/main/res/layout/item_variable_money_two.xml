@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/l_three"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="2dp"
+        android:background="@drawable/shape_variable_two"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ed_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:numeric="decimal"
+            android:maxLength="11"
+            android:hint="手动输入"
+            android:gravity="center"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+</LinearLayout>

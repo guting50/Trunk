@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_choose_smscontents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.zhiluo.android.yunpu.sms.activity.ChooseSMSTemplatesActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_head_choosesmscontents"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_back_choosesmscontents"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_margin="@dimen/loginmagin"-->
+            <!--android:background="@mipmap/left_btn_n"-->
+            <!--android:scaleType="centerCrop"/>-->
+
+        <include layout="@layout/overall_backbutton_single_head"/>
+
+        <TextView
+            android:id="@+id/tv_title_choosesmscontents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="模板列表"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_title_font_size"/>
+
+        <TextView
+            android:id="@+id/tv_sms_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="添加"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_title_font_size"/>
+    </RelativeLayout>
+
+    <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+        android:id="@+id/wsrl_sms_contents_choosesmscontents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_sms_contents_list_choosesmscontents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1px"
+            android:divider="@color/lightgray"
+            android:background="@color/white"/>
+    </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+
+</LinearLayout>

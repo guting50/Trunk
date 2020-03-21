@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingEnd="5dp">
+
+    <LinearLayout
+        android:id="@+id/rl_add_member_init_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/et_add_field_title"
+            style="@style/TextViewAddMember"
+            android:layout_marginStart="14dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/is_fill"
+            style="@style/Flag" />
+        <!--<EditText-->
+            <!--android:id="@+id/et_add_field_text"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+            <!--android:duplicateParentState="true"-->
+            <!--android:hint="点击输入..."/>-->
+
+        <EditText
+            android:id="@+id/et_add_field_text"
+            style="@style/EditTextStyleAddMember"
+            android:focusable="true"
+            android:hint="请输入..."
+            android:focusableInTouchMode="true"
+            android:inputType="text"
+            android:enabled="true"
+        />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rl_add_member_init_password"
+        android:background="@color/ysl_gray" />
+
+
+</RelativeLayout>

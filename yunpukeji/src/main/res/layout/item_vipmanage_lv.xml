@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/loginmagin"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/loginmagin"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_vipname_item"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:text=""
+            android:textColor="@color/color_main_text_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="卡号："
+            android:textColor="@color/color_main_text_black" />
+
+        <TextView
+            android:id="@+id/tv_vipcardid_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_main_text_black" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/loginmagin"
+        android:layout_marginTop="@dimen/loginmagin2"
+
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_vipdengji_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="等级：" />
+
+        <TextView
+            android:id="@+id/tv_vgname_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/homepage"
+            android:layout_toRightOf="@id/tv_vipdengji_item"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_vipxian_item"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/homepage"
+            android:layout_toRightOf="@id/tv_vgname_item"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/tv_vipshou_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/tv_vipxian_item"
+            android:text="手机号:" />
+
+        <TextView
+            android:id="@+id/tv_vipphone_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/tv_vipshou_item"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/adduertsex"
+            android:background="@mipmap/right_tw" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/loginmagin"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="性别：" />
+
+        <TextView
+            android:id="@+id/tv_vipsex_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/homepage"
+            android:text="" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/homepage"
+            android:background="@color/gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="状态：" />
+
+        <TextView
+            android:id="@+id/tv_vipstate_item"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="正常" />
+
+    </LinearLayout>
+</LinearLayout>

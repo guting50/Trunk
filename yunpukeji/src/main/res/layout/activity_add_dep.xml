@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.staff.AddDepActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="8dp"
+        android:text="新增部门"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_add_dep_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_marginEnd="@dimen/loginmagin"
+        android:layout_marginStart="@dimen/loginmagin"
+        android:layout_marginTop="@dimen/loginmagin"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:hint="部门名称"
+        android:inputType="text"
+        android:maxLength="8"
+        android:paddingLeft="@dimen/loginmagin"
+        android:singleLine="true"
+        android:textColor="@color/color_main_text_black"
+        android:textColorHint="@color/color_text_hint_gray"
+        android:textCursorDrawable="@drawable/shape_color_cursor"
+        android:textSize="@dimen/dimen_main_size" />
+
+    <EditText
+        android:id="@+id/et_add_dep_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/loginmagin"
+        android:layout_marginStart="@dimen/loginmagin"
+        android:layout_marginTop="@dimen/loginmagin"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:gravity="top"
+        android:hint="备注信息"
+        android:inputType="textMultiLine"
+        android:maxLines="6"
+        android:minLines="4"
+        android:padding="10dp"
+        android:paddingLeft="@dimen/loginmagin"
+        android:scrollbars="vertical"
+        android:textColor="@color/color_main_text_black"
+        android:textColorHint="@color/color_text_hint_gray"
+        android:textCursorDrawable="@drawable/shape_color_cursor"
+        android:textSize="@dimen/dimen_main_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_add_dep_confirm"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector_yunpu"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_button_size" />
+
+        <Button
+            android:id="@+id/btn_add_dep_cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@drawable/shape_border_common_radius_stroke"
+            android:text="取消"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_button_size" />
+
+    </LinearLayout>
+</LinearLayout>

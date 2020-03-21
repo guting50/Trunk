@@ -1,0 +1,21 @@
+/*
+ *这是单独为hello mui准备的个性化css，可以覆盖标准mui的css定义；
+ * 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能；
+ * 
+ * */
+
+.mui-bar {
+	background-color: #FF8739 !important;
+}
+
+.mui-title {
+	color: #fff;
+}
+
+.mui-content {
+	background-color: #f5f5f5;
+}
+
+a {
+	color: #fff;
+}

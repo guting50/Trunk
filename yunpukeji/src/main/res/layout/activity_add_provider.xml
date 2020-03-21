@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.goods.manager.activity.AddProviderActivity">
+    <!--头部-->
+    <RelativeLayout
+        android:id="@+id/rl_warehousing_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <TextView
+            android:id="@+id/tv_add_provider_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@mipmap/left_btn_n"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:text="   "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="添加供应商"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_add_provider_save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_vertical"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/img_save"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/ysl_save_ok"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                android:id="@+id/tv_add_provider_name"
+                style="@style/TextViewAddMember"
+                android:text="供应商" />
+
+            <TextView
+                android:id="@+id/tv_add_provider_name_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_add_provider_name"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="*"
+                android:textColor="@color/red" />
+
+            <EditText
+                android:id="@+id/et_add_provider_name"
+                style="@style/EditTextStyleAddMember"
+                android:layout_toEndOf="@+id/tv_add_provider_name_flag"
+                android:hint="请输入供应商" />
+
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                android:id="@+id/tv_add_provider_linkman"
+                style="@style/TextViewAddMember"
+                android:text="联系人" />
+
+            <TextView
+                android:id="@+id/tv_add_provider_linkman_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_add_provider_linkman"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="*"
+                android:textColor="@color/red" />
+
+            <EditText
+                android:id="@+id/et_add_provider_linkman"
+                style="@style/EditTextStyleAddMember"
+                android:layout_toEndOf="@+id/tv_add_provider_linkman_flag"
+                android:hint="请输入联系人" />
+
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                android:id="@+id/tv_add_provider_link_phone"
+                style="@style/TextViewAddMember"
+                android:text="手机号码" />
+
+            <TextView
+                android:id="@+id/tv_add_provider_link_phone_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_add_provider_link_phone"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="*"
+                android:textColor="@color/red"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/et_add_provider_link_phone"
+                style="@style/EditTextStyleAddMember"
+                android:layout_toEndOf="@+id/tv_add_provider_link_phone_flag"
+                android:hint="请输入手机号码"
+                android:inputType="phone" />
+
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                android:id="@+id/tv_add_provider_link_zuoji"
+                style="@style/TextViewAddMember"
+                android:text="座机号码" />
+
+            <EditText
+                android:id="@+id/et_add_provider_link_zuoji"
+                style="@style/EditTextStyleAddMember"
+                android:layout_toEndOf="@+id/tv_add_provider_link_zuoji"
+                android:hint="请输入座机号码"
+                android:inputType="phone" />
+
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                android:id="@+id/tv_add_provider_qq"
+                style="@style/TextViewAddMember"
+                android:text="QQ" />
+
+            <EditText
+                android:id="@+id/et_add_provider_qq"
+                style="@style/EditTextStyleAddMember"
+                android:layout_toEndOf="@+id/tv_add_provider_qq"
+                android:hint="请输入QQ号码"
+                android:inputType="phone" />
+
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                android:id="@+id/tv_add_provider_weixin"
+                style="@style/TextViewAddMember"
+                android:text="微信" />
+
+            <EditText
+                android:id="@+id/et_add_provider_weixin"
+                style="@style/EditTextStyleAddMember"
+                android:layout_toEndOf="@+id/tv_add_provider_weixin"
+                android:hint="请输入微信"
+                android:inputType="text" />
+
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                android:id="@+id/tv_add_provider_brand"
+                style="@style/TextViewAddMember"
+                android:text="品牌" />
+
+            <EditText
+                android:id="@+id/et_add_provider_brand"
+                style="@style/EditTextStyleAddMember"
+                android:layout_toEndOf="@+id/tv_add_provider_brand"
+                android:hint="请输入品牌"
+                android:inputType="text" />
+
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                android:id="@+id/tv_add_provider_address"
+                style="@style/TextViewAddMember"
+                android:text="联系地址" />
+
+            <EditText
+                android:id="@+id/et_add_provider_address"
+                style="@style/EditTextStyleAddMember"
+                android:layout_toEndOf="@+id/tv_add_provider_address"
+                android:hint="请输入联系地址"
+                android:inputType="text" />
+
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                android:id="@+id/tv_add_provider_remark"
+                style="@style/TextViewAddMember"
+                android:text="备注" />
+
+            <EditText
+                android:id="@+id/et_add_provider_remark"
+                style="@style/EditTextStyleAddMember"
+                android:layout_toEndOf="@+id/tv_add_provider_remark"
+                android:hint="请输入备注信息"
+                android:inputType="text" />
+
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+
+    </LinearLayout>
+</LinearLayout>

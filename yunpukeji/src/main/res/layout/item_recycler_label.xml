@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingEnd="6dp"
+    android:paddingStart="6dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/tv_item_recycler_label"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:drawableEnd="@android:drawable/btn_dialog"
+        android:gravity="center"
+        android:text="标签"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/edittext_textview_font_size" />
+
+</LinearLayout>

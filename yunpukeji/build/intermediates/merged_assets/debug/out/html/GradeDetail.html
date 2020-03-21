@@ -1,0 +1,369 @@
+<!doctype html>
+<html class="gradedetail">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>等级详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/app.css" />
+		<style>
+			.mui-plus .plus {
+				display: inline;
+			}
+			
+			.plus {
+				display: none;
+			}
+			
+			#topPopover {
+				position: fixed;
+				top: 16px;
+				right: 6px;
+			}
+			
+			#topPopover .mui-popover-arrow {
+				left: auto;
+				right: 6px;
+			}
+			
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			
+			.mui-popover {
+				height: 100px;
+				width: 100px;
+			}
+			
+			.mui-content {
+				padding: 10px;
+			}
+			
+			body {
+				background-color: #FFFFFF;
+			}
+			
+			h5 {
+				color: #000000;
+				line-height: 20px;
+				height: 20px;
+			}
+			.mui-radio input[type='radio']:before, .mui-checkbox input[type='checkbox']:before
+			{
+				font-size: 24px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<a id="menu" class="mui-action-menu mui-icon mui-icon-bars mui-pull-right" href="#topPopover"></a>
+			<h1 class="mui-title">等级详情</h1>
+		</header>
+		<!--右上角弹出菜单-->
+		<div id="topPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a href="#" style="text-align: center;">编辑</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a href="#" style="text-align: center;">删除</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mui-content">
+			<!--
+            	作者：offline
+            	时间：2018-01-10
+            	描述：基本信息
+            -->
+			<h5>基本信息</h5>
+			<div class="mui-input-group">
+				<div class="mui-input-row">
+					<label>等级名称</label>
+					<input type="text" placeholder="请输入等级名称">
+				</div>
+				<div class="mui-input-row">
+					<label>等级编码</label>
+					<input type="text" placeholder="请输入等级编码">
+				</div>
+				<div class="mui-input-row">
+					<label>升级条件</label>
+					<input type="number" placeholder="请输入升级条件">
+				</div>
+				<div class="mui-input-row">
+					<label>售卡金额</label>
+					<input type="number" placeholder="请输入售卡金额">
+				</div>
+
+				<div class="mui-row" style="height: 40px;">
+					<div class="mui-col-sm-6 mui-checkbox mui-left">
+						<label style="height: 40px;line-height: 40px;">自动升级</label>
+						<input name="checkbox1" value="Item 1" type="checkbox" checked>
+					</div>
+					<div class="mui-col-sm-6 mui-checkbox mui-left">
+						<label style="height: 40px;line-height: 40px;">自动降级</label>
+						<input name="checkbox1" value="Item 1" type="checkbox">
+					</div>
+				</div>
+
+			</div>
+			<!--
+            	作者：offline
+            	时间：2018-01-10
+            	描述：储值设定
+            -->
+			<div class="mui-table-view-cell" style="padding-left: 0;">
+				<span>储值设定</span>
+				<div class="mui-switch">
+					<div class="mui-switch-handle"></div>
+				</div>
+			</div>
+			<div class="mui-input-group">
+				<div class="mui-input-row">
+					<label>初始金额</label>
+					<input type="text" placeholder="请输入初始金额">
+				</div>
+			</div>
+			<!--
+            	作者：offline
+            	时间：2018-01-10
+            	描述：积分设定
+            -->
+			<div class="mui-table-view-cell" style="padding-left: 0;">
+				<span>积分设定</span>
+				<div class="mui-switch">
+					<div class="mui-switch-handle"></div>
+				</div>
+			</div>
+			<div class="mui-input-group">
+				<div class="mui-input-row">
+					<label>初始积分</label>
+					<input type="text" placeholder="请输入初始积分">
+				</div>
+				<div class="mui-input-row">
+					<label>充值比例</label>
+					<label style="color: #000000;line-height: 1.1;padding: 11px 0;width: 15%;">每充值</label>
+					<input type="number" placeholder="0" style="width: 25%;float: left;text-align: center;">
+					<label style="color: #000000;line-height: 1.1;padding: 11px 0;width: 25%;">元可积1分</label>
+				</div>
+				<div class="mui-input-row">
+					<label>快消比例</label>
+					<div class="">
+						<label style="color: #000000;line-height: 1.1;padding: 11px 0;width: 15%;">每消费</label>
+						<input type="number" placeholder="0" style="width: 25%;float: left;text-align: center;">
+						<label style="color: #000000;line-height: 1.1;padding: 11px 0;width: 25%;">元可积1分</label>
+					</div>
+				</div>
+				<div class="mui-input-row">
+					<label>商品积分</label>
+				</div>
+				<div class="mui-input-group">
+					<div class="mui-input-row mui-radio mui-left">
+						<label style="width: 36%;padding-right: 0;">统一设置</label>
+						<input name="radio1" type="radio" checked>
+						<label style="width: 15%;padding: 11px 0;">每消费</label>
+						<input type="number" placeholder="0" style="width: 20%;float: inherit;text-align: center;">
+						<label style="width: 24%;padding: 11px 0;">元可积1分</label>
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label style="width: 36%;padding-right: 0;">详细设置</label>
+						<input name="radio1" type="radio">
+						<p style="width: 32%;float:right ;padding: 10px 0;color: #0075d7;font-size: 14px;">点击设置详情</p>
+					</div>
+				</div>
+			</div>
+			<!--
+            	作者：offline
+            	时间：2018-01-10
+            	描述：折扣设定
+            -->
+			<div class="mui-table-view-cell" style="padding-left: 0;">
+				<span>折扣设定</span>
+				<div class="mui-switch">
+					<div class="mui-switch-handle"></div>
+				</div>
+			</div>
+			<div class="mui-input-group">
+				<div class="mui-input-row">
+					<label>快消比例</label>
+					<input type="number" placeholder="1-100" style="width: 55%;float: left;text-align: center;">
+					<label style="color: #000000;line-height: 1.1;padding: 11px 0;width: 10%;">%</label>
+				</div>
+				<div class="mui-input-row">
+					<label>商品折扣</label>
+				</div>
+				<div class="mui-input-group">
+					<div class="mui-input-row mui-radio mui-left">
+						<label style="width: 36%;padding-right: 0;">统一设置</label>
+						<input name="radio1" type="radio" checked>
+						<input type="number" placeholder="1-100" style="width: 50%;float: initial;text-align: center;">
+						<label style="color: #000000;line-height: 1.1;padding: 11px 0;width: 10%;">%</label>
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label style="width: 36%;padding-right: 0;">详细设置</label>
+						<input name="radio1" type="radio">
+						<p style="width: 32%;float:right ;padding: 10px 0;color: #0075d7;font-size: 14px;">点击设置详情</p>
+					</div>
+				</div>
+			</div>
+				<!--
+            	作者：offline
+            	时间：2018-01-11
+            	描述：计次设定
+           -->
+			<div class="mui-table-view-cell" style="padding-left: 0;">
+				<span>计次设定</span>
+				<div class="mui-switch">
+					<div class="mui-switch-handle">
+					</div>
+				</div>
+			</div>
+			<div class="mui-row" style="padding: 0px;margin: 0px;">
+				<div class="mui-col-sm-4" style="width: 30%;">
+					<div class="mui-input-group">
+						<div class="mui-input-row">
+							<label style="width:65%;padding-left: 5px;padding-right: 0px;">有效次数</label>
+							<input type="text"  placeholder="请输次数" style="width:35%; padding: 11px 0px;padding-left:2px;">
+						</div>
+					</div>
+				</div>
+				<div class="mui-col-sm-2" style="width: 24%;">
+					<div class="mui-input-group">
+						<div class="mui-input-row mui-checkbox">
+							<label style="width: 30%;padding:11px 2px;float: left;text-align: center;">次</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked style="left:0px;right: 5px;margin: auto;">	
+							<label style="width: 50%;padding:11px 0px;float:right; text-align: center;">限时</label>
+						</div>
+					</div>
+				</div>
+				<div class="mui-col-sm-3" style="width: 12%;">
+					<div class="mui-input-group">
+						<div class="mui-input-row mui-checkbox mui-left">
+								<input type="text" class="mui-input-clear" placeholder="请输次数" style="padding:11px 0px;padding-left:2px;">
+						</div>
+					</div>
+				</div>
+				<div class="mui-col-sm-2" style="width: 20%;">
+					<div class="mui-input-group mui-left" >
+						<div class="mui-input-row">
+						<input type="text" value="天" style="width: 75%;">							
+						<a href="#popover" id="openPopover" class="" style="width: 25%;">	
+							<span class="mui-icon mui-icon-arrowdown"></span></a>
+						</div>
+					</div>
+				</div>
+				<div class="mui-col-sm-1" style="width: 13%;">
+					<div class="mui-input-group">
+					<label class="mui-icon mui-icon-close" style="color: red;padding: 8px 2px;"></label>
+					</div>
+				</div>
+			</div>
+			<!--
+            	作者：offline
+            	时间：2018-01-11
+            	描述：限时设定
+           -->
+			<div class="mui-table-view-cell" style="padding-left: 0;">
+				<span>限时设定</span>
+				<div class="mui-switch">
+					<div class="mui-switch-handle">
+
+					</div>
+				</div>
+			</div>
+			<div class="mui-row">
+				<div class="mui-col-sm-8"  style="width: 70%;">
+					<div class="mui-input-group">
+						<div class="mui-input-row">
+							<label style="width:40%;">有效次数</label>
+							<input type="text" class="mui-input-clear" placeholder="请输次数"style="width: 60%;">
+						</div>
+					</div>
+				</div>
+				<div class="mui-col-sm-4" style="width:30%;">
+					<div class="mui-input-group">
+						<div class="mui-input-row mui-checkbox mui-left">
+							<label>不限</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mui-row">
+				<div class="mui-col-sm-4" style="width: 50%;">
+					<div class="mui-input-group" >
+						<div class="mui-input-row" >
+							<label style="width: 55%;">有效时间</label>
+							<input type="text" class="mui-input-clear" placeholder="请输入" style="width: 45%;">
+						</div>
+					</div>
+				</div>
+				<div class="mui-col-sm-4" style="width: 20%;">
+					<div class="mui-input-group mui-left" >
+						<div class="mui-input-row">
+						<input type="text" value="天" style="width: 70%;">							
+						<a href="#popover" id="openPopover" class="" style="width: 30%;">	
+							<span class="mui-icon mui-icon-arrowdown"></span></a>
+						</div>
+					</div>
+				</div>
+				<div class="mui-col-sm-4" style="width: 30%;">
+					<div class="mui-input-group">
+						<div class="mui-input-row mui-checkbox mui-left">
+							<label>不限</label>
+							<input name="checkbox1" value="Item 1" type="checkbox" checked>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popover" class="mui-popover">
+  <ul class="mui-table-view">
+    <li class="mui-table-view-cell"><a href="#">Item1</a></li>
+    <li class="mui-table-view-cell"><a href="#">Item2</a></li>
+    <li class="mui-table-view-cell"><a href="#">Item3</a></li>
+    <li class="mui-table-view-cell"><a href="#">Item4</a></li>
+    <li class="mui-table-view-cell"><a href="#">Item5</a></li>
+  </ul>
+</div>
+			<script src="../js/mui.js"></script>
+			<script src="../js/jquery-2.1.1.min.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					mui.init({
+						swipeBack: true //启用右滑关闭功能				
+					});
+					mui('.mui-scroll-wrapper').scroll();
+					mui('body').on('shown', '.mui-popover', function(e) {
+						//console.log('shown', e.detail.id);//detail为当前popover元素
+					});
+					mui('body').on('hidden', '.mui-popover', function(e) {
+						//console.log('hidden', e.detail.id);//detail为当前popover元素
+					});
+					mui('.mui-content .mui-switch').each(function() { //循环所有toggle
+						//toggle.classList.contains('mui-active') 可识别该toggle的开关状态
+						//				this.parentNode.querySelector('span').innerText = '储值设定' + (this.classList.contains('mui-active') ? 'true' : 'false');
+						/**
+						 * toggle 事件监听
+						 */
+						this.addEventListener('toggle', function(event) {
+							//event.detail.isActive 可直接获取当前状态
+							//					this.parentNode.querySelector('span').innerText = '储值设定' + (event.detail.isActive ? 'true' : 'false');
+						});
+					});
+				});
+			</script>
+	</body>
+
+</html>

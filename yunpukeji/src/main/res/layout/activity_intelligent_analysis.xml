@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.zhiluo.android.yunpu.analysis.IntelligentAnalysisActivity">
+    <!--头部-->
+    <RelativeLayout
+        android:id="@+id/rl_analysis_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <TextView
+            android:id="@+id/tv_analysis_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@mipmap/left_btn_n"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:text="   "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="智能分析"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_analysis_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_analysis_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:checkedButton="@+id/rb_analysis_month"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/rb_selection_left"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="15dp"
+            android:paddingTop="8dp"
+            android:text="本日"
+            android:textColor="@color/rb_text_selection" />
+
+        <RadioButton
+            android:id="@+id/rb_analysis_month"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/rb_selection_mid"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:text="本月"
+            android:textColor="@color/rb_text_selection" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/rb_selection_right"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingEnd="15dp"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:text="本年"
+            android:textColor="@color/rb_text_selection" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_line_char_dis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg_analysis_type"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="2017年9月销售走势图" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_analysis_bottom"
+        android:layout_below="@+id/tv_line_char_dis">
+
+        <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/line_chart_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+    </RelativeLayout>
+
+    <!--底部菜单-->
+    <LinearLayout
+        android:id="@+id/ll_analysis_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView style="@style/LineStyle" />
+
+        <RelativeLayout
+            android:id="@+id/rl_analysis_sale"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="销售分析" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:drawableEnd="@mipmap/right_tw" />
+        </RelativeLayout>
+
+        <TextView style="@style/LineStyle" />
+
+        <RelativeLayout
+            android:id="@+id/rl_analysis_member"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="会员分析" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:drawableEnd="@mipmap/right_tw" />
+        </RelativeLayout>
+
+        <TextView style="@style/LineStyle" />
+
+        <RelativeLayout
+            android:id="@+id/rl_analysis_good"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="商品分析" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:drawableEnd="@mipmap/right_tw" />
+        </RelativeLayout>
+
+        <TextView style="@style/LineStyle" />
+
+        <RelativeLayout
+            android:id="@+id/rl_analysis_daily"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="经营日报" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:drawableEnd="@mipmap/right_tw" />
+        </RelativeLayout>
+
+        <TextView style="@style/LineStyle" />
+    </LinearLayout>
+</RelativeLayout>

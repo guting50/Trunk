@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/ysl_gray"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="姓名:"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="@dimen/dimen_info_size" />
+
+    <TextView
+        android:id="@+id/tv_member_info_name"
+        style="@style/MemberInfoTextView"
+        android:hint="无" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="卡号:"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="@dimen/dimen_info_size" />
+
+    <TextView
+        android:id="@+id/tv_member_info_card"
+        style="@style/MemberInfoTextView"
+        android:layout_weight="3"
+        android:hint="无" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="余额:"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="@dimen/dimen_info_size" />
+
+    <TextView
+        android:id="@+id/tv_member_info_balance"
+        style="@style/MemberInfoTextView"
+        android:hint="0.00" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="积分:"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="@dimen/dimen_info_size" />
+
+    <TextView
+        android:id="@+id/tv_member_info_integral"
+        style="@style/MemberInfoTextView"
+        android:layout_marginEnd="10dp"
+        android:hint="0.00" />
+</LinearLayout>

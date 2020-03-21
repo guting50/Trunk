@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/l_two"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="70dp"
+        android:background="@drawable/shape_variable_two"
+        android:layout_margin="2dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:paddingTop="15dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_weight="1"
+            android:src="@mipmap/ysl_add_variable" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="添加快捷充值"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+</LinearLayout>

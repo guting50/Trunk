@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_pay_way"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.member.consume.activity.MemberRechargeActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/rl_pay_confirm_title"
+            layout="@layout/activity_title_member" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background">
+
+            <LinearLayout
+                android:id="@+id/ll_scan_limite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_member_recharge_back"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_border_view_radius"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_membercard_onekey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:hint="请输入会员卡号/手机号"
+                    android:padding="@dimen/editText_textview_padding"
+                    android:singleLine="true"
+                    android:textColor="@color/color_main_text_black"
+                    android:textColorHint="@color/color_text_hint_gray"
+                    android:textCursorDrawable="@drawable/shape_color_cursor"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <ImageView
+                    android:id="@+id/iv_scan_limite"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    android:src="@mipmap/ysl_ma_black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/member_info_layout" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"
+            android:layout_below="@+id/rl_head">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1.8"
+                        android:gravity="center_vertical|left"
+                        android:text="选择油品"
+                        android:textColor="@color/color_main_text_black"
+                        android:textSize="@dimen/dimen_main_size" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/re_oil_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"></android.support.v7.widget.RecyclerView>
+
+
+                <RelativeLayout
+                    android:id="@+id/r_layout_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    >
+
+                    <TextView
+                        style="@style/TextViewPayLeft"
+                        android:text="订单编号" />
+
+                    <EditText
+                        android:id="@+id/tv_pay_confirm_order"
+                        style="@style/TextViewPayRightblack"
+                        android:background="@null"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"/>
+                </RelativeLayout>
+
+                <View style="@style/LineStyle" />
+                <LinearLayout
+                    android:id="@+id/lr_order_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:layout_marginStart="10dp"
+                        android:text="订单日期" />
+
+                    <TextView
+                        android:id="@+id/et_add_member_order_date"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:inputType="date"
+                        android:maxLength="20" />
+
+                    <ImageView
+                        android:id="@+id/iv_add_member_order_date"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="5dp"
+                        android:src="@mipmap/ysl_canlander" />
+                </LinearLayout>
+                <View style="@style/LineStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_oil_unit_price"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="4"
+                        android:gravity="center_vertical|left"
+                        android:text="油品单价(元/升)"
+                        android:singleLine="true"
+                        android:textColor="@color/color_main_text_black"
+                        android:textSize="@dimen/dimen_main_size" />
+
+                    <TextView
+                        android:id="@+id/tv_oil_price"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="7"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="8dp"
+                        android:textColor="@color/color_main_text_black"
+                        android:textSize="@dimen/dimen_main_size" />
+                </LinearLayout>
+
+                <View style="@style/LineStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical|left"
+                        android:text="加油金额(元)"
+                        android:textColor="@color/color_main_text_black"
+                        android:textSize="@dimen/dimen_main_size" />
+
+                    <EditText
+                        android:id="@+id/et_oil_money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="7"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入加油金额"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="50"
+                        android:padding="@dimen/editText_textview_padding"
+                        android:singleLine="true"
+                        android:textColor="@color/color_main_text_black"
+                        android:textColorHint="@color/color_text_hint_gray"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/dimen_main_size" />
+
+
+                </LinearLayout>
+
+                <View style="@style/LineStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_oil_rise"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical|left"
+                        android:text="加油数量(升)"
+                        android:textColor="@color/color_main_text_black"
+                        android:textSize="@dimen/dimen_main_size" />
+
+                    <EditText
+                        android:id="@+id/et_oil_num"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="7"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入加油数量"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="50"
+                        android:padding="@dimen/editText_textview_padding"
+                        android:singleLine="true"
+                        android:textColor="@color/color_main_text_black"
+                        android:textColorHint="@color/color_text_hint_gray"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/dimen_main_size" />
+
+
+                </LinearLayout>
+
+                <View style="@style/LineStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1.8"
+                        android:gravity="center_vertical|left"
+                        android:text="获得积分"
+                        android:textColor="@color/color_main_text_black"
+                        android:textSize="@dimen/dimen_main_size" />
+
+                    <TextView
+                        android:id="@+id/tv_oil_integral"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="7"
+                        android:gravity="center_vertical|right"
+                        android:hint="0"
+                        android:paddingRight="8dp"
+                        android:textColor="@color/color_main_text_black"
+                        android:textSize="@dimen/dimen_main_size" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <!--收款-->
+    <LinearLayout
+        android:id="@+id/l_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_border_footer_stroke"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/red"
+            android:textSize="17sp" />
+
+        <CheckBox
+            android:id="@+id/cb_short_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/rember_password"
+            android:drawablePadding="5dp"
+            android:text="短信" />
+
+        <CheckBox
+            android:id="@+id/cb_print"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/rember_password"
+            android:drawablePadding="5dp"
+            android:text="打印" />
+
+        <TextView
+            android:id="@+id/tv_pay_confirm_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ysl_get_go"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="收款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_button_size" />
+    </LinearLayout>
+</RelativeLayout>

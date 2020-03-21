@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical"
+              tools:context="com.zhiluo.android.yunpu.goodsmanage.service.activity.ServiceListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <include layout="@layout/overall_backbutton_single_head"/>
+        <!--<ImageView-->
+        <!--android:id="@+id/imv_serlistback_activity"-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_margin="@dimen/loginmagin"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:background="@mipmap/left_btn_n" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="服务管理"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_title_font_size"/>
+
+        <ImageView
+            android:id="@+id/imv_addser_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/loginmagin2"
+            android:background="@mipmap/add_member"/>
+    </RelativeLayout>
+
+    <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+        android:id="@+id/srl_freshserlisttmng_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:above_wave_color="@color/yunpu"
+        app:blow_wave_color="@color/yunpu">
+
+        <ListView
+            android:id="@+id/lv_serlistdmgt_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@color/lightgray"
+            android:dividerHeight="1px"/>
+    </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+</LinearLayout>

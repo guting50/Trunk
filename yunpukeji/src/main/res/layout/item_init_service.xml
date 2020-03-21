@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/edittext_height"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/tv_item_init_service_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="泡温泉"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="@dimen/dimen_main_size" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:background="@drawable/shape_square"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_item_init_service_count"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightgrey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:gravity="center_vertical"
+            android:text="次"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+
+        <CheckBox
+            android:id="@+id/cb_limit_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox_selector"
+            android:drawablePadding="4dp"
+            android:paddingEnd="4dp"
+            android:text="限时"
+            android:textColor="@color/info"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightgrey" />
+
+        <EditText
+            android:id="@+id/et_item_init_service_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightgrey" />
+
+        <Spinner
+            android:id="@+id/sp_item_init_service"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:entries="@array/limit_time_type" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_item_init_delete"
+        android:layout_width="28dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:paddingEnd="4dp"
+        android:paddingStart="4dp"
+        android:src="@mipmap/cancles" />
+</LinearLayout>

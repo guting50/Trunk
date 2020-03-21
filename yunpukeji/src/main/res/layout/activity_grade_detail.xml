@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.GradeDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_grade_detail_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="等级详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <ImageView
+            android:id="@+id/iv_grade_detail_menu"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:src="@mipmap/more" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:text="基本信息"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="等级名称" />
+
+                <TextView style="@style/Flag" />
+
+                <EditText
+                    android:id="@+id/et_grade_detail_name"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入等级名称" />
+            </LinearLayout>
+
+
+            <TextView style="@style/LineStyle" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="开卡费用" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_grade_detail_money"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="0" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+
+            <RelativeLayout
+                android:id="@+id/r_chunzhi_set"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_chunzhi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:text="储值设定"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_switch_recharge_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="60dp"
+                    android:layout_toRightOf="@id/tv_chunzhi"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/right_tw" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/r_jifen_set"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_jifensheidng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:text="积分设定"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_switch_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="60dp"
+                    android:layout_toRightOf="@+id/tv_jifensheidng"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/right_tw" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r_shekou_set"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_zhekou_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:text="折扣设定"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_switch_disscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="60dp"
+                    android:layout_toRightOf="@id/tv_zhekou_set"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/right_tw" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="快消比例" />
+
+                <EditText
+                    android:id="@+id/et_grade_fast_consume_discount_scale"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="1-100" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginEnd="10dp"
+                    android:text="%" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="商品折扣"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cb_grade_discount_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/checkbox_selector"
+                    android:text="统一设置"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <EditText
+                    android:id="@+id/et_grade_goods_consume_discount_scale"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="1-100" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginEnd="10dp"
+                    android:text="%" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/LineStyle"
+                android:layout_marginStart="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cb_grade_discount_detail_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/checkbox_selector"
+                    android:text="详情设置"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_discount_set_detail"
+                    style="@style/TextViewAddMember"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical|right"
+                    android:text="点击查看详情"
+                    android:textColor="#1c5bb2" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/r_jici_set"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_jici_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:text="计次设定"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_switch_limit_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="60dp"
+                    android:layout_toRightOf="@id/tv_jici_set"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/right_tw" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/r_xianshi_set"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_xainshi_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:text="限时设定"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_switch_limit_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="60dp"
+                    android:layout_toRightOf="@id/tv_xainshi_set"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/right_tw" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:text="升降级详情"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <RelativeLayout
+                android:id="@+id/r_rise_fall_set"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_rise_fall_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:text="升降级"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:src="@mipmap/right_tw" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

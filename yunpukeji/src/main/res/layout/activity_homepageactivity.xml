@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drl_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.zhiluo.android.yunpu.home.activity.HomePageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height"
+            android:background="@color/yunpu">
+
+            <ImageView
+                android:id="@+id/imv_drawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/loginmagin"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/cemen_icon" />
+
+            <TextView
+                android:id="@+id/tv_shopnamehomepage_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_title_size" />
+        </RelativeLayout>
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/banner_height" />
+
+        <GridView
+            android:id="@+id/homepage_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4">
+
+        </GridView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="bottom|center_horizontal"
+        android:text="@string/bottom"
+        android:textColor="@color/color_text_hint_gray"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_drawer_activity"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginLeft="@dimen/loginmagin"
+        android:background="#11172d"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_shopname_drawer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/loginmagin"
+                    android:maxLength="10"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_creatorhomepage_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/loginmagin"
+                    android:layout_marginStart="@dimen/loginmagin"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_shop_typename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/loginmagin"
+                android:background="@color/yunpu"
+                android:gravity="center_vertical"
+                android:padding="2dp"
+                android:text="免费版"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_main_size" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="@dimen/loginmagin"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:layout_marginStart="@dimen/loginmagin"
+            android:background="@color/lightgray" />
+
+        <ListView
+            android:id="@+id/lv_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="#00000000" />
+
+        <TextView
+            android:id="@+id/quit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/myborder2"
+            android:drawableLeft="@mipmap/tuichu"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/loginmagin"
+            android:paddingRight="@dimen/loginmagin"
+            android:text="@string/quit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_main_size" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>

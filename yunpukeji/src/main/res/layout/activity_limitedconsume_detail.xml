@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <TextView
+            android:id="@+id/tv_no_confirm_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/left_btn_n"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:text="   "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_no_confirm_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:padding="3dp"
+            android:src="@mipmap/more" />
+
+    </RelativeLayout>
+
+
+    <!--<include layout="@layout/no_confirm_title_layout" />-->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/ysl_inout_detail"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="消费时间：" />
+
+                    <TextView
+                        android:id="@+id/tv_project_time"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="过期时间：" />
+
+                    <TextView
+                        android:id="@+id/tv_project_overtime"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="剩余次数：" />
+
+                    <TextView
+                        android:id="@+id/tv_sy_times"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/xuxian"
+                    android:layerType="software" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="消费店铺：" />
+
+                    <TextView
+                        android:id="@+id/tv_project_store"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+
+                        style="@style/wareTextStyleLeft"
+                        android:text="扣减次数：" />
+
+                    <TextView
+                        android:id="@+id/tv_kj_times"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        style="@style/wareTextStyleLeft"
+                        android:text="设        备：" />
+
+                    <TextView
+                        android:id="@+id/tv_project_device"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+
+                        style="@style/wareTextStyleLeft"
+                        android:text="操  作  员：" />
+
+                    <TextView
+                        android:id="@+id/tv_project_creator"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+
+                        style="@style/wareTextStyleLeft"
+                        android:text="备        注：" />
+
+                    <TextView
+                        android:id="@+id/tv_project_remark"
+                        style="@style/wareTextStyleRight" />
+                </RelativeLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/xuxian"
+                    android:layerType="software" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

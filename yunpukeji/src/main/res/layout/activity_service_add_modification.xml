@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <include layout="@layout/overall_backbutton_single_head"/>
+        <!--<ImageView-->
+        <!--android:id="@+id/imv_addserviceback_activity"-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_margin="@dimen/loginmagin"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:background="@mipmap/left_btn_n" />-->
+        <TextView
+            android:id="@+id/tv_titlergd_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="添加服务"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_title_font_size"/>
+
+        <TextView
+            android:id="@+id/tv_addservicekeep_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/loginmagin2"
+            android:text="保存"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loginmagin"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height"
+            >
+
+            <TextView
+                android:id="@+id/tv_sername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/adduser"
+                android:gravity="center"
+                android:text="服务名称"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_sername"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/red"/>
+
+            <EditText
+                android:id="@+id/edi_addservicename_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:maxLength="10"
+                android:paddingRight="@dimen/adduser"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/edittext_font_size"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lightgray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height">
+
+            <TextView
+                android:id="@+id/tv_serpricce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/adduser"
+                android:gravity="center"
+                android:text="服务单价"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_serpricce"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/red"/>
+
+            <EditText
+                android:id="@+id/edi_addserviceprice_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:inputType="numberDecimal"
+                android:gravity="right|center_vertical"
+                android:maxLength="6"
+                android:hint="0.00"
+                android:textColorHint="@color/yunpu"
+                android:textColor="@color/yunpu"
+                android:paddingRight="@dimen/adduser"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/edittext_font_size"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lightgray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height">
+
+            <TextView
+                android:id="@+id/tv_sertype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/adduser"
+                android:gravity="center"
+                android:text="服务分类"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_sertype"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:id="@+id/tv_addservicetype_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:drawableRight="@mipmap/right_tw"
+                android:gravity="right|center_vertical"
+                android:hint="请选择所属分类"
+                android:paddingRight="@dimen/adduser"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/edittext_font_size"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lightgray"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/adduser"
+                android:gravity="center"
+                android:text="服务简介"/>
+
+            <EditText
+                android:id="@+id/edi_addserviceabstract_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:maxLength="20"
+                android:paddingRight="@dimen/adduser"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/edittext_font_size"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

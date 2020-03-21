@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/sms_item">
+
+    <TextView
+        android:id="@+id/tv_contents_smscontentsadapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_send_smscontentsadapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_contents_smscontentsadapter"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@mipmap/icon_to_send"
+        android:padding="5dp"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_selector_yunpu"
+        android:text="发送"/>
+
+</RelativeLayout>

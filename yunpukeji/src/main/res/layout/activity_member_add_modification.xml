@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_member_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.member.activity.AddMemberActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:id="@+id/tv_titleadduser_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新增会员"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_title_font_size" />
+
+        <TextView
+            android:id="@+id/tv_keepadduser_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/loginmagin"
+            android:text="保存"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_border_common_radius_stroke"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_member_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/loginmagin2"
+                        android:layout_centerVertical="true"
+                        android:text="头像" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_marginBottom="@dimen/member_photo_padding"
+                        android:layout_marginTop="@dimen/member_photo_padding"
+                        android:id="@+id/iv_member_photo"
+                        android:layout_width="@dimen/member_photo_diameter"
+                        android:layout_height="@dimen/member_photo_diameter"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/member_photo_padding"
+                        android:src="@drawable/member_photo" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_vipcarnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/loginmagin2"
+                        android:gravity="center"
+                        android:text="会员卡号" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/tv_vipcarnum"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+<!--
+                    <ImageView
+                        android:id="@+id/iv_saoma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/add_code" />
+-->
+                    <EditText
+                        android:id="@+id/edi_vipcardadduser_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toLeftOf="@id/iv_saoma"
+                        android:layout_toRightOf="@id/tv_vipcarnum"
+                        android:background="@null"
+                        android:focusable="true"
+                        android:gravity="right|center_vertical"
+                        android:inputType="number"
+                        android:maxLength="50"
+                        android:paddingRight="@dimen/adduser"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/edittext_font_size">
+
+                        <requestFocus />
+                    </EditText>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tvname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/adduser"
+                        android:gravity="center"
+                        android:text="姓名"
+                        android:textSize="@dimen/edittext_textview_font_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/tvname"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+
+                    <EditText
+                        android:id="@+id/edi_vipnameadduser_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:maxLength="5"
+                        android:paddingRight="@dimen/adduser"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/edittext_textview_font_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_cellnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/adduser"
+                        android:gravity="center"
+                        android:text="手机号"
+                        android:textSize="@dimen/edittext_textview_font_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/tv_cellnum"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+
+                    <EditText
+                        android:id="@+id/edi_vipphoneadduser_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:paddingRight="@dimen/adduser"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/edittext_font_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_member_grade_addmemberactivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_vipleave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/loginmagin2"
+                        android:gravity="center"
+                        android:text="会员等级" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/tv_vipleave"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+
+
+                    <TextView
+                        android:id="@+id/tv_addusergrade_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:drawableRight="@mipmap/right_tw"
+                        android:gravity="center|right"
+                        android:padding="@dimen/editText_textview_padding" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/adduser"
+                        android:gravity="center"
+                        android:text="性别"
+                        android:textSize="@dimen/edittext_textview_font_size" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_adduser_activity"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:checkedButton="@+id/rb_addusersex0_activity"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/adduser">
+
+                        <RadioButton
+                            android:id="@+id/rb_addusersex0_activity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/sexradio"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="男"
+                            android:textColor="@color/sexradio"
+                            android:textSize="@dimen/edittext_textview_font_size" />
+
+                        <RadioButton
+                            android:id="@+id/rb_addusersex1_activity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/sexradio"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="女"
+                            android:textColor="@color/sexradio"
+                            android:textSize="@dimen/edittext_textview_font_size" />
+
+                        <RadioButton
+                            android:id="@+id/rb_addusersex2_activity"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/sexradio"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="保密"
+                            android:textColor="@color/sexradio"
+                            android:textSize="@dimen/edittext_textview_font_size" />
+                    </RadioGroup>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_initpwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_initial_password_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/adduser"
+                        android:gravity="center"
+                        android:text="初始密码"
+                        android:textSize="@dimen/edittext_textview_font_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/tv_initial_password_info"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+
+                    <EditText
+                        android:id="@+id/et_initial_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:digits="0123456789zxcvbnmasdfghjklqwertyuiop"
+                        android:gravity="right|center_vertical"
+                        android:hint="最小长度为3"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:paddingRight="@dimen/adduser"
+                        android:singleLine="true"
+                        android:textColorHint="@color/lightgray"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/edittext_font_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_confirmpwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_confirm_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/adduser"
+                        android:gravity="center"
+                        android:text="确认密码"
+                        android:textSize="@dimen/edittext_textview_font_size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/tv_confirm_password"
+                        android:gravity="center"
+                        android:text="*"
+                        android:textColor="@color/red" />
+
+                    <EditText
+                        android:id="@+id/et_confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:digits="0123456789zxcvbnmasdfghjklqwertyuiop"
+                        android:gravity="right|center_vertical"
+                        android:hint="最小长度为3"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:paddingRight="@dimen/adduser"
+                        android:singleLine="true"
+                        android:textColorHint="@color/lightgray"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/edittext_font_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/adduser"
+                        android:gravity="center"
+                        android:text="身份证" />
+
+                    <EditText
+                        android:id="@+id/edi_vipiccardadduser_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:inputType="number"
+                        android:maxLength="50"
+                        android:paddingRight="@dimen/adduser"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/edittext_font_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/adduser"
+                        android:gravity="center"
+                        android:text="生日" />
+
+                    <TextView
+                        android:id="@+id/tv_vipbirthdayadduser_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:paddingRight="@dimen/adduser"
+                        android:textSize="@dimen/edittext_font_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_border_common_radius_stroke"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_referrer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/adduser"
+                        android:gravity="center"
+                        android:text="推荐人" />
+
+                    <TextView
+                        android:id="@+id/tv_referrer_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/tv_referrer"
+                        android:gravity="left|center_vertical"
+                        android:hint="无"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/yunpu"
+                        android:textColorHint="@color/yunpu"
+                        android:textSize="@dimen/edittext_font_size" />
+
+                    <EditText
+                        android:id="@+id/edt_referrer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入推荐人卡号"
+                        android:paddingRight="@dimen/adduser"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColorHint="@color/lightgray"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/edittext_font_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/edittext_height">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginLeft="@dimen/adduser"-->
+                <!--android:gravity="center"-->
+                <!--android:text="开卡员工"/>-->
+
+                <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:background="@null"-->
+                <!--android:gravity="right|center_vertical"-->
+                <!--android:hint=""-->
+                <!--android:paddingRight="@dimen/adduser"-->
+                <!--android:singleLine="true"-->
+                <!--android:textCursorDrawable="@drawable/shape_color_cursor"-->
+                <!--android:textSize="@dimen/edittext_font_size"/>-->
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:background="@color/lightgray"/>-->
+                <!--</RelativeLayout>-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_open_card_fees_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/loginmagin2"
+                        android:gravity="center"
+                        android:text="开卡费用" />
+
+                    <EditText
+                        android:id="@+id/edt_open_card_fees"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/tv_open_card_fees_info"
+                        android:background="@null"
+                        android:gravity="center_vertical|left"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/yunpu"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/edittext_font_size" />
+                    <Spinner
+                        android:id="@+id/spinner_opencard_way"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:entries="@array/data"
+                        />
+<!--
+                    <TextView
+                        android:id="@+id/tv_sell_card_way"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:drawableRight="@mipmap/sellcardway48"
+                        android:gravity="center_vertical|left"
+                        android:padding="@dimen/editText_textview_padding"
+                        android:text="现金支付"
+                        android:textColorHint="@color/lightgray" />
+                    -->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height">
+
+                    <TextView
+                        android:id="@+id/tv_commission_empl_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/loginmagin2"
+                        android:gravity="center"
+                        android:text="提成员工" />
+
+                    <TextView
+                        android:id="@+id/tv_commission_empl_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@id/tv_commission_empl_info"
+                        android:gravity="left|center_vertical"
+                        android:hint="无"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/yunpu"
+                        android:textColorHint="@color/yunpu"
+                        android:textSize="@dimen/edittext_font_size" />
+
+                    <TextView
+                        android:id="@+id/tv_commission_empl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:drawableRight="@mipmap/right_tw"
+                        android:gravity="center|right"
+                        android:padding="@dimen/editText_textview_padding" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/adduser"
+                        android:gravity="center"
+                        android:text="消费密码" />
+
+                    <EditText
+                        android:id="@+id/edi_adduservippass_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:maxLength="6"
+                        android:paddingRight="@dimen/adduser"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/edittext_font_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/lightgray" />
+                </RelativeLayout>
+            </LinearLayout>
+<!--
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_margin="10dp"
+                android:layout_marginTop="@dimen/adduser"
+                android:background="@drawable/shape_border_common_radius_stroke">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/adduser"
+                    android:gravity="center"
+                    android:text="会员状态" />
+
+                <TextView
+                    android:id="@+id/tv_adduserstate_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/loginmagin2"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/adduser"
+                    android:singleLine="true"
+                    android:text="正常" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lightgray" />
+            </RelativeLayout>
+            -->
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

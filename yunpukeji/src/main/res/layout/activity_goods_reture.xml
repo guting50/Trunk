@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <include
+        android:id="@+id/reture_title"
+        layout="@layout/no_confirm_title_layout" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reture_title"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/r_layout_num"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                style="@style/TextViewPayLeft"
+                android:text="退货数量：" />
+
+            <EditText
+                android:id="@+id/tv_reture_num"
+                style="@style/TextViewPayRightblack"
+                android:background="@null"
+                android:inputType="number|numberDecimal"
+                android:textCursorDrawable="@drawable/shape_color_cursor"/>
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+
+        <RelativeLayout
+            android:id="@+id/r_layout_money"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            >
+
+            <TextView
+                style="@style/TextViewPayLeft"
+                android:text="退款金额：" />
+
+            <EditText
+                android:id="@+id/tv_reture_money"
+                style="@style/TextViewPayRightblack"
+                android:background="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="numberDecimal|number"
+                android:textCursorDrawable="@drawable/shape_color_cursor"/>
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+        <RelativeLayout
+            android:id="@+id/rl_reture_integral"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@color/lightgray"
+            >
+
+            <TextView
+                style="@style/TextViewPayLeft"
+                android:text="扣除积分：" />
+
+            <EditText
+                android:id="@+id/et_reture_integral"
+                style="@style/TextViewPayRightblack"
+                android:background="@null"
+                android:inputType="numberDecimal|number"
+                android:enabled="false"
+                android:textCursorDrawable="@drawable/shape_color_cursor"/>
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+
+        <LinearLayout
+            android:id="@+id/lr_order_time"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@color/lightgray"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/TextViewPayLeft"
+                android:layout_marginStart="10dp"
+                android:text="退货时间：" />
+
+            <TextView
+                android:id="@+id/tv_reture_order_date"
+                style="@style/EditTextStyleAddMember"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="date"
+                android:maxLength="20" />
+
+            <ImageView
+                android:id="@+id/iv_reture_order_date"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/ysl_canlander" />
+        </LinearLayout>
+
+        <View style="@style/LineStyle" />
+
+        <RelativeLayout
+            android:id="@+id/rl_reture_means"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height">
+
+            <TextView
+                android:id="@+id/tv_em"
+                style="@style/TextViewPayLeft"
+                android:text="退款方式："/>
+
+            <TextView
+                android:id="@+id/tv_reture_means"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/dimen_main_size"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_em"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@mipmap/right_tw"
+                />
+        </RelativeLayout>
+
+        <View style="@style/LineStyle" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewPayLeft"
+                android:text="备注信息：" />
+
+            <EditText
+                android:id="@+id/et_constom_pay_detail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="8"
+                android:background="@null"
+                android:gravity="center_vertical|right"
+                android:singleLine="true"
+                android:hint="请输入备注信息"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--收款-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_border_footer_stroke"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <CheckBox
+            android:id="@+id/cb_entry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:button="@null"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/rember_password"
+            android:drawablePadding="5dp"
+            android:checked="true"
+            android:text="自动入库" />
+
+
+        <CheckBox
+            android:id="@+id/cb_rebate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:button="@null"
+            android:drawableLeft="@drawable/rember_password"
+            android:checked="true"
+            android:drawablePadding="5dp"
+            android:text="撤销提成和返利" />
+
+        <CheckBox
+            android:id="@+id/cb_print"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:button="@null"
+            android:drawableLeft="@drawable/rember_password"
+            android:checked="true"
+            android:drawablePadding="5dp"
+            android:text="打印"
+            />
+
+        <TextView
+            android:id="@+id/btn_reture_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ysl_get_go"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="退货"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_button_size"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

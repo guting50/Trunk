@@ -1,0 +1,90 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">云上铺会员管理收银系统</string>
+<!--    <string name="app_name">会员管理系统</string>-->
+    <string name="app_test">测试版</string>
+    <string name="longinusername">手机号或邮箱</string>
+    <string name="longinpaseword">密码</string>
+    <string name="signup">30秒免费</string>
+    <string name="tosignup">注册</string>
+    <string name="quit">\t退出登录</string>
+    <string name="about">\t\t\t\t云上铺是智络旗下的一款基于互联网+的会员管理软件，总部位于中国深圳,主要
+        针对企业进行会员制营销，管理和策划。研发与销售会员管理软件，结合微信应用，移动pos消费领域，二维码
+        消费支付，配合新颖时尚的电子会员卡，广泛应用于酒店，餐饮，美容美发，汽车销售，珠宝首饰，航空送票，服装
+        ，化妆品，手机卖场，房地产等多个行业。
+    </string>
+    <string name="bottom">©\t2015-2018\tAll\tRights\tReserved\tV1.6.9.0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="goodscode">1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM</string>
+
+
+    <string name="pl_cancel">取消</string>
+    <string name="pl_confirm">确定</string>
+    <string name="pl_confirm_pattern">再次绘制确认</string>
+    <string name="pl_continue">继续</string>
+    <string name="pl_draw_pattern">绘制解锁图案</string>
+    <string name="pl_draw_pattern_to_unlock">绘制图案来解锁</string>
+    <string name="pl_forgot_pattern">忘记手势密码</string>
+    <string name="pl_pattern_confirmed">你的新解锁图案</string>
+    <string name="pl_pattern_recorded">图案已记录</string>
+    <string name="pl_pattern_too_short">至少连接 %d 个点, 请重画</string>
+    <string name="pl_recording_pattern">完成后抬起手指</string>
+    <string name="pl_redraw">重画</string>
+    <string name="pl_wrong_pattern">图案错误, 请重试</string>
+
+    <string name="pl_access_pattern_start">图案开始</string>
+    <string name="pl_access_pattern_cleared">清除图案</string>
+    <string name="pl_access_pattern_cell_added">添加绘制点</string>
+    <string name="pl_access_pattern_cell_added_verbose">Cell <xliff:g example="3" id="cell_index">%1$s</xliff:g> added</string>
+    <string name="pl_access_pattern_detected">图案完成</string>
+    <string name="pl_access_pattern_area">Pattern area.</string>
+    <string name="title_activity_sss">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="title_activity_aaa">Sign in</string>
+
+
+    <!-- 通知窗样式 -->
+    <style name="notify_dialog_style" parent="android:Theme.Light">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <string name="NumberOrLetter">0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm</string>
+
+    <string-array name="paywaylist">
+        <item>现金支付</item>
+        <item>余额支付</item>
+        <item>微信记账</item>
+        <item>支付宝记账</item>
+        <item>银联支付</item>
+    </string-array>
+    <string-array name="intergalrule">
+        <item>会员等级积分</item>
+        <item>商品固定积分</item>
+        <item>本商品不积分</item>
+    </string-array>
+
+    <string-array name="synstate">
+        <item>不同步</item>
+        <item>同步</item>
+    </string-array>
+    <string-array name="goodstype">
+        <item>普通商品</item>
+        <item>服务商品</item>
+    </string-array>
+</resources>

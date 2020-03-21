@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <Spinner
+            android:id="@+id/sp_opttype_dia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/loginmagin"
+            android:layout_margin="@dimen/loginmagin"
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_opttypeok_dia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:background="@color/yunpu"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            />
+        <Button
+            android:id="@+id/btn_opttypeno_dia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:background="@color/quxiao"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            />
+    </LinearLayout>
+</LinearLayout>

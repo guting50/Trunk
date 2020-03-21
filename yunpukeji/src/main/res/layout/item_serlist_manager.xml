@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selector_clicked_item"
+    android:padding="5dp">
+
+
+    <com.zhiluo.android.yunpu.goods.consume.view.ShapedImageView
+        android:id="@+id/iv_gift"
+        android:layout_width="@dimen/goods_picture_height"
+        android:layout_height="@dimen/goods_picture_height"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:src="@drawable/defalut_goods"
+        app:round_radius="8dp"
+        app:shape_mode="round_rect"
+        app:stroke_color="@color/white"
+        app:stroke_width="0.6dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/iv_gift"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_sername_lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务单价:" />
+
+            <TextView
+                android:id="@+id/tv_sernum_lv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yunpu" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_sertype_lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

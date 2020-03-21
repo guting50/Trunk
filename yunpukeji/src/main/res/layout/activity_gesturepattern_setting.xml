@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_message_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="请绘制密码图案"
+
+            android:textAppearance="?android:textAppearanceMedium"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_contraction_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_11"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="3dp"
+            android:src="@drawable/shape_gesturepatter_circle_contraction"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_12"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="3dp"
+            android:src="@drawable/shape_gesturepatter_circle_contraction"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_13"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="3dp"
+            android:src="@drawable/shape_gesturepatter_circle_contraction"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_contraction_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_21"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="3dp"
+            android:src="@drawable/shape_gesturepatter_circle_contraction"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_22"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="3dp"
+            android:src="@drawable/shape_gesturepatter_circle_contraction"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_23"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="3dp"
+            android:src="@drawable/shape_gesturepatter_circle_contraction"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_contraction_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_31"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="3dp"
+            android:src="@drawable/shape_gesturepatter_circle_contraction"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_32"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="3dp"
+            android:src="@drawable/shape_gesturepatter_circle_contraction"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/iv_33"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="3dp"
+            android:src="@drawable/shape_gesturepatter_circle_contraction"
+            android:scaleType="centerCrop"/>
+
+    </LinearLayout>
+
+    <com.takwolf.android.lock9.Lock9View
+        android:id="@+id/lock_9_view_setting"
+        android:layout_width="@dimen/Lock9View_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        app:lock9_autoLink="false"
+        app:lock9_enableVibrate="true"
+        app:lock9_lineColor="@color/line_pwd"
+        app:lock9_lineWidth="3dp"
+        app:lock9_nodeOnAnim="@anim/node_on_1"
+        app:lock9_nodeOnSrc="@mipmap/gesture_circle64yellow"
+        app:lock9_nodeSrc="@mipmap/gesture_circle64gray"
+        app:lock9_nodeSize="@dimen/lock9_nodeSize"
+        app:lock9_padding="28dp"
+        app:lock9_spacing="28dp"
+        app:lock9_vibrateTime="10"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textSize="18sp"
+            />
+    </RelativeLayout>
+</LinearLayout>

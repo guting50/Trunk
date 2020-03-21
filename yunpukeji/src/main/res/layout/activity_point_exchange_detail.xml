@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.statistics.order.activity.PointExchangeDetailActivity">
+
+    <include layout="@layout/no_confirm_title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_goods_order_num_name"
+                    style="@style/TextViewAddMember"
+                    android:text="兑换单号：" />
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_order"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_goods_order_num_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_goods_order_name_name"
+                    style="@style/TextViewAddMember"
+                    android:text="会员姓名：" />
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_name"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_goods_order_name_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_goods_order_card_name"
+                    style="@style/TextViewAddMember"
+                    android:text="会员卡号：" />
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_card"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_goods_order_card_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_goods_order_consume"
+                    style="@style/TextViewAddMember"
+                    android:text="兑换数量：" />
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_num"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_goods_order_consume"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_rebate_list_time_name"
+                    style="@style/TextViewAddMember"
+                    android:text="消费积分：" />
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_consume"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_rebate_list_time_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_rebate_list_balance_name"
+                    style="@style/TextViewAddMember"
+                    android:text="剩余积分：" />
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_left"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_rebate_list_balance_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_rebate_list_point_name"
+                    style="@style/TextViewAddMember"
+                    android:text="兑换店铺：" />
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_shop"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_rebate_list_point_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_rebate_detail_depict_name"
+                    style="@style/TextViewAddMember"
+                    android:text="设备：" />
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_device"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_rebate_detail_depict_name"
+                    android:singleLine="true"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_rebate_detail_time_name"
+                    style="@style/TextViewAddMember"
+                    android:text="兑换时间：" />
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_exchange_time"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_rebate_detail_time_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_goods_order_device_name"
+                    style="@style/TextViewAddMember"
+                    android:text="操作员：" />
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_operation"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_goods_order_device_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_remark_name"
+                    style="@style/TextViewAddMember"
+                    android:text="备注：" />
+
+                <TextView
+                    android:id="@+id/tv_point_exchange_remark"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_point_exchange_remark_name"
+                    android:textColor="@color/color_main_text_black" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_goods_order_detail_name"
+                    style="@style/TextViewAddMember"
+                    android:text="礼品详情：" />
+
+                <TextView
+                    android:id="@+id/tv_point_order_detail"
+                    style="@style/TextViewPayRight"
+                    android:layout_toEndOf="@+id/tv_goods_order_detail_name"
+                    android:text="点击查看礼品详情"
+                    android:textColor="@color/yunpu" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

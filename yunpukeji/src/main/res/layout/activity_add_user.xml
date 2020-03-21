@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.user.AddUserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新增用户"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+
+        <TextView
+            android:id="@+id/tv_add_user_save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:gravity="center_vertical"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
+                android:text="提示：子账号由手机号+编号构成，编号为3位数。"
+                android:gravity="left"
+                android:textColor="@color/red" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="例如：183xxxxxxxx001"
+                android:layout_marginStart="50dp"
+                android:gravity="left"
+                android:textColor="@color/red" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_add_member_head"
+                    android:layout_width="@dimen/head_image_height"
+                    android:layout_height="@dimen/head_image_height"
+                    android:layout_alignParentEnd="true"
+                    android:padding="10dp"
+                    android:src="@mipmap/ysl_member_head_imgs" />
+
+                <RelativeLayout
+                    android:id="@+id/ll_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_toStartOf="@+id/civ_add_member_head"
+                    >
+
+                    <TextView
+                        android:id="@+id/et_add_user_account_name"
+                        style="@style/TextViewAddMember"
+                        android:text="登录账号" />
+
+                    <TextView
+                        android:id="@+id/et_add_user_account_name_start"
+                        style="@style/Flag"
+                        android:layout_toRightOf="@+id/et_add_user_account_name"/>
+
+                    <EditText
+                        android:id="@+id/et_add_user_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/color_main_text_black"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:layout_toRightOf="@+id/et_add_user_account_name_start"
+                        android:layout_toLeftOf="@+id/et_add_user_account_line"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/dimen_main_size"
+                        android:textColorHint="@color/color_text_hint_gray"
+                        android:paddingEnd="@dimen/adduser"
+                        android:text=""
+                        android:hint="手机号" />
+                    <TextView
+                        android:id="@+id/et_add_user_account_line"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/black"
+                        android:layout_toLeftOf="@+id/et_add_user_num"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_add_user_num"
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/color_main_text_black"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/shape_color_cursor"
+                        android:textSize="@dimen/dimen_main_size"
+                        android:textColorHint="@color/color_text_hint_gray"
+                        android:paddingEnd="@dimen/adduser"
+                        android:layout_alignParentEnd="true"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:text=""
+                        android:hint="编号" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_line"
+                    style="@style/LineStyle"
+                    android:layout_toStartOf="@+id/civ_add_member_head"
+                    android:layout_below="@+id/ll_name"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_toStartOf="@+id/civ_add_member_head"
+                    android:layout_below="@+id/tv_line"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:text="用户名称" />
+
+                    <TextView style="@style/Flag" />
+
+                    <EditText
+                        android:id="@+id/et_add_user_name"
+                        style="@style/EditTextStyleAddMember"
+                        android:hint="请输入用户名称" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="登录密码" />
+
+                <TextView style="@style/Flag" />
+
+                <EditText
+                    android:id="@+id/et_add_user_paw"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入登录密码"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="用户角色" />
+
+                <TextView style="@style/Flag" />
+
+                <TextView
+                    android:id="@+id/tv_role"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:hint="请点击选择"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/text_black"
+                    android:drawableEnd="@mipmap/right_tw"/>
+
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="所属店铺" />
+
+                <TextView style="@style/Flag" />
+
+                <TextView
+                    android:id="@+id/tv_shop"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:hint="请点击选择"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/text_black"
+                    android:drawableEnd="@mipmap/right_tw"/>
+
+            </LinearLayout>
+
+            <!--<TextView style="@style/LineStyle" />-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/edittext_height"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--style="@style/TextViewAddMember"-->
+                    <!--android:text="关联员工" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_staff"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center_vertical|right"-->
+                    <!--android:hint="请点击选择"-->
+                    <!--android:paddingEnd="10dp"-->
+                    <!--android:textColor="@color/text_black"-->
+                    <!--android:drawableEnd="@mipmap/right_tw"/>-->
+
+            <!--</LinearLayout>-->
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="是否锁定" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:layout_width="40dp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_issuoding"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:hint="请点击选择"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/text_black"
+                    android:drawableEnd="@mipmap/right_tw"/>
+
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="联系方式" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_add_user_phone"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入联系方式"
+                    android:inputType="phone"
+                    android:maxLength="11" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="备注信息" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_add_user_remark"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入备注信息" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,117 @@
+// Generated code from Butter Knife. Do not modify!
+package com.zhiluo.android.yunpu.ui.activity;
+
+import android.view.View;
+import butterknife.ButterKnife.Finder;
+import butterknife.ButterKnife.ViewBinder;
+
+public class EditGradeActivity$$ViewBinder<T extends com.zhiluo.android.yunpu.ui.activity.EditGradeActivity> implements ViewBinder<T> {
+  @Override public void bind(final Finder finder, final T target, Object source) {
+    View view;
+    view = finder.findRequiredView(source, 2131298297, "field 'tvBack'");
+    target.tvBack = finder.castView(view, 2131298297, "field 'tvBack'");
+    view = finder.findRequiredView(source, 2131298424, "field 'tvSave'");
+    target.tvSave = finder.castView(view, 2131298424, "field 'tvSave'");
+    view = finder.findRequiredView(source, 2131296848, "field 'etName'");
+    target.etName = finder.castView(view, 2131296848, "field 'etName'");
+    view = finder.findRequiredView(source, 2131296843, "field 'etCode'");
+    target.etCode = finder.castView(view, 2131296843, "field 'etCode'");
+    view = finder.findRequiredView(source, 2131296844, "field 'etCondition'");
+    target.etCondition = finder.castView(view, 2131296844, "field 'etCondition'");
+    view = finder.findRequiredView(source, 2131296847, "field 'etMoney'");
+    target.etMoney = finder.castView(view, 2131296847, "field 'etMoney'");
+    view = finder.findRequiredView(source, 2131296481, "field 'cbUpGrade'");
+    target.cbUpGrade = finder.castView(view, 2131296481, "field 'cbUpGrade'");
+    view = finder.findRequiredView(source, 2131296480, "field 'cbDownGrade'");
+    target.cbDownGrade = finder.castView(view, 2131296480, "field 'cbDownGrade'");
+    view = finder.findRequiredView(source, 2131298119, "field 'sbRechargeMoney'");
+    target.sbRechargeMoney = finder.castView(view, 2131298119, "field 'sbRechargeMoney'");
+    view = finder.findRequiredView(source, 2131296846, "field 'etInitMoney'");
+    target.etInitMoney = finder.castView(view, 2131296846, "field 'etInitMoney'");
+    view = finder.findRequiredView(source, 2131298114, "field 'sbIntegral'");
+    target.sbIntegral = finder.castView(view, 2131298114, "field 'sbIntegral'");
+    view = finder.findRequiredView(source, 2131296845, "field 'etInitIntegral'");
+    target.etInitIntegral = finder.castView(view, 2131296845, "field 'etInitIntegral'");
+    view = finder.findRequiredView(source, 2131296855, "field 'etRechargeIntegralScale'");
+    target.etRechargeIntegralScale = finder.castView(view, 2131296855, "field 'etRechargeIntegralScale'");
+    view = finder.findRequiredView(source, 2131296852, "field 'etFastConsumeIntegralScale'");
+    target.etFastConsumeIntegralScale = finder.castView(view, 2131296852, "field 'etFastConsumeIntegralScale'");
+    view = finder.findRequiredView(source, 2131296487, "field 'cbIntegralSet'");
+    target.cbIntegralSet = finder.castView(view, 2131296487, "field 'cbIntegralSet'");
+    view = finder.findRequiredView(source, 2131296854, "field 'etGoodsConsumeIntegralScale'");
+    target.etGoodsConsumeIntegralScale = finder.castView(view, 2131296854, "field 'etGoodsConsumeIntegralScale'");
+    view = finder.findRequiredView(source, 2131296486, "field 'cbIntegralDetailSet'");
+    target.cbIntegralDetailSet = finder.castView(view, 2131296486, "field 'cbIntegralDetailSet'");
+    view = finder.findRequiredView(source, 2131298577, "field 'tvIntegralSetDetail'");
+    target.tvIntegralSetDetail = finder.castView(view, 2131298577, "field 'tvIntegralSetDetail'");
+    view = finder.findRequiredView(source, 2131298112, "field 'sbDiscount'");
+    target.sbDiscount = finder.castView(view, 2131298112, "field 'sbDiscount'");
+    view = finder.findRequiredView(source, 2131296851, "field 'etFastConsumeDiscountScale'");
+    target.etFastConsumeDiscountScale = finder.castView(view, 2131296851, "field 'etFastConsumeDiscountScale'");
+    view = finder.findRequiredView(source, 2131296483, "field 'cbDiscountSet'");
+    target.cbDiscountSet = finder.castView(view, 2131296483, "field 'cbDiscountSet'");
+    view = finder.findRequiredView(source, 2131296853, "field 'etGoodsConsumeDiscountScale'");
+    target.etGoodsConsumeDiscountScale = finder.castView(view, 2131296853, "field 'etGoodsConsumeDiscountScale'");
+    view = finder.findRequiredView(source, 2131296482, "field 'cbDiscountDetailSet'");
+    target.cbDiscountDetailSet = finder.castView(view, 2131296482, "field 'cbDiscountDetailSet'");
+    view = finder.findRequiredView(source, 2131298418, "field 'tvDiscountSetDetail'");
+    target.tvDiscountSetDetail = finder.castView(view, 2131298418, "field 'tvDiscountSetDetail'");
+    view = finder.findRequiredView(source, 2131298117, "field 'sbLimitTime'");
+    target.sbLimitTime = finder.castView(view, 2131298117, "field 'sbLimitTime'");
+    view = finder.findRequiredView(source, 2131296850, "field 'etEffectiveTimes'");
+    target.etEffectiveTimes = finder.castView(view, 2131296850, "field 'etEffectiveTimes'");
+    view = finder.findRequiredView(source, 2131296484, "field 'cbEffectiveCount'");
+    target.cbEffectiveCount = finder.castView(view, 2131296484, "field 'cbEffectiveCount'");
+    view = finder.findRequiredView(source, 2131296849, "field 'etEffectiveTime'");
+    target.etEffectiveTime = finder.castView(view, 2131296849, "field 'etEffectiveTime'");
+    view = finder.findRequiredView(source, 2131298062, "field 'spDetailTimeType'");
+    target.spDetailTimeType = finder.castView(view, 2131298062, "field 'spDetailTimeType'");
+    view = finder.findRequiredView(source, 2131296485, "field 'cbEffectiveTime'");
+    target.cbEffectiveTime = finder.castView(view, 2131296485, "field 'cbEffectiveTime'");
+    view = finder.findRequiredView(source, 2131298118, "field 'sbLimitTimes'");
+    target.sbLimitTimes = finder.castView(view, 2131298118, "field 'sbLimitTimes'");
+    view = finder.findRequiredView(source, 2131296354, "field 'btnClear'");
+    target.btnClear = finder.castView(view, 2131296354, "field 'btnClear'");
+    view = finder.findRequiredView(source, 2131296338, "field 'btnAdd'");
+    target.btnAdd = finder.castView(view, 2131296338, "field 'btnAdd'");
+    view = finder.findRequiredView(source, 2131297489, "field 'lvGradeDetail'");
+    target.lvGradeDetail = finder.castView(view, 2131297489, "field 'lvGradeDetail'");
+  }
+
+  @Override public void unbind(T target) {
+    target.tvBack = null;
+    target.tvSave = null;
+    target.etName = null;
+    target.etCode = null;
+    target.etCondition = null;
+    target.etMoney = null;
+    target.cbUpGrade = null;
+    target.cbDownGrade = null;
+    target.sbRechargeMoney = null;
+    target.etInitMoney = null;
+    target.sbIntegral = null;
+    target.etInitIntegral = null;
+    target.etRechargeIntegralScale = null;
+    target.etFastConsumeIntegralScale = null;
+    target.cbIntegralSet = null;
+    target.etGoodsConsumeIntegralScale = null;
+    target.cbIntegralDetailSet = null;
+    target.tvIntegralSetDetail = null;
+    target.sbDiscount = null;
+    target.etFastConsumeDiscountScale = null;
+    target.cbDiscountSet = null;
+    target.etGoodsConsumeDiscountScale = null;
+    target.cbDiscountDetailSet = null;
+    target.tvDiscountSetDetail = null;
+    target.sbLimitTime = null;
+    target.etEffectiveTimes = null;
+    target.cbEffectiveCount = null;
+    target.etEffectiveTime = null;
+    target.spDetailTimeType = null;
+    target.cbEffectiveTime = null;
+    target.sbLimitTimes = null;
+    target.btnClear = null;
+    target.btnAdd = null;
+    target.lvGradeDetail = null;
+  }
+}

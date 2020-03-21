@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.discount.AddDisActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新增优惠活动"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_add_dis_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="活动名称" />
+
+        <TextView style="@style/Flag" />
+
+        <EditText
+            android:id="@+id/et_add_dis_name"
+            style="@style/EditTextStyleAddMember"
+            android:hint="如：消费满100送20" />
+    </LinearLayout>
+
+    <TextView style="@style/LineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="消费条件" />
+
+        <TextView style="@style/Flag" />
+
+        <EditText
+            android:id="@+id/et_add_dis_money"
+            style="@style/EditTextStyleAddMember"
+            android:hint="满100"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <TextView style="@style/LineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="优惠规则" />
+
+        <TextView style="@style/Flag" />
+
+        <TextView
+            android:id="@+id/sp_add_dis_type"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:drawableRight="@mipmap/right_tw"
+            android:hint="选择规则"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/et_add_dis_give_money"
+            style="@style/EditTextStyleAddMember"
+            android:hint="请输入优惠金额"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <TextView style="@style/LineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="赠送积分" />
+
+        <TextView style="@style/Flag" />
+
+        <EditText
+            android:id="@+id/et_add_dis_give_integral"
+            style="@style/EditTextStyleAddMember"
+            android:hint="请输入赠送积分"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <TextView style="@style/LineStyle" />
+
+    <RadioGroup
+        android:id="@+id/rg_add_dis_double"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:checkedButton="@+id/rb_add_dis_double"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_add_dis_double"
+            style="@style/RadioButton"
+            android:layout_marginStart="32dp"
+            android:text="翻倍" />
+
+        <RadioButton
+            android:id="@+id/rb_add_dis_no_double"
+            style="@style/RadioButton"
+            android:checked="true"
+            android:text="不翻倍" />
+    </RadioGroup>
+
+    <TextView style="@style/LineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="有效时间" />
+
+        <TextView style="@style/Flag" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp">
+
+        <CheckBox
+            android:id="@+id/cb_forever"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="永久有效"
+            android:textColor="@color/text_black" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp">
+
+        <CheckBox
+            android:id="@+id/cb_vip_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="会员生日当天"
+            android:textColor="@color/text_black" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp">
+
+        <CheckBox
+            android:id="@+id/cb_fix_time"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="固定时间"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/te_end_time"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:hint="点击选择"
+            android:paddingRight="10dp"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/te_to"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/te_end_time"
+            android:gravity="center"
+            android:text="至"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/te_start_time"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@id/te_to"
+            android:gravity="center"
+            android:hint="点击选择"
+            android:textColor="@color/text_black" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp">
+
+        <CheckBox
+            android:id="@+id/cb_by_weeks"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="按每周"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/te_content_week"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/cb_by_weeks"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:hint="点击选择" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/background" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp">
+
+        <CheckBox
+            android:id="@+id/cb_by_months"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="按每月"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/te_content_month"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/cb_by_months"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:hint="点击选择"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/background" />
+
+</LinearLayout>

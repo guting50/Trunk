@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.HomeActivity">
+
+
+    <!--底部菜单-->
+    <RadioGroup
+        android:id="@+id/rg_homepage_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:checkedButton="@+id/rb_homepage_home"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_homepage_home"
+            style="@style/HomePageBottomMenu"
+            android:drawableTop="@drawable/homepage_home_selector"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rb_homepage_message"
+            style="@style/HomePageBottomMenu"
+            android:drawableTop="@drawable/homepage_message_selector"
+            android:text="消息" />
+
+        <RadioButton
+            android:id="@+id/rb_homepage_report"
+            style="@style/HomePageBottomMenu"
+            android:drawableTop="@drawable/homepage_report_selector"
+            android:text="统计" />
+
+        <RadioButton
+            android:id="@+id/rb_homepage_service"
+            style="@style/HomePageBottomMenu"
+            android:drawableTop="@drawable/homepage_shop_selector"
+            android:text="商城" />
+
+        <RadioButton
+            android:id="@+id/rb_homepage_my"
+            style="@style/HomePageBottomMenu"
+            android:drawableTop="@drawable/homepage_my_selector"
+            android:text="我的" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_alignParentBottom="true"
+        android:background="#00000000"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:visibility="invisible" />
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/btn_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_homepage_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/rg_homepage_bottom"
+        android:background="@color/background" />
+
+    <FrameLayout
+        android:id="@+id/fl_homepage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_homepage_line" />
+
+</RelativeLayout>

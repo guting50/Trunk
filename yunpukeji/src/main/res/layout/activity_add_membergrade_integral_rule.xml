@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+
+        <include layout="@layout/overall_backbutton_single_head"/>
+        <!--<ImageView-->
+        <!--android:id="@+id/imv_backaddusergrade_activity"-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_margin="@dimen/loginmagin"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:background="@mipmap/left_btn_n" />-->
+
+        <TextView
+            android:id="@+id/adduser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新增会员等级"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_title_font_size"/>
+
+        <TextView
+            android:id="@+id/tv_keepaddgrade_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/loginmagin"
+            android:text="保存"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+
+    <cn.iwgang.familiarrecyclerview.FamiliarRecyclerView
+        android:id="@+id/lv_addusergrade_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:scrollbars="vertical"
+        app:frv_layoutManager="linear"
+        app:frv_layoutManagerOrientation="vertical"
+        >
+
+    </cn.iwgang.familiarrecyclerview.FamiliarRecyclerView>
+</LinearLayout>

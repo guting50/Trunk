@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_recharge_other"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_more_item_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:focusableInTouchMode="false">
+
+        <TextView
+            android:id="@+id/tv_item_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:enabled="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_item_tishi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="2dp"
+            android:paddingEnd="2dp"
+            android:text="输入金额"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

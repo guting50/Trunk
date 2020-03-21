@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ysl_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/loginmagin"
+            android:drawableLeft="@mipmap/left_btn_n"
+            android:gravity="center"
+            android:text="    "
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_titel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="升降级设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <ImageView
+            android:id="@+id/img_ok"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/ysl_save_ok"
+            android:layout_centerVertical="true"
+            android:padding="3dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+    android:id="@+id/ll_rise_set"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_rise_set"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="自动升级"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switch_button_rise_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentEnd="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_rise_set"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        >
+        <TextView
+            android:id="@+id/tv_rise_set_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="升级后级别"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size"/>
+
+        <TextView
+            android:id="@+id/tv_rise_set_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:enabled="false"
+            android:drawableRight="@mipmap/right_tw"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/tv_rise_set_name"
+            android:textColor="@color/color_main_text_black"
+            />
+    </RelativeLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_fall_set"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_fall_set"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="自动降级"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_button_fall_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentEnd="true"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_fall_set"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            >
+            <TextView
+                android:id="@+id/tv_fall_set_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="降级后级别"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size"/>
+            <TextView
+                android:id="@+id/tv_fall_set_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:hint="请选择"
+                android:enabled="false"
+                android:layout_toRightOf="@+id/tv_fall_set_name"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/color_main_text_black"
+                android:drawableRight="@mipmap/right_tw"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_case_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="升降级方案"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size"/>
+
+        <TextView
+            android:id="@+id/tv_case"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:hint="请选择升降级方案"
+            android:text="按账户积分"
+            android:layout_toRightOf="@+id/tv_case_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/right_tw"
+            android:textColor="@color/color_main_text_black"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:text="条件范围"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="@dimen/dimen_main_size" />
+
+    <!--条件范围-->
+    <LinearLayout
+        android:id="@+id/ll_statistics_time_other"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/tv_min"
+            style="@style/EditTextStyleriseandfall"
+            android:layout_weight="3"
+            android:hint="条件下限"
+            android:layout_marginLeft="10dp"
+            android:enabled="false"
+            android:inputType="numberDecimal|number"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="≤  账户积分 ＜"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+
+        <EditText
+            android:id="@+id/tv_max"
+            style="@style/EditTextStyleriseandfall"
+            android:layout_weight="3"
+            android:hint="条件上限"
+            android:enabled="false"
+            android:inputType="numberDecimal|number"/>
+
+        <CheckBox
+            android:id="@+id/cb_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:button="@null"
+            android:enabled="false"
+            android:drawableStart="@drawable/checkbox_selector"
+            android:paddingRight="15dp"
+            android:text="不限"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="注：各等级的条件范围最好具有连贯性，即上一个等级的条件上限是下一个等级的条件下限；第一个等级的条件下限为0，最后一个 等级的条件上限为不限"
+        android:textColor="@color/red"
+        android:textSize="14dp"
+        android:background="@color/white"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:text="信息描述"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="@dimen/dimen_main_size" />
+
+    <TextView
+        android:id="@+id/tv_notice_rise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="1.当前等级的会员账户积分大于等于【】时将自动升级到【】"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="14dp"
+        android:background="@color/white"/>
+    <TextView
+        android:id="@+id/tv_notice_fall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:text="2.当前等级的会员账户积分小于【540】时将自动降级到【】"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="14dp"
+        android:background="@color/white"/>
+
+
+
+</LinearLayout>

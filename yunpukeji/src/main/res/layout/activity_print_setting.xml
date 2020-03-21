@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_print_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.setting.print.PrintSettingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="打印机设置"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="小票份数设置"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_recepit_num_ps"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="@dimen/loginmagin"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:digits="123456789"
+        android:hint="请输入小票份数"
+        android:maxLength="1"
+        android:numeric="integer"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:text="2"
+        android:textColor="@color/color_main_text_black"
+        android:textColorHint="@color/lightgray"
+        android:textCursorDrawable="@drawable/shape_color_cursor"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_bingo_ps"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rl_chose"
+            android:layout_gravity="bottom"
+            android:background="@drawable/button_selector_yunpu"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

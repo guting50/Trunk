@@ -1,0 +1,422 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="leftbut">
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="patternViewStyle">@style/PatternView</item>
+        <!-- Or PatternView.Light, or your own style extending these two or not. -->
+    </style>
+
+    <style name="Base.PatternView" parent="">
+        <item name="pl_aspect">square</item>
+    </style>
+
+    <style name="PatternView" parent="Base.PatternView">
+        <item name="pl_regularColor">?colorControlNormal</item>
+        <item name="pl_errorColor">#fff4511e</item>
+        <item name="pl_successColor">?colorControlActivated</item>
+    </style>
+
+    <style name="PatternView.Light" parent="Base.PatternView">
+        <item name="pl_regularColor">?colorControlNormal</item>
+        <item name="pl_errorColor">#fff4511e</item>
+        <item name="pl_successColor">?colorControlActivated</item>
+    </style>
+    <!--弹出自定义PopWindow选择拍照还是从相册中选取动画弹出样式-->
+    <style name="PhotoSelectorPopWindowStyle">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+    <!--支付页面TextView Style-->
+    <style name="TextViewPayRight">
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textColorHint">@color/red</item>
+    </style>
+    <!--支付页面TextView Style,黑色字体-->
+    <style name="TextViewPayRightblack">
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="TextViewPayGetPoint">
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textColorHint">@color/red</item>
+    </style>
+    <!--出入库详情左边字体样式-->
+    <style name="wareTextStyleLeft">
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+    <!--出入库详情右边字体样式-->
+    <style name="wareTextStyleRight">
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+
+    <style name="TextViewPayLeft">
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:gravity">center_vertical|left</item>
+    </style>
+
+    <style name="TextViewPayLeftWithPng">
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:gravity">center_vertical|left</item>
+    </style>
+    <!--横线-->
+    <style name="LineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/background</item>
+    </style>
+    <!--横线-->
+    <style name="LineStyle_add">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#e2e2e2</item>
+    </style>
+    <!--RadioButton样式-->
+    <style name="RadioButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:drawablePadding">12dp</item>
+    </style>
+    <!--EditText样式-->
+    <style name="EditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:maxLength">12</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textCursorDrawable">@drawable/shape_color_cursor</item>
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:textColorHint">@color/color_text_hint_gray</item>
+        <item name="android:inputType">numberDecimal</item>
+    </style>
+
+    <!-- popup window 显示消失动画-->
+    <style name="PopWindowAnimStyle">
+        <item name="android:windowShowAnimation">@anim/dialog_enter</item>
+        <!-- 指定显示的动画xml  -->
+        <item name="android:windowHideAnimation">@anim/dialog_exit</item>
+        <!-- 指定消失的动画xml  -->
+    </style>
+    <!-- my loading dialog -->
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="TransDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- <item name="android:background">@android:color/transparent</item> -->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="WhiteDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- <item name="android:background">@android:color/transparent</item> -->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@drawable/popup_bg</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--添加会员界面EditText样式-->
+    <style name="EditTextStyleAddMember">
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textCursorDrawable">@drawable/shape_color_cursor</item>
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:textColorHint">@color/color_text_hint_gray</item>
+        <item name="android:paddingEnd">@dimen/adduser</item>
+    </style>
+    <!--添加会员界面EditText样式-->
+    <style name="EditTextNumberType">
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:inputType">number</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textCursorDrawable">@drawable/shape_color_cursor</item>
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:textColorHint">@color/color_text_hint_gray</item>
+        <item name="android:paddingEnd">@dimen/adduser</item>
+    </style>
+    <!--添加会员界面EditText红色样式-->
+    <style name="EditTextStyleAddMemberred">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textCursorDrawable">@drawable/shape_color_cursor</item>
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:textColorHint">@color/color_text_hint_gray</item>
+        <item name="android:paddingEnd">@dimen/adduser</item>
+    </style>
+    <!--添加会员界面TextView样式-->
+    <style name="TextViewAddMember">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:textColorHint">@color/color_text_hint_gray</item>
+        <item name="android:layout_marginStart">@dimen/loginmagin2</item>
+    </style>
+    <!--添加会员下View样式-->
+    <style name="BottomViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">14dp</item>
+        <item name="android:background">@color/ysl_gray</item>
+    </style>
+
+    <style name="Spinner">
+        <item name="android:textSize">@dimen/edittext_textview_font_size</item>
+        <item name="android:textColor">@color/color_main_text_black</item>
+    </style>
+    <!--自定义PopWindow菜单布局中TextView-->
+    <style name="MenuPopWindowItem">
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--快速消费数字键盘样式-->
+    <style name="NumButton">
+        <item name="android:gravity">center</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/selector_clicked_view</item>
+    </style>
+
+    <style name="NumButton1">
+        <item name="android:gravity">center</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/selector_clicked_view</item>
+    </style>
+
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary" tools:targetApi="lollipop">#AB3700</item>
+
+    </style>
+
+    <!--TextView字体颜色和大小-->
+    <style name="Base_TextView_Style">
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:textColor">@color/color_main_text_black</item>
+    </style>
+    <!--RadioGroup-->
+    <style name="RadioButton">
+        <item name="android:drawablePadding">6dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableLeft">@drawable/checkbox_selector</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+    </style>
+
+    <style name="checkboxshape">
+        <item name="android:drawablePadding">6dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+    </style>
+
+    <!--首页底部菜单-->
+    <style name="HomePageBottomMenu">
+        <item name="android:textColor">@color/button_selctor</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:drawablePadding">1dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="StoreText">
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textColor">@color/color_item_text_gray</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+    </style>
+    <!--强制输入标记-->
+    <style name="Flag">
+        <item name="android:layout_width">14dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:text">*</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--添加商品表头图片样式-->
+    <style name="AddGoodImage">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+    <!--会员信息样式-->
+    <style name="MemberInfoTextView">
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/dimen_info_size</item>
+        <item name="android:textColor">@color/yunpu</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColorHint">@color/yunpu</item>
+        <item name="android:lines">1</item>
+    </style>
+    <!--  这个是加入的代码 -->
+    <style name="pop_show_style">
+        <item name="android:windowEnterAnimation">@anim/pop_show_in</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/pop_show_out</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <style name="masize">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <!--升降级EditText样式-->
+    <style name="EditTextStyleriseandfall">
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textCursorDrawable">@drawable/shape_color_cursor</item>
+        <item name="android:textSize">@dimen/dimen_main_size</item>
+        <item name="android:textColorHint">@color/color_text_hint_gray</item>
+        <item name="android:paddingEnd">@dimen/adduser</item>
+    </style>
+
+    <style name="TextviewAgreementtitle">
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textSize">@dimen/dimen_title_size</item>
+
+    </style>
+
+    <style name="TextviewAgreementbody">
+        <item name="android:textColor">@color/color_main_text_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textSize">@dimen/dimen_item_size</item>
+
+    </style>
+
+    <declare-styleable name="MaxHeightRecyclerView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+</resources>

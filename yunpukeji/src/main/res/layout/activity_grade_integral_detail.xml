@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ysl_gray"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.GradeIntegralDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="等级积分详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="初始积分" />
+
+
+        <EditText
+            android:id="@+id/et_origin_intergal"
+            style="@style/EditTextStyleAddMember"
+            android:hint="0.00"
+            android:enabled="false"
+            android:inputType="number" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/ysl_gray" />
+
+    <LinearLayout
+        android:id="@+id/ll_oil"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="一键加油" />
+
+
+        <EditText
+            android:id="@+id/et_onekey_oil"
+            style="@style/EditTextStyleAddMember"
+            android:hint="每消费多少元可积1分"
+            android:enabled="false"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_oil"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/ysl_gray"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="快速消费" />
+
+
+        <EditText
+            android:id="@+id/et_fast_shop"
+            style="@style/EditTextStyleAddMember"
+            android:hint="每消费多少元可积1分"
+            android:enabled="false"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/ysl_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="会员充值" />
+
+        <EditText
+            android:id="@+id/et_vip_rechange"
+            style="@style/EditTextStyleAddMember"
+            android:hint="每充值多少元可积1分"
+            android:enabled="false"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/ysl_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewAddMember"
+            android:text="商品积分" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_integral_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

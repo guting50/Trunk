@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pnw_date_time_range">
+        <item>今天</item>
+        <item>明天</item>
+        <item>后天</item>
+    </string-array>
+    <string name="app_name">dialog-picker</string>
+    <string name="timepicker_day">日</string>
+    <string name="timepicker_finish">确认</string>
+    <string name="timepicker_hour">时</string>
+    <string name="timepicker_min">分</string>
+    <string name="timepicker_month">月</string>
+    <string name="timepicker_sec">秒</string>
+    <string name="timepicker_title">选择时间</string>
+    <string name="timepicker_title_default">设置</string>
+    <string name="timepicker_year">年</string>
+    <style name="Animation.Bottom.Rising" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+    <style name="Theme.Light.NoTitle.Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+    <style name="Theme.Light.NoTitle.NoShadow.Dialog" parent="Theme.Light.NoTitle.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <declare-styleable name="ScrollPickerView">
+        <attr format="dimension" name="spv_min_text_size"/>
+        <attr format="dimension" name="spv_max_text_size"/>
+        <attr format="color" name="spv_start_color"/>
+        <attr format="color" name="spv_end_color"/>
+        <attr format="color" name="spv_center_item_background"/>
+        <attr format="integer" name="spv_visible_item_count"/>
+        <!-- 中间item的位置,默认为 mVisibleItemCount / 2-->
+        <attr format="integer" name="spv_center_item_position"/>
+        <!-- 是否循环滚动，默认为true，开启-->
+        <attr format="boolean" name="spv_is_circulation"/>
+        <!-- 不允许父组件拦截触摸事件，设置为true为不允许拦截，此时该设置才生效 -->
+        <attr format="boolean" name="spv_disallow_intercept_touch"/>
+    </declare-styleable>
+</resources>

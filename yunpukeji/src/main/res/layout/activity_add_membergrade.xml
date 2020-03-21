@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.member.activity.AddMemberGradeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height">
+
+            <TextView
+                android:id="@+id/tv_levelname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="等级名称" />
+            <TextView
+                android:layout_toRightOf="@id/tv_levelname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:layout_centerVertical="true"
+                android:textColor="@color/red" />
+
+            <EditText
+                android:id="@+id/edi_gradenameaddgrade_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="请输入级别名称"
+                android:maxLength="8"
+                android:paddingRight="@dimen/adduser"
+                android:textSize="@dimen/edittext_font_size"
+                android:singleLine="true"
+                android:textColorHint="@color/lightgray"
+                android:textCursorDrawable="@drawable/shape_color_cursor" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lightgray"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height">
+
+            <TextView
+                android:id="@+id/tv_zhekoulv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="快速消费折扣率" />
+            <TextView
+                android:id="@+id/tv_star1"
+                android:layout_toRightOf="@id/tv_zhekoulv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:layout_centerVertical="true"
+                android:textColor="@color/red" />
+            <TextView
+                android:layout_toRightOf="@id/tv_star1"
+                android:layout_marginLeft="3dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/lightgray"
+                android:text="（例:90表示9折）"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!--
+            折扣率
+            -->
+            <EditText
+                android:id="@+id/edi_dsvalueaddgrade_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="折扣率"
+                android:maxLength="3"
+                android:inputType="number"
+                android:textSize="13sp"
+                android:paddingRight="@dimen/adduser"
+                android:singleLine="true"
+                android:textColorHint="@color/lightgray"
+                android:textCursorDrawable="@drawable/shape_color_cursor" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lightgray"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height">
+
+            <TextView
+                android:id="@+id/tv_czbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="充值积分倍率"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"/>
+            <!--rs表示充值积分倍率-->
+            <TextView
+                android:id="@+id/tv_star2"
+                android:layout_toRightOf="@id/tv_czbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="*"
+                android:textColor="@color/red" />
+            <TextView
+                android:layout_toRightOf="@id/tv_star2"
+                android:layout_width="wrap_content"
+                android:text="（例:2,充值1元积2分）"
+                android:textColor="@color/lightgray"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edi_rsvalueaddgrade_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="倍率"
+                android:textSize="@dimen/edittext_font_size"
+                android:maxLength="3"
+                android:inputType="numberDecimal"
+                android:paddingRight="@dimen/adduser"
+                android:singleLine="true"
+                android:textColorHint="@color/lightgray"
+                android:textCursorDrawable="@drawable/shape_color_cursor" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lightgray"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height">
+
+            <TextView
+                android:id="@+id/tv_xfbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:text="快速消费积分倍率" />
+            <!--vs表示快速消费积分规则-->
+            <TextView
+                android:id="@+id/tv_star3"
+                android:layout_toRightOf="@id/tv_xfbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:text="*"
+                android:textColor="@color/red" />
+            <TextView
+                android:layout_toRightOf="@id/tv_star3"
+                android:layout_width="wrap_content"
+                android:text="（例:2,消费1元积2分）"
+                android:layout_centerVertical="true"
+                android:textColor="@color/lightgray"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edi_vsvalueaddgrade_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="倍率"
+                android:textSize="@dimen/edittext_font_size"
+                android:maxLength="3"
+                android:paddingRight="@dimen/adduser"
+                android:singleLine="true"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/lightgray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lightgray"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height">
+
+            <TextView
+                android:id="@+id/tv_obeyrule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="满足条件积分达到" />
+            <!--us表示充值最低金额-->
+            <TextView
+                android:layout_toRightOf="@id/tv_obeyrule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="*"
+                android:textColor="@color/red" />
+            <EditText
+                android:id="@+id/edi_usvalueaddgrade_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="请输入"
+                android:textSize="@dimen/edittext_font_size"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingRight="@dimen/adduser"
+                android:singleLine="true"
+                android:textColorHint="@color/lightgray"
+                android:textCursorDrawable="@drawable/shape_color_cursor" />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="商品/服务分类折扣积分规则设置"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/lightgray"
+        android:text="折扣率(例如90表示9折) 积分倍率（例如2表示1元2分）"
+        />
+</LinearLayout>

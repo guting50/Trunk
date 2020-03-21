@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.consume.activity.YSLFastConsumeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!--标题-->
+        <RelativeLayout
+            android:id="@+id/rl_head"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/ysl_main_style">
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@mipmap/left_btn_n"
+                android:gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:text="   "
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_title_size" />
+
+            <TextView
+                android:id="@+id/tv_title_fastconsumeactivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="快速消费"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_title_size" />
+
+
+        </RelativeLayout>
+
+
+        <!--金额相关信息-->
+        <RelativeLayout
+            android:id="@+id/rl_fast_consume_money"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_fast_consume_ys_money"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:paddingStart="4dp"
+                android:maxLength="9"
+                android:textColor="@color/black"
+                android:textSize="35sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@+id/tv_fast_consume_ys_money"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/gray"
+                android:textSize="20sp" />
+        </RelativeLayout>
+        <!--输入显示-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_fast_consume_money"
+            android:layout_below="@+id/rl_head"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_fast_consume_show_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入金额"
+                    android:maxLength="9"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <!--数字键盘-->
+    <LinearLayout
+        android:id="@+id/ll_fast_consume_keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_keyboard_7"
+                    style="@style/NumButton"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/btn_keyboard_8"
+                    style="@style/NumButton"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/btn_keyboard_9"
+                    style="@style/NumButton"
+                    android:text="9" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_keyboard_4"
+                    style="@style/NumButton"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/btn_keyboard_5"
+                    style="@style/NumButton"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/btn_keyboard_6"
+                    style="@style/NumButton"
+                    android:text="6" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_keyboard_1"
+                    style="@style/NumButton"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/btn_keyboard_2"
+                    style="@style/NumButton"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/btn_keyboard_3"
+                    style="@style/NumButton"
+                    android:text="3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btn_keyboard_0"
+                    style="@style/NumButton1"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/btn_keyboard_00"
+                    style="@style/NumButton"
+                    android:text="." />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/btn_keyboard_delete"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_clicked_view">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false">
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:background="@mipmap/delete_key"
+                        android:clickable="false"
+                        android:textColor="@color/color_main_text_black"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/l_layout_add_key"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_clicked_view"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btn_key_add_key"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/add_key"
+                        android:onClick="onClick"
+                        android:textColor="@color/red"
+                        android:textSize="25sp"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_keyboard_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="#FF693A"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="结账"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

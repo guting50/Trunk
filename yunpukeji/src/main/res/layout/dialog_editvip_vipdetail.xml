@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="8dp"
+        android:text="挂失/解挂"
+        android:textColor="@color/color_main_text_black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_cardeditvip_dia"
+        style="@style/Base_TextView_Style"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_margin="@dimen/loginmagin"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_margin="@dimen/loginmagin"
+        android:background="@drawable/shape_border_common_radius_stroke">
+
+        <Spinner
+            android:id="@+id/sp_dialog_gs_jg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/vip_state" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/lightgray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_edivipok_dia"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector_yunpu"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_button_size" />
+
+        <Button
+            android:id="@+id/btn_edivipno_dia"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_border_common_radius_stroke"
+            android:text="取消"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_button_size" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/app.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">会员等级</h1>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+			</ul>
+		</div>
+		<script src="../js/mui.js"></script>
+		<script src="../js/jquery-2.1.1.min.js"></script>
+		<script src="../js/YunAPP.Keys.js"></script>
+		<script src="../js/YunAPP.Storage.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				/*************************************** 页面初始化 **********************************/
+				var str = JSBridge.getGrade();
+				var result = JSON.parse(str);
+				var strhtml = "";
+				mui.each(result.data, function(index, item) {
+					strhtml += '<li  data-gid="' + item.GID + '" class="mui-table-view-cell"><a  class="mui-navigate-right">' + item.VG_Name + '</a></li>';
+				})
+				var obj = $(".mui-table-view").append(strhtml);
+
+				/*************************************** 事件绑定 **********************************/
+				mui(".mui-table-view").on('tap', '.mui-table-view-cell', function() {
+					var id = this.getAttribute("data-gid");
+					mui.each(result.data, function(index, item) {
+						if(item.GID == id) {
+							<!--YunAPP.Storage().Local.SetItem(YunAPP.Keys().ObjGradeInfo,item.GID);-->
+							JSBridge.jump2Detail(item.GID);
+//							mui.openWindow({
+//								id: 'detail',
+//								url: '../html/GradeDetail.html'			
+//							});
+							return;
+						}
+					})
+				})
+
+				/*************************************** 公共方法 **********************************/
+			})
+		</script>
+	</body>
+
+</html>

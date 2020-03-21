@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edi_newcardvipdetail_dia2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_margin="@dimen/loginmagin"
+        android:background="@color/white"
+        android:numeric="integer"
+        android:hint="请输入数量"
+        android:textColorHint="@color/lightgray"
+        android:digits="0123456789"
+        android:textCursorDrawable="@drawable/shape_color_cursor"
+        android:maxLength="4"
+        android:paddingLeft="@dimen/loginmagin"
+        android:singleLine="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_num_cancel2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@drawable/shape_border_common_radius_stroke"
+            android:text="取消"
+            android:textSize="@dimen/big_button_font_size"
+            android:textColor="@color/color_main_text_black"
+            />
+
+        <Button
+            android:id="@+id/btn_num_bingo2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector_yunpu"
+            android:text="确定"
+            android:textSize="@dimen/big_button_font_size"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_pay_input"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_pay_confirm_title"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="支出类别" />
+
+            <TextView style="@style/Flag" />
+
+            <TextView
+                android:id="@+id/tv_input_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:hint="请选择"
+                android:paddingEnd="10dp"
+                android:textColor="@color/text_black"
+                android:drawableEnd="@mipmap/right_tw"/>
+
+        </LinearLayout>
+
+        <View style="@style/LineStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="金         额" />
+
+            <TextView style="@style/Flag" />
+
+            <EditText
+                android:id="@+id/et_pay_input_money"
+                style="@style/EditTextStyleAddMember"
+                android:hint="请输入金额"
+                android:inputType="numberDecimal|number" />
+        </LinearLayout>
+
+        <View style="@style/LineStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="支出人员" />
+
+            <TextView style="@style/Flag" />
+
+            <TextView
+                android:id="@+id/tv_pay_input_person"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:hint="请选择"
+                android:paddingEnd="10dp"
+                android:textColor="@color/text_black"
+                android:drawableEnd="@mipmap/right_tw"/>
+
+        </LinearLayout>
+
+        <View style="@style/LineStyle" />
+
+        <LinearLayout
+            android:id="@+id/ll_pay_input_date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/TextViewAddMember"
+                android:layout_marginStart="10dp"
+                android:text="日         期" />
+            <TextView style="@style/Flag" />
+
+            <TextView
+                android:id="@+id/tv_pay_input_date"
+                style="@style/EditTextStyleAddMember"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="date"
+                android:maxLength="20" />
+
+            <ImageView
+                android:id="@+id/iv_pay_input_date"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:src="@mipmap/ysl_canlander" />
+        </LinearLayout>
+
+        <View style="@style/LineStyle" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewPayLeft"
+                android:text="备         注" />
+
+            <EditText
+                android:id="@+id/et_pay_input_remark"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="8"
+                android:background="@null"
+                android:gravity="center_vertical|right"
+                android:singleLine="true"
+                android:hint="请输入备注"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_comfirm"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_ysl_style"
+            android:text="保      存"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="loginmagin">10dp</dimen>
+    <dimen name="loginmagin2">10dp</dimen>
+    <dimen name="homepage">30dp</dimen>
+    <dimen name="big">100dp</dimen>
+    <dimen name="adduser">10dp</dimen>
+    <dimen name="adduertsex">15dp</dimen>
+    <dimen name="vipdetailtop">180dp</dimen>
+    <dimen name="edittext_font_size">14sp</dimen>
+    <dimen name="bottom">50dp</dimen>
+    <dimen name="titleheight">45dp</dimen>
+
+
+    <!--Cheng custom dimens-->
+
+    <!-- 登陆界面logo高度 -->
+    <dimen name="login_logo_height">240dp</dimen>
+    <!--banner的高度-->
+    <dimen name="banner_height">210dp</dimen>
+    <!--布局界面上下外间距-->
+    <dimen name="layout_marginBottom_and_Top">10dp</dimen>
+    <!--标题栏标题字体大小-->
+    <dimen name="head_title_font_size">16sp</dimen>
+    <!--标题栏返回按钮字体大小-->
+    <dimen name="head_back_font_size">14sp</dimen>
+    <!--头部标题栏距顶部的外间距-->
+    <dimen name="head_marginTop">10dp</dimen>
+    <!--返回按钮距左的外间距-->
+    <dimen name="head_back_marginLeft">10dp</dimen>
+    <!--头部标题栏高度-->
+    <dimen name="head_height">46dp</dimen>
+    <!--文本框的字体大小-->
+    <dimen name="edittext_textview_font_size">14sp</dimen>
+    <!--文本框的内间距-->
+    <dimen name="editText_textview_padding">8dp</dimen>
+    <!--小短按钮的字体大小-->
+    <dimen name="small_button_font_size">16sp</dimen>
+    <!--长形的大按钮的字体大小-->
+    <dimen name="big_button_font_size">18sp</dimen>
+    <!--文本框高度-->
+    <dimen name="dimen_edit_text_height">46dp</dimen>
+    <!--快速消费记录小圆圈高-->
+    <dimen name="oval_height">23dp</dimen>
+    <!--快速消费记录小圆圈宽-->
+    <dimen name="oval_width">23dp</dimen>
+    <!--解锁界面图标高-->
+    <dimen name="pattern_icon_height">50dp</dimen>
+    <!--解锁界面图标宽-->
+    <dimen name="pattern_icon_width">50dp</dimen>
+    <!--文本框高度-->
+    <dimen name="edittext_height">42dp</dimen>
+    <dimen name="pattern_layout_marginTop">30dp</dimen>
+    <dimen name="pattern_layout_marginBottom">8dp</dimen>
+    <dimen name="Lock9View_layout_width">250dp</dimen>
+    <dimen name="lock9_nodeSize">45dp</dimen>
+    <dimen name="rl_button_container_layout_margin">20dp</dimen>
+
+    <dimen name="message_center_tag_width">8dp</dimen>
+    <dimen name="message_center_tag_height">8dp</dimen>
+    <dimen name="home_gride_padding">6dp</dimen>
+    <!--会员头像直径-->
+    <dimen name="member_photo_diameter">70dp</dimen>
+    <!--会员头像与父控件间距-->
+    <dimen name="member_photo_padding">8dp</dimen>
+    <!--会员列表会员头像直接-->
+    <dimen name="member_list_diameter">58dp</dimen>
+    <!--支付方式popwindow中图标大小-->
+    <dimen name="pay_way_icon">72dp</dimen>
+    <!--会员头像高度-->
+    <dimen name="head_image_height">85dp</dimen>
+    <!--商品、礼品图片高度-->
+    <dimen name="goods_picture_height">75dp</dimen>
+</resources>

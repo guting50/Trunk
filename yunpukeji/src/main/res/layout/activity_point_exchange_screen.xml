@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.zhiluo.android.yunpu.statistics.order.activity.PointExchangeScreenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height"
+            android:background="@color/yunpu">
+
+            <TextView
+                android:id="@+id/tv_report_screen_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/left_btn_n"
+                android:gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:text="   "
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_title_size" />
+
+            <TextView
+                android:id="@+id/tv_head_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="筛选条件"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_title_size" />
+
+            <TextView
+                android:id="@+id/tv_report_screen_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_title_size" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/l_yout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yunpu"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_goods_consume_scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_border_view_radius"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_report_screen_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:gravity="left|center_vertical"
+                    android:hint="会员姓名/卡号/卡面号码"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="@dimen/editText_textview_padding"
+                    android:singleLine="true"
+                    android:textColor="@color/color_main_text_black"
+                    android:textColorHint="@color/color_text_hint_gray"
+                    android:textCursorDrawable="@drawable/shape_color_cursor"
+                    android:textSize="@dimen/dimen_main_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="订单号查询"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_title_size" />
+
+            <EditText
+                android:id="@+id/et_search_by_order"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/head_height"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/shape_border_view_radius"
+                android:cursorVisible="true"
+                android:gravity="left|center_vertical"
+                android:hint="请输入要查询的单号"
+                android:inputType="text"
+                android:maxLength="50"
+                android:padding="@dimen/editText_textview_padding"
+                android:singleLine="true"
+                android:textColor="@color/color_main_text_black"
+                android:textColorHint="@color/color_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="设备"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rg_device_type"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:checkedButton="@+id/rb_point_1"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_point_1"
+                    style="@style/RadioButton"
+                    android:text="全部" />
+
+                <RadioButton
+                    android:id="@+id/rb_point_2"
+                    style="@style/RadioButton"
+                    android:text="浏览器" />
+
+                <RadioButton
+                    android:id="@+id/rb_point_3"
+                    style="@style/RadioButton"
+                    android:text="安卓手机" />
+                <RadioButton
+                    android:id="@+id/rb_point_4"
+                    style="@style/RadioButton"
+                    android:text="IOS" />
+            </RadioGroup>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="所属店铺"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:background="@color/white">
+
+            <Spinner
+                android:id="@+id/sp_point_exchange_store"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="46dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="操作员"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_title_size" />
+
+            <EditText
+                android:id="@+id/et_search_by_opreat"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/head_height"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/shape_border_view_radius"
+                android:cursorVisible="true"
+                android:gravity="left|center_vertical"
+                android:hint="请输入操作员"
+                android:inputType="text"
+                android:maxLength="50"
+                android:padding="@dimen/editText_textview_padding"
+                android:singleLine="true"
+                android:textColor="@color/color_main_text_black"
+                android:textColorHint="@color/color_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_report_screen_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/head_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:background="@color/yunpu"
+        android:text="清除条件"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_button_size" />
+</RelativeLayout>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_add_tc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.tc.AddTCActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新增套餐"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_add_tc_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/loginmagin2"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextViewAddMember"
+                            android:text="套餐编号" />
+
+                        <TextView style="@style/Flag" />
+
+                        <EditText
+                            android:id="@+id/et_add_tc_code"
+                            style="@style/EditTextStyleAddMember"
+                            android:layout_weight="1"
+                            android:digits="@string/NumberOrLetter"
+                            android:focusable="true"
+                            android:hint="请输入套餐编号"
+                            android:paddingRight="10dp" />
+
+                        <ImageView
+                            android:id="@+id/iv_add_tc_scan"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:padding="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:src="@mipmap/ysl_ma_black" />
+                    </LinearLayout>
+
+                    <View style="@style/LineStyle_add" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextViewAddMember"
+                            android:text="套餐名称" />
+
+                        <TextView style="@style/Flag" />
+
+                        <EditText
+                            android:id="@+id/et_add_tc_name"
+                            style="@style/EditTextStyleAddMember"
+                            android:hint="请输入套餐名称" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.zhiluo.android.yunpu.goods.consume.view.ShapedImageView
+                    android:id="@+id/iv_upload_tv_picture"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ysl_goods" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle_add" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="套餐类型" />
+
+                <TextView style="@style/Flag" />
+
+                <TextView
+                    android:id="@+id/te_tc_type"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:hint="点击选择套餐类型"
+                    android:drawableEnd="@mipmap/right_tw"/>
+            </LinearLayout>
+
+            <View style="@style/LineStyle_add" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="套餐售价" />
+
+                <TextView style="@style/Flag" />
+
+                <EditText
+                    android:id="@+id/et_add_tc_price"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="套餐售价"
+                    android:inputType="numberDecimal"
+                    android:maxLength="7" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle_add" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="套餐规格" />
+
+                <EditText
+                    android:id="@+id/et_add_tc_model"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入规格型号"
+                    android:maxLength="30"
+                    android:maxLines="2" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle_add" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="套餐折扣" />
+
+                <EditText
+                    android:id="@+id/et_add_tc_dis"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_margin="2dp"
+                    android:hint="取值范围0-1之间"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle_add" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="套餐积分" />
+
+                <EditText
+                    android:id="@+id/et_add_tc_integral"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_margin="2dp"
+                    android:hint="请输入套餐积分"
+                    android:inputType="number|numberDecimal"
+                    android:maxLength="10" />
+            </LinearLayout>
+
+
+            <View style="@style/LineStyle_add" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="套餐备注" />
+
+                <EditText
+                    android:id="@+id/et_add_tc_remark"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_margin="2dp"
+                    android:hint="请输入备注" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle_add" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="套餐商品" />
+
+                <TextView style="@style/Flag" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btn_clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@color/red"
+                        android:padding="5dp"
+                        android:text="清除"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btn_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_toStartOf="@+id/btn_clear"
+                        android:background="@color/yunpu"
+                        android:padding="5dp"
+                        android:text="添加商品"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.zhiluo.android.yunpu.ui.view.MyListView
+                android:id="@+id/lv_add_tc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

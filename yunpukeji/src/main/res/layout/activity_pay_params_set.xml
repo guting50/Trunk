@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.SystemParamsSetActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="支付设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_system_set_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/img_save"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:src="@mipmap/ysl_save_ok"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@color/ysl_gray"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="支付开关"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_cash"
+                    style="@style/RadioButton"
+                    android:checked="true"
+                    android:text="现金支付" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_wx"
+                    style="@style/RadioButton"
+                    android:text="微信记账" />
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_zfb"
+                    style="@style/RadioButton"
+                    android:text="支付宝记账" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_yl"
+                    style="@style/RadioButton"
+                    android:checked="true"
+                    android:text="银联支付" />
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_yhq"
+                    style="@style/RadioButton"
+                    android:text="优惠券" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_sm"
+                    style="@style/RadioButton"
+                    android:text="扫码支付" />
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_other"
+                    style="@style/RadioButton"
+                    android:text="其他支付" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_integral"
+                    style="@style/RadioButton"
+                    android:text="积分支付" />
+
+                <EditText
+                    android:id="@+id/et_system_set_integral"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_width="0dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:textSize="@dimen/dimen_main_size"
+                    android:hint="用多少积分抵扣1元"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/ysl_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_integral_limit"
+                    style="@style/RadioButton"
+                    android:clickable="false"
+                    android:text="积分支付限制" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_system_set_integral_max"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_width="0dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:hint="每次最多可用剩余积分"
+                        android:textSize="@dimen/dimen_main_size"
+                        android:inputType="numberDecimal"
+                        android:maxLength="10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="%"
+                        android:textColor="@color/color_main_text_black"
+                        android:textSize="@dimen/dimen_main_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/ysl_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_balance"
+                    style="@style/RadioButton"
+                    android:clickable="true"
+                    android:text="余额支付" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_system_set_balance_max"
+                        style="@style/EditTextStyleAddMember"
+                        android:layout_width="0dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:hint="每次最多可用剩余余额"
+                        android:textSize="@dimen/dimen_main_size"
+                        android:inputType="numberDecimal"
+                        android:maxLength="10" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="%"
+                        android:textColor="@color/color_main_text_black"
+                        android:textSize="@dimen/dimen_main_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/ysl_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_system_set_default"
+                    style="@style/RadioButton"
+                    android:text="默认支付" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:id="@+id/r_default_payway"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="2dp">
+
+                        <ImageView
+                            android:id="@+id/img_go"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@mipmap/ysl_go" />
+
+                        <TextView
+                            android:id="@+id/tv_default_payway"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@id/img_go"
+                            android:hint="选择支付方式"
+                            android:textColor="@color/color_main_text_black"
+                            android:textSize="@dimen/dimen_main_size" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_saoma_more"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/saoma_yellow"/>
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="扫码支付"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size"/>
+                
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="23dp"
+                    android:background="@drawable/pay_param_saoma_detail"
+                    android:text="费率低"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/yunpu"
+                    android:textSize="12sp"/>
+
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="23dp"
+                    android:background="@drawable/pay_param_saoma_detail"
+                    android:text="次日到账"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/yunpu"
+                    android:textSize="12sp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="立即了解  >"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|right"
+                    android:textColor="@color/yunpu"
+                    android:textSize="@dimen/dimen_main_size"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

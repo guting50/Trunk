@@ -1,0 +1,21 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--登陆界面logo的高度-->
+    <dimen name="banner_height">180dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_size_normal">40dp</dimen>
+
+    <!--全部按照这个来，具体参照界面中-->
+    <!--标题字体大小-->
+    <dimen name="dimen_title_size">18sp</dimen>
+    <!--项目主要字体大小-->
+    <dimen name="dimen_main_size">14sp</dimen>
+    <!--ListView中部分信息字体大小-->
+    <dimen name="dimen_item_size">12sp</dimen>
+    <!--会员信息字体大小-->
+    <dimen name="dimen_info_size">13sp</dimen>
+    <!--按钮字体大小-->
+    <dimen name="dimen_button_size">18sp</dimen>
+</resources>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.user.UserDetailActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_user_detail_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="用户详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <ImageView
+            android:id="@+id/iv_user_detail_menu"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:src="@mipmap/more" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_add_member_head"
+                android:layout_width="@dimen/head_image_height"
+                android:layout_height="@dimen/head_image_height"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp"
+                android:src="@mipmap/ysl_member_head_imgs" />
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_toStartOf="@+id/civ_add_member_head"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="用户账户" />
+
+                <TextView style="@style/Flag" />
+
+                <TextView
+                    android:id="@+id/tv_user_detail_account"
+                    style="@style/EditTextStyleAddMember" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_line"
+                style="@style/LineStyle"
+                android:layout_toStartOf="@+id/civ_add_member_head"
+                android:layout_below="@+id/ll_name"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_toStartOf="@+id/civ_add_member_head"
+                android:layout_below="@+id/tv_line"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="用户姓名" />
+
+                <TextView style="@style/Flag" />
+
+                <TextView
+                    android:id="@+id/tv_user_detail_name"
+                    style="@style/EditTextStyleAddMember" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+        <!--
+                <TextView style="@style/LineStyle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewAddMember"
+                        android:text="初始密码" />
+
+                    <TextView style="@style/Flag" />
+
+                    <TextView
+                        android:id="@+id/tv_user_detail_paw"
+                        style="@style/EditTextStyleAddMember" />
+                </LinearLayout>
+        -->
+        <TextView style="@style/LineStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="用户角色" />
+
+            <TextView style="@style/Flag" />
+
+            <TextView
+                android:id="@+id/tv_user_detail_role"
+                style="@style/EditTextStyleAddMember" />
+        </LinearLayout>
+
+        <TextView style="@style/LineStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="所属店铺" />
+
+            <TextView style="@style/Flag" />
+
+            <TextView
+                android:id="@+id/tv_user_detail_shop"
+                style="@style/EditTextStyleAddMember" />
+        </LinearLayout>
+
+        <TextView style="@style/LineStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="是否锁定" />
+
+            <TextView
+                style="@style/Flag"
+                android:layout_width="40dp"
+                android:visibility="invisible" />
+
+
+            <CheckBox
+                android:id="@+id/cb_islock_yse"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:width="0dp"
+                android:button="@null"
+                android:gravity="center"
+                android:text="是"
+                android:textColor="@color/text_black" />
+
+            <CheckBox
+                android:id="@+id/cb_islock_no"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:width="0dp"
+                android:button="@null"
+                android:gravity="center"
+                android:text="否"
+                android:textColor="@color/text_black" />
+
+        </LinearLayout>
+
+        <TextView style="@style/LineStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="联系方式" />
+
+            <TextView
+                style="@style/Flag"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_user_detail_phone"
+                android:text="1058346971@qq.com"
+                style="@style/EditTextStyleAddMember" />
+        </LinearLayout>
+
+        <TextView style="@style/LineStyle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:text="备注信息" />
+
+            <TextView
+                style="@style/Flag"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_user_detail_remark"
+                style="@style/EditTextStyleAddMember" />
+        </LinearLayout>
+
+        <TextView style="@style/LineStyle" />
+    </LinearLayout>
+
+</LinearLayout>

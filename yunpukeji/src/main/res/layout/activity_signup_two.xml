@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.zhiluo.android.yunpu.login.activity.SignupTwoActivity">
+
+
+    <FrameLayout
+        android:id="@+id/fl_head"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@mipmap/singupone"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_back_signuptwoactivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/loginmagin"
+            android:drawableLeft="@mipmap/backlight"
+            android:gravity="center_vertical"
+            android:text="   "
+            android:textColor="@color/gray" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fl_head"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:textColor="@color/color_main_text_black"
+                android:id="@+id/edi_singtwonum_activity"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/head_height"
+                android:layout_margin="@dimen/loginmagin"
+                android:layout_weight="4"
+                android:background="@drawable/shape_border_common_radius_stroke"
+                android:hint="请输入您的验证码"
+                android:inputType="number"
+                android:maxLength="4"
+                android:padding="@dimen/loginmagin"
+                android:textColorHint="@color/color_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <TextView
+                android:id="@+id/tet_singtime_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/loginmagin"
+                android:background="@drawable/singupnext"
+                android:enabled="false"
+                android:padding="@dimen/loginmagin"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_singuptwonext_activity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/head_height"
+            android:layout_margin="@dimen/loginmagin"
+            android:background="@drawable/button_selector_yunpu"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_button_size" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/loginmagin"
+        android:gravity="center"
+        android:text="@string/bottom"
+        android:textSize="10sp" />
+</RelativeLayout>

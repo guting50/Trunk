@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_deletevip_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loginmagin"
+        android:text="删除会员" />
+
+    <TextView
+        android:id="@+id/tv_revisevip_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loginmagin"
+        android:text="修改会员" />
+
+    <TextView
+        android:id="@+id/tv_vipguashi_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/loginmagin"
+        android:text="会员挂失" />
+
+</LinearLayout>

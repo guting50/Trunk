@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.staff.AddStaffActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新增员工"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+
+        <TextView
+            android:id="@+id/tv_add_staff_save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:gravity="center_vertical"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:text="基本信息"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="员工姓名" />
+
+                <TextView style="@style/Flag" />
+
+                <EditText
+                    android:id="@+id/et_staff_detail_name"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入员工姓名" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="员工编号" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_staff_detail_number"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入员工编号" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="所属部门" />
+
+                <TextView style="@style/Flag" />
+
+                <TextView
+                    android:id="@+id/te_part_choise"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@mipmap/right_tw"
+                    android:gravity="center_vertical|right"
+                    android:hint="点击选择"
+                    android:textColor="@color/text_black" />
+
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="所属店铺" />
+
+                <TextView
+                    android:id="@+id/te_shop_shoice"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@mipmap/right_tw"
+                    android:gravity="center_vertical|right"
+                    android:hint="点击选择"
+                    android:textColor="@color/text_black" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="性        别" />
+
+
+                <TextView
+                    style="@style/Flag"
+                    android:layout_width="40dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/te_sex_choise"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:drawableEnd="@mipmap/right_tw"
+                    android:gravity="center_vertical|right"
+                    android:hint="点击选择"
+                    android:textColor="@color/text_black" />
+
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="手机号码" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_staff_detail_phone"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入手机号码"
+                    android:inputType="phone"
+                    android:maxLength="11" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="联系地址" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_staff_detail_address"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入联系地址" />
+
+
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:id="@+id/ll_add_staff_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="员工生日" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_add_staff_birthday"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_width="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/img_choise_birthday"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:src="@mipmap/ysl_canlander" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:text="提成类型"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_add_staff_tc_sale_card"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="售卡提成"
+                    android:textColor="@color/text_black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:id="@+id/cb_add_staff_tc_recharge_money"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="充值提成"
+                    android:textColor="@color/text_black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_add_staff_tc_recharge_times"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.2"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="充次提成"
+                    android:textColor="@color/text_black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:id="@+id/cb_add_staff_tc_goods_consume"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.5"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="商品消费提成"
+                    android:textColor="@color/text_black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_add_staff_tc_fast_consume"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.2"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="快速消费提成"
+                    android:textColor="@color/text_black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+
+                <CheckBox
+                    android:id="@+id/cb_add_staff_tc_times_consume"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.5"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="计次消费提成"
+                    android:textColor="@color/text_black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:text="备注信息"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <EditText
+                android:id="@+id/et_add_staff_remark"
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/common_edit_background"
+                android:gravity="top"
+                android:hint="请输入备注信息"
+                android:inputType="textMultiLine"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="4"
+                android:minLines="4"
+                android:padding="4dp"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.ui.activity.AddGradeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:id="@+id/tv_add_member_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新增等级"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <TextView
+            android:id="@+id/tv_add_grade_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/loginmagin"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:paddingStart="5dp"
+                android:text="基本信息"
+                android:textColor="@color/color_main_text_black"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="等级名称" />
+
+                <TextView style="@style/Flag" />
+
+                <EditText
+                    android:id="@+id/et_add_grade_name"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入等级名称" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="等级编码" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_add_grade_code"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="请输入等级编码" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="升级条件" />
+
+                <TextView style="@style/Flag" />
+
+                <EditText
+                    android:id="@+id/et_add_grade_condition"
+                    style="@style/EditTextStyleAddMember"
+                    android:hint="积分达到多少升级"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="售卡金额" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_add_grade_money"
+                    style="@style/EditTextStyleAddMember"
+                    android:inputType="number"
+                    android:text="0" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_add_grade_up_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/checkbox_selector"
+                    android:text="自动升级"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <CheckBox
+                    android:id="@+id/cb_add_grade_down_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/checkbox_selector"
+                    android:text="自动降级"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:text="储值设定"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_button_recharge_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    app:sb_checked="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="初始金额" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_add_grade_init_money"
+                    style="@style/EditTextStyleAddMember"
+                    android:inputType="numberDecimal"
+                    android:text="0" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:text="积分设定"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_button_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    app:sb_checked="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="初始积分" />
+
+                <TextView
+                    style="@style/Flag"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_add_grade_init_integral"
+                    style="@style/EditTextStyleAddMember"
+                    android:inputType="numberDecimal"
+                    android:text="0" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="充值比例" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginStart="40dp"
+                    android:inputType="numberDecimal"
+                    android:text="每充值" />
+
+                <EditText
+                    android:id="@+id/et_grade_recharge_integral_scale"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginEnd="10dp"
+                    android:text="元可积1分" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="快消比例" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginStart="40dp"
+                    android:text="每消费" />
+
+                <EditText
+                    android:id="@+id/et_grade_fast_consume_integral_scale"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginEnd="10dp"
+                    android:text="元可积1分" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="商品积分" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_grade_integral_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/checkbox_selector"
+                    android:text="统一设置"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginStart="40dp"
+                    android:text="每消费" />
+
+                <EditText
+                    android:id="@+id/et_grade_goods_consume_integral_scale"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginEnd="10dp"
+                    android:text="元可积1分" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/LineStyle"
+                android:layout_marginStart="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_grade_integral_detail_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/checkbox_selector"
+                    android:text="详情设置"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_integral_set_detail"
+                    style="@style/TextViewAddMember"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:text="点击设置详情"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:text="折扣设定"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_button_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    app:sb_checked="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="快消比例" />
+
+                <EditText
+                    android:id="@+id/et_grade_fast_consume_discount_scale"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="1-100"
+                    android:inputType="number"
+                    android:text="100" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginEnd="10dp"
+                    android:text="%" />
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <TextView
+                style="@style/TextViewAddMember"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="商品折扣" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_grade_discount_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/checkbox_selector"
+                    android:text="统一设置"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <EditText
+                    android:id="@+id/et_grade_goods_consume_discount_scale"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="1-100"
+                    android:inputType="number"
+                    android:text="100" />
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:layout_marginEnd="10dp"
+                    android:text="%" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/LineStyle"
+                android:layout_marginStart="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_grade_discount_detail_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/checkbox_selector"
+                    android:text="详情设置"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <TextView
+                    android:id="@+id/tv_discount_set_detail"
+                    style="@style/TextViewAddMember"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical|right"
+                    android:text="点击设置详情"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:text="限时设定"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_button_limit_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    app:sb_checked="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="有效次数" />
+
+                <EditText
+                    android:id="@+id/et_grade_effective_times"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number" />
+
+                <CheckBox
+                    android:id="@+id/cb_grade_effective_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/checkbox_selector"
+                    android:text="不限"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/LineStyle"
+                android:layout_marginStart="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewAddMember"
+                    android:text="有效时间" />
+
+                <EditText
+                    android:id="@+id/et_grade_effective_time"
+                    style="@style/EditTextStyleAddMember"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:inputType="number" />
+
+                <Spinner
+                    android:id="@+id/sp_add_grade_time_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <CheckBox
+                    android:id="@+id/cb_grade_effective_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:button="@null"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/checkbox_selector"
+                    android:text="不限"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:text="计次设定"
+                    android:textColor="@color/color_main_text_black"
+                    android:textSize="@dimen/dimen_main_size" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_button_limit_times"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    app:sb_checked="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/red"
+                    android:padding="5dp"
+                    android:text="清除"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toStartOf="@+id/btn_clear"
+                    android:background="@color/yunpu"
+                    android:padding="5dp"
+                    android:text="添加开卡初始项目"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <com.zhiluo.android.yunpu.ui.view.MyListView
+                android:id="@+id/lv_add_grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

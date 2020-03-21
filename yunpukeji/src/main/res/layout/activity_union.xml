@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.zhiluo.android.yunpu.consume.activity.UnionPayActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_union_pay_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="联合支付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_below="@id/rl_union_pay_title"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="可用余额："
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+
+        <TextView
+            android:id="@+id/tv_union_pay_yue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:hint="0.00"
+            android:textColor="@color/color_main_text_black"
+            android:textColorHint="@color/color_text_hint_gray"
+            android:textSize="@dimen/dimen_main_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="可抵扣金额"
+            android:textColor="@color/color_main_text_black"
+            android:textSize="@dimen/dimen_main_size" />
+
+        <TextView
+            android:id="@+id/tv_union_pay_jifeng"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:hint="0.00"
+            android:textColor="@color/color_main_text_black"
+            android:textColorHint="@color/color_text_hint_gray"
+            android:textSize="@dimen/dimen_main_size" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/TextViewPayLeft"
+                    android:text="折后金额：" />
+
+                <TextView
+                    android:id="@+id/tv_union_pay_receivable"
+                    style="@style/TextViewPayRight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="0.00" />
+
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <LinearLayout
+                android:id="@+id/ll_union_pay_yhq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:src="@mipmap/ysl_ticket_pay"
+                        android:visibility="gone" />
+
+                    <TextView
+                        style="@style/TextViewPayLeft"
+                        android:text="优惠券" />
+
+                    <EditText
+                        android:id="@+id/et_union_pay_yhq"
+                        style="@style/EditTextStyle"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:hint="点击选择优惠券"
+                        android:gravity="right|center_vertical" />
+
+                    <TextView
+                        android:id="@+id/tv_check_yhq_legal"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="6dp"
+                        android:background="@drawable/ysl_get_go"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:text="选择优惠券"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_check_yhq_legal"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/right_tw" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <LinearLayout
+                android:id="@+id/ll_wipe_zero"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/pay_moling"
+                    android:visibility="gone" />
+
+                <TextView
+                    style="@style/TextViewPayLeft"
+                    android:text="抹零金额" />
+
+                <EditText
+                    android:id="@+id/et_union_pay_moling"
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入抹零金额"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/t1"
+                    style="@style/TextViewPayLeft"
+                    android:text="应收金额：" />
+
+                <TextView
+                    android:id="@+id/tv_order_money"
+                    style="@style/TextViewPayRight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="0.00" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewPayLeft"
+                    android:text="找零金额：" />
+
+                <TextView
+                    android:id="@+id/tv_union_pay_zhaoling"
+                    style="@style/TextViewPayRight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="0.00" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ysl_cash_pay" />
+
+                <TextView
+                    style="@style/TextViewPayLeft"
+                    android:text="现金" />
+
+                <EditText
+                    android:id="@+id/et_union_pay_cash"
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入支付金额"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ysl_union_pay" />
+
+                <TextView
+                    style="@style/TextViewPayLeft"
+                    android:text="银联" />
+
+                <EditText
+                    android:id="@+id/et_union_pay_card"
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入支付金额"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ysl_yue_pay" />
+
+                <TextView
+                    style="@style/TextViewPayLeft"
+                    android:text="余额" />
+
+                <EditText
+                    android:id="@+id/et_union_pay_yue"
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="请输入支付金额"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ysl_wei_pay" />
+
+                <TextView
+                    style="@style/TextViewPayLeft"
+                    android:text="微信记账" />
+
+                <EditText
+                    android:id="@+id/et_union_pay_wx"
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="请输入支付金额"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ysl_zhiufubao_pay" />
+
+                <TextView
+                    style="@style/TextViewPayLeft"
+                    android:text="支付宝记账" />
+
+                <EditText
+                    android:id="@+id/et_union_pay_zfb"
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="请输入支付金额"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@mipmap/ysl_jifen_pay" />
+
+                <TextView
+                    style="@style/TextViewPayLeft"
+                    android:text="积分" />
+
+                <EditText
+                    android:id="@+id/et_union_pay_jifen"
+                    style="@style/EditTextStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入支付金额"
+                    android:inputType="numberDecimal"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+
+            <View style="@style/LineStyle" />
+
+            <!--确认收款-->
+            <Button
+                android:id="@+id/btn_union_pay_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/head_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/ysl_get_go"
+                android:text="确认收款"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_button_size" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

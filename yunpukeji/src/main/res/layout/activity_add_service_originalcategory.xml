@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background"
+              android:orientation="vertical"
+              tools:context="com.zhiluo.android.yunpu.goods.manager.activity.AddGoodsOriginalCategoryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@color/yunpu">
+
+        <include layout="@layout/overall_backbutton_single_head"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新增主分类"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_title_font_size"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_border_common_radius_stroke"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="主分类"/>
+
+        <EditText
+            android:id="@+id/et_addbig"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:hint="主分类名称"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/lightgray"
+            android:textCursorDrawable="@drawable/shape_color_cursor"
+            android:textSize="@dimen/edittext_font_size"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_addbig"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_selector_yunpu"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="@dimen/big_button_font_size"/>
+</LinearLayout>

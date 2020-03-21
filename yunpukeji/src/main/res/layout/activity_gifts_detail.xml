@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.gift.activity.GiftsDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_gift_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:background="@drawable/ysl_main_style">
+
+        <include layout="@layout/overall_backbutton_single_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="礼品详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_title_size" />
+
+        <ImageView
+            android:id="@+id/iv_gift_detail_more"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/loginmagin2"
+            android:src="@mipmap/more" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.zhiluo.android.yunpu.goods.consume.view.ShapedImageView
+            android:id="@+id/iv_gift_detail_picture"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/defalut_goods"
+            app:round_radius="8dp"
+            app:shape_mode="round_rect"
+            app:stroke_color="@color/white"
+            app:stroke_width="0.6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_gift_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_edit_text_height"
+                android:background="@null"
+                android:gravity="left|center_vertical"
+                android:padding="@dimen/adduser"
+                android:textColor="@color/color_main_text_black"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/adduser"
+                    android:gravity="center"
+                    android:text="¥"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    android:id="@+id/tv_gift_detail_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/red" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/adduser"
+                    android:gravity="center"
+                    android:text="礼品编码" />
+
+                <TextView
+                    android:id="@+id/tv_gift_detail_code"
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:padding="@dimen/adduser"
+                    android:textCursorDrawable="@drawable/shape_color_cursor" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/TextViewAddMember"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/textView3"
+                    android:layout_marginTop="325dp"
+                    android:text="库存警戒值" />
+
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_edit_text_height">
+
+                <TextView
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/adduser"
+                    android:gravity="center"
+                    android:text="礼品分类" />
+
+                <TextView
+                    android:id="@+id/tv_gift_detail_type"
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:padding="@dimen/adduser"
+                    android:textCursorDrawable="@drawable/shape_color_cursor" />
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/adduser"
+                    android:gravity="center"
+                    android:text="礼品简码" />
+
+                <TextView
+                    android:id="@+id/tv_gift_detail_simple_code"
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:padding="@dimen/adduser"
+                    android:textCursorDrawable="@drawable/shape_color_cursor" />
+
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/adduser"
+                    android:gravity="center"
+                    android:text="参考进价" />
+
+                <TextView
+                    android:id="@+id/tv_gift_detail_reference_price"
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:padding="@dimen/adduser"
+                    android:textCursorDrawable="@drawable/shape_color_cursor" />
+
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/adduser"
+                    android:gravity="center"
+                    android:text="规格型号" />
+
+                <TextView
+                    android:id="@+id/tv_gift_detail_model"
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/adduser"
+                    android:textCursorDrawable="@null" />
+
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/adduser"
+                    android:gravity="center"
+                    android:text="计量单位" />
+
+                <TextView
+                    android:id="@+id/tv_gift_detail_unit"
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/adduser"
+                    android:textCursorDrawable="@drawable/shape_color_cursor" />
+
+            </LinearLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/adduser"
+                    android:gravity="center"
+                    android:text="礼品品牌" />
+
+                <TextView
+                    android:id="@+id/tv_gift_detail_brand"
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/adduser"
+                    android:textCursorDrawable="@drawable/shape_color_cursor" />
+
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/adduser"
+                    android:gravity="center"
+                    android:text="库存警戒值" />
+
+                <TextView
+                    android:id="@+id/tv_gift_detail_stock_notice_num"
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/adduser"
+                    android:textCursorDrawable="@drawable/shape_color_cursor" />
+
+            </RelativeLayout>
+
+            <TextView style="@style/LineStyle" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height">
+
+                <TextView
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/adduser"
+                    android:gravity="center"
+                    android:text="同步状态" />
+
+                <TextView
+                    android:id="@+id/tv_gift_detail_sync"
+                    style="@style/Base_TextView_Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/adduser"
+                    android:textCursorDrawable="@drawable/shape_color_cursor" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

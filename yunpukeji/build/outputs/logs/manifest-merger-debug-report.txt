@@ -1,0 +1,2225 @@
+-- Merging decision tree log ---
+permission#com.zhiluo.android.yunpu.permission.JPUSH_MESSAGE
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:10:5-12:47
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:11:5-13:47
+	android:protectionLevel
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:12:9-44
+	android:name
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:11:9-65
+uses-permission#com.zhiluo.android.yunpu.permission.JPUSH_MESSAGE
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:13:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:16:5-81
+	android:name
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:13:22-78
+provider#android.support.v4.content.FileProvider
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:136:9-144:20
+	android:grantUriPermissions
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:140:13-47
+	android:authorities
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:138:13-64
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:139:13-37
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:137:13-67
+category#com.zhiluo.android.yunpu
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:194:17-61
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:222:17-61
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:235:17-61
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:260:17-61
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:281:17-61
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:288:17-61
+	android:name
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:194:27-58
+provider#cn.jpush.android.service.DataProvider
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:209:9-213:43
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:126:9-130:43
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:126:9-130:43
+	android:process
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:213:13-40
+	android:authorities
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:211:13-64
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:212:13-37
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:210:13-65
+provider#cn.jpush.android.service.DownloadProvider
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:225:9-228:39
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:132:9-135:39
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:132:9-135:39
+	android:authorities
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:227:13-68
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:228:13-36
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:226:13-69
+action#com.zhiluo.android.yunpu.login.activity.receiver.FrorceOfflineReceiver
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:293:17-105
+	android:name
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:293:25-102
+manifest
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:2:1-892:12
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:2:1-892:12
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:2:1-892:12
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:2:1-892:12
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\dc81f70bba666021d80c9247cc0d2845\multidex-1.0.2\AndroidManifest.xml:17:1-22:12
+MERGED from [:mypicker] D:\project\project_gt\Trunk\mypicker\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:2:1-35:12
+MERGED from [com.mamengmami.android:waveswiperefreshlayout:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f58f0707b6e66637504a0641c5d0f949\waveswiperefreshlayout-1.0.0\AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.iwgang:familiarrecyclerview:1.3.2] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3507c96c3eea69dab857bc94c10e6572\familiarrecyclerview-1.3.2\AndroidManifest.xml:2:1-10:12
+MERGED from [com.youth.banner:banner:1.4.8] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\afcd9aa62aa9063a9f3c80de52af20c1\banner-1.4.8\AndroidManifest.xml:2:1-11:12
+MERGED from [com.eftimoff:android-patternview:1.0.6] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\792a64ce1b2a3ee61a51ae89a659a023\android-patternview-1.0.6\AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.rey5137:material:1.2.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\bd617e8e8c56c1135e371455ef1c971d\material-1.2.4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.yanzhenjie:permission:1.0.5] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\d1e1bcdb73645b2be3f7474c46329148\permission-1.0.5\AndroidManifest.xml:17:1-25:12
+MERGED from [com.dou361.dialogui:jjdxm-dialogui:1.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b5918126ab3f26b09a1c2a9f1563978a\jjdxm-dialogui-1.0.3\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.support:design:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.zhy:flowlayout-lib:1.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3fb13e44358272162236def75b626a07\flowlayout-lib-1.0.3\AndroidManifest.xml:2:1-12:12
+MERGED from [com.yanzhenjie.alertdialog:alertdialog:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\eb74c798b97c20a083e0b08c1a88f4a1\alertdialog-1.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [:library] D:\project\project_gt\Trunk\library\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-13:12
+MERGED from [com.pnikosis:materialish-progress:1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\38146e36c7ddcd1e31b6eaa1108813b0\materialish-progress-1.0\AndroidManifest.xml:2:1-17:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3c115bd9f6556a7430ab54a2645aa55d\appcompat-v7-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:transition:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e13c4a3a02d0f93e83b088e91c91216c\transition-26.1.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8b2410946284cd4775e5f8b775d72d89\support-v4-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.takwolf.android:lock9view:0.0.11] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e3df44c7526a6d51e1191db3f4cde0e2\lock9view-0.0.11\AndroidManifest.xml:2:1-11:12
+MERGED from [me.drakeet.materialdialog:library:1.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\5d1011770d22d6d72523ffd4a9c1120d\library-1.3.1\AndroidManifest.xml:2:1-12:12
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\11affc0685db3039cae43f3363a706e6\circleimageview-2.1.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.melnykov:floatingactionbutton:1.3.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8532cf97184e877832c4a22d4a6e4326\floatingactionbutton-1.3.0\AndroidManifest.xml:2:1-14:12
+MERGED from [org.litepal.android:core:1.6.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\c724edd23a61d6cd9a44add9d455f549\core-1.6.0\AndroidManifest.xml:2:1-16:12
+MERGED from [com.drawthink:expandable-recyclerview:0.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b6fa0a64b611fcf477c03d7f697e095c\expandable-recyclerview-0.0.3\AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.lecho:hellocharts-library:1.5.8] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\9be520dfeb447fa654ceb9a67a5b51a9\hellocharts-library-1.5.8\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.lzyzsd:jsbridge:1.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1f096de0aebefbbb64402b91e05b8243\jsbridge-1.0.4\AndroidManifest.xml:2:1-16:12
+MERGED from [com.github.zcweng:switch-button:0.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\11a53035bc8ddbf90f028f4dd377f346\switch-button-0.0.3\AndroidManifest.xml:2:1-11:12
+MERGED from [:SunmiPayService:] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\0e4a35cb7d73435e7e188ef0f22d36ee\SunmiPayService\AndroidManifest.xml:2:1-16:12
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:2:1-147:12
+MERGED from [cn.jiguang.sdk:jcore:2.0.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ecbf79d6e14ae2a870fccf4c3270820\jcore-2.0.1\AndroidManifest.xml:2:1-14:12
+MERGED from [com.lzy.net:okgo:3.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1a4f7fed7247ed4e5bf950e369e8fee7\okgo-3.0.4\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\ef7c5ae2af6a27687948fc6cc3886b74\recyclerview-v7-26.1.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\26df0f8813a13404e327c780b3b81904\support-media-compat-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f7553f20c19b1ac99491fe60ed6b734d\support-fragment-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\6ab7c35cf9f4095d5538551927303dbd\support-core-utils-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ac1655360d6dbf344dc8ff3c8d3b0e6\animated-vector-drawable-26.1.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\258048e6c61d4b5456510532346e8c01\support-core-ui-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\a449755bc5e7ed79153fa9929dc7654c\support-vector-drawable-26.1.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\19640d657814c0deaea3c9f8ce878766\support-compat-26.1.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:cardview-v7:23.4.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\c6bc11ae90746dfb970581f8dee8b947\cardview-v7-23.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cbd00f137ffe055a54edb27e1642d0f7\runtime-1.0.0\AndroidManifest.xml:17:1-30:12
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:2:1-892:12
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:2:1-892:12
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:2:1-892:12
+	package
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:4:5-39
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:6:5-34
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:18:5-67
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:18:5-67
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:18:5-67
+MERGED from [com.lzy.net:okgo:3.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1a4f7fed7247ed4e5bf950e369e8fee7\okgo-3.0.4\AndroidManifest.xml:26:5-67
+MERGED from [com.lzy.net:okgo:3.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1a4f7fed7247ed4e5bf950e369e8fee7\okgo-3.0.4\AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:18:22-64
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:20:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:20:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:20:5-81
+MERGED from [com.lzy.net:okgo:3.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1a4f7fed7247ed4e5bf950e369e8fee7\okgo-3.0.4\AndroidManifest.xml:28:5-81
+MERGED from [com.lzy.net:okgo:3.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1a4f7fed7247ed4e5bf950e369e8fee7\okgo-3.0.4\AndroidManifest.xml:28:5-81
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:20:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:22:5-80
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:21:5-80
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:21:5-80
+MERGED from [com.lzy.net:okgo:3.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1a4f7fed7247ed4e5bf950e369e8fee7\okgo-3.0.4\AndroidManifest.xml:27:5-80
+MERGED from [com.lzy.net:okgo:3.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1a4f7fed7247ed4e5bf950e369e8fee7\okgo-3.0.4\AndroidManifest.xml:27:5-80
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:22:22-77
+uses-permission#android.permission.BLUETOOTH
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:24:5-68
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:24:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:26:5-74
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:26:22-71
+uses-permission#android.permission.CAMERA
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:28:5-65
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:28:22-62
+uses-permission#android.permission.MANAGE_ACCOUNTS
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:30:5-74
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:30:22-71
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:32:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:24:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:32:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:34:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:30:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:30:5-81
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:34:22-78
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:36:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:25:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:25:5-76
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:36:22-73
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:38:5-40:47
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:22:5-73
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:22:5-73
+	tools:ignore
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:40:9-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:39:9-57
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:42:5-83
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:42:22-80
+uses-permission#com.pos.permission.ACCESSORY_DATETIME
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:45:5-77
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:45:22-74
+uses-permission#com.pos.permission.ACCESSORY_LED
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:46:5-72
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:46:22-69
+uses-permission#com.pos.permission.ACCESSORY_BEEP
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:47:5-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:47:22-70
+uses-permission#com.pos.permission.ACCESSORY_RFREGISTER
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:48:5-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:48:22-76
+uses-permission#com.pos.permission.CARD_READER_ICC
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:49:5-74
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:49:22-71
+uses-permission#com.pos.permission.CARD_READER_PICC
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:50:5-75
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:50:22-72
+uses-permission#com.pos.permission.CARD_READER_MAG
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:51:5-74
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:51:22-71
+uses-permission#com.pos.permission.COMMUNICATION
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:52:5-72
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:52:22-69
+uses-permission#com.pos.permission.PRINTER
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:53:5-66
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:53:22-63
+uses-permission#com.pos.permission.SECURITY
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:54:5-67
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:54:22-64
+uses-permission#android.permission.NFC
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:57:5-62
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:57:22-59
+uses-permission#android.permission.CLOUDPOS_MID_PRINTER
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:61:5-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:61:22-76
+uses-permission#android.permission.CLOUDPOS_MID_ICCARD
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:63:5-78
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:63:22-75
+uses-permission#android.permission.CLOUDPOS_MID_RFCARD
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:65:5-78
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:65:22-75
+uses-permission#android.permission.CLOUDPOS_MID_MAGCARD
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:67:5-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:67:22-76
+uses-permission#android.permission.CLOUDPOS_MID_MAGCARD_GETTRACKDATA
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:69:5-92
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:69:22-89
+uses-permission#android.permission.CLOUDPOS_MID_MAGCARD_GETENCRYPTTRACKDATA
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:71:5-99
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:71:22-96
+uses-permission#android.permission.CLOUDPOS_MID_PSAMCARD
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:73:5-80
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:73:22-77
+uses-permission#android.permission.CLOUDPOS_MID_SERIALPORT
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:75:5-82
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:75:22-79
+uses-permission#android.permission.CLOUDPOS_MID_SYSTEMDEV
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:77:5-81
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:77:22-78
+uses-permission#android.permission.RECEIVE_USER_PRESENT
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:79:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:17:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:79:22-76
+application
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:115:5-890:19
+MERGED from [:mypicker] D:\project\project_gt\Trunk\mypicker\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
+MERGED from [:mypicker] D:\project\project_gt\Trunk\mypicker\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-15:19
+MERGED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:9:5-33:19
+MERGED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:9:5-33:19
+MERGED from [com.mamengmami.android:waveswiperefreshlayout:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f58f0707b6e66637504a0641c5d0f949\waveswiperefreshlayout-1.0.0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.mamengmami.android:waveswiperefreshlayout:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f58f0707b6e66637504a0641c5d0f949\waveswiperefreshlayout-1.0.0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.eftimoff:android-patternview:1.0.6] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\792a64ce1b2a3ee61a51ae89a659a023\android-patternview-1.0.6\AndroidManifest.xml:11:5-20
+MERGED from [com.eftimoff:android-patternview:1.0.6] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\792a64ce1b2a3ee61a51ae89a659a023\android-patternview-1.0.6\AndroidManifest.xml:11:5-20
+MERGED from [com.android.support:design:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [:library] D:\project\project_gt\Trunk\library\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-20
+MERGED from [:library] D:\project\project_gt\Trunk\library\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-20
+MERGED from [com.pnikosis:materialish-progress:1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\38146e36c7ddcd1e31b6eaa1108813b0\materialish-progress-1.0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.pnikosis:materialish-progress:1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\38146e36c7ddcd1e31b6eaa1108813b0\materialish-progress-1.0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3c115bd9f6556a7430ab54a2645aa55d\appcompat-v7-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3c115bd9f6556a7430ab54a2645aa55d\appcompat-v7-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e13c4a3a02d0f93e83b088e91c91216c\transition-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e13c4a3a02d0f93e83b088e91c91216c\transition-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8b2410946284cd4775e5f8b775d72d89\support-v4-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8b2410946284cd4775e5f8b775d72d89\support-v4-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\11affc0685db3039cae43f3363a706e6\circleimageview-2.1.0\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\11affc0685db3039cae43f3363a706e6\circleimageview-2.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:9:5-20
+MERGED from [com.melnykov:floatingactionbutton:1.3.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8532cf97184e877832c4a22d4a6e4326\floatingactionbutton-1.3.0\AndroidManifest.xml:12:5-20
+MERGED from [com.melnykov:floatingactionbutton:1.3.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8532cf97184e877832c4a22d4a6e4326\floatingactionbutton-1.3.0\AndroidManifest.xml:12:5-20
+MERGED from [org.litepal.android:core:1.6.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\c724edd23a61d6cd9a44add9d455f549\core-1.6.0\AndroidManifest.xml:11:5-14:19
+MERGED from [org.litepal.android:core:1.6.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\c724edd23a61d6cd9a44add9d455f549\core-1.6.0\AndroidManifest.xml:11:5-14:19
+MERGED from [com.drawthink:expandable-recyclerview:0.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b6fa0a64b611fcf477c03d7f697e095c\expandable-recyclerview-0.0.3\AndroidManifest.xml:11:5-15:19
+MERGED from [com.drawthink:expandable-recyclerview:0.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b6fa0a64b611fcf477c03d7f697e095c\expandable-recyclerview-0.0.3\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.lzyzsd:jsbridge:1.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1f096de0aebefbbb64402b91e05b8243\jsbridge-1.0.4\AndroidManifest.xml:11:5-14:19
+MERGED from [com.github.lzyzsd:jsbridge:1.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1f096de0aebefbbb64402b91e05b8243\jsbridge-1.0.4\AndroidManifest.xml:11:5-14:19
+MERGED from [:SunmiPayService:] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\0e4a35cb7d73435e7e188ef0f22d36ee\SunmiPayService\AndroidManifest.xml:11:5-14:19
+MERGED from [:SunmiPayService:] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\0e4a35cb7d73435e7e188ef0f22d36ee\SunmiPayService\AndroidManifest.xml:11:5-14:19
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:37:5-145:19
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:37:5-145:19
+MERGED from [cn.jiguang.sdk:jcore:2.0.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ecbf79d6e14ae2a870fccf4c3270820\jcore-2.0.1\AndroidManifest.xml:11:5-12:19
+MERGED from [cn.jiguang.sdk:jcore:2.0.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ecbf79d6e14ae2a870fccf4c3270820\jcore-2.0.1\AndroidManifest.xml:11:5-12:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\ef7c5ae2af6a27687948fc6cc3886b74\recyclerview-v7-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\ef7c5ae2af6a27687948fc6cc3886b74\recyclerview-v7-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\26df0f8813a13404e327c780b3b81904\support-media-compat-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\26df0f8813a13404e327c780b3b81904\support-media-compat-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f7553f20c19b1ac99491fe60ed6b734d\support-fragment-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f7553f20c19b1ac99491fe60ed6b734d\support-fragment-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\6ab7c35cf9f4095d5538551927303dbd\support-core-utils-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\6ab7c35cf9f4095d5538551927303dbd\support-core-utils-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ac1655360d6dbf344dc8ff3c8d3b0e6\animated-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ac1655360d6dbf344dc8ff3c8d3b0e6\animated-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\258048e6c61d4b5456510532346e8c01\support-core-ui-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\258048e6c61d4b5456510532346e8c01\support-core-ui-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\a449755bc5e7ed79153fa9929dc7654c\support-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\a449755bc5e7ed79153fa9929dc7654c\support-vector-drawable-26.1.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\19640d657814c0deaea3c9f8ce878766\support-compat-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\19640d657814c0deaea3c9f8ce878766\support-compat-26.1.0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:cardview-v7:23.4.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\c6bc11ae90746dfb970581f8dee8b947\cardview-v7-23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:23.4.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\c6bc11ae90746dfb970581f8dee8b947\cardview-v7-23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cbd00f137ffe055a54edb27e1642d0f7\runtime-1.0.0\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cbd00f137ffe055a54edb27e1642d0f7\runtime-1.0.0\AndroidManifest.xml:24:5-28:19
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:122:9-45
+	android:supportsRtl
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:123:9-35
+	android:label
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:120:9-41
+		REJECTED from [:mypicker] D:\project\project_gt\Trunk\mypicker\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:9-41
+		REJECTED from [com.mamengmami.android:waveswiperefreshlayout:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f58f0707b6e66637504a0641c5d0f949\waveswiperefreshlayout-1.0.0\AndroidManifest.xml:13:9-41
+		REJECTED from [com.pnikosis:materialish-progress:1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\38146e36c7ddcd1e31b6eaa1108813b0\materialish-progress-1.0\AndroidManifest.xml:14:9-41
+		REJECTED from [org.litepal.android:core:1.6.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\c724edd23a61d6cd9a44add9d455f549\core-1.6.0\AndroidManifest.xml:13:9-41
+		REJECTED from [com.drawthink:expandable-recyclerview:0.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b6fa0a64b611fcf477c03d7f697e095c\expandable-recyclerview-0.0.3\AndroidManifest.xml:13:9-41
+		REJECTED from [com.github.lzyzsd:jsbridge:1.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1f096de0aebefbbb64402b91e05b8243\jsbridge-1.0.4\AndroidManifest.xml:13:9-41
+	android:hardwareAccelerated
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:118:9-44
+	android:largeHeap
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:121:9-33
+	android:icon
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:119:9-45
+		REJECTED from [com.pnikosis:materialish-progress:1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\38146e36c7ddcd1e31b6eaa1108813b0\materialish-progress-1.0\AndroidManifest.xml:13:9-45
+	android:allowBackup
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:117:9-35
+	android:theme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:124:9-42
+	tools:replace
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:126:9-51
+	android:usesCleartextTraffic
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:125:9-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:116:9-45
+activity#com.zhiluo.android.yunpu.goods.consume.activity.GoodsSpecsActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:127:9-88
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:127:19-76
+uses-library#com.odm
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:129:9-131:40
+	android:required
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:131:13-37
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:130:13-35
+uses-library#com.pos.sdk
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:132:9-134:40
+	android:required
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:134:13-37
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:133:13-39
+activity#com.zhiluo.android.yunpu.login.activity.LoginActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:146:9-171:20
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:149:13-49
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:150:13-54
+	android:alwaysRetainTaskState
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:148:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:147:13-57
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:151:13-155:29
+action#android.intent.action.MAIN
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:152:17-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:152:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:154:17-77
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:154:27-74
+intent-filter#action:name:android.nfc.action.TECH_DISCOVERED
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:156:13-158:29
+action#android.nfc.action.TECH_DISCOVERED
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:157:17-77
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:157:25-74
+intent-filter#action:name:android.nfc.action.NDEF_DISCOVERED+category:name:android.intent.category.DEFAULT+data:mimeType:text/plain
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:159:13-165:29
+action#android.nfc.action.NDEF_DISCOVERED
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:160:17-77
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:160:25-74
+category#android.intent.category.DEFAULT
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:162:17-76
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:162:27-73
+data
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:164:17-55
+	android:scheme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:246:23-47
+	android:mimeType
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:164:23-52
+intent-filter#action:name:android.nfc.action.TAG_DISCOVERED+category:name:android.intent.category.DEFAULT
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:166:13-170:29
+action#android.nfc.action.TAG_DISCOVERED
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:167:17-76
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:167:25-73
+activity#com.zhiluo.android.yunpu.jpush.NoticeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:172:9-180:20
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:174:13-37
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:173:13-49
+intent-filter#action:name:jpush.testAction+category:name:jpush.testCategory
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:175:13-179:29
+action#jpush.testAction
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:176:17-59
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:176:25-56
+category#jpush.testCategory
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:178:17-63
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:178:27-60
+activity#cn.jpush.android.ui.PopWinActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:181:9-184:52
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:40:9-43:52
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:40:9-43:52
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:183:13-37
+	android:theme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:184:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:182:13-62
+activity#cn.jpush.android.ui.PushActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:185:9-196:20
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:46:9-57:20
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:46:9-57:20
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:188:13-37
+	android:configChanges
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:187:13-63
+	android:theme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:189:13-60
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:186:13-60
+intent-filter#action:name:cn.jpush.android.ui.PushActivity+category:name:android.intent.category.DEFAULT+category:name:com.zhiluo.android.yunpu
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:190:13-195:29
+action#cn.jpush.android.ui.PushActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:191:17-75
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:191:25-72
+service#cn.jpush.android.service.PushService
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:198:9-208:19
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:60:9-71:19
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:60:9-71:19
+	android:enabled
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:62:13-35
+	android:process
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:201:13-40
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:200:13-37
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:199:13-64
+intent-filter#action:name:cn.jpush.android.intent.PUSH_TIME+action:name:cn.jpush.android.intent.PushService+action:name:cn.jpush.android.intent.REGISTER+action:name:cn.jpush.android.intent.REPORT
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:202:13-207:29
+action#cn.jpush.android.intent.REGISTER
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:203:17-75
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:203:25-72
+action#cn.jpush.android.intent.REPORT
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:204:17-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:204:25-70
+action#cn.jpush.android.intent.PushService
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:205:17-78
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:205:25-75
+action#cn.jpush.android.intent.PUSH_TIME
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:206:17-76
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:206:25-73
+service#cn.jpush.android.service.DaemonService
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:215:9-224:19
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:75:9-84:19
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:75:9-84:19
+	android:enabled
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:217:13-35
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:218:13-36
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:216:13-66
+intent-filter#action:name:cn.jpush.android.intent.DaemonService+category:name:com.zhiluo.android.yunpu
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:219:13-223:29
+action#cn.jpush.android.intent.DaemonService
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:220:17-80
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:220:25-77
+receiver#cn.jpush.android.service.PushReceiver
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:229:9-248:20
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:100:9-119:20
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:100:9-119:20
+	android:enabled
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:231:13-35
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:232:13-37
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:230:13-65
+intent-filter#action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY+category:name:com.zhiluo.android.yunpu
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:233:13-236:29
+	android:priority
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:233:28-51
+action#cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:234:17-94
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:234:25-91
+intent-filter#action:name:android.intent.action.USER_PRESENT+action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:237:13-240:29
+action#android.intent.action.USER_PRESENT
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:238:17-77
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:238:25-74
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:239:17-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:239:25-76
+intent-filter#action:name:android.intent.action.PACKAGE_ADDED+action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:242:13-247:29
+action#android.intent.action.PACKAGE_ADDED
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:243:17-78
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:243:25-75
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:244:17-80
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:244:25-77
+receiver#cn.jpush.android.service.AlarmReceiver
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:249:9-251:40
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:122:9-124:40
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:122:9-124:40
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:251:13-37
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:250:13-66
+activity#cn.jpush.android.service.JNotifyActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:252:9-262:20
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:87:9-97:20
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:87:9-97:20
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:254:13-36
+	android:theme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:256:13-72
+	android:taskAffinity
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:255:13-48
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:253:13-68
+intent-filter#action:name:cn.jpush.android.intent.JNotifyActivity+category:name:com.zhiluo.android.yunpu
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:257:13-261:29
+action#cn.jpush.android.intent.JNotifyActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:258:17-82
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:258:25-79
+service#com.zhiluo.android.yunpu.jpush.PushService
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:264:9-270:19
+	android:process
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:266:13-40
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:265:13-46
+intent-filter#action:name:cn.jiguang.user.service.action
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:267:13-269:29
+action#cn.jiguang.user.service.action
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:268:17-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:268:25-70
+receiver#com.zhiluo.android.yunpu.jpush.MyReceiver
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:271:9-283:20
+	android:enabled
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:273:13-35
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:274:13-37
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:272:13-45
+intent-filter#action:name:cn.jpush.android.intent.CONNECTION+action:name:cn.jpush.android.intent.MESSAGE_RECEIVED+action:name:cn.jpush.android.intent.NOTIFICATION_OPENED+action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED+action:name:cn.jpush.android.intent.REGISTRATION+category:name:com.zhiluo.android.yunpu
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:275:13-282:29
+action#cn.jpush.android.intent.REGISTRATION
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:276:17-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:276:25-76
+action#cn.jpush.android.intent.MESSAGE_RECEIVED
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:277:17-83
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:277:25-80
+action#cn.jpush.android.intent.NOTIFICATION_RECEIVED
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:278:17-88
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:278:25-85
+action#cn.jpush.android.intent.NOTIFICATION_OPENED
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:279:17-86
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:279:25-83
+action#cn.jpush.android.intent.CONNECTION
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:280:17-77
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:280:25-74
+receiver#com.zhiluo.android.yunpu.jpush.MyJPushMessageReceiver
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:284:9-290:20
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:284:19-63
+intent-filter#action:name:cn.jpush.android.intent.RECEIVE_MESSAGE+category:name:com.zhiluo.android.yunpu
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:285:13-289:29
+action#cn.jpush.android.intent.RECEIVE_MESSAGE
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:286:17-82
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:286:25-79
+receiver#com.zhiluo.android.yunpu.login.receiver.FrorceOfflineReceiver
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:291:9-296:20
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:291:19-71
+intent-filter#action:name:com.zhiluo.android.yunpu.login.activity.receiver.FrorceOfflineReceiver
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:292:13-295:29
+activity#com.mob.tools.MobUIShell
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:298:9-321:20
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:301:13-49
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:303:13-67
+	android:configChanges
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:300:13-74
+	android:theme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:302:13-72
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:299:13-52
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:scheme:tencent1106104847
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:306:13-313:29
+action#android.intent.action.VIEW
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:309:17-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:309:25-66
+category#android.intent.category.BROWSABLE
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:311:17-78
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:311:27-75
+intent-filter#action:name:com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY+category:name:android.intent.category.DEFAULT
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:316:13-320:29
+action#com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:317:17-92
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:317:25-89
+activity#com.zhiluo.android.yunpu.setting.bluetooth.activity.BlueToothActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:322:9-324:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:324:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:323:13-73
+activity#com.zhiluo.android.yunpu.home.activity.BannerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:325:9-327:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:327:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:326:13-57
+activity#com.zhiluo.android.yunpu.login.activity.ConfirmGesturePatternPasswordActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:328:9-330:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:330:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:329:13-81
+activity#com.zhiluo.android.yunpu.login.activity.SettingGesturePatternPasswordActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:331:9-333:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:333:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:332:13-81
+activity#com.zhiluo.android.yunpu.login.activity.SignupActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:334:9-336:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:336:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:335:13-58
+activity#com.zhiluo.android.yunpu.login.activity.NewpasswordActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:337:9-339:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:339:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:338:13-63
+activity#com.zhiluo.android.yunpu.member.activity.EmployeeListActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:340:9-342:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:342:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:341:13-65
+activity#com.zhiluo.android.yunpu.member.activity.MemberGradeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:343:9-345:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:345:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:344:13-64
+activity#com.zhiluo.android.yunpu.home.activity.FeedbackActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:346:9-348:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:348:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:347:13-59
+activity#com.zhiluo.android.yunpu.home.activity.AboutActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:349:9-351:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:351:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:350:13-56
+activity#com.zhiluo.android.yunpu.home.activity.ShopManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:352:9-354:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:354:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:353:13-62
+activity#com.zhiluo.android.yunpu.login.activity.SignupTwoActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:355:9-357:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:357:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:356:13-61
+activity#com.zhiluo.android.yunpu.login.activity.SignupContentActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:358:9-360:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:360:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:359:13-65
+activity#com.zhiluo.android.yunpu.login.activity.SignupEndActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:361:9-363:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:363:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:362:13-61
+activity#com.zhiluo.android.yunpu.login.activity.NewpasswordTwoActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:364:9-366:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:366:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:365:13-66
+activity#com.zhiluo.android.yunpu.login.activity.NewpasswordEndActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:367:9-369:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:369:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:368:13-66
+activity#com.zhiluo.android.yunpu.member.manager.activity.MemberListActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:370:9-372:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:372:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:371:13-71
+activity#com.zhiluo.android.yunpu.zxing.activity.CaptureActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:373:9-375:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:375:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:374:13-59
+activity#com.zhiluo.android.yunpu.member.consume.activity.MemberRechargeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:376:9-380:82
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:379:13-49
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:378:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:380:13-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:377:13-75
+activity#com.zhiluo.android.yunpu.goods.manager.activity.GoodsDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:381:9-383:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:383:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:382:13-71
+activity#com.zhiluo.android.yunpu.goods.manager.activity.AddGoodsActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:384:9-387:72
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:386:13-49
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:387:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:385:13-68
+activity#com.zhiluo.android.yunpu.goods.manager.activity.GoodsChooseCategoryListActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:388:9-390:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:390:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:389:13-83
+activity#com.zhiluo.android.yunpu.goods.manager.activity.GoodsModificationActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:391:9-394:73
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:393:13-49
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:394:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:392:13-77
+activity#com.zhiluo.android.yunpu.gift.activity.GiftsManagementListActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:395:9-397:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:397:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:396:13-70
+activity#com.zhiluo.android.yunpu.gift.activity.AddGiftsActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:398:9-401:72
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:400:13-49
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:401:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:399:13-59
+activity#com.zhiluo.android.yunpu.gift.activity.GiftChooseCategoryActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:402:9-404:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:404:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:403:13-69
+activity#com.zhiluo.android.yunpu.gift.activity.GiftsDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:405:9-407:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:407:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:406:13-62
+activity#com.zhiluo.android.yunpu.gift.activity.GiftsModificationActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:408:9-411:72
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:410:13-49
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:411:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:409:13-68
+activity#com.zhiluo.android.yunpu.member.consume.activity.MemberChargeManagementActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:412:9-417:73
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:416:13-49
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:417:13-70
+	android:focusableInTouchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:415:13-48
+	android:focusable
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:414:13-37
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:413:13-83
+activity#com.zhiluo.android.yunpu.member.consume.activity.IntegralExchangeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:418:9-421:72
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:420:13-49
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:421:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:419:13-77
+activity#com.zhiluo.android.yunpu.goods.manager.activity.AddGoodsOriginalCategoryActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:422:9-424:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:424:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:423:13-84
+activity#com.zhiluo.android.yunpu.goods.manager.activity.AddGoodsSubCategoryActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:425:9-427:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:427:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:426:13-79
+activity#com.zhiluo.android.yunpu.gift.activity.AddGiftsCategoryActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:428:9-430:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:430:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:429:13-67
+activity#com.zhiluo.android.yunpu.sms.activity.SendMsgActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:431:9-434:73
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:433:13-49
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:434:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:432:13-57
+activity#com.zhiluo.android.yunpu.home.activity.MessageCenterActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:435:9-437:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:437:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:436:13-64
+activity#com.zhiluo.android.yunpu.home.activity.MessageContentActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:438:9-440:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:440:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:439:13-65
+activity#com.zhiluo.android.yunpu.home.activity.ShareActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:441:9-443:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:443:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:442:13-56
+activity#com.zhiluo.android.yunpu.setting.bluetooths.activity.BluetoothActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:444:9-446:52
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:446:13-49
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:445:13-74
+activity#com.zhiluo.android.yunpu.home.activity.SystemSettingActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:447:9-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:447:19-70
+activity#com.zhiluo.android.yunpu.setting.BluePrintSettingActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:448:9-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:448:19-67
+activity#com.zhiluo.android.yunpu.setting.gesture.GesturePasswordSettingActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:449:9-84
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:449:19-81
+activity#com.zhiluo.android.yunpu.member.consume.activity.PlusReduceIntegralActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:450:9-452:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:452:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:451:13-79
+activity#com.zhiluo.android.yunpu.home.activity.CustomerServiceActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:453:9-75
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:453:19-72
+activity#com.zhiluo.android.yunpu.sms.activity.ChooseSMSTemplatesActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:454:9-77
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:454:19-74
+activity#com.zhiluo.android.yunpu.sms.activity.ChooseSMSContentsActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:455:9-76
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:455:19-73
+activity#com.zhiluo.android.yunpu.setting.print.PrintSettingActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:456:9-72
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:456:19-69
+activity#com.zhiluo.android.yunpu.member.activity.MemberPhotoActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:457:9-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:457:19-70
+activity#com.zhiluo.android.yunpu.consume.activity.PayConfirmActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:458:9-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:458:19-70
+activity#com.zhiluo.android.yunpu.consume.activity.UnionPayActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:459:9-71
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:459:19-68
+activity#com.zhiluo.android.yunpu.consume.activity.DiscountTypeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:460:9-75
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:460:19-72
+activity#com.zhiluo.android.yunpu.consume.activity.StaffCommissionActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:461:9-78
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:461:19-75
+activity#com.zhiluo.android.yunpu.member.manager.activity.CheckMemberInfoActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:462:9-85
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:462:19-82
+activity#com.zhiluo.android.yunpu.member.manager.activity.AddMemberActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:463:9-466:73
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:466:13-70
+	android:exported
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:465:13-36
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:464:13-70
+activity#com.zhiluo.android.yunpu.member.manager.activity.ScreenMemberActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:467:9-469:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:469:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:468:13-73
+activity#com.zhiluo.android.yunpu.member.manager.activity.ModifyMemberActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:470:9-472:73
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:472:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:471:13-73
+activity#com.zhiluo.android.yunpu.goods.manager.activity.GoodsManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:473:9-81
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:473:19-78
+activity#com.zhiluo.android.yunpu.goods.consume.activity.GoodsConsumeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:474:9-81
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:474:19-78
+activity#com.zhiluo.android.yunpu.statistics.ReportFromActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:475:9-67
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:475:19-64
+activity#com.zhiluo.android.yunpu.statistics.account.activity.ReportScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:476:9-478:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:478:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:477:13-77
+activity#com.zhiluo.android.yunpu.statistics.account.activity.MemberAccountActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:479:9-87
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:479:19-84
+activity#com.zhiluo.android.yunpu.statistics.order.activity.OrderActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:480:9-77
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:480:19-74
+activity#com.zhiluo.android.yunpu.statistics.staff.activity.StaffReportActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:481:9-83
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:481:19-80
+activity#com.zhiluo.android.yunpu.statistics.rebate.activity.RebateActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:482:9-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:482:19-76
+activity#com.zhiluo.android.yunpu.statistics.rebate.activity.RebateDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:483:9-85
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:483:19-82
+activity#com.zhiluo.android.yunpu.statistics.rebate.activity.RebateListDetaillActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:484:9-90
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:484:19-87
+activity#com.zhiluo.android.yunpu.statistics.staff.activity.StaffScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:485:9-487:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:487:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:486:13-74
+activity#com.zhiluo.android.yunpu.statistics.staff.activity.StaffRebateDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:488:9-89
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:488:19-86
+activity#com.zhiluo.android.yunpu.statistics.order.activity.GoodsOrderScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:489:9-491:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:491:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:490:13-79
+activity#com.zhiluo.android.yunpu.statistics.order.activity.GoodsOrderDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:492:9-88
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:492:19-85
+activity#com.zhiluo.android.yunpu.statistics.order.activity.FastConsumeDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:493:9-89
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:493:19-86
+activity#com.zhiluo.android.yunpu.statistics.order.activity.TimesConsumeScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:494:9-496:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:496:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:495:13-81
+activity#com.zhiluo.android.yunpu.statistics.order.activity.TimesConsumeDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:497:9-90
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:497:19-87
+activity#com.zhiluo.android.yunpu.statistics.order.activity.PointExchangeScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:498:9-500:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:500:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:499:13-82
+activity#com.zhiluo.android.yunpu.statistics.order.activity.PointExchangeDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:501:9-91
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:501:19-88
+activity#com.zhiluo.android.yunpu.statistics.account.activity.RechargeScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:502:9-504:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:504:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:503:13-79
+activity#com.zhiluo.android.yunpu.statistics.account.activity.RechargeMoneyDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:505:9-93
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:505:19-90
+activity#com.zhiluo.android.yunpu.statistics.account.activity.TimesRechargeDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:506:9-93
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:506:19-90
+activity#com.zhiluo.android.yunpu.statistics.account.activity.TimesRechargeScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:507:9-509:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:509:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:508:13-84
+activity#com.zhiluo.android.yunpu.statistics.account.activity.DelayDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:510:9-85
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:510:19-82
+activity#com.zhiluo.android.yunpu.statistics.account.activity.MoneyDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:511:9-85
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:511:19-82
+activity#com.zhiluo.android.yunpu.statistics.account.activity.IntegralDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:512:9-88
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:512:19-85
+activity#com.zhiluo.android.yunpu.statistics.account.activity.DelayScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:513:9-515:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:515:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:514:13-76
+activity#com.zhiluo.android.yunpu.statistics.account.activity.IntegralScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:516:9-518:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:518:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:517:13-79
+activity#com.zhiluo.android.yunpu.statistics.account.activity.MoneyDetailScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:519:9-521:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:521:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:520:13-82
+activity#com.zhiluo.android.yunpu.statistics.account.activity.MemberSignScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:522:9-525:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:524:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:525:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:523:13-81
+activity#com.zhiluo.android.yunpu.home.activity.MoreActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:526:9-64
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:526:19-61
+activity#com.zhiluo.android.yunpu.analysis.activity.GoodAnalysisActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:527:9-76
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:527:19-73
+activity#com.zhiluo.android.yunpu.analysis.activity.MemberAnalysisActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:528:9-78
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:528:19-75
+activity#com.zhiluo.android.yunpu.analysis.activity.StatisticsActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:529:9-74
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:529:19-71
+activity#com.zhiluo.android.yunpu.goods.manager.activity.StockTakingActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:530:9-80
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:530:19-77
+activity#com.zhiluo.android.yunpu.ui.activity.good.GoodsWarehousingActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:531:9-534:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:533:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:534:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:532:13-70
+activity#com.zhiluo.android.yunpu.goods.manager.activity.CheckGoodsActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:535:9-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:535:19-76
+activity#com.zhiluo.android.yunpu.goods.manager.activity.ProviderManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:536:9-538:73
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:538:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:537:13-75
+activity#com.zhiluo.android.yunpu.goods.manager.activity.AddProviderActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:539:9-80
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:539:19-77
+activity#com.zhiluo.android.yunpu.goods.manager.activity.ModifyProviderActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:540:9-83
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:540:19-80
+activity#com.zhiluo.android.yunpu.ui.activity.HomeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:541:9-545:37
+	android:screenOrientation
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:544:13-49
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:543:13-44
+	android:theme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:545:13-34
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:542:13-53
+activity#com.zhiluo.android.yunpu.ui.activity.PrintSetActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:546:9-548:57
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:548:13-54
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:547:13-57
+activity#com.zhiluo.android.yunpu.ui.activity.ChoiceTypeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:549:9-68
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:549:19-65
+activity#com.zhiluo.android.yunpu.member.consume.activity.VerifyPasswordActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:550:9-552:76
+	android:theme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:552:13-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:551:13-75
+activity#com.zhiluo.android.yunpu.ui.activity.AddMainTypeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:553:9-555:76
+	android:theme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:555:13-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:554:13-60
+activity#com.zhiluo.android.yunpu.ui.activity.AddChildTypeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:556:9-558:76
+	android:theme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:558:13-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:557:13-61
+activity#com.zhiluo.android.yunpu.member.manager.activity.MemberRecordActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:559:9-82
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:559:19-79
+activity#com.zhiluo.android.yunpu.member.manager.activity.ScreenStoreActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:560:9-81
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:560:19-78
+activity#com.zhiluo.android.yunpu.ui.activity.AddGradeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:561:9-66
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:561:19-63
+activity#com.zhiluo.android.yunpu.consume.activity.YouHuiQuanActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:562:9-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:562:19-70
+activity#com.zhiluo.android.yunpu.ui.activity.SystemParamsSetActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:563:9-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:563:19-70
+activity#com.zhiluo.android.yunpu.ui.activity.GradeManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:564:9-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:564:19-67
+activity#com.zhiluo.android.yunpu.ui.activity.GradeDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:565:9-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:565:19-66
+activity#com.zhiluo.android.yunpu.ui.activity.ChoiceInitServiceActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:566:9-568:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:568:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:567:13-66
+activity#com.zhiluo.android.yunpu.ui.activity.GradeIntegralSetActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:569:9-571:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:571:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:570:13-65
+activity#com.zhiluo.android.yunpu.ui.activity.GradeDiscountSetActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:572:9-574:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:574:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:573:13-65
+activity#com.zhiluo.android.yunpu.ui.activity.EditGradeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:575:9-67
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:575:19-64
+activity#com.zhiluo.android.yunpu.ui.activity.GradeIntegralDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:576:9-77
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:576:19-74
+activity#com.zhiluo.android.yunpu.ui.activity.DiscountDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:577:9-72
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:577:19-69
+activity#com.zhiluo.android.yunpu.ui.activity.recharge.RechargeManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:578:9-82
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:578:19-79
+activity#com.zhiluo.android.yunpu.ui.activity.recharge.AddRechargeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:579:9-78
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:579:19-75
+activity#com.zhiluo.android.yunpu.ui.activity.recharge.KRechargeDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:580:9-82
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:580:19-79
+activity#com.zhiluo.android.yunpu.ui.activity.recharge.EditRechargeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:581:9-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:581:19-76
+activity#com.zhiluo.android.yunpu.ui.activity.tc.TCManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:582:9-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:582:19-67
+activity#com.zhiluo.android.yunpu.ui.activity.tc.TCDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:583:9-585:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:585:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:584:13-60
+activity#com.zhiluo.android.yunpu.ui.activity.tc.AddTCActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:586:9-588:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:588:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:587:13-57
+activity#com.zhiluo.android.yunpu.ui.activity.tc.ChoiceGoodsActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:589:9-591:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:591:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:590:13-63
+activity#com.zhiluo.android.yunpu.ui.activity.tc.EditTCActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:592:9-594:73
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:594:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:593:13-58
+activity#com.zhiluo.android.yunpu.ui.activity.discount.DiscountManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:595:9-82
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:595:19-79
+activity#com.zhiluo.android.yunpu.ui.activity.discount.AddDisActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:596:9-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:596:19-70
+activity#com.zhiluo.android.yunpu.ui.activity.discount.DisDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:597:9-76
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:597:19-73
+activity#com.zhiluo.android.yunpu.ui.activity.discount.EditDisActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:598:9-74
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:598:19-71
+activity#com.zhiluo.android.yunpu.ui.activity.staff.StaffManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:599:9-76
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:599:19-73
+activity#com.zhiluo.android.yunpu.ui.activity.staff.AddDepActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:600:9-602:76
+	android:theme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:602:13-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:601:13-61
+activity#com.zhiluo.android.yunpu.ui.activity.staff.StaffDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:603:9-75
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:603:19-72
+activity#com.zhiluo.android.yunpu.ui.activity.staff.EditStaffActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:604:9-606:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:606:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:605:13-64
+activity#com.zhiluo.android.yunpu.ui.activity.staff.AddStaffActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:607:9-609:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:609:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:608:13-63
+activity#com.zhiluo.android.yunpu.ui.activity.user.UserManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:610:9-74
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:610:19-71
+activity#com.zhiluo.android.yunpu.ui.activity.user.AddUserActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:611:9-613:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:613:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:612:13-61
+activity#com.zhiluo.android.yunpu.ui.activity.user.UserDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:614:9-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:614:19-70
+activity#com.zhiluo.android.yunpu.ui.activity.user.AddRoleActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:615:9-617:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:617:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:616:13-61
+activity#com.zhiluo.android.yunpu.ui.activity.user.EditUserActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:618:9-620:72
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:620:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:619:13-62
+activity#com.zhiluo.android.yunpu.ui.activity.user.EditRoleActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:621:9-71
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:621:19-68
+activity#com.zhiluo.android.yunpu.ui.activity.label.LabelManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:622:9-76
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:622:19-73
+activity#com.zhiluo.android.yunpu.ui.activity.label.AddLabelActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:623:9-625:76
+	android:theme
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:625:13-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:624:13-63
+activity#com.zhiluo.android.yunpu.ui.activity.label.LabelDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:626:9-75
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:626:19-72
+activity#com.zhiluo.android.yunpu.ui.activity.label.EditLabelActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:627:9-73
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:627:19-70
+activity#com.zhiluo.android.yunpu.ui.activity.customvlue.CustomValueManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:628:9-87
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:628:19-84
+activity#com.zhiluo.android.yunpu.ui.activity.customvlue.AddMemberValueActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:629:9-83
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:629:19-80
+activity#com.zhiluo.android.yunpu.ui.activity.customvlue.AddGoodsValueActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:630:9-82
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:630:19-79
+activity#com.zhiluo.android.yunpu.ui.activity.customvlue.MemberValueDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:631:9-86
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:631:19-83
+activity#com.zhiluo.android.yunpu.ui.activity.customvlue.EditMemberValueActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:632:9-84
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:632:19-81
+activity#com.zhiluo.android.yunpu.ui.activity.customvlue.GoodsValueDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:633:9-85
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:633:19-82
+activity#com.zhiluo.android.yunpu.ui.activity.customvlue.EditGoodsValueActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:634:9-83
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:634:19-80
+activity#com.zhiluo.android.yunpu.ui.activity.staff.EditDepActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:635:9-637:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:637:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:636:13-62
+activity#com.zhiluo.android.yunpu.historyconsumption.HistoryRecoderActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:638:9-640:56
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:640:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:639:13-70
+activity#com.zhiluo.android.yunpu.member.manager.activity.YSLMemberDetailsActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:641:9-643:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:643:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:642:13-77
+activity#com.zhiluo.android.yunpu.member.manager.activity.LossAndLockActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:644:9-646:56
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:646:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:645:13-72
+activity#com.zhiluo.android.yunpu.member.manager.activity.ChangeCardActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:647:9-649:56
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:649:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:648:13-71
+activity#com.zhiluo.android.yunpu.member.consume.activity.VipDelayActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:650:9-652:56
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:652:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:651:13-69
+activity#com.zhiluo.android.yunpu.member.manager.activity.ChangePwdActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:653:9-655:56
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:655:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:654:13-70
+activity#com.zhiluo.android.yunpu.ui.activity.ShopMallActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:656:9-66
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:656:19-63
+activity#com.zhiluo.android.yunpu.home.activity.MineKeFuActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:657:9-68
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:657:19-65
+activity#com.zhiluo.android.yunpu.home.activity.ShopSettingActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:658:9-71
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:658:19-68
+activity#com.zhiluo.android.yunpu.home.activity.YSLSystemSetActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:659:9-72
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:659:19-69
+activity#com.zhiluo.android.yunpu.home.activity.YSLShopEditActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:660:9-662:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:662:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:661:13-62
+activity#com.zhiluo.android.yunpu.home.activity.LinkNameSetActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:663:9-665:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:665:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:664:13-62
+activity#com.zhiluo.android.yunpu.home.activity.LinkTelsetActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:666:9-668:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:668:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:667:13-61
+activity#com.zhiluo.android.yunpu.home.activity.YSLMessagesActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:669:9-671:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:671:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:670:13-62
+activity#com.zhiluo.android.yunpu.goods.manager.activity.YSLSupplierManager
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:672:9-674:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:674:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:673:13-70
+activity#com.zhiluo.android.yunpu.ui.activity.YSLVipLevelEdit
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:675:9-678:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:677:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:678:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:676:13-56
+activity#com.zhiluo.android.yunpu.ui.activity.VipLevelChuZhi
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:679:9-681:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:681:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:680:13-55
+activity#com.zhiluo.android.yunpu.ui.activity.VipLevelChuZhiDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:682:9-684:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:684:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:683:13-69
+activity#com.zhiluo.android.yunpu.ui.activity.VipIntergalsetACtivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:685:9-688:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:687:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:688:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:686:13-63
+activity#com.zhiluo.android.yunpu.ui.activity.YSLDiscountACtivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:689:9-691:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:691:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:690:13-60
+activity#com.zhiluo.android.yunpu.ui.activity.YSLXianShiSetActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:692:9-694:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:694:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:693:13-62
+activity#com.zhiluo.android.yunpu.ui.activity.DisplayJiCiServiceActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:695:9-697:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:697:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:696:13-67
+activity#com.zhiluo.android.yunpu.ui.activity.NewVipIntergalsetActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:698:9-701:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:700:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:701:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:699:13-66
+activity#com.zhiluo.android.yunpu.ui.activity.YSLAddNewVipLevelActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:702:9-705:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:704:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:705:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:703:13-66
+activity#com.zhiluo.android.yunpu.ui.activity.NewYSLDiscountActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:706:9-708:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:708:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:707:13-63
+activity#com.zhiluo.android.yunpu.ui.activity.NewDisplayJiCiServiceACtivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:709:9-711:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:711:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:710:13-70
+activity#com.zhiluo.android.yunpu.ui.activity.NewYSLXianShiSetActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:712:9-714:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:714:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:713:13-65
+activity#com.zhiluo.android.yunpu.goods.manager.activity.YSLAddMaintypeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:715:9-717:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:717:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:716:13-74
+activity#com.zhiluo.android.yunpu.goods.manager.activity.YSLAddChildTypeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:718:9-720:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:720:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:719:13-75
+activity#com.zhiluo.android.yunpu.goods.manager.activity.YSLAddGoodsActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:721:9-724:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:723:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:724:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:722:13-71
+activity#com.zhiluo.android.yunpu.ui.activity.recharge.YSLEditReChargeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:725:9-728:57
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:727:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:728:13-54
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:726:13-73
+activity#com.zhiluo.android.yunpu.member.manager.activity.VipBaseMessage
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:729:9-731:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:731:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:730:13-67
+activity#com.zhiluo.android.yunpu.consume.activity.KuaiJieShouKuan
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:732:9-734:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:734:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:733:13-61
+activity#com.zhiluo.android.yunpu.consume.activity.YSLFastConsumeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:735:9-737:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:737:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:736:13-68
+activity#com.zhiluo.android.yunpu.ui.activity.good.InOutWareHouseActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:738:9-741:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:740:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:741:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:739:13-68
+activity#com.zhiluo.android.yunpu.ui.activity.good.InRecoderActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:742:9-744:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:744:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:743:13-63
+activity#com.zhiluo.android.yunpu.ui.activity.good.InWareItemDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:745:9-747:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:747:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:746:13-70
+activity#com.zhiluo.android.yunpu.statistics.account.activity.ChuZhiActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:748:9-750:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:750:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:749:13-71
+activity#com.zhiluo.android.yunpu.statistics.account.activity.JiFenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:751:9-753:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:753:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:752:13-70
+activity#com.zhiluo.android.yunpu.statistics.account.activity.JiCiActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:754:9-756:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:756:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:755:13-69
+activity#com.zhiluo.android.yunpu.ui.activity.good.OutRecoderActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:757:9-759:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:759:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:758:13-64
+activity#com.zhiluo.android.yunpu.ui.activity.good.OutWareItemDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:760:9-762:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:762:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:761:13-71
+activity#com.zhiluo.android.yunpu.member.consume.activity.MemberChargePayActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:763:9-765:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:765:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:764:13-76
+activity#com.zhiluo.android.yunpu.login.activity.RegisteActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:766:9-768:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:768:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:767:13-59
+activity#com.zhiluo.android.yunpu.consume.activity.SignChooseActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:769:9-771:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:771:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:770:13-64
+activity#com.zhiluo.android.yunpu.goods.manager.activity.GoodsManagerChooseActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:772:9-775:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:774:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:775:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:773:13-78
+activity#com.zhiluo.android.yunpu.ui.activity.handduty.HandDutyActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:776:9-779:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:778:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:779:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:777:13-66
+activity#com.zhiluo.android.yunpu.statistics.handover.HandOverReportActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:780:9-782:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:782:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:781:13-71
+activity#com.zhiluo.android.yunpu.statistics.handover.HandOverReportDetail
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:783:9-785:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:785:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:784:13-69
+activity#com.zhiluo.android.yunpu.ui.activity.timesrule.TimesRuleManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:786:9-788:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:788:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:787:13-75
+activity#com.zhiluo.android.yunpu.ui.activity.timesrule.AddTimesRuleActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:789:9-80
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:789:19-77
+activity#com.zhiluo.android.yunpu.ui.activity.timesrule.TimesRuleDetail
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:790:9-792:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:792:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:791:13-66
+activity#com.zhiluo.android.yunpu.ui.activity.timesrule.EditRulesActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:793:9-795:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:795:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:794:13-68
+activity#com.zhiluo.android.yunpu.goods.manager.activity.FastChargesActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:796:9-798:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:798:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:797:13-71
+activity#com.zhiluo.android.yunpu.goods.manager.activity.ChoiceFastchargesActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:799:9-801:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:801:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:800:13-77
+activity#com.zhiluo.android.yunpu.ui.activity.TimesDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:802:9-804:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:804:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:803:13-60
+activity#com.zhiluo.android.yunpu.ui.activity.GradeXianShiDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:805:9-807:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:807:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:806:13-67
+activity#com.zhiluo.android.yunpu.ui.activity.PayParamsSetActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:808:9-810:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:810:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:809:13-61
+activity#com.zhiluo.android.yunpu.ui.activity.good.ChoiceProviderActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:811:9-814:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:813:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:814:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:812:13-68
+activity#com.zhiluo.android.yunpu.sms.activity.MsgNotice
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:815:9-817:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:817:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:816:13-51
+activity#com.zhiluo.android.yunpu.ui.activity.VipLevelRiseOrFallActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:818:9-821:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:820:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:821:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:819:13-67
+activity#com.zhiluo.android.yunpu.ui.activity.VipLevelRiseFallDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:822:9-824:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:824:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:823:13-71
+activity#com.zhiluo.android.yunpu.sms.activity.AddSmsTemplatesActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:825:9-827:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:827:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:826:13-65
+activity#com.zhiluo.android.yunpu.statistics.order.activity.GoodsRetureActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:828:9-830:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:830:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:829:13-74
+activity#com.zhiluo.android.yunpu.ui.activity.good.InWareRetureActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:831:9-833:73
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:833:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:832:13-66
+activity#com.zhiluo.android.yunpu.member.manager.activity.MemberSignActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:834:9-837:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:836:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:837:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:835:13-71
+activity#com.zhiluo.android.yunpu.member.manager.activity.MemberSearchProjectActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:838:9-841:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:840:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:841:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:839:13-80
+activity#com.zhiluo.android.yunpu.member.manager.activity.MemberSignDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:842:9-844:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:844:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:843:13-77
+activity#com.zhiluo.android.yunpu.consume.activity.LimitedTimeConsumeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:845:9-847:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:847:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:846:13-72
+activity#com.zhiluo.android.yunpu.statistics.order.activity.LimitedConsumeScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:848:9-850:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:850:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:849:13-83
+activity#com.zhiluo.android.yunpu.statistics.order.activity.LimitedCosumeReportDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:851:9-853:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:853:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:852:13-88
+activity#com.zhiluo.android.yunpu.consume.activity.OneKeyRefuelingActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:854:9-78
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:854:19-75
+activity#com.zhiluo.android.yunpu.paymanager.activity.PayManagerActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:855:9-858:73
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:857:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:858:13-70
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:856:13-67
+activity#com.zhiluo.android.yunpu.paymanager.activity.ChoiceExpensesActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:859:9-861:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:861:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:860:13-71
+activity#com.zhiluo.android.yunpu.paymanager.activity.AddExpensesMainTypeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:862:9-864:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:864:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:863:13-76
+activity#com.zhiluo.android.yunpu.paymanager.activity.AddExpenseschildTypeActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:865:9-867:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:867:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:866:13-77
+activity#com.zhiluo.android.yunpu.paymanager.activity.PayDetailScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:868:9-870:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:870:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:869:13-72
+activity#com.zhiluo.android.yunpu.paymanager.activity.ModifyPayDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:871:9-873:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:873:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:872:13-72
+activity#com.zhiluo.android.yunpu.paymanager.activity.PayDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:874:9-876:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:876:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:875:13-66
+activity#com.zhiluo.android.yunpu.statistics.order.activity.YJJYOrderDetailActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:877:9-879:47
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:879:13-44
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:878:13-78
+activity#com.zhiluo.android.yunpu.statistics.order.activity.YJJYOrderScreenActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:880:9-883:72
+	android:launchMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:882:13-44
+	android:windowSoftInputMode
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:883:13-69
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:881:13-78
+activity#com.zhiluo.android.yunpu.ui.activity.QRPayDetail
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:884:9-61
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:884:19-58
+activity#com.zhiluo.android.yunpu.ui.activity.OpenQRPayActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:885:9-67
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:885:19-64
+activity#com.zhiluo.android.yunpu.goods.manager.activity.ConsumeOneActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:886:9-79
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:886:19-76
+activity#com.zhiluo.android.yunpu.login.activity.UserAgreementActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:887:9-74
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:887:19-71
+activity#com.zhiluo.android.yunpu.ui.activity.PowerListActivity
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:889:9-67
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:889:19-64
+uses-sdk
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\dc81f70bba666021d80c9247cc0d2845\multidex-1.0.2\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\dc81f70bba666021d80c9247cc0d2845\multidex-1.0.2\AndroidManifest.xml:20:5-43
+MERGED from [:mypicker] D:\project\project_gt\Trunk\mypicker\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:mypicker] D:\project\project_gt\Trunk\mypicker\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:7:5-44
+MERGED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:7:5-44
+MERGED from [com.mamengmami.android:waveswiperefreshlayout:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f58f0707b6e66637504a0641c5d0f949\waveswiperefreshlayout-1.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.mamengmami.android:waveswiperefreshlayout:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f58f0707b6e66637504a0641c5d0f949\waveswiperefreshlayout-1.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.iwgang:familiarrecyclerview:1.3.2] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3507c96c3eea69dab857bc94c10e6572\familiarrecyclerview-1.3.2\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.iwgang:familiarrecyclerview:1.3.2] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3507c96c3eea69dab857bc94c10e6572\familiarrecyclerview-1.3.2\AndroidManifest.xml:6:5-8:41
+MERGED from [com.youth.banner:banner:1.4.8] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\afcd9aa62aa9063a9f3c80de52af20c1\banner-1.4.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.youth.banner:banner:1.4.8] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\afcd9aa62aa9063a9f3c80de52af20c1\banner-1.4.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.eftimoff:android-patternview:1.0.6] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\792a64ce1b2a3ee61a51ae89a659a023\android-patternview-1.0.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.eftimoff:android-patternview:1.0.6] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\792a64ce1b2a3ee61a51ae89a659a023\android-patternview-1.0.6\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.rey5137:material:1.2.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\bd617e8e8c56c1135e371455ef1c971d\material-1.2.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.rey5137:material:1.2.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\bd617e8e8c56c1135e371455ef1c971d\material-1.2.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.yanzhenjie:permission:1.0.5] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\d1e1bcdb73645b2be3f7474c46329148\permission-1.0.5\AndroidManifest.xml:21:5-23:41
+MERGED from [com.yanzhenjie:permission:1.0.5] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\d1e1bcdb73645b2be3f7474c46329148\permission-1.0.5\AndroidManifest.xml:21:5-23:41
+MERGED from [com.dou361.dialogui:jjdxm-dialogui:1.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b5918126ab3f26b09a1c2a9f1563978a\jjdxm-dialogui-1.0.3\AndroidManifest.xml:8:5-10:41
+MERGED from [com.dou361.dialogui:jjdxm-dialogui:1.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b5918126ab3f26b09a1c2a9f1563978a\jjdxm-dialogui-1.0.3\AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:design:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:21:5-23:62
+MERGED from [com.zhy:flowlayout-lib:1.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3fb13e44358272162236def75b626a07\flowlayout-lib-1.0.3\AndroidManifest.xml:8:5-10:41
+MERGED from [com.zhy:flowlayout-lib:1.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3fb13e44358272162236def75b626a07\flowlayout-lib-1.0.3\AndroidManifest.xml:8:5-10:41
+MERGED from [com.yanzhenjie.alertdialog:alertdialog:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\eb74c798b97c20a083e0b08c1a88f4a1\alertdialog-1.0.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.yanzhenjie.alertdialog:alertdialog:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\eb74c798b97c20a083e0b08c1a88f4a1\alertdialog-1.0.0\AndroidManifest.xml:6:5-8:41
+MERGED from [:library] D:\project\project_gt\Trunk\library\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:library] D:\project\project_gt\Trunk\library\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [com.pnikosis:materialish-progress:1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\38146e36c7ddcd1e31b6eaa1108813b0\materialish-progress-1.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.pnikosis:materialish-progress:1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\38146e36c7ddcd1e31b6eaa1108813b0\materialish-progress-1.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3c115bd9f6556a7430ab54a2645aa55d\appcompat-v7-26.1.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3c115bd9f6556a7430ab54a2645aa55d\appcompat-v7-26.1.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:transition:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e13c4a3a02d0f93e83b088e91c91216c\transition-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e13c4a3a02d0f93e83b088e91c91216c\transition-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8b2410946284cd4775e5f8b775d72d89\support-v4-26.1.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8b2410946284cd4775e5f8b775d72d89\support-v4-26.1.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.takwolf.android:lock9view:0.0.11] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e3df44c7526a6d51e1191db3f4cde0e2\lock9view-0.0.11\AndroidManifest.xml:7:5-9:41
+MERGED from [com.takwolf.android:lock9view:0.0.11] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e3df44c7526a6d51e1191db3f4cde0e2\lock9view-0.0.11\AndroidManifest.xml:7:5-9:41
+MERGED from [me.drakeet.materialdialog:library:1.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\5d1011770d22d6d72523ffd4a9c1120d\library-1.3.1\AndroidManifest.xml:8:5-10:41
+MERGED from [me.drakeet.materialdialog:library:1.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\5d1011770d22d6d72523ffd4a9c1120d\library-1.3.1\AndroidManifest.xml:8:5-10:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\11affc0685db3039cae43f3363a706e6\circleimageview-2.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\11affc0685db3039cae43f3363a706e6\circleimageview-2.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cb20b76ed225fe8217fdebe6b4cd159d\constraint-layout-1.0.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.melnykov:floatingactionbutton:1.3.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8532cf97184e877832c4a22d4a6e4326\floatingactionbutton-1.3.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.melnykov:floatingactionbutton:1.3.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8532cf97184e877832c4a22d4a6e4326\floatingactionbutton-1.3.0\AndroidManifest.xml:8:5-10:41
+MERGED from [org.litepal.android:core:1.6.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\c724edd23a61d6cd9a44add9d455f549\core-1.6.0\AndroidManifest.xml:7:5-9:41
+MERGED from [org.litepal.android:core:1.6.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\c724edd23a61d6cd9a44add9d455f549\core-1.6.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.drawthink:expandable-recyclerview:0.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b6fa0a64b611fcf477c03d7f697e095c\expandable-recyclerview-0.0.3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.drawthink:expandable-recyclerview:0.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b6fa0a64b611fcf477c03d7f697e095c\expandable-recyclerview-0.0.3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.lecho:hellocharts-library:1.5.8] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\9be520dfeb447fa654ceb9a67a5b51a9\hellocharts-library-1.5.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.lecho:hellocharts-library:1.5.8] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\9be520dfeb447fa654ceb9a67a5b51a9\hellocharts-library-1.5.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.lzyzsd:jsbridge:1.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1f096de0aebefbbb64402b91e05b8243\jsbridge-1.0.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.lzyzsd:jsbridge:1.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1f096de0aebefbbb64402b91e05b8243\jsbridge-1.0.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.zcweng:switch-button:0.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\11a53035bc8ddbf90f028f4dd377f346\switch-button-0.0.3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.zcweng:switch-button:0.0.3] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\11a53035bc8ddbf90f028f4dd377f346\switch-button-0.0.3\AndroidManifest.xml:7:5-9:41
+MERGED from [:SunmiPayService:] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\0e4a35cb7d73435e7e188ef0f22d36ee\SunmiPayService\AndroidManifest.xml:7:5-9:41
+MERGED from [:SunmiPayService:] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\0e4a35cb7d73435e7e188ef0f22d36ee\SunmiPayService\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:2.0.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ecbf79d6e14ae2a870fccf4c3270820\jcore-2.0.1\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:2.0.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ecbf79d6e14ae2a870fccf4c3270820\jcore-2.0.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.lzy.net:okgo:3.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1a4f7fed7247ed4e5bf950e369e8fee7\okgo-3.0.4\AndroidManifest.xml:22:5-24:41
+MERGED from [com.lzy.net:okgo:3.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1a4f7fed7247ed4e5bf950e369e8fee7\okgo-3.0.4\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\ef7c5ae2af6a27687948fc6cc3886b74\recyclerview-v7-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\ef7c5ae2af6a27687948fc6cc3886b74\recyclerview-v7-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\26df0f8813a13404e327c780b3b81904\support-media-compat-26.1.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\26df0f8813a13404e327c780b3b81904\support-media-compat-26.1.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f7553f20c19b1ac99491fe60ed6b734d\support-fragment-26.1.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f7553f20c19b1ac99491fe60ed6b734d\support-fragment-26.1.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\6ab7c35cf9f4095d5538551927303dbd\support-core-utils-26.1.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\6ab7c35cf9f4095d5538551927303dbd\support-core-utils-26.1.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ac1655360d6dbf344dc8ff3c8d3b0e6\animated-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ac1655360d6dbf344dc8ff3c8d3b0e6\animated-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\258048e6c61d4b5456510532346e8c01\support-core-ui-26.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\258048e6c61d4b5456510532346e8c01\support-core-ui-26.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\a449755bc5e7ed79153fa9929dc7654c\support-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\a449755bc5e7ed79153fa9929dc7654c\support-vector-drawable-26.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\19640d657814c0deaea3c9f8ce878766\support-compat-26.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\19640d657814c0deaea3c9f8ce878766\support-compat-26.1.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:cardview-v7:23.4.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\c6bc11ae90746dfb970581f8dee8b947\cardview-v7-23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:23.4.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\c6bc11ae90746dfb970581f8dee8b947\cardview-v7-23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cbd00f137ffe055a54edb27e1642d0f7\runtime-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cbd00f137ffe055a54edb27e1642d0f7\runtime-1.0.0\AndroidManifest.xml:20:5-22:41
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+		INJECTED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:141:13-143:54
+	android:resource
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:143:17-51
+	android:name
+		ADDED from D:\project\project_gt\Trunk\yunpukeji\src\main\AndroidManifest.xml:142:17-67
+activity#com.blankj.utilcode.util.PermissionUtils$PermissionActivity
+ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:10:9-15:75
+	android:multiprocess
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:13:13-40
+	android:windowSoftInputMode
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:15:13-72
+	android:configChanges
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:12:13-74
+	android:theme
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:14:13-55
+	android:name
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:11:13-87
+provider#com.blankj.utilcode.util.Utils$FileProvider4UtilCode
+ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:17:9-26:20
+	android:grantUriPermissions
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:21:13-47
+	android:authorities
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:19:13-69
+	android:multiprocess
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:22:13-40
+	android:exported
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:20:13-37
+	android:name
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:18:13-80
+service#com.blankj.utilcode.util.MessengerUtils$ServerService
+ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:28:9-32:19
+	android:name
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:28:18-86
+intent-filter#action:name:${applicationId}.messenger
+ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:29:13-31:29
+intent-filter#action:name:com.zhiluo.android.yunpu.messenger
+ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:29:13-31:29
+action#${applicationId}.messenger
+ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:30:17-69
+	android:name
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:30:25-66
+action#com.zhiluo.android.yunpu.messenger
+ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:30:17-69
+	android:name
+		ADDED from [com.blankj:utilcode:1.25.9] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e6e41a51219b9a3ae0b237aec0915201\utilcode-1.25.9\AndroidManifest.xml:30:25-66
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3c115bd9f6556a7430ab54a2645aa55d\appcompat-v7-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3c115bd9f6556a7430ab54a2645aa55d\appcompat-v7-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e13c4a3a02d0f93e83b088e91c91216c\transition-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\e13c4a3a02d0f93e83b088e91c91216c\transition-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8b2410946284cd4775e5f8b775d72d89\support-v4-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\8b2410946284cd4775e5f8b775d72d89\support-v4-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\ef7c5ae2af6a27687948fc6cc3886b74\recyclerview-v7-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\ef7c5ae2af6a27687948fc6cc3886b74\recyclerview-v7-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\26df0f8813a13404e327c780b3b81904\support-media-compat-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\26df0f8813a13404e327c780b3b81904\support-media-compat-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f7553f20c19b1ac99491fe60ed6b734d\support-fragment-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\f7553f20c19b1ac99491fe60ed6b734d\support-fragment-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\6ab7c35cf9f4095d5538551927303dbd\support-core-utils-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\6ab7c35cf9f4095d5538551927303dbd\support-core-utils-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ac1655360d6dbf344dc8ff3c8d3b0e6\animated-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\3ac1655360d6dbf344dc8ff3c8d3b0e6\animated-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\258048e6c61d4b5456510532346e8c01\support-core-ui-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\258048e6c61d4b5456510532346e8c01\support-core-ui-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\a449755bc5e7ed79153fa9929dc7654c\support-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\a449755bc5e7ed79153fa9929dc7654c\support-vector-drawable-26.1.0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\19640d657814c0deaea3c9f8ce878766\support-compat-26.1.0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\19640d657814c0deaea3c9f8ce878766\support-compat-26.1.0\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.1.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\20002896a77046aac10817efbb717d4b\design-26.1.0\AndroidManifest.xml:27:13-51
+permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:11:5-13:47
+uses-permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
+MERGED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:16:5-81
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:19:5-75
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:19:22-72
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:23:5-84
+MERGED from [com.lzy.net:okgo:3.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1a4f7fed7247ed4e5bf950e369e8fee7\okgo-3.0.4\AndroidManifest.xml:29:5-84
+MERGED from [com.lzy.net:okgo:3.0.4] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\1a4f7fed7247ed4e5bf950e369e8fee7\okgo-3.0.4\AndroidManifest.xml:29:5-84
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:23:22-81
+uses-permission#android.permission.VIBRATE
+ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:28:5-66
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:28:22-63
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:29:5-78
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:29:22-75
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:31:5-85
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:31:22-82
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:32:5-76
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:32:22-73
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:33:5-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:33:22-76
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:34:5-89
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:34:22-86
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:35:5-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:35:22-76
+meta-data#JPUSH_CHANNEL
+ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:138:9-140:48
+	android:value
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:140:13-45
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:139:13-41
+meta-data#JPUSH_APPKEY
+ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:141:9-143:47
+	android:value
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:143:13-44
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.3.1] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\b77656538909f8795ee38c87cf77891d\jpush-3.3.1\AndroidManifest.xml:142:13-40
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cbd00f137ffe055a54edb27e1642d0f7\runtime-1.0.0\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cbd00f137ffe055a54edb27e1642d0f7\runtime-1.0.0\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\guting\.gradle\caches\transforms-2\files-2.1\cbd00f137ffe055a54edb27e1642d0f7\runtime-1.0.0\AndroidManifest.xml:26:13-58

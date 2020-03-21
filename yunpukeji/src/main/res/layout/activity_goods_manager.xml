@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zhiluo.android.yunpu.goods.manager.activity.GoodsManagerActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_goods_manager_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ysl_gray">
+
+        <RelativeLayout
+            android:id="@+id/ll_goods_manager_head"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@drawable/ysl_main_style">
+
+            <TextView
+                android:id="@+id/tv_goods_manager_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@mipmap/left_btn_n"
+                android:gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:text="   "
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_title_size" />
+
+            <TextView
+                android:id="@+id/tv_goods_manager_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:text="商品列表"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_title_size" />
+
+            <TextView
+                android:id="@+id/tv_goods_manager_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/loginmagin2"
+                android:gravity="center_vertical"
+                android:text="筛选"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_goods_manager_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_goods_manager_head"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_border_view_radius"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_goods_manager_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:gravity="left|center_vertical"
+                android:hint="请输入商品编码/简码/名称开始查询"
+                android:maxLength="50"
+                android:padding="@dimen/editText_textview_padding"
+                android:singleLine="true"
+                android:textColor="@color/color_main_text_black"
+                android:textColorHint="@color/color_text_hint_gray"
+                android:textCursorDrawable="@drawable/shape_color_cursor"
+                android:textSize="@dimen/dimen_main_size" />
+
+            <ImageView
+                android:id="@+id/iv_scan"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+                android:src="@drawable/ysl_ma_black" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_sent"
+        android:layout_below="@id/ll2"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/loginmagin2"
+            android:orientation="horizontal">
+
+            <ExpandableListView
+                android:id="@+id/lv_goods_manager_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:choiceMode="singleChoice"
+                android:listSelector="#00000000" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/ysl_gray" />
+
+            <com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout
+                android:id="@+id/refresh_goods_manager"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                app:above_wave_color="@color/yunpu"
+                app:blow_wave_color="@color/yunpu">
+
+                <com.zhiluo.android.yunpu.ui.view.BaseListView
+                    android:id="@+id/lv_goods_manager_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingStart="5dp"
+                    android:scrollbars="none" />
+
+            </com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout>
+
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:src="@drawable/icon_add_member"
+            app:backgroundTint="@color/yunpu"
+            app:rippleColor="#fd6401"
+            />
+
+    </FrameLayout>
+
+
+</LinearLayout>
