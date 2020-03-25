@@ -299,6 +299,8 @@ public class GoodsRetureActivity extends Activity {
         params.put("IsCancelCommission", cbRebate.isChecked());
         //备注
         params.put("RO_Remark", etConstomPayDetail.getText().toString());
+        //时间
+        params.put("RO_UpdateTime", tvRetureOrderDate.getText().toString());
 
         CallBack callBack = new CallBack() {
             @Override
