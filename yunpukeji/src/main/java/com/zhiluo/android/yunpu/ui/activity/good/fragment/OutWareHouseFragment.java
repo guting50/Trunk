@@ -411,6 +411,7 @@ public class OutWareHouseFragment extends Fragment implements View.OnClickListen
                     @Override
                     public void onDataSelected(String itemValue, int position) {
                         mTextView.setText(itemValue);
+                        tvPayType.setHint("选择收款方式");
                         switch (position) {
                             case 0:
                                 outputType = 2;
@@ -422,6 +423,7 @@ public class OutWareHouseFragment extends Fragment implements View.OnClickListen
                                 mPayName = "";
                                 mPayCode = "";
                                 tvPayType.setText("");
+                                tvPayType.setHint("");
                                 tvPayType.setEnabled(false);
                                 break;
                             case 2:

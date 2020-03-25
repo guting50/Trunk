@@ -518,13 +518,15 @@ public class UnionPayActivity extends BaseActivity {
                 etpaymoling.setEnabled(true);
             } else if (mZeroType == 1) {//四舍五入到元
                 etpaymoling.setEnabled(false);
-                result = DoubleMathUtil.sub(mReceivableAmount, Double.parseDouble(String.format("%.0f", mReceivableAmount)));
+//                result = DoubleMathUtil.sub(mReceivableAmount, Double.parseDouble(String.format("%.0f", mReceivableAmount)));
+                result = DoubleMathUtil.sub(mReceivableAmount, DoubleMathUtil.round(mReceivableAmount,0));
                 etpaymoling.setText(result + "");
                 double moneyFlag = mReceivableAmount - result;
                 tv_order_money.setText(Decima2KeeplUtil.stringToDecimal(moneyFlag + ""));
             } else if (mZeroType == 2) {//四舍五入到角
                 etpaymoling.setEnabled(false);
-                result = DoubleMathUtil.sub(mReceivableAmount, Double.parseDouble(String.format("%.1f", mReceivableAmount)));
+//                result = DoubleMathUtil.sub(mReceivableAmount, Double.parseDouble(String.format("%.1f", mReceivableAmount)));
+                result = DoubleMathUtil.sub(mReceivableAmount, DoubleMathUtil.round(mReceivableAmount,1));
                 etpaymoling.setText(result + "");
                 double moneyFlag = mReceivableAmount - result;
                 tv_order_money.setText(Decima2KeeplUtil.stringToDecimal(moneyFlag + ""));

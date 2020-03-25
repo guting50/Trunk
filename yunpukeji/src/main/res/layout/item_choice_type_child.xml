@@ -3,11 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/edittext_height">
 
+    <!--android:layout_marginRight="15dp"-->
     <TextView
         android:id="@+id/tv_item_type_child"
         android:layout_width="match_parent"
         android:layout_height="@dimen/edittext_height"
-        android:layout_marginRight="15dp"
         android:background="@color/white"
         android:gravity="center"
         android:text="子分类"
@@ -19,5 +19,6 @@
         android:layout_height="15dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
+        android:visibility="gone"
         android:src="@mipmap/ysl_gray_go" />
 </RelativeLayout>

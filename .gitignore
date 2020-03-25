@@ -1,3 +1,7 @@
 .idea/
 .gradle/
 yunpukeji/build/
+captures/
+library/build/
+mypicker/build/
+*.iml

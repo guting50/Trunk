@@ -185,7 +185,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:drawableRight="@mipmap/right_tw"
-                    android:gravity="center_vertical"
+                    android:gravity="center_vertical|right"
                     android:hint="选择收款方式"
                     android:textSize="15sp"/>
 
