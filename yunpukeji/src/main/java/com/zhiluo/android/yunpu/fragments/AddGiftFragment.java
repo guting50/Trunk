@@ -423,6 +423,7 @@ public class AddGiftFragment extends Fragment implements View.OnClickListener {
         goodsmodel = edGoodsModel.getText().toString();//礼品规格
         mDefaultPrice = edGoodsBidPrice.getText().toString();//参考进价
         mMemberPrice = edGoodsVipPrice.getText().toString();//会员价
+        goodsmetering = edGoodsMetering.getText().toString();//计量单位
     }
 
     @Override
