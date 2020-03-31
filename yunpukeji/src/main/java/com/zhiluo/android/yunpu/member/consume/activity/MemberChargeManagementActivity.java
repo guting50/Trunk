@@ -233,7 +233,11 @@ public class MemberChargeManagementActivity extends BaseActivity implements JiCi
             CustomToast.makeText(this, "该服务已过期！", Toast.LENGTH_SHORT).show();
             return;
         } else if (chargeList.get(position).getCount() >= chargeList.get(position).getRegularResiduals()) {
-            CustomToast.makeText(this, "该服务消费已达规则上限！", Toast.LENGTH_SHORT).show();
+            String WR_Name = "【无】";
+            if (chargeList.get(position).getWR_Name()!=null&& !chargeList.get(position).getWR_Name().equals("")){
+                WR_Name = chargeList.get(position).getWR_Name();
+            }
+            CustomToast.makeText(this, "该服务消费数量已达" + WR_Name + "上限！", Toast.LENGTH_SHORT).show();
             return;
         } else {
             chargeList.get(position).setCount(chargeList.get(position).getCount() + 1);
