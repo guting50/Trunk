@@ -406,7 +406,6 @@ public class OneKeyRefuelingActivity extends BaseActivity implements OneKeyRefue
                         etOilNum.setText("");
                     }
                 }
-
             }
         });
 
@@ -640,24 +639,21 @@ public class OneKeyRefuelingActivity extends BaseActivity implements OneKeyRefue
         for (int z = 0; z < mGoodsList.getData().size(); z++) {
             if (mGoodsList.getData().get(z).isChecked()) {
                 OilListBean.DataBean bean = mGoodsList.getData().get(z);
+                bean.setEachPoint(0);
                 if (singleVip != null) {
-
-                    //商品积分计算
-                    if (singleVip.getData().getVG_IsIntegral() == 0) {//会员等级积分开关没有有打开
-                        bean.setEachPoint(0);
-                    } else if (singleVip.getData().getVG_IsIntegral() == 1) {
+                    if (singleVip.getData().getVG_IsIntegral() == 1) {
                         double bl = singleVip.getData().getVG_OilIntegral();
                         if (bl != 0) {
-
                             double fb = bean.getOM_Price() / bl;
                             bean.setEachPoint(fb);
-
-                        } else {
-                            bean.setEachPoint(0);
+                        } else if (singleVip.getData().getVGInfo() != null) {
+                            for (MemberInfoBean.DataBean.VGInfo vgInfo : singleVip.getData().getVGInfo()) {
+                                if (TextUtils.equals(vgInfo.PT_GID, bean.getGID())) {
+                                    bean.setEachPoint(vgInfo.getVS_Number() * bean.getOM_Price());
+                                }
+                            }
                         }
                     }
-                } else {
-                    bean.setEachPoint(0);
                 }
                 //计算商品消费获得总积分
 
