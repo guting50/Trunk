@@ -1,6 +1,5 @@
 package com.zhiluo.android.yunpu.mvp.presenter;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
@@ -13,23 +12,16 @@ import com.loopj.android.http.RequestParams;
 import com.zhiluo.android.yunpu.config.MyApplication;
 import com.zhiluo.android.yunpu.goods.manager.bean.BarCodePayBean;
 import com.zhiluo.android.yunpu.goods.manager.bean.QuerPayBean;
-import com.zhiluo.android.yunpu.http.CallBack;
-import com.zhiluo.android.yunpu.http.HttpHelper;
 import com.zhiluo.android.yunpu.login.activity.LoginActivity;
-import com.zhiluo.android.yunpu.mvp.model.SuccessEntry;
 import com.zhiluo.android.yunpu.mvp.view.IBaseView;
 import com.zhiluo.android.yunpu.mvp.view.SaoMaPayView;
 import com.zhiluo.android.yunpu.ui.activity.ActivityCollector;
 import com.zhiluo.android.yunpu.ui.view.CustomToast;
-import com.zhiluo.android.yunpu.ui.view.LoadingDialogUtil;
 import com.zhiluo.android.yunpu.utils.CommonFun;
 
 import java.io.UnsupportedEncodingException;
 
 import cz.msebera.android.httpclient.Header;
-
-import static com.zhiluo.android.yunpu.yslutils.LogUtils.Le;
-import static com.zhiluo.android.yunpu.yslutils.LogUtils.Li;
 
 /**
  * Created by YSL on 2018-10-31.
@@ -40,11 +32,11 @@ public class SaoMaPayPresntter implements Presenter {
     private SaoMaPayView mView;
 
 
-
-    public SaoMaPayPresntter(Context context){
-        this.mContext= context;
+    public SaoMaPayPresntter(Context context) {
+        this.mContext = context;
 
     }
+
     @Override
     public void onCreate(String s) {
 
@@ -61,12 +53,12 @@ public class SaoMaPayPresntter implements Presenter {
 
     }
 
-    public void barCode(RequestParams params){
+    public void barCode(RequestParams params) {
 
         AsyncHttpClient client = new AsyncHttpClient();
         final PersistentCookieStore myCookieStore = new PersistentCookieStore(mContext);
         client.setCookieStore(myCookieStore);
-        String url = MyApplication.BASE_URL+"PayOrder/BarcodePay";
+        String url = MyApplication.BASE_URL + "PayOrder/BarcodePay";
         client.post(url, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -76,27 +68,25 @@ public class SaoMaPayPresntter implements Presenter {
 
                     if (statusCode == 200) {
                         Gson gson = new Gson();
-                        SuccessEntry entity = CommonFun.JsonToObj(responseString, SuccessEntry.class);
+                        BarCodePayBean entityresult = CommonFun.JsonToObj(responseString, BarCodePayBean.class);
 
-                        if (entity.isSuccess()) {
-                            BarCodePayBean entityresult = CommonFun.JsonToObj(responseString, BarCodePayBean.class);
-                            if (!entityresult.getData().equals("")&&!String.valueOf(entityresult.getData()).equals("1")){
+                        if (entityresult.isSuccess()) {
+                            if (!entityresult.getData().equals("") && !String.valueOf(entityresult.getData()).equals("1")) {
                                 mView.barCodeSuccess(entityresult);
-                            }else {
+                            } else {
                                 onCancel();
                             }
-                        } else if (entity.getMsg().contains("登录") || entity.getMsg().contains("登陆")) {
+                        } else if (entityresult.getMsg().contains("登录") || entityresult.getMsg().contains("登陆")) {
 
-                            if (MyApplication.LOGINCODE){
+                            if (MyApplication.LOGINCODE) {
                                 MyApplication.LOGINCODE = false;
-                                reLogin(entity.getMsg());//重新登录
+                                reLogin(entityresult.getMsg());//重新登录
                             }
 
                         } else {
-                            if (!entity.getData().equals("")&&!String.valueOf(entity.getData()).equals("1")){
-                                mView.barCodeFailString(entity.getMsg());
-                            }else {
-                                BarCodePayBean entityresult = CommonFun.JsonToObj(responseString, BarCodePayBean.class);
+                            if (!entityresult.getData().equals("") && !String.valueOf(entityresult.getData()).equals("1")) {
+                                mView.barCodeFailString(entityresult.getMsg());
+                            } else {
                                 mView.barCodeFail(entityresult);
                             }
                         }
@@ -113,7 +103,7 @@ public class SaoMaPayPresntter implements Presenter {
 
                 if (statusCode != 200) {
                     if (statusCode == 301 || statusCode == 302 || statusCode == 307) {
-                        for (int i = 0;i<headers.length;i++){
+                        for (int i = 0; i < headers.length; i++) {
                             CustomToast.makeText(MyApplication.getContext(), "请重新登录", Toast.LENGTH_LONG).show();
 
                         }
@@ -129,12 +119,13 @@ public class SaoMaPayPresntter implements Presenter {
 
     }
 
-    public void querPay(RequestParams params){
+    public void querPay(RequestParams params) {
 
         AsyncHttpClient client = new AsyncHttpClient();
         final PersistentCookieStore myCookieStore = new PersistentCookieStore(mContext);
         client.setCookieStore(myCookieStore);
-        String url = MyApplication.BASE_URL+"PayOrder/QuerPay";
+//        String url = MyApplication.BASE_URL + "PayOrder/QuerPay";
+        String url = MyApplication.BASE_URL + "PayOrder/QueryPayResult";
         client.post(url, params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -148,7 +139,7 @@ public class SaoMaPayPresntter implements Presenter {
                         if (entityresult.isSuccess()) {
                             mView.querPaySuccess(entityresult);
                         } else if (entityresult.getMsg().contains("登录") || entityresult.getMsg().contains("登陆")) {
-                            if (MyApplication.LOGINCODE){
+                            if (MyApplication.LOGINCODE) {
                                 MyApplication.LOGINCODE = false;
                                 reLogin(entityresult.getMsg());//重新登录
                             }
@@ -169,7 +160,7 @@ public class SaoMaPayPresntter implements Presenter {
 
                 if (statusCode != 200) {
                     if (statusCode == 301 || statusCode == 302 || statusCode == 307) {
-                        for (int i = 0;i<headers.length;i++){
+                        for (int i = 0; i < headers.length; i++) {
                             CustomToast.makeText(MyApplication.getContext(), "请重新登录", Toast.LENGTH_LONG).show();
 
                         }
@@ -192,6 +183,6 @@ public class SaoMaPayPresntter implements Presenter {
         Intent intent = new Intent(MyApplication.getContext(), LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         MyApplication.getContext().startActivity(intent);
-        CustomToast.makeText(MyApplication.getmContext(),msg, Toast.LENGTH_SHORT).show();
+        CustomToast.makeText(MyApplication.getmContext(), msg, Toast.LENGTH_SHORT).show();
     }
 }

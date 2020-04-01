@@ -46,16 +46,16 @@ public class  MyApplication extends LitePalApplication {
     /***
      *测试版
      */
-    public static  String BASE_URL = "http://pcbeta.yunvip123.com/api/";
-    public static  String IMAGE_URL = "http://pcbeta.yunvip123.com";
-    public static  String CTMONEY_URL = "http://corebeta.yunvip123.com/";
+//    public static  String BASE_URL = "http://pcbeta.yunvip123.com/api/";
+//    public static  String IMAGE_URL = "http://pcbeta.yunvip123.com";
+//    public static  String CTMONEY_URL = "http://corebeta.yunvip123.com/";
 
     /**
      * 正式版
      **/
-//    public static String BASE_URL = "https://pc.yunvip123.com/api/";
-//    public static String IMAGE_URL = "https://pc.yunvip123.com";
-//    public static String CTMONEY_URL = "https://core.yunvip123.com/";
+    public static String BASE_URL = "https://pc.yunvip123.com/api/";
+    public static String IMAGE_URL = "https://pc.yunvip123.com";
+    public static String CTMONEY_URL = "https://core.yunvip123.com/";
 
 
 
