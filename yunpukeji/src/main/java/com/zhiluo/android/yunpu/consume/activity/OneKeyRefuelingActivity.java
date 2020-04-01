@@ -591,8 +591,7 @@ public class OneKeyRefuelingActivity extends BaseActivity implements OneKeyRefue
                     if (mDialog != null) {
                         LoadingDialogUtil.closeDialog(mDialog);
                     }
-//                    goodsShopStepTwo();
-                    payComplete(entity.getData().getGID());
+                    goodsShopStepTwo();
                 } else {
                     querPay();
                 }
@@ -616,7 +615,11 @@ public class OneKeyRefuelingActivity extends BaseActivity implements OneKeyRefue
                     if (mDialog != null) {
                         LoadingDialogUtil.closeDialog(mDialog);
                     }
-                    CustomToast.makeText(OneKeyRefuelingActivity.this, entity.getMsg(), Toast.LENGTH_SHORT).show();
+                    if (entity.getMsg().contains("扣款成功")) {
+                        goodsShopStepTwo();
+                    } else {
+                        CustomToast.makeText(OneKeyRefuelingActivity.this, entity.getMsg(), Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         };
