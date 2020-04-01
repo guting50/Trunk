@@ -591,7 +591,8 @@ public class OneKeyRefuelingActivity extends BaseActivity implements OneKeyRefue
                     if (mDialog != null) {
                         LoadingDialogUtil.closeDialog(mDialog);
                     }
-                    goodsShopStepTwo();
+//                    goodsShopStepTwo();
+                    payComplete(entity.getData().getGID());
                 } else {
                     querPay();
                 }
@@ -1196,47 +1197,8 @@ public class OneKeyRefuelingActivity extends BaseActivity implements OneKeyRefue
         CallBack callBack = new CallBack() {
             @Override
             public void onSuccess(String responseString, Gson gson) {
-                try {
-                    final YJJY_Success_Bean yjjy_success_bean = CommonFun.JsonToObj(responseString, YJJY_Success_Bean.class);
-                    mSweetAlertDialog = new SweetAlertDialog(OneKeyRefuelingActivity.this, SweetAlertDialog.SUCCESS_TYPE);
-                    mSweetAlertDialog.setTitleText("支付成功");
-                    mSweetAlertDialog.setConfirmText("确定");
-                    if (mOrderType != 1) {
-                        mSweetAlertDialog.setCancelText("添加为会员");
-                    }
-                    mSweetAlertDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-                            Intent intent = new Intent(OneKeyRefuelingActivity.this, AddMemberActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-                        }
-                    });
-                    mSweetAlertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                        @Override
-                        public void onDismiss(DialogInterface dialogInterface) {
-                            mPayWayPopWindow.dismiss();
-
-                            //打印小票
-                            if (cbPrint.isChecked()) {
-                                if (MyApplication.mGoodsConsumeMap.isEmpty()) {
-                                    GetPrintSet.getPrintParamSet();
-                                }
-                                new HttpGetPrintContents(OneKeyRefuelingActivity.this, MyApplication.YJJY_PRINT_TIMES, yjjy_success_bean.getData().getGID()).YJJY();
-                            }
-
-                            viewClear();
-
-                        }
-                    });
-                    mSweetAlertDialog.show();
-                    mOrderNo = CreateOrder.createOrder("JY");
-                    tvPayConfirmOrder.setText(mOrderNo);
-                    etAddMemberOrderDate.setText(DateTimeUtil.getReallyTimeNow());
-                } catch (JsonSyntaxException e) {
-                    CustomToast.makeText(OneKeyRefuelingActivity.this, "打印失败！", Toast.LENGTH_SHORT).show();
-                    finish();
-                }
+                final YJJY_Success_Bean yjjy_success_bean = CommonFun.JsonToObj(responseString, YJJY_Success_Bean.class);
+                payComplete(yjjy_success_bean.getData().getGID());
             }
 
             @Override
@@ -1278,6 +1240,49 @@ public class OneKeyRefuelingActivity extends BaseActivity implements OneKeyRefue
         };
         callBack.setLoadingAnimation(this, "正在支付...", false);
         HttpHelper.post(this, HttpAPI.API().ONE_KEY_OIL_PAY, params, callBack);
+    }
+
+    private void payComplete(final String GID) {
+        try {
+            mSweetAlertDialog = new SweetAlertDialog(OneKeyRefuelingActivity.this, SweetAlertDialog.SUCCESS_TYPE);
+            mSweetAlertDialog.setTitleText("支付成功");
+            mSweetAlertDialog.setConfirmText("确定");
+            if (mOrderType != 1) {
+                mSweetAlertDialog.setCancelText("添加为会员");
+            }
+            mSweetAlertDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                @Override
+                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                    Intent intent = new Intent(OneKeyRefuelingActivity.this, AddMemberActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }
+            });
+            mSweetAlertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialogInterface) {
+                    mPayWayPopWindow.dismiss();
+
+                    //打印小票
+                    if (cbPrint.isChecked()) {
+                        if (MyApplication.mGoodsConsumeMap.isEmpty()) {
+                            GetPrintSet.getPrintParamSet();
+                        }
+                        new HttpGetPrintContents(OneKeyRefuelingActivity.this, MyApplication.YJJY_PRINT_TIMES, GID).YJJY();
+                    }
+
+                    viewClear();
+
+                }
+            });
+            mSweetAlertDialog.show();
+            mOrderNo = CreateOrder.createOrder("JY");
+            tvPayConfirmOrder.setText(mOrderNo);
+            etAddMemberOrderDate.setText(DateTimeUtil.getReallyTimeNow());
+        } catch (JsonSyntaxException e) {
+            CustomToast.makeText(OneKeyRefuelingActivity.this, "打印失败！", Toast.LENGTH_SHORT).show();
+            finish();
+        }
     }
 
     /**

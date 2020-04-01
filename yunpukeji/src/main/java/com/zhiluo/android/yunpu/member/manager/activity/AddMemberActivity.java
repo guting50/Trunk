@@ -1,16 +1,12 @@
 package com.zhiluo.android.yunpu.member.manager.activity;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.PendingIntent;
 import android.content.ContentResolver;
-import android.content.CursorLoader;
 import android.content.Intent;
-import android.content.Loader;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.hardware.Camera;
@@ -26,8 +22,6 @@ import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.annotation.RequiresPermission;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -50,7 +44,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.basewin.utils.StringUtil;
 import com.bumptech.glide.Glide;
 import com.example.liangmutian.mypicker.DataPickerDialog;
 import com.example.liangmutian.mypicker.DateUtil;
@@ -59,13 +52,10 @@ import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
-
 import com.zhiluo.android.yunpu.R;
 import com.zhiluo.android.yunpu.config.MyApplication;
-import com.zhiluo.android.yunpu.consume.activity.PayConfirmActivity;
 import com.zhiluo.android.yunpu.consume.activity.SignChooseActivity;
 import com.zhiluo.android.yunpu.consume.activity.StaffCommissionActivity;
-import com.zhiluo.android.yunpu.goods.consume.activity.GoodsConsumeActivity;
 import com.zhiluo.android.yunpu.http.CallBack;
 import com.zhiluo.android.yunpu.http.HttpAPI;
 import com.zhiluo.android.yunpu.http.HttpHelper;
@@ -122,18 +112,18 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * 作者：罗咏哲 on 2017/7/18 19:39.
  * 邮箱：137615198@qq.com
  */
-public class AddMemberActivity extends BaseActivity implements CustomPopWindow.OnItemClickListener ,CalendarSelector
-        .ICalendarSelectorCallBack, addCostomfieldsAdapter.OnImageClickEvent{
+public class AddMemberActivity extends BaseActivity implements CustomPopWindow.OnItemClickListener, CalendarSelector
+        .ICalendarSelectorCallBack, addCostomfieldsAdapter.OnImageClickEvent {
     //会员卡号，姓名，手机，开卡费用，初始金额，初始积分，推荐人卡号，邮箱，身份证，地址，备注。
     private EditText etCardNum, etMemberName, etPhoneNum, etPayCountMoney, etInitMoney, etInitPoint,
-             etEmail, etID, etAddress, etRemark, etFaceNum, etInitPassword;
-    private TextView tvCommission, tvBirthday, tvRecommend, tvLabel, istelview,isfacenumview, etRecommendCardNum;//提成员工，生日，推荐人,会员标签。推荐人
+            etEmail, etID, etAddress, etRemark, etFaceNum, etInitPassword;
+    private TextView tvCommission, tvBirthday, tvRecommend, tvLabel, istelview, isfacenumview, etRecommendCardNum;//提成员工，生日，推荐人,会员标签。推荐人
     private CircleImageView civHeadImg;//会员头像
     private Dialog mDialog;//加载中
     private RelativeLayout rlLabel;//会员标签布局
     private LinearLayout rlReommendStaff;
     private ImageView ivOverdueDate;
-//            ,ivphone;//选择会员过期时间  选择联系人
+    //            ,ivphone;//选择会员过期时间  选择联系人
     private TextView etOverdueDate;
     private Handler mHandler;
     private List<ReportMessageBean.DataBean.VIPGradeListBean> mMemberGrade;//会员等级实体
@@ -147,17 +137,17 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
     // 推荐人姓名，生日，提成员工姓名，推荐人卡号，
     // 邮箱，身份证，地址，备注。
     private String mCardNum, mMemberName, mPhoneNum, mGradeName, mOverdueDate,
-            mRecommendName, mBirthday, mCommissionName, mRecommendCardNum,calaryMonth,isLunar,
+            mRecommendName, mBirthday, mCommissionName, mRecommendCardNum, calaryMonth, isLunar,
             mEmail, mId, mAddress, mRemark;
     private String mGradeGid;//等级GID
-    private String  mInitMoney, mInitPoint,initpoint;//开卡费用，初始金额，初始积分
+    private String mInitMoney, mInitPoint, initpoint;//开卡费用，初始金额，初始积分
     private double mMoney;
     private int mSex = 0;//性别 0 男，1 女，2 未知
-  
+
     private int mIsForver;//是否是永久会员 1 永久 0 非永久
     private List<ReportMessageBean.DataBean.EmplistBean> mStaffInfo;//提成员工
     private ArrayList<String> mStaffListGid = new ArrayList<>();//提成员工GID
- 
+
     private StringBuilder mStaffName;//提成员工姓名
     private MemberLabel mMemberLabel;//会员标签对象
     private List<LabelBean> mUpLabel;//上传的会员标签
@@ -197,7 +187,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
     private boolean canUse;
     private boolean cash = true, bank = true, zfb = false, wx = false;
 
-   
+
     private TextView tvVipLevel;
     private TextView tvSex;
     private TextView tvPayWay;
@@ -248,7 +238,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
     private void initDatas() {
         Intent intent = getIntent();
 
-        if (intent!=null){
+        if (intent != null) {
             inType = intent.getStringExtra("intype");
         }
         mSexList = new ArrayList<>();
@@ -281,7 +271,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
     @Override
     public void onNewIntent(Intent intent) {
         Tag tagFromIntent = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
-        if (tagFromIntent!=null){
+        if (tagFromIntent != null) {
             String CardId = ByteArrayToHexString.ByteArrayToHex(tagFromIntent.getId());
             if (null != CardId) {
                 MyApplication.VIP_CARD = CardId;
@@ -305,7 +295,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         /**
          * lkl、sunmi 、basewin的检卡 读卡操作
          */
-        if (!MyApplication.IS_SUNMI_POS_V1S_DEVICE){
+        if (!MyApplication.IS_SUNMI_POS_V1S_DEVICE) {
             new CardOperationUtils(this, etCardNum);
             try {
                 Thread.sleep(200);
@@ -580,7 +570,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
     /**
      * @param date      ,
      * @param mTextView ,
-     *  选择日期
+     *                  选择日期
      */
     private void showDateDialog(List<Integer> date, final TextView mTextView) {
         com.example.liangmutian.mypicker.DatePickerDialog.Builder builder = new com.example.liangmutian.mypicker.DatePickerDialog.Builder(this);
@@ -639,6 +629,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
                             mPayTypeName = "支付宝记账";
                         }
                     }
+
                     @Override
                     public void onCancel() {
                     }
@@ -671,13 +662,13 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
                         mInitPoint = (int) mMemberGrade.get(position).getVG_InitialIntegral() + "";//初始积分
                         if (mMemberGrade.get(position).getVG_IsTime() == 1 && mMemberGrade.get(position).getVG_IsTimeNum() != null) {
                             addTime(mMemberGrade.get(position).getVG_IsTimeUnit().toString(), Double.parseDouble(mMemberGrade.get(position).getVG_IsTimeNum() + ""));
-                        etOverdueDate.setText(overTime);
+                            etOverdueDate.setText(overTime);
                             ivOverdueDate.setEnabled(false);
-                     
+
                         } else if (mMemberGrade.get(position).getVG_IsTime() == 1 && mMemberGrade.get(position).getVG_IsTimeNum() == null) {
                             etOverdueDate.setText("永久");
                             ivOverdueDate.setEnabled(false);
-                      
+
                         } else {
                             etOverdueDate.setText("");
                             ivOverdueDate.setEnabled(true);
@@ -812,7 +803,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             if (inType != null && inType.equals("1")) {
                 finish();
-            }else {
+            } else {
                 Intent intent = new Intent(AddMemberActivity.this, MemberListActivity.class);
                 startActivity(intent);
                 finish();
@@ -834,7 +825,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
 
                 mCalendarSelector.show(tvBirthday);
                 if (tvBirthday.getText().toString().isEmpty()) {
-                    mCalendarSelector.setPosition(DateUtil.getDateForString(DateTimeUtil.getNowDate()),"0","0");
+                    mCalendarSelector.setPosition(DateUtil.getDateForString(DateTimeUtil.getNowDate()), "0", "0");
                 }
             }
         });
@@ -857,9 +848,9 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         tvVipLevel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mGradeNameList.size()>0){
+                if (mGradeNameList.size() > 0) {
                     showVipLevelDialog(mGradeNameList, tvVipLevel);
-                }else {
+                } else {
                     warnDialog("请先添加会员等级！");
                 }
 
@@ -875,7 +866,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
             public void onClick(View view) {
                 if (inType != null && inType.equals("1")) {
                     finish();
-                }else {
+                } else {
                     Intent intent = new Intent(AddMemberActivity.this, MemberListActivity.class);
                     startActivity(intent);
                     finish();
@@ -928,7 +919,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         tvCommission.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              
+
                 if (isStaff) {
                     Intent intent = new Intent(AddMemberActivity.this, StaffCommissionActivity.class);
                     Bundle bundle = new Bundle();
@@ -936,7 +927,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
                     bundle.putSerializable("mStaffInfo", (Serializable) mStaffInfo);
                     intent.putExtras(bundle);
                     startActivityForResult(intent, 999);
-               
+
                 } else {
                     CustomToast.makeText(AddMemberActivity.this, "员工提成未开启，请确认后再尝试！", Toast.LENGTH_SHORT).show();
                 }
@@ -947,9 +938,9 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         etRecommendCardNum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             
+
                 Intent intent = new Intent(AddMemberActivity.this, CheckMemberInfoActivity.class);
-                intent.putExtra("addmember","yes");
+                intent.putExtra("addmember", "yes");
                 startActivityForResult(intent, 777);
             }
         });
@@ -1050,7 +1041,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
      */
     private void clearAll() {
         if (mLabList != null) {
-           
+
             for (int i = 0; i < mLabList.size(); i++) {
                 mLabList.get(i).setChecked(false);
             }
@@ -1063,7 +1054,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         etFaceNum.setText("");//卡面号码
         tvVipLevel.setText("默认等级");//会员等级
         loadData();
-       
+
         if (!mPassordSwitch) {
             etInitPassword.setText("");//初始密码
         }
@@ -1083,14 +1074,14 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         etRemark.setText("");//备注信息
         mStaffName = new StringBuilder("");
         mStaffListGid.clear();
-      
+
         if (mStaffInfo != null) {
             mStaffInfo.clear();
         }
         mPayWay = "";
 
-        for (int i = 0;i<costomfields.size();i++){
-           costomfields.get(i).setM_ItemsValue("");
+        for (int i = 0; i < costomfields.size(); i++) {
+            costomfields.get(i).setM_ItemsValue("");
         }
         initAdapter();
 
@@ -1123,14 +1114,14 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
             }
         }
 
-      
+
         if (resultCode == 666) {
             mLabList = (List<LabelBean>) data.getSerializableExtra("sign");
 
-           
+
             if (mLabList != null) {
                 for (int i = 0; i < mLabList.size(); i++) {
-                  
+
                     if (mLabList.get(i).isChecked()) {
                         if (i == mLabList.size() - 1) {
                             mLabName.append(mLabList.get(i).getItemName());
@@ -1154,8 +1145,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
 //        if (resultCode)
         switch (requestCode) {
             case 23://选择联系人后返回
-                if (resultCode == Activity.RESULT_OK)
-                {
+                if (resultCode == Activity.RESULT_OK) {
 //                    if (resultCode == RESULT_OK) {
 //
 //                        final CursorLoader cursorLoader = new CursorLoader(this, data.getData(), new String[] { "data1" }, null, null, null);
@@ -1164,11 +1154,11 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
 //                    }
 
 //                    //处理返回的data,获取选择的联系人信息
-                    Uri uri=data.getData();
-                    String[] contacts=getPhoneContacts(uri);
+                    Uri uri = data.getData();
+                    String[] contacts = getPhoneContacts(uri);
                     etMemberName.setText(contacts[0]);
-                    if (contacts[1].contains(" ")){
-                        contacts[1] = contacts[1].replace(" ","");
+                    if (contacts[1].contains(" ")) {
+                        contacts[1] = contacts[1].replace(" ", "");
                     }
                     etPhoneNum.setText(contacts[1]);
                 }
@@ -1189,7 +1179,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
                 }
                 break;
             case CAMERA_REQUEST_CODE: //照相后返回
-               
+
                 if (resultCode == RESULT_OK) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                         Uri inputUri = FileProvider.getUriForFile(AddMemberActivity.this, MyApplication.FILE_ADDRESS, mCameraFile);//通过FileProvider创建一个content类型的Uri
@@ -1203,7 +1193,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
                 }
                 break;
             case RESULT_REQUEST_CODE://剪裁结果用ImageView显示
-               
+
                 if (resultCode == RESULT_OK) {
                     Uri inputUri = FileProvider.getUriForFile(AddMemberActivity.this,
                             MyApplication.FILE_ADDRESS, mCropFile);//通过FileProvider创建一个content类型的Uri
@@ -1232,18 +1222,17 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
     @SuppressLint("SupportAnnotationUsage")
     @RequiresPermission
     @RequiresApi(api = Build.VERSION_CODES.M)
-    public String[] getPhoneContacts(Uri uri){
-        String[] contact=new String[2];
+    public String[] getPhoneContacts(Uri uri) {
+        String[] contact = new String[2];
         //得到ContentResolver对象**
         ContentResolver cr = getContentResolver();
         //取得电话本中开始一项的光标**
-        Cursor cursor=cr.query(uri,null,null,null,null);
-        if(cursor!=null)
-        {
+        Cursor cursor = cr.query(uri, null, null, null, null);
+        if (cursor != null) {
             cursor.moveToFirst();
             //取得联系人姓名**
-            int nameFieldColumnIndex=cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME);
-            contact[0]=cursor.getString(nameFieldColumnIndex);
+            int nameFieldColumnIndex = cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME);
+            contact[0] = cursor.getString(nameFieldColumnIndex);
             //取得电话号码**
             String ContactId = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
 
@@ -1258,7 +1247,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
 
             Cursor phone = cr.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
                     ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=" + ContactId, null, null);
-            if(phone != null){
+            if (phone != null) {
                 phone.moveToFirst();
                 contact[1] = phone.getString(phone.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
             }
@@ -1271,13 +1260,11 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
     }
 
 
-
-
     /**
      * 拍照
      */
     private void jump2Caramel() {
-       
+
         if (hasCamera()) {
             if (CheckPromiss.checkPermission(AddMemberActivity.this)) {
                 Intent intentFromCapture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -1291,12 +1278,12 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
                     intentFromCapture.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mCameraFile));
                 }
                 startActivityForResult(intentFromCapture, CAMERA_REQUEST_CODE);
-         
+
             } else {
                 warnDialog("未获取到相机权限，请确认后尝试！");
             }
 
-        
+
         } else {
             CustomToast.makeText(AddMemberActivity.this, "未获取到相机，请确认后再尝试！", Toast.LENGTH_SHORT).show();
             return;
@@ -1308,7 +1295,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         return hasBackFacingCamera() || hasFrontFacingCamera();
     }
 
-  
+
     /**
      * 检查设备是否有后置摄像头
      *
@@ -1319,7 +1306,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         return checkCameraFacing(CAMERA_FACING_BACK);
     }
 
-   
+
     /**
      * 检查设备是否有前置摄像头
      *
@@ -1350,7 +1337,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
      * 从相册中选择
      */
     private void jump2Album() {
-      
+
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 //        intent.addCategory(Intent.CATEGORY_OPENABLE);
 //        intent.setType("image/*");
@@ -1387,7 +1374,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
         } else {
             Uri outPutUri = Uri.fromFile(mCropFile);
-         
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 String url = GetImagePath.getPath(getApplicationContext(), inputUri);//这个方法是处理4.4以上图片返回的Uri对象不同的处理方法
                 intent.setDataAndType(Uri.fromFile(new File(url)), "image/*");
@@ -1463,25 +1450,25 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
     /**
      * 查询会员等级
      */
-   
+
     private void getMemberGrade(final int num) {
         AsyncHttpClient client = new AsyncHttpClient();
         PersistentCookieStore cookieStore = new PersistentCookieStore(this);
         client.setCookieStore(cookieStore);
         RequestParams params = new RequestParams();
-       
+
         client.post(HttpAPI.API().PRE_LOAD, params, new MyTextHttpResponseHandler() {
             @Override
             public void onSuccess(String responseString, Gson gson) {
                 ReportMessageBean reportbean = CommonFun.JsonToObj(responseString, ReportMessageBean.class);
-                 mMemberGrade = reportbean.getData().getVIPGradeList();
+                mMemberGrade = reportbean.getData().getVIPGradeList();
                 CacheData.saveObject("grade", mMemberGrade);//缓存等级列表到本地
 
                 costomfields = reportbean.getData().getGetCustomFieldsVIP();
                 CacheData.saveObject("costomfield", costomfields);//缓存自定义属性到本地
 
-                if (num ==1){
-                    if(mMemberGrade!=null &&mMemberGrade.size()>0){
+                if (num == 1) {
+                    if (mMemberGrade != null && mMemberGrade.size() > 0) {
                         groupGradeName();//组装会员等级名称集合
                         mHandler.sendEmptyMessage(1);
 
@@ -1607,11 +1594,11 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         params.put("VIP_Remark", mRemark);
         params.put("MA_AvailableIntegral", Integer.parseInt(mInitPoint));//初始积分
         params.put("MA_AggregateAmount", mInitMoney);//初始金额
-        params.put("VIP_Overdue", mOverdueDate+ " 23:59:59");//过期日期
-         for (int i = 0;i<costomfields.size();i++){//自定义属性
-             params.put("FildsId["+i+"]", costomfields.get(i).getCF_GID());
-             params.put("FildsValue["+i+"]", costomfields.get(i).getM_ItemsValue()==null?"":costomfields.get(i).getM_ItemsValue());
-         }
+        params.put("VIP_Overdue", mOverdueDate + " 23:59:59");//过期日期
+        for (int i = 0; i < costomfields.size(); i++) {//自定义属性
+            params.put("FildsId[" + i + "]", costomfields.get(i).getCF_GID());
+            params.put("FildsValue[" + i + "]", costomfields.get(i).getM_ItemsValue() == null ? "" : costomfields.get(i).getM_ItemsValue());
+        }
 
 //        for (int i = 0; i < mStaffListGid.size(); i++) {//提成员工GID
         if (mStaffListGid.size() > 0) {
@@ -1642,7 +1629,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
                     @Override
                     public void onClick(SweetAlertDialog sweetAlertDialog) {
                         mSweetAlertDialog.dismiss();
-                        new HttpGetPrintContents(AddMemberActivity.this, MyApplication.HYKK_PRINT_TIMES, hykk_success_bean.getData().getGID(),intentHandler).HYKK();
+                        new HttpGetPrintContents(AddMemberActivity.this, MyApplication.HYKK_PRINT_TIMES, hykk_success_bean.getData().getGID(), intentHandler).HYKK();
                     }
                 });
                 mSweetAlertDialog.show();
@@ -1663,17 +1650,17 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
             }
         };
         responseHandler.setDialog(AddMemberActivity.this, "正在提交...", false);//设置加载动画
-       
+
         client.post(HttpAPI.API().ADDUSER, params, responseHandler);
     }
 
-    public class  IntentHandler extends Handler{
+    public class IntentHandler extends Handler {
 
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             Intent intent;
-            switch (msg.what){
+            switch (msg.what) {
                 case 1:
                     if (inType != null && inType.equals("1") && operate == 1) {
                         finish();
@@ -1696,9 +1683,8 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
     private boolean getTextValue() {
 
 
-
         mPhoneNum = etPhoneNum.getText().toString();
-       
+
         if (mIsfilltel) {
             if (!TextUtils.isEmpty(etPhoneNum.getText())) {
 
@@ -1717,16 +1703,15 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
 //                    warnDialog("您开启了会员卡同手机号，请填写手机号");
 //                    return false;
 //                }
-               
+
                 mPhoneNum = "";
             }
 
 
-     
         } else {
             if (mCardContactPhone && TextUtils.isEmpty(etPhoneNum.getText())) {
                 warnDialog("您开启了会员卡同手机号，请填写手机号");
-                    return false;
+                return false;
             }
         }
 
@@ -1744,11 +1729,11 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
             return false;
         }
 
-        if (isCardNum){
+        if (isCardNum) {
             if (!TextUtils.isEmpty(etFaceNum.getText())) {
-                if (etFaceNum.getText().toString().length()>1){
+                if (etFaceNum.getText().toString().length() > 1) {
                     mcardId = etFaceNum.getText().toString();
-                }else {
+                } else {
                     warnDialog("【卡面号码】不能少于两位");
                     return false;
                 }
@@ -1760,7 +1745,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
 
         if (!TextUtils.isEmpty(etPayCountMoney.getText())) {
             mMoney = Double.parseDouble(etPayCountMoney.getText().toString());
-       
+
         } else {
             mMoney = 0;
         }
@@ -1771,7 +1756,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
 //            mInitPoint = Decima2KeeplUtil.stringToDecimal(etInitPoint.getText().toString());
             mInitPoint = etInitPoint.getText().toString();
         }
-       
+
         if (!TextUtils.isEmpty(etOverdueDate.getText()) && !etOverdueDate.getText().toString().equals("永久")) {//过期时间存在，不为永久会员
             mOverdueDate = etOverdueDate.getText().toString();
             mIsForver = 0;
@@ -1800,16 +1785,16 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         if (!TextUtils.isEmpty(etRemark.getText())) {
             mRemark = etRemark.getText().toString();
         }
-       
+
         if (!etPayCountMoney.getText().toString().isEmpty()) {
             if (Double.parseDouble(etPayCountMoney.getText().toString()) > 0 && tvPayWay.getText().toString().isEmpty()) {
                 warnDialog("请选择支付方式！");
                 return false;
             }
         }
-        for (int i = 0;i<costomfields.size();i++){
-            if (costomfields.get(i).getCF_Required().equals("是")&&(costomfields.get(i).getM_ItemsValue()==null||costomfields.get(i).getM_ItemsValue().equals(""))){
-                warnDialog("请填写"+costomfields.get(i).getCF_FieldName()+"!");
+        for (int i = 0; i < costomfields.size(); i++) {
+            if (costomfields.get(i).getCF_Required().equals("是") && (costomfields.get(i).getM_ItemsValue() == null || costomfields.get(i).getM_ItemsValue().equals(""))) {
+                warnDialog("请填写" + costomfields.get(i).getCF_FieldName() + "!");
                 return false;
             }
         }
@@ -1845,7 +1830,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
             @Override
             public void onClick(SweetAlertDialog sweetAlertDialog) {
                 mSweetAlertDialog.dismiss();
-             
+
                 if (operate == 1) {
                     Intent intent = new Intent(AddMemberActivity.this, MemberListActivity.class);
                     startActivity(intent);
@@ -1930,7 +1915,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
 //        adapter.setDropDownViewResource(android.R.layout.simple_list_item_checked);
 //        spLabel.setAdapter(adapter);
         mInflater = LayoutInflater.from(getApplicationContext());
-       
+
         mFlowLayout.setAdapter(new TagAdapter<String>(mLabelList) {
             @Override
             public View getView(FlowLayout flowLayout, int i, String s) {
@@ -2047,7 +2032,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
 //    }
 
     @Override
-    public void OnImageClickEvent(int position,boolean isEmpty) {
+    public void OnImageClickEvent(int position, boolean isEmpty) {
         isImageType = true;
         mCustomImageId = position;
         mCustomPopWindow.showAtLocation(AddMemberActivity.this.findViewById(R.id.activity_add_member), Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);

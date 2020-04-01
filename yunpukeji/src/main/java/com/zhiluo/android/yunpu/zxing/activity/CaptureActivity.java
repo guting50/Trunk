@@ -19,7 +19,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -61,7 +60,6 @@ import com.zhiluo.android.yunpu.goods.consume.adapter.ShopeCarAdapter;
 import com.zhiluo.android.yunpu.goods.consume.bean.IntegralScalingBean;
 import com.zhiluo.android.yunpu.goods.consume.view.GoodsView;
 import com.zhiluo.android.yunpu.goods.consume.view.ShapedImageView;
-import com.zhiluo.android.yunpu.goods.manager.activity.AddGoodsActivity;
 import com.zhiluo.android.yunpu.goods.manager.activity.YSLAddGoodsActivity;
 import com.zhiluo.android.yunpu.goods.manager.bean.GoodsCheckResponseByType;
 import com.zhiluo.android.yunpu.goods.manager.bean.GoodsModelListBean;
@@ -71,7 +69,6 @@ import com.zhiluo.android.yunpu.http.HttpHelper;
 import com.zhiluo.android.yunpu.mvp.model.GoodsType;
 import com.zhiluo.android.yunpu.mvp.presenter.WareHousingPresenter;
 import com.zhiluo.android.yunpu.mvp.view.IWareHousingView;
-import com.zhiluo.android.yunpu.print.util.HttpGetPrintContents;
 import com.zhiluo.android.yunpu.ui.view.BaseListView;
 import com.zhiluo.android.yunpu.ui.view.CustomToast;
 import com.zhiluo.android.yunpu.utils.CommonFun;
@@ -89,7 +86,6 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -238,7 +234,7 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
         }
 
         initview();
-        if (isSPXF){
+        if (isSPXF) {
             initData();
             initLisenter();
         }
@@ -298,11 +294,11 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
                 goodsList = entity.getData();
                 rlNotice.setVisibility(View.GONE);
 
-                if (goodsList.getDataList()!=null &&goodsList.getDataList().size()>0){
+                if (goodsList.getDataList() != null && goodsList.getDataList().size() > 0) {
 
-                    if (goodsList.getDataList().size() ==1){
+                    if (goodsList.getDataList().size() == 1) {
                         double numgoods = 0;
-                        if (mHaveChoosedGoodList.size() > 0 && goodsList.getDataList().size()>0) {
+                        if (mHaveChoosedGoodList.size() > 0 && goodsList.getDataList().size() > 0) {
                             for (int i = 0; i < goodsList.getDataList().size(); i++) {
                                 for (int j = 0; j < mHaveChoosedGoodList.size(); j++) {
                                     if (goodsList.getDataList().get(i).getGID().equals(mHaveChoosedGoodList.get(j).getGID())) {
@@ -313,7 +309,7 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
                             }
                         }
 
-                        goodsList.getDataList().get(0).setNum(numgoods+1);
+                        goodsList.getDataList().get(0).setNum(numgoods + 1);
                         mHaveChoosedGoodList.add(goodsList.getDataList().get(0));
                         countGoodsNum();
                         setRightAdapter();
@@ -323,13 +319,13 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
                         continuePreview();
                         try {
                             Thread.currentThread().sleep(1500);
-                        }catch (Exception e){
+                        } catch (Exception e) {
 
                         }
                     } else {
                         if (ModelList != null) {
                             //初始化
-                            for (int i = 0;i<ModelList.getData().size();i++){
+                            for (int i = 0; i < ModelList.getData().size(); i++) {
                                 ModelList.getData().get(i).setChecked(false);
                                 ModelList.getData().get(i).setEnable(false);
                             }
@@ -339,7 +335,7 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
                                     List<String> list = DateUtil.getStringForlist(goodsList.getDataList().get(i).getPM_Modle());
                                     for (int j = 0; j < list.size(); j++) {
                                         for (int k = 0; k < ModelList.getData().size(); k++) {
-                                            if (list.get(j).equals(ModelList.getData().get(k).getPM_Properties())){
+                                            if (list.get(j).equals(ModelList.getData().get(k).getPM_Properties())) {
                                                 ModelList.getData().get(k).setEnable(true);
                                             }
                                         }
@@ -354,15 +350,15 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
                             modelList.clear();
 
                             //组装规格数据
-                            if (ModelList!=null &&ModelList.getData().size()>1){
-                                for (int i = 0;i<ModelList.getData().size();i++) {
-                                    if (ModelList.getData().get(i).getPM_Type() ==0){
+                            if (ModelList != null && ModelList.getData().size() > 1) {
+                                for (int i = 0; i < ModelList.getData().size(); i++) {
+                                    if (ModelList.getData().get(i).getPM_Type() == 0) {
                                         List<GoodsModelListBean.DataBean> list = new ArrayList<>();
                                         list.add(ModelList.getData().get(i));
                                         modelList.add(list);
-                                    }else {
-                                        for (int j = 0;j<modelList.size();j++){
-                                            if (modelList.get(j).get(0).getPM_Name().equals(ModelList.getData().get(i).getPM_Name())){
+                                    } else {
+                                        for (int j = 0; j < modelList.size(); j++) {
+                                            if (modelList.get(j).get(0).getPM_Name().equals(ModelList.getData().get(i).getPM_Name())) {
                                                 modelList.get(j).add(ModelList.getData().get(i));
                                             }
                                         }
@@ -370,19 +366,19 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
                                 }
                             }
                             //设置第一个默认选中
-                            for (int i = 0;i<modelList.size();i++){
+                            for (int i = 0; i < modelList.size(); i++) {
                                 int num = 0;
-                                for (int j = 0;j<modelList.get(i).size();j++){
-                                    if (modelList.get(i).get(j).isEnable()&&modelList.get(i).get(j).getPM_Type()!=0){
+                                for (int j = 0; j < modelList.get(i).size(); j++) {
+                                    if (modelList.get(i).get(j).isEnable() && modelList.get(i).get(j).getPM_Type() != 0) {
                                         modelList.get(i).get(j).setChecked(true);
                                         num++;
                                         break;
                                     }
                                 }
-                                if (num ==0){
+                                if (num == 0) {
                                     modelList.remove(i);
                                     i--;
-                                }else {
+                                } else {
                                     modelList.get(i).remove(0);
                                 }
                             }
@@ -402,7 +398,7 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
                         public void onClick(SweetAlertDialog sweetAlertDialog) {
                             mSweetAlertDialog.dismiss();
                             Intent intent = new Intent(CaptureActivity.this, YSLAddGoodsActivity.class);
-                            intent.putExtra("Searchcontetnt",Searchcontetnt);
+                            intent.putExtra("Searchcontetnt", Searchcontetnt);
                             startActivity(intent);
                         }
                     });
@@ -418,7 +414,7 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
 
             @Override
             public void getCombofail(String result) {
-                CustomToast.makeText(CaptureActivity.this,result,Toast.LENGTH_SHORT).show();
+                CustomToast.makeText(CaptureActivity.this, result, Toast.LENGTH_SHORT).show();
             }
         };
         mPresenter.attachView(mView);
@@ -462,11 +458,11 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
         imgSure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Searchcontetnt =etGoodsConsumeSearch.getText().toString();
-                if (Searchcontetnt!=null&&!Searchcontetnt.equals("")){
+                Searchcontetnt = etGoodsConsumeSearch.getText().toString();
+                if (Searchcontetnt != null && !Searchcontetnt.equals("")) {
                     getGoods(1, 99);
-                }else {
-                    CustomToast.makeText(CaptureActivity.this,"请先输入商品编码",Toast.LENGTH_SHORT).show();
+                } else {
+                    CustomToast.makeText(CaptureActivity.this, "请先输入商品编码", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -546,33 +542,33 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
             double a = DoubleMathUtil.mul(bean.getPM_UnitPrice(), bean.getNum());
 
 
-            if (bean.getPM_IsDiscount() ==1){
-                if (bean.getPM_SpecialOfferMoney()>-1){
+            if (bean.getPM_IsDiscount() == 1) {
+                if (bean.getPM_SpecialOfferMoney() > -1) {
                     mOrderMoney += DoubleMathUtil.mul(bean.getPM_SpecialOfferMoney(), bean.getNum());
                     bean.setEachMoney(bean.getPM_SpecialOfferMoney());
                     bean.setZHMoney(bean.getPM_SpecialOfferMoney() * bean.getNum());
-                }else if (tejiaPercent<1&& tejiaPercent>0){
+                } else if (tejiaPercent < 1 && tejiaPercent > 0) {
                     percent = compareTandD(zuidiPercent, tejiaPercent);
                     if (percent == 0) {
                         mOrderMoney += DoubleMathUtil.mul(a, 1);
                         bean.setEachMoney(bean.getPM_UnitPrice());
-                        bean.setZHMoney(bean.getPM_UnitPrice()*bean.getNum());
+                        bean.setZHMoney(bean.getPM_UnitPrice() * bean.getNum());
                     } else {
                         mOrderMoney += DoubleMathUtil.mul(a, percent);
                         bean.setEachMoney(bean.getPM_UnitPrice() * percent);
-                        bean.setZHMoney(bean.getPM_UnitPrice() * percent*bean.getNum());
+                        bean.setZHMoney(bean.getPM_UnitPrice() * percent * bean.getNum());
                     }
-                }else {
+                } else {
                     mOrderMoney += DoubleMathUtil.mul(a, 1);
                     bean.setEachMoney(bean.getPM_UnitPrice());
-                    bean.setZHMoney(bean.getPM_UnitPrice()*bean.getNum());
+                    bean.setZHMoney(bean.getPM_UnitPrice() * bean.getNum());
                 }
 
 
-            }else {
+            } else {
                 mOrderMoney += DoubleMathUtil.mul(a, 1);
                 bean.setEachMoney(bean.getPM_UnitPrice());
-                bean.setZHMoney(bean.getPM_UnitPrice()*bean.getNum());
+                bean.setZHMoney(bean.getPM_UnitPrice() * bean.getNum());
             }
 
             mTotalMoney = mOrderMoney;
@@ -615,9 +611,9 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
     }
 
 
-    private ShapedImageView ivGoodsImage ;
-    private TextView tvName ;
-    private TextView tvPrice ;
+    private ShapedImageView ivGoodsImage;
+    private TextView tvName;
+    private TextView tvPrice;
     private TextView tvStork;
 
     private void showRulePop() {
@@ -627,7 +623,7 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
         TextView tvCancel = view.findViewById(R.id.tv_cancel);
         TextView tvSure = view.findViewById(R.id.tv_sure);
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
-        mShopRulesAdapter = new ShopRulesAdapter(this,modelList,CaptureActivity.this);
+        mShopRulesAdapter = new ShopRulesAdapter(this, modelList, CaptureActivity.this);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
         mRulePopupWindow.setOnDismissListener(this);
@@ -649,9 +645,9 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
         tvSure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (goodsitem != null){
+                if (goodsitem != null) {
                     double numgoods = 0;
-                    if (mHaveChoosedGoodList.size() > 0 ) {
+                    if (mHaveChoosedGoodList.size() > 0) {
                         for (int j = 0; j < mHaveChoosedGoodList.size(); j++) {
                             if (goodsitem.getGID().equals(mHaveChoosedGoodList.get(j).getGID())) {
                                 numgoods = mHaveChoosedGoodList.get(j).getNum();
@@ -686,8 +682,7 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
     }
 
 
-
-    private  void initpop(){
+    private void initpop() {
         goodsitem = null;
         StringBuilder modelName = new StringBuilder("");
         for (int j = 0; j < modelList.size(); j++) {
@@ -702,14 +697,14 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
             str = str.substring(0, str.length() - 1);
         }
 
-        for (int i = 0;i<goodsList.getDataList().size();i++){
-            if (str.equals(goodsList.getDataList().get(i).getPM_Modle())){
+        for (int i = 0; i < goodsList.getDataList().size(); i++) {
+            if (str.equals(goodsList.getDataList().get(i).getPM_Modle())) {
 
                 goodsitem = goodsList.getDataList().get(i);
             }
         }
 
-        if (goodsitem!= null){
+        if (goodsitem != null) {
             //头像
             if (goodsitem.getPM_BigImg() != null) {
                 if (goodsitem.getPM_BigImg().contains("http")) {
@@ -720,12 +715,12 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
                         String[] s = url.split("\\.\\./");
                         url = s[2];
                     }
-                    Glide.with(this).load(HttpAPI.API().MAIN_DOMAIN + "/"+url).into(ivGoodsImage);
+                    Glide.with(this).load(HttpAPI.API().MAIN_DOMAIN + "/" + url).into(ivGoodsImage);
                 }
             } else {
                 ivGoodsImage.setImageResource(R.drawable.defalut_goods);
             }
-            tvName.setText(goodsitem.getPM_Name()+"");
+            tvName.setText(goodsitem.getPM_Name() + "");
             tvPrice.setText("¥  " + Decima2KeeplUtil.stringToDecimal(goodsitem.getPM_UnitPrice() + ""));
             //库存
             if (goodsitem.getPM_Metering() != null) {
@@ -733,7 +728,7 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
             } else {
                 tvStork.setText(goodsitem.getStock_Number() + "");
             }
-        }else {
+        } else {
             ivGoodsImage.setImageResource(R.drawable.defalut_goods);
             tvName.setText("无此规格商品");
             tvPrice.setText("¥0.00");
@@ -816,7 +811,7 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
                     num--;
                     if (num > 0) {
                         mHaveChoosedGoodList.get(position).setNum(num);
-                    }else {
+                    } else {
                         mHaveChoosedGoodList.remove(position);
                     }
                     countGoodsNum();
@@ -861,26 +856,26 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
         params.put("pageSize", size);
         params.put("PT_GID", "");
 //        params.put("PM_CodeOrNameOrSimpleCode",Searchcontetnt);//模糊查找
-        params.put("PM_CodePrecise",Searchcontetnt);//条码精确查找
+        params.put("PM_CodePrecise", Searchcontetnt);//条码精确查找
 
         mPresenter.getcombo(params);
 
     }
 
-    private void getproductmodel(){
+    private void getproductmodel() {
 
         HttpHelper.post(this, HttpAPI.API().GOODSMODEL, new CallBack() {
             @Override
             public void onSuccess(String responseString, Gson gson) {
                 Log.d(TAG, "onSuccess: ");
-                ModelList = CommonFun.JsonToObj(responseString,GoodsModelListBean.class);
+                ModelList = CommonFun.JsonToObj(responseString, GoodsModelListBean.class);
 
 
             }
 
             @Override
             public void onFailure(String msg) {
-                Log.d(TAG, "onFailure: "+msg);
+                Log.d(TAG, "onFailure: " + msg);
 
             }
         });
@@ -969,10 +964,10 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
         inactivityTimer.onActivity();
         beepManager.playBeepSoundAndVibrate();
 
-        if (isSPXF){
+        if (isSPXF) {
             Searchcontetnt = rawResult.getText();
-            getGoods(1,99);
-        }else {
+            getGoods(1, 99);
+        } else {
             Intent resultIntent = new Intent();
             bundle.putInt("width", mCropRect.width());
             bundle.putInt("height", mCropRect.height());
@@ -1070,13 +1065,13 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
         /** 计算最终截取的矩形的左上角顶点x坐标 */
         int x = cropLeft * cameraWidth / containerWidth;
         /** 计算最终截取的矩形的左上角顶点y坐标 */
-        int y = cropTop * cameraHeight/ containerHeight;
+        int y = cropTop * cameraHeight / containerHeight;
 
 
         /** 计算最终截取的矩形的宽度 */
         int width = cropWidth * cameraWidth / containerWidth;
         /** 计算最终截取的矩形的高度 */
-        int height = cropHeight *cameraHeight /containerHeight;
+        int height = cropHeight * cameraHeight / containerHeight;
 
 
         /** 生成最终的截取的矩形 */
@@ -1104,7 +1099,7 @@ public final class CaptureActivity extends Activity implements GoodsConsumeRight
     }
 
     @Override
-    public void modelItemChecked(GoodsModelListBean.DataBean conditionBean, boolean isChecked,int position) {
+    public void modelItemChecked(GoodsModelListBean.DataBean conditionBean, boolean isChecked, int position) {
 
         for (int j = 0; j < modelList.get(position).size(); j++) {
             modelList.get(position).get(j).setChecked(false);

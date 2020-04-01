@@ -1403,11 +1403,14 @@ public class PayConfirmActivity extends BaseActivity implements YSLPayPopWindow.
                         LoadingDialogUtil.closeDialog(mDialog);
                     }
                     if (isKSXF) {
-                        fastPayStepTwo();
+//                        fastPayStepTwo();
+                        fastPayStepTwoComplete(entity.getData().getGID());
                     } else if (isHYCC) {
-                        vipInflateCountStepTwo();
+//                        vipInflateCountStepTwo();
+                        vipInflateCountStepTwoComplete(entity.getData().getGID());
                     } else if (isSPXF) {
-                        goodsShopStepTwo();
+//                        goodsShopStepTwo();
+                        goodsShopStepTwoComplete(entity.getData().getGID());
                     }
 
                 } else {
@@ -2785,7 +2788,7 @@ public class PayConfirmActivity extends BaseActivity implements YSLPayPopWindow.
         if (mZeroType == 4) {
             if (Decima2KeeplUtil.stringToDecimal(mKsxfFlagMoney + "").endsWith("0")) {
                 params.put("PayResult[EraseOdd]", 0);
-            }else {
+            } else {
                 params.put("PayResult[EraseOdd]", mZeroMoney);
             }
         } else {
@@ -2807,56 +2810,9 @@ public class PayConfirmActivity extends BaseActivity implements YSLPayPopWindow.
         CallBack callBack = new CallBack() {
             @Override
             public void onSuccess(String responseString, Gson gson) {
-                try {
-                    final KSXF_Success_Bean ksxf_success_bean = CommonFun.JsonToObj(responseString, KSXF_Success_Bean.class);
-                    mSweetAlertDialog = new SweetAlertDialog(PayConfirmActivity.this, SweetAlertDialog.SUCCESS_TYPE);
-                    mSweetAlertDialog.setTitleText("支付成功");
-                    mSweetAlertDialog.setConfirmText("确定");
-                    if (mMemberInfoBack == null) {
-                        mSweetAlertDialog.setCancelText("添加为会员");
-                    }
-                    mSweetAlertDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-                            Intent intent = new Intent(PayConfirmActivity.this, AddMemberActivity.class);
-                            startActivity(intent);
-                        }
-                    });
-                    mSweetAlertDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-                            mSweetAlertDialog.dismiss();
-                            if (cbPrint.isChecked()) {
-                                if (MyApplication.mFastConsumeMap.isEmpty()) {
-                                    GetPrintSet.getPrintParamSet();
-                                }
-
-
-                                Li("---------------打印小票-------------- 商品消费--random:" + new Gson().toJson(ksxf_success_bean));
-
-
-                                //打印小票
-                                new HttpGetPrintContents(PayConfirmActivity.this, MyApplication.KSXF_PRINT_TIMES,
-                                        ksxf_success_bean.getData().getGID(), intentHandler).KSXF();
-                                Li("hahah--" + ksxf_success_bean.getData().getGID());
-                            } else {
-                                if (!"".equals(MDZZ) && MDZZ != null) {
-                                    Intent intent = new Intent(PayConfirmActivity.this, MemberListActivity.class);
-                                    intent.putExtra("carddd", mMemberCardNo);
-                                    startActivity(intent);
-                                    finish();
-                                } else {
-                                    finish();
-                                }
-                            }
-
-                        }
-                    });
-                    mSweetAlertDialog.show();
-                } catch (JsonSyntaxException e) {
-                    CustomToast.makeText(PayConfirmActivity.this, "打印失败！", Toast.LENGTH_SHORT).show();
-                    finish();
-                }
+                final KSXF_Success_Bean ksxf_success_bean = CommonFun.JsonToObj(responseString, KSXF_Success_Bean.class);
+                Li("---------------打印小票-------------- 商品消费--random:" + new Gson().toJson(ksxf_success_bean));
+                fastPayStepTwoComplete(ksxf_success_bean.getData().getGID());
             }
 
             @Override
@@ -2933,6 +2889,54 @@ public class PayConfirmActivity extends BaseActivity implements YSLPayPopWindow.
         HttpHelper.post(this, HttpAPI.API().FAST_CONSUME_PAY, params, callBack);
     }
 
+    private void fastPayStepTwoComplete(final String GID) {
+        Li("---------------打印小票--------------" + GID);
+        try {
+            mSweetAlertDialog = new SweetAlertDialog(PayConfirmActivity.this, SweetAlertDialog.SUCCESS_TYPE);
+            mSweetAlertDialog.setTitleText("支付成功");
+            mSweetAlertDialog.setConfirmText("确定");
+            if (mMemberInfoBack == null) {
+                mSweetAlertDialog.setCancelText("添加为会员");
+            }
+            mSweetAlertDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                @Override
+                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                    Intent intent = new Intent(PayConfirmActivity.this, AddMemberActivity.class);
+                    startActivity(intent);
+                }
+            });
+            mSweetAlertDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                @Override
+                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                    mSweetAlertDialog.dismiss();
+                    if (cbPrint.isChecked()) {
+                        if (MyApplication.mFastConsumeMap.isEmpty()) {
+                            GetPrintSet.getPrintParamSet();
+                        }
+
+
+                        //打印小票
+                        new HttpGetPrintContents(PayConfirmActivity.this, MyApplication.KSXF_PRINT_TIMES,
+                                GID, intentHandler).KSXF();
+                    } else {
+                        if (!"".equals(MDZZ) && MDZZ != null) {
+                            Intent intent = new Intent(PayConfirmActivity.this, MemberListActivity.class);
+                            intent.putExtra("carddd", mMemberCardNo);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            finish();
+                        }
+                    }
+
+                }
+            });
+            mSweetAlertDialog.show();
+        } catch (JsonSyntaxException e) {
+            CustomToast.makeText(PayConfirmActivity.this, "打印失败！", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+    }
 
     /**
      * 会员充次提交第一步，提交订单
@@ -3063,36 +3067,8 @@ public class PayConfirmActivity extends BaseActivity implements YSLPayPopWindow.
         CallBack callBack = new CallBack() {
             @Override
             public void onSuccess(String responseString, Gson gson) {
-                try {
-                    final HYCC_Success_Bean hycc_success_bean = CommonFun.JsonToObj(responseString, HYCC_Success_Bean.class);
-                    mSweetAlertDialog = new SweetAlertDialog(PayConfirmActivity.this, SweetAlertDialog.SUCCESS_TYPE);
-                    mSweetAlertDialog.setTitleText("充次成功");
-                    mSweetAlertDialog.setConfirmText("确定");
-                    mSweetAlertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                        @Override
-                        public void onDismiss(DialogInterface dialogInterface) {
-                            if (cbPrint.isChecked()) {
-                                if (MyApplication.mTimesRechargeMap.isEmpty()) {
-                                    GetPrintSet.getPrintParamSet();
-                                }
-                                //打印小票
-                                new HttpGetPrintContents(PayConfirmActivity.this, MyApplication.HYCC_PRINT_TIMES, hycc_success_bean.getData().getGID(), intentHandler).HYCC();
-                            } else {
-                                Intent intent = new Intent(PayConfirmActivity.this, GoodsConsumeActivity.class);
-                                intent.putExtra("type", "HYCC");
-                                startActivity(intent);
-                                finish();
-                            }
-
-
-                        }
-                    });
-                    mSweetAlertDialog.show();
-
-                } catch (JsonSyntaxException e) {
-                    CustomToast.makeText(PayConfirmActivity.this, "打印失败！", Toast.LENGTH_SHORT).show();
-                    finish();
-                }
+                final HYCC_Success_Bean hycc_success_bean = CommonFun.JsonToObj(responseString, HYCC_Success_Bean.class);
+                vipInflateCountStepTwoComplete(hycc_success_bean.getData().getGID());
             }
 
             @Override
@@ -3150,6 +3126,38 @@ public class PayConfirmActivity extends BaseActivity implements YSLPayPopWindow.
         };
         callBack.setLoadingAnimation(this, "正在支付...", false);
         HttpHelper.post(this, HttpAPI.API().MEM_CHARGE_PAY, params, callBack);
+    }
+
+    private void vipInflateCountStepTwoComplete(final String GID) {
+        try {
+            mSweetAlertDialog = new SweetAlertDialog(PayConfirmActivity.this, SweetAlertDialog.SUCCESS_TYPE);
+            mSweetAlertDialog.setTitleText("充次成功");
+            mSweetAlertDialog.setConfirmText("确定");
+            mSweetAlertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialogInterface) {
+                    if (cbPrint.isChecked()) {
+                        if (MyApplication.mTimesRechargeMap.isEmpty()) {
+                            GetPrintSet.getPrintParamSet();
+                        }
+                        //打印小票
+                        new HttpGetPrintContents(PayConfirmActivity.this, MyApplication.HYCC_PRINT_TIMES, GID, intentHandler).HYCC();
+                    } else {
+                        Intent intent = new Intent(PayConfirmActivity.this, GoodsConsumeActivity.class);
+                        intent.putExtra("type", "HYCC");
+                        startActivity(intent);
+                        finish();
+                    }
+
+
+                }
+            });
+            mSweetAlertDialog.show();
+
+        } catch (JsonSyntaxException e) {
+            CustomToast.makeText(PayConfirmActivity.this, "打印失败！", Toast.LENGTH_SHORT).show();
+            finish();
+        }
     }
 
     /**
@@ -3303,57 +3311,9 @@ public class PayConfirmActivity extends BaseActivity implements YSLPayPopWindow.
         CallBack callBack = new CallBack() {
             @Override
             public void onSuccess(String responseString, Gson gson) {
-                try {
-                    final SPXF_Success_Bean spxf_success_bean = CommonFun.JsonToObj(responseString, SPXF_Success_Bean.class);
-
-                    Li("=============random:" + new Gson().toJson(spxf_success_bean));
-
-                    mSweetAlertDialog = new SweetAlertDialog(PayConfirmActivity.this, SweetAlertDialog.SUCCESS_TYPE);
-                    mSweetAlertDialog.setTitleText("支付成功");
-                    mSweetAlertDialog.setConfirmText("确定");
-                    if (mOrderType != 1) {
-                        mSweetAlertDialog.setCancelText("添加为会员");
-                    }
-                    mSweetAlertDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-                            Intent intent = new Intent(PayConfirmActivity.this, AddMemberActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-                        }
-                    });
-                    mSweetAlertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                        @Override
-                        public void onDismiss(DialogInterface dialogInterface) {
-
-                            //打印小票
-                            if (Print) {
-                                if (MyApplication.mGoodsConsumeMap.isEmpty()) {
-                                    GetPrintSet.getPrintParamSet();
-                                }
-                                Li("---------------打印小票-------------- 商品消费--random:" + new Gson().toJson(spxf_success_bean));
-                                new HttpGetPrintContents(PayConfirmActivity.this, MyApplication.SPXF_PRINT_TIMES, spxf_success_bean.getData().getGID(), intentHandler).SPXF();
-                            } else {
-                                Intent intent = new Intent(PayConfirmActivity.this, GoodsConsumeActivity.class);
-                                intent.putExtra("type", "SPXF");
-                                startActivity(intent);
-                                finish();
-                            }
-//                            if (MDZZ != null && "mdzz".equals(MDZZ)) {
-////                                Intent intent = new Intent(PayConfirmActivity.this, MemberListActivity.class);
-////                                intent.putExtra("carddd", mMemberCardNo);
-////                                startActivity(intent);
-//                                finish();
-//                            } else {
-
-//                            }
-                        }
-                    });
-                    mSweetAlertDialog.show();
-                } catch (JsonSyntaxException e) {
-                    CustomToast.makeText(PayConfirmActivity.this, "打印失败！", Toast.LENGTH_SHORT).show();
-                    finish();
-                }
+                final SPXF_Success_Bean spxf_success_bean = CommonFun.JsonToObj(responseString, SPXF_Success_Bean.class);
+                Li("=============random:" + new Gson().toJson(spxf_success_bean));
+                goodsShopStepTwoComplete(spxf_success_bean.getData().getGID());
             }
 
             @Override
@@ -3414,6 +3374,54 @@ public class PayConfirmActivity extends BaseActivity implements YSLPayPopWindow.
         HttpHelper.post(this, HttpAPI.API().GOODS_CONSUME_PAY, params, callBack);
     }
 
+    private void goodsShopStepTwoComplete(final String GID) {
+        try {
+            mSweetAlertDialog = new SweetAlertDialog(PayConfirmActivity.this, SweetAlertDialog.SUCCESS_TYPE);
+            mSweetAlertDialog.setTitleText("支付成功");
+            mSweetAlertDialog.setConfirmText("确定");
+            if (mOrderType != 1) {
+                mSweetAlertDialog.setCancelText("添加为会员");
+            }
+            mSweetAlertDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                @Override
+                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                    Intent intent = new Intent(PayConfirmActivity.this, AddMemberActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }
+            });
+            mSweetAlertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialogInterface) {
+
+                    //打印小票
+                    if (Print) {
+                        if (MyApplication.mGoodsConsumeMap.isEmpty()) {
+                            GetPrintSet.getPrintParamSet();
+                        }
+                        new HttpGetPrintContents(PayConfirmActivity.this, MyApplication.SPXF_PRINT_TIMES, GID, intentHandler).SPXF();
+                    } else {
+                        Intent intent = new Intent(PayConfirmActivity.this, GoodsConsumeActivity.class);
+                        intent.putExtra("type", "SPXF");
+                        startActivity(intent);
+                        finish();
+                    }
+//                            if (MDZZ != null && "mdzz".equals(MDZZ)) {
+////                                Intent intent = new Intent(PayConfirmActivity.this, MemberListActivity.class);
+////                                intent.putExtra("carddd", mMemberCardNo);
+////                                startActivity(intent);
+//                                finish();
+//                            } else {
+
+//                            }
+                }
+            });
+            mSweetAlertDialog.show();
+        } catch (JsonSyntaxException e) {
+            CustomToast.makeText(PayConfirmActivity.this, "打印失败！", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+    }
 
     /**
      * 提示对话框

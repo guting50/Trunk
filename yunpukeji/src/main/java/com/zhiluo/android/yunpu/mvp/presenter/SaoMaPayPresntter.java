@@ -84,11 +84,12 @@ public class SaoMaPayPresntter implements Presenter {
                             }
 
                         } else {
-                            if (!entityresult.getData().equals("") && !String.valueOf(entityresult.getData()).equals("1")) {
-                                mView.barCodeFailString(entityresult.getMsg());
-                            } else {
-                                mView.barCodeFail(entityresult);
-                            }
+//                            if (!entityresult.getData().equals("") && !String.valueOf(entityresult.getData()).equals("1")) {
+//                                mView.barCodeFailString(entityresult.getMsg());
+//                            } else {
+//                                mView.barCodeFail(entityresult);
+//                            }
+                            mView.barCodeFail(entityresult);
                         }
                     }
 

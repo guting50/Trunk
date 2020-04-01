@@ -277,7 +277,8 @@ public class MemberRechargeActivity extends BaseActivity implements KeyboardAdap
                     if (mDialog != null) {
                         LoadingDialogUtil.closeDialog(mDialog);
                     }
-                    vipInflateMoneyStepTwo();
+//                    vipInflateMoneyStepTwo();
+                    payComplete(entity.getData().getGID());
                 } else {
                     querPay();
                 }
@@ -1436,38 +1437,10 @@ public class MemberRechargeActivity extends BaseActivity implements KeyboardAdap
         CallBack callBack = new CallBack() {
             @Override
             public void onSuccess(String responseString, Gson gson) {
-                mVipCard = null;
-                shoudongInput = false;
-                Message message = new Message();
-                message.what = 1;
-                message.obj = "0";
-                adapter.vHandler.sendMessage(message);
-                mTvChooseMember.setText("选择会员");
-                try {
-                    final HYCZ_Success_Bean hycz_success_bean = CommonFun.JsonToObj(responseString, HYCZ_Success_Bean.class);
-                    Li(" 会员充值支付-------------111--------random:" + new Gson().toJson(hycz_success_bean));
-                    mSweetAlertDialog = new SweetAlertDialog(MemberRechargeActivity.this, SweetAlertDialog.SUCCESS_TYPE);
-                    mSweetAlertDialog.setTitleText("充值成功");
-                    mSweetAlertDialog.setConfirmText("确定");
-                    mSweetAlertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                        @Override
-                        public void onDismiss(DialogInterface dialogInterface) {
-                            if (cbPrint.isChecked()) {
-                                if (MyApplication.mRechargeMap.isEmpty()) {
-                                    GetPrintSet.getPrintParamSet();
-                                }
-                                //打印小票
-                                new HttpGetPrintContents(MemberRechargeActivity.this, MyApplication.HYCZ_PRINT_TIMES, hycz_success_bean.getData().getGID()).HYCZ();
-                            }
-                            initUI();
-                        }
-                    });
-                    mSweetAlertDialog.show();
-                } catch (JsonSyntaxException e) {
-                    Li(" 会员充值支付-------------3333--------random:");
-                    CustomToast.makeText(MemberRechargeActivity.this, "打印失败！", Toast.LENGTH_SHORT).show();
-                    finish();
-                }
+                final HYCZ_Success_Bean hycz_success_bean = CommonFun.JsonToObj(responseString, HYCZ_Success_Bean.class);
+                Li(" 会员充值支付-------------111--------random:" + new Gson().toJson(hycz_success_bean));
+
+                payComplete(hycz_success_bean.getData().getGID());
             }
 
             @Override
@@ -1512,6 +1485,39 @@ public class MemberRechargeActivity extends BaseActivity implements KeyboardAdap
         };
         callBack.setLoadingAnimation(this, "正在支付...", false);
         HttpHelper.post(this, HttpAPI.API().MEM_RECHARGE_PAY, params, callBack);
+    }
+
+    private void payComplete(final String GID){
+        mVipCard = null;
+        shoudongInput = false;
+        Message message = new Message();
+        message.what = 1;
+        message.obj = "0";
+        adapter.vHandler.sendMessage(message);
+        mTvChooseMember.setText("选择会员");
+        try {
+            mSweetAlertDialog = new SweetAlertDialog(MemberRechargeActivity.this, SweetAlertDialog.SUCCESS_TYPE);
+            mSweetAlertDialog.setTitleText("充值成功");
+            mSweetAlertDialog.setConfirmText("确定");
+            mSweetAlertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialogInterface) {
+                    if (cbPrint.isChecked()) {
+                        if (MyApplication.mRechargeMap.isEmpty()) {
+                            GetPrintSet.getPrintParamSet();
+                        }
+                        //打印小票
+                        new HttpGetPrintContents(MemberRechargeActivity.this, MyApplication.HYCZ_PRINT_TIMES, GID).HYCZ();
+                    }
+                    initUI();
+                }
+            });
+            mSweetAlertDialog.show();
+        } catch (JsonSyntaxException e) {
+            Li(" 会员充值支付-------------3333--------random:");
+            CustomToast.makeText(MemberRechargeActivity.this, "打印失败！", Toast.LENGTH_SHORT).show();
+            finish();
+        }
     }
 
     //选择快捷充值，
