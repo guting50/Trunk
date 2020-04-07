@@ -227,7 +227,7 @@ public class YSLMemberInfoBean implements Serializable {
             private String VIP_Creator;
             private String SM_Name;
             private String SM_GID;
-            private int VCH_Fee;
+            private String VCH_Fee;
             private Object VIP_OpenID;
             private int VIP_InterCalaryMonth;
             private Object MCA_HowManyDetail;
@@ -470,11 +470,11 @@ public class YSLMemberInfoBean implements Serializable {
             }
 
             public int getVCH_Fee() {
-                return VCH_Fee;
+                return VCH_Fee.isEmpty() ? 0 : Integer.parseInt(VCH_Fee);
             }
 
             public void setVCH_Fee(int VCH_Fee) {
-                this.VCH_Fee = VCH_Fee;
+                this.VCH_Fee = VCH_Fee + "";
             }
 
             public Object getVIP_OpenID() {
