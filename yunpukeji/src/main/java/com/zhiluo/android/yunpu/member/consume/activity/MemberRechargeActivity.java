@@ -278,7 +278,7 @@ public class MemberRechargeActivity extends BaseActivity implements KeyboardAdap
                         LoadingDialogUtil.closeDialog(mDialog);
                     }
 //                    vipInflateMoneyStepTwo();
-                    payComplete(entity.getData().getGID());
+                    payComplete(mVipInflateMoneyGID);
                 } else {
                     querPay();
                 }

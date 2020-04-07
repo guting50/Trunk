@@ -221,7 +221,7 @@ public class KuaiJieShouKuan extends AppCompatActivity implements View.OnClickLi
                         LoadingDialogUtil.closeDialog(mDialog);
                     }
 //                    fastPayStepTwo();
-                    payComplete(entity.getData().getGID());
+                    payComplete(mOrderGID);
                 } else {
                     querPay();
                 }

@@ -9,8 +9,8 @@ android {
         applicationId "com.zhiluo.android.yunpu"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 169
-        versionName "1.9.8.9"
+        versionCode 171
+        versionName "1.9.8.11"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         javaCompileOptions {

@@ -2,6 +2,7 @@ package com.zhiluo.android.yunpu.mvp.presenter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.TextUtils;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -146,6 +147,9 @@ public class SaoMaPayPresntter implements Presenter {
                             }
 
                         } else {
+                            if (TextUtils.equals(entityresult.getMsg(), "支付失败：PAYERROR")) {
+                                entityresult.setMsg("支付失败");
+                            }
                             mView.querPayFail(entityresult);
                         }
                     }

@@ -1404,13 +1404,13 @@ public class PayConfirmActivity extends BaseActivity implements YSLPayPopWindow.
                     }
                     if (isKSXF) {
 //                        fastPayStepTwo();
-                        fastPayStepTwoComplete(entity.getData().getGID());
+                        fastPayStepTwoComplete(mOrderGID);
                     } else if (isHYCC) {
 //                        vipInflateCountStepTwo();
-                        vipInflateCountStepTwoComplete(entity.getData().getGID());
+                        vipInflateCountStepTwoComplete(mVipInflatCountGID);
                     } else if (isSPXF) {
 //                        goodsShopStepTwo();
-                        goodsShopStepTwoComplete(entity.getData().getGID());
+                        goodsShopStepTwoComplete(mGoodsBeanGID);
                     }
 
                 } else {
