@@ -171,7 +171,7 @@ public class MemberChargeManagementActivity extends BaseActivity implements JiCi
                     & !tvMemberCard.getText().equals("     ")) {
                 isSearch = false;
                 et_search_memberchargemanagementactivity.setText(tvMemberCard.getText().toString());
-                vippresenter.postVip(tvMemberCard.getText().toString(),isSearch);
+                vippresenter.postVip(tvMemberCard.getText().toString(), isSearch);
 //                postVip(tvMemberCard.getText().toString());
             }
         } else {
@@ -233,15 +233,13 @@ public class MemberChargeManagementActivity extends BaseActivity implements JiCi
             CustomToast.makeText(this, "该服务已过期！", Toast.LENGTH_SHORT).show();
             return;
         } else if (chargeList.get(position).getCount() >= chargeList.get(position).getRegularResiduals()) {
-            String WR_Name = "【无】";
-            if (chargeList.get(position).getWR_Name()!=null&& !chargeList.get(position).getWR_Name().equals("")){
-                WR_Name = chargeList.get(position).getWR_Name();
+            String WR_Name = chargeList.get(position).getWR_Name();
+            if (WR_Name != null && !WR_Name.equals("")) {
+                CustomToast.makeText(this, "该服务消费数量已达" + WR_Name + "上限！", Toast.LENGTH_SHORT).show();
+                return;
             }
-            CustomToast.makeText(this, "该服务消费数量已达" + WR_Name + "上限！", Toast.LENGTH_SHORT).show();
-            return;
-        } else {
-            chargeList.get(position).setCount(chargeList.get(position).getCount() + 1);
         }
+        chargeList.get(position).setCount(chargeList.get(position).getCount() + 1);
         handler.sendEmptyMessage(1);
         mJiCiConsumeAdapter.notifyDataSetChanged();
     }
@@ -1034,14 +1032,14 @@ public class MemberChargeManagementActivity extends BaseActivity implements JiCi
 
 
                 tvMemberCard.setText(vipdatalist.getVCH_Card());
-                tvBalance.setText(Decima2KeeplUtil.stringToDecimal(vipdatalist.getMA_AvailableBalance() +""));
-                tvIntegral.setText(Decima2KeeplUtil.stringToDecimal(vipdatalist.getMA_AvailableIntegral() +""));
+                tvBalance.setText(Decima2KeeplUtil.stringToDecimal(vipdatalist.getMA_AvailableBalance() + ""));
+                tvIntegral.setText(Decima2KeeplUtil.stringToDecimal(vipdatalist.getMA_AvailableIntegral() + ""));
             }
 
             @Override
             public void getvipfail(String result) {
                 if (MyApplication.VIP_CARD != null) {
-                    vippresenter.postVip(MyApplication.VIP_CARD,isSearch);
+                    vippresenter.postVip(MyApplication.VIP_CARD, isSearch);
 //                    postVip(MyApplication.VIP_CARD);
                     MyApplication.VIP_CARD = null;
                 } else {
@@ -1254,7 +1252,7 @@ public class MemberChargeManagementActivity extends BaseActivity implements JiCi
     private void doQurry() {
         hasTimerDown = true;
         if (System.currentTimeMillis() - pretime > 500) {
-            vippresenter.postVip(content,isSearch);
+            vippresenter.postVip(content, isSearch);
             hasTimerDown = false;
         } else {
             mInputHandler.sendEmptyMessageDelayed(1, 300);
