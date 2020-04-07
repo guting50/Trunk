@@ -530,8 +530,8 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
             public void onFailure(String msg) {
                 mSweetAlertDialog = new SweetAlertDialog(MemberChargePayActivity.this, SweetAlertDialog.WARNING_TYPE);
                 mSweetAlertDialog.setTitleText("发送失败");
-                if (msg.equals("BuySms")) {
-                    mSweetAlertDialog.setContentText("短信不足，请前去pc端购买!");
+                if (msg.contains("BuySms")) {
+                    mSweetAlertDialog.setContentText("计次消费成功，但短信发送失败：企业短信库存不足，请前去pc端购买!");
                 } else {
                     mSweetAlertDialog.setContentText(msg + "!");
                 }
