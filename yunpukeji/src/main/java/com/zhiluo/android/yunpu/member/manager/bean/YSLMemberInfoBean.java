@@ -1,5 +1,7 @@
 package com.zhiluo.android.yunpu.member.manager.bean;
 
+import android.text.TextUtils;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -54,7 +56,7 @@ public class YSLMemberInfoBean implements Serializable {
         this.data = data;
     }
 
-    public static class DataBean implements Serializable{
+    public static class DataBean implements Serializable {
         /**
          * PageTotal : 18
          * PageSize : 20
@@ -145,7 +147,7 @@ public class YSLMemberInfoBean implements Serializable {
             }
         }
 
-        public static class DataListBean implements Serializable{
+        public static class DataListBean implements Serializable {
             /**
              * GID : d3ac98dc-d5b4-47a7-847d-5804d4fff5b2
              * VIP_RegSource : 2
@@ -470,7 +472,7 @@ public class YSLMemberInfoBean implements Serializable {
             }
 
             public int getVCH_Fee() {
-                return VCH_Fee.isEmpty() ? 0 : Integer.parseInt(VCH_Fee);
+                return TextUtils.isEmpty(VCH_Fee) ? 0 : Integer.parseInt(VCH_Fee);
             }
 
             public void setVCH_Fee(int VCH_Fee) {
@@ -661,7 +663,7 @@ public class YSLMemberInfoBean implements Serializable {
                 this.CustomeFieldList = CustomeFieldList;
             }
 
-            public static class CustomeFieldListBean implements Serializable{
+            public static class CustomeFieldListBean implements Serializable {
                 /**
                  * CF_GID : c44c90ab-af07-43f9-9764-532d86c83039
                  * CF_FieldName : 卡号

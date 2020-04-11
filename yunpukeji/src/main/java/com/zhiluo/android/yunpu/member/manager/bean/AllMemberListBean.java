@@ -1,5 +1,7 @@
 package com.zhiluo.android.yunpu.member.manager.bean;
 
+import android.text.TextUtils;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -448,7 +450,7 @@ public class AllMemberListBean implements Serializable {
             }
 
             public int getVCH_Fee() {
-                return VCH_Fee.isEmpty() ? 0 : Integer.parseInt(VCH_Fee);
+                return TextUtils.isEmpty(VCH_Fee) ? 0 : Integer.parseInt(VCH_Fee);
             }
 
             public void setVCH_Fee(int VCH_Fee) {
