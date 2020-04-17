@@ -396,7 +396,7 @@ public class addCostomfieldsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     }
 
     public static List<String> getDateForString(String date) {
-        String[] dates = date.split("\\|");
+        String[] dates = date.split("\\,");
         List<String> list = new ArrayList<>();
         for (int i = 0; i < dates.length; i++) {
             list.add(dates[i]);
@@ -474,7 +474,6 @@ public class addCostomfieldsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             ButterKnife.bind(this, view);
         }
     }
-
 
     static class ViewHolder4 extends RecyclerView.ViewHolder {
         @Bind(R.id.tv_title)

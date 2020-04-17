@@ -114,8 +114,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 public class AddMemberActivity extends BaseActivity implements CustomPopWindow.OnItemClickListener, CalendarSelector
         .ICalendarSelectorCallBack, addCostomfieldsAdapter.OnImageClickEvent {
-    //会员卡号，姓名，手机，开卡费用，初始金额，初始积分，推荐人卡号，邮箱，身份证，地址，备注。
+    //                  会员卡号，   姓名，        手机，      开卡费用，      初始金额，   初始积分，
     private EditText etCardNum, etMemberName, etPhoneNum, etPayCountMoney, etInitMoney, etInitPoint,
+    //        邮箱，推荐人卡号，身份证，地址，备注。
             etEmail, etID, etAddress, etRemark, etFaceNum, etInitPassword;
     private TextView tvCommission, tvBirthday, tvRecommend, tvLabel, istelview, isfacenumview, etRecommendCardNum;//提成员工，生日，推荐人,会员标签。推荐人
     private CircleImageView civHeadImg;//会员头像
@@ -140,7 +141,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
             mRecommendName, mBirthday, mCommissionName, mRecommendCardNum, calaryMonth, isLunar,
             mEmail, mId, mAddress, mRemark;
     private String mGradeGid;//等级GID
-    private String mInitMoney, mInitPoint, initpoint;//开卡费用，初始金额，初始积分
+    private String mInitMoney, mInitPoint;//开卡费用，初始金额，初始积分
     private double mMoney;
     private int mSex = 0;//性别 0 男，1 女，2 未知
 
@@ -199,7 +200,6 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
     private List<String> mPayWayList;
     private List<LabelBean> mLabList;
     private StringBuilder mLabName;
-    private String mPayWay;
     private Dialog dateDialog;
     private RecyclerView reLabRecycle;
     private addCostomfieldsAdapter mLabAdapter;
@@ -371,110 +371,97 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
     private void initVariable() {
         intentHandler = new IntentHandler();
         mSwitchEntity = (List<ReportMessageBean.DataBean.GetSysSwitchListBean>) CacheData.restoreObject("switch");
-        if (mSwitchEntity != null) {
-            if (mSwitchEntity.size() > 0) {
-                for (int i = 0; i < mSwitchEntity.size(); i++) {
+        if (mSwitchEntity != null && mSwitchEntity.size() > 0) {
+            for (int i = 0; i < mSwitchEntity.size(); i++) {
+                //会员卡号同手机号
+                if ("201".equals(mSwitchEntity.get(i).getSS_Code())) {
+                    if (mSwitchEntity.get(i).getSS_State() == 1) {
+                        mCardContactPhone = true;
+                        etCardNum.setInputType(InputType.TYPE_NULL);
+                        etCardNum.setEnabled(false);
+                        mIvScan.setEnabled(false);
 
-                    //会员卡号同手机号
-                    if ("201".equals(mSwitchEntity.get(i).getSS_Code())) {
-                        if (mSwitchEntity.get(i).getSS_State() == 1) {
-                            mCardContactPhone = true;
-                            etCardNum.setInputType(InputType.TYPE_NULL);
-                            etCardNum.setEnabled(false);
-                            mIvScan.setEnabled(false);
-
-                        } else {
-                            mCardContactPhone = false;
-                            mIvScan.setEnabled(true);
-                            etCardNum.setEnabled(true);
-                        }
+                    } else {
+                        mCardContactPhone = false;
+                        mIvScan.setEnabled(true);
+                        etCardNum.setEnabled(true);
                     }
-                    //是否必填手机号
-                    if ("211".equals(mSwitchEntity.get(i).getSS_Code())) {
-                        if (mSwitchEntity.get(i).getSS_State() == 1) {
-                            mIsfilltel = true;
-                            istelview.setVisibility(View.VISIBLE);
-                        } else if (mSwitchEntity.get(i).getSS_State() == 0) {
-                            mIsfilltel = false;
-                            istelview.setVisibility(View.GONE);
-                        }
-                    }
-
-                    //卡面号码
-                    if ("208".equals(mSwitchEntity.get(i).getSS_Code())) {
-                        if (mSwitchEntity.get(i).getSS_State() == 1) {
-                            findViewById(R.id.rl_add_member_face_number).setVisibility(View.VISIBLE);
-                            findViewById(R.id.view_line).setVisibility(View.VISIBLE);
-                            isCardNum = true;
-                        } else {
-                            findViewById(R.id.rl_add_member_face_number).setVisibility(View.GONE);
-                            findViewById(R.id.view_line).setVisibility(View.GONE);
-                            isCardNum = false;
-                        }
-                    }
-                    //初始密码
-                    if ("202".equals(mSwitchEntity.get(i).getSS_Code())) {
-                        if (mSwitchEntity.get(i).getSS_State() == 1) {
-                            findViewById(R.id.rl_add_member_init_password).setVisibility(View.VISIBLE);
-                            findViewById(R.id.view_paw_line).setVisibility(View.VISIBLE);
-                            etInitPassword.setText(mSwitchEntity.get(i).getSS_Value() + "");
-                            mPassordSwitch = true;
-                        } else {
-                            findViewById(R.id.rl_add_member_init_password).setVisibility(View.GONE);
-                            findViewById(R.id.view_paw_line).setVisibility(View.GONE);
-                            mPassordSwitch = false;
-                        }
-                    }
-                    if ("103".equals(mSwitchEntity.get(i).getSS_Code())) {
-                        if (mSwitchEntity.get(i).getSS_State() == 1) {
-                            bank = true;
-                        } else if (mSwitchEntity.get(i).getSS_State() == 0) {
-                            bank = false;
-                        }
-                    }
-                    if ("101".equals(mSwitchEntity.get(i).getSS_Code())) {
-                        if (mSwitchEntity.get(i).getSS_State() == 1) {
-                            cash = true;
-                        } else if (mSwitchEntity.get(i).getSS_State() == 0) {
-                            cash = false;
-                        }
-                    }
-
-                    //支付宝记账
-                    if ("106".equals(mSwitchEntity.get(i).getSS_Code())) {
-                        if (mSwitchEntity.get(i).getSS_State() == 1) {
-                            zfb = true;
-                        } else if (mSwitchEntity.get(i).getSS_State() == 0) {
-                            zfb = false;
-                        }
-                    }
-                    //微信记账
-                    if ("105".equals(mSwitchEntity.get(i).getSS_Code())) {
-                        if (mSwitchEntity.get(i).getSS_State() == 1) {
-                            wx = true;
-                        } else if (mSwitchEntity.get(i).getSS_State() == 0) {
-                            wx = false;
-                        }
-                    }
-                    //员工提成
-                    if ("301".equals(mSwitchEntity.get(i).getSS_Code())) {
-                        if (mSwitchEntity.get(i).getSS_State() == 1) {
-                            isStaff = true;
-                        } else {
-                            isStaff = false;
-                        }
-                    }
-
                 }
-            } else {
-//                rlReommendStaff.setVisibility(View.GONE);
-                mCardContactPhone = false;//会员卡号同手机号默认关闭
-                findViewById(R.id.rl_add_member_init_password).setVisibility(View.GONE);
-                mPassordSwitch = false;
-                findViewById(R.id.rl_add_member_face_number).setVisibility(View.GONE);
-                findViewById(R.id.view_paw_line).setVisibility(View.GONE);
-                findViewById(R.id.view_line).setVisibility(View.GONE);
-                Log.i(TAG, "未设置开关");
+                //是否必填手机号
+                if ("211".equals(mSwitchEntity.get(i).getSS_Code())) {
+                    if (mSwitchEntity.get(i).getSS_State() == 1) {
+                        mIsfilltel = true;
+                        istelview.setVisibility(View.VISIBLE);
+                    } else if (mSwitchEntity.get(i).getSS_State() == 0) {
+                        mIsfilltel = false;
+                        istelview.setVisibility(View.GONE);
+                    }
+                }
+
+                //卡面号码
+                if ("208".equals(mSwitchEntity.get(i).getSS_Code())) {
+                    if (mSwitchEntity.get(i).getSS_State() == 1) {
+                        findViewById(R.id.rl_add_member_face_number).setVisibility(View.VISIBLE);
+                        findViewById(R.id.view_line).setVisibility(View.VISIBLE);
+                        isCardNum = true;
+                    } else {
+                        findViewById(R.id.rl_add_member_face_number).setVisibility(View.GONE);
+                        findViewById(R.id.view_line).setVisibility(View.GONE);
+                        isCardNum = false;
+                    }
+                }
+                //初始密码
+                if ("202".equals(mSwitchEntity.get(i).getSS_Code())) {
+                    if (mSwitchEntity.get(i).getSS_State() == 1) {
+                        findViewById(R.id.rl_add_member_init_password).setVisibility(View.VISIBLE);
+                        findViewById(R.id.view_paw_line).setVisibility(View.VISIBLE);
+                        etInitPassword.setText(mSwitchEntity.get(i).getSS_Value() + "");
+                        mPassordSwitch = true;
+                    } else {
+                        findViewById(R.id.rl_add_member_init_password).setVisibility(View.GONE);
+                        findViewById(R.id.view_paw_line).setVisibility(View.GONE);
+                        mPassordSwitch = false;
+                    }
+                }
+                if ("103".equals(mSwitchEntity.get(i).getSS_Code())) {
+                    if (mSwitchEntity.get(i).getSS_State() == 1) {
+                        bank = true;
+                    } else if (mSwitchEntity.get(i).getSS_State() == 0) {
+                        bank = false;
+                    }
+                }
+                if ("101".equals(mSwitchEntity.get(i).getSS_Code())) {
+                    if (mSwitchEntity.get(i).getSS_State() == 1) {
+                        cash = true;
+                    } else if (mSwitchEntity.get(i).getSS_State() == 0) {
+                        cash = false;
+                    }
+                }
+
+                //支付宝记账
+                if ("106".equals(mSwitchEntity.get(i).getSS_Code())) {
+                    if (mSwitchEntity.get(i).getSS_State() == 1) {
+                        zfb = true;
+                    } else if (mSwitchEntity.get(i).getSS_State() == 0) {
+                        zfb = false;
+                    }
+                }
+                //微信记账
+                if ("105".equals(mSwitchEntity.get(i).getSS_Code())) {
+                    if (mSwitchEntity.get(i).getSS_State() == 1) {
+                        wx = true;
+                    } else if (mSwitchEntity.get(i).getSS_State() == 0) {
+                        wx = false;
+                    }
+                }
+                //员工提成
+                if ("301".equals(mSwitchEntity.get(i).getSS_Code())) {
+                    if (mSwitchEntity.get(i).getSS_State() == 1) {
+                        isStaff = true;
+                    } else {
+                        isStaff = false;
+                    }
+                }
             }
         } else {
 //            rlReommendStaff.setVisibility(View.GONE);
@@ -640,12 +627,11 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
 
     /**
      * @param mlist
-     * @param mTextView 选择会员等级
      */
-    private void showVipLevelDialog(final List<String> mlist, final TextView mTextView) {
+    private void showVipLevelDialog(final List<String> mlist) {
         int j = 0;
         for (int i = 0; i < mlist.size(); i++) {
-            if (mTextView.getText().toString().equals(mlist.get(i))) {
+            if (tvVipLevel.getText().toString().equals(mlist.get(i))) {
                 j = i;
             }
         }
@@ -654,26 +640,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
                 .setOnDataSelectedListener(new DataPickerDialog.OnDataSelectedListener() {
                     @Override
                     public void onDataSelected(String itemValue, int position) {
-                        mTextView.setText(itemValue);
-                        mPayWay = mlist.get(position);
-                        mGradeGid = mMemberGrade.get(position).getGID();
-                        mInitMoney = Decima2KeeplUtil.stringToDecimal(mMemberGrade.get(position).getVG_InitialAmount() + "");//会员初始金额
-                        mMoney = mMemberGrade.get(position).getVG_CardAmount();//售卡金额
-                        mInitPoint = (int) mMemberGrade.get(position).getVG_InitialIntegral() + "";//初始积分
-                        if (mMemberGrade.get(position).getVG_IsTime() == 1 && mMemberGrade.get(position).getVG_IsTimeNum() != null) {
-                            addTime(mMemberGrade.get(position).getVG_IsTimeUnit().toString(), Double.parseDouble(mMemberGrade.get(position).getVG_IsTimeNum() + ""));
-                            etOverdueDate.setText(overTime);
-                            ivOverdueDate.setEnabled(false);
-
-                        } else if (mMemberGrade.get(position).getVG_IsTime() == 1 && mMemberGrade.get(position).getVG_IsTimeNum() == null) {
-                            etOverdueDate.setText("永久");
-                            ivOverdueDate.setEnabled(false);
-
-                        } else {
-                            etOverdueDate.setText("");
-                            ivOverdueDate.setEnabled(true);
-                        }
-                        mHandler.sendEmptyMessage(2);
+                        selectedMemberGrade(mMemberGrade.get(position));
                     }
 
                     @Override
@@ -685,6 +652,25 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         chooseDialog.show();
     }
 
+    private void selectedMemberGrade(ReportMessageBean.DataBean.VIPGradeListBean vipGradeListBean) {
+        tvVipLevel.setText(vipGradeListBean.getVG_Name());
+        mGradeGid = vipGradeListBean.getGID();
+        mInitMoney = Decima2KeeplUtil.stringToDecimal(vipGradeListBean.getVG_InitialAmount() + "");//会员初始金额
+        mMoney = vipGradeListBean.getVG_CardAmount();//售卡金额
+        mInitPoint = (int) vipGradeListBean.getVG_InitialIntegral() + "";//初始积分
+        if (vipGradeListBean.getVG_IsTime() == 1 && vipGradeListBean.getVG_IsTimeNum() != null) {
+            addTime(vipGradeListBean.getVG_IsTimeUnit(), Double.parseDouble(vipGradeListBean.getVG_IsTimeNum() + ""));
+            etOverdueDate.setText(overTime);
+            ivOverdueDate.setEnabled(false);
+        } else if (vipGradeListBean.getVG_IsTime() == 1 && vipGradeListBean.getVG_IsTimeNum() == null) {
+            etOverdueDate.setText("永久");
+            ivOverdueDate.setEnabled(false);
+        } else {
+            etOverdueDate.setText("");
+            ivOverdueDate.setEnabled(true);
+        }
+        mHandler.sendEmptyMessage(2);
+    }
 
     private void addTime(String str, double num) {
 
@@ -749,24 +735,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
             getMemberGrade(1);//获取会员等级
         } else {
             if (mMemberGrade != null && mMemberGrade.size() > 0) {
-                tvVipLevel.setText(mMemberGrade.get(0).getVG_Name());
-                mGradeGid = mMemberGrade.get(0).getGID();
-                mInitMoney = Decima2KeeplUtil.stringToDecimal(mMemberGrade.get(0).getVG_InitialAmount() + "");//会员初始金额
-                mMoney = mMemberGrade.get(0).getVG_CardAmount();//售卡金额
-                mInitPoint = (int) mMemberGrade.get(0).getVG_InitialIntegral() + "";//初始积分
-                initpoint = (int) mMemberGrade.get(0).getVG_InitialIntegral() + "";//初始积分
-                if (mMemberGrade.get(0).getVG_IsTime() == 1 && mMemberGrade.get(0).getVG_IsTimeNum() != null) {
-                    addTime(mMemberGrade.get(0).getVG_IsTimeUnit().toString(), Double.parseDouble(mMemberGrade.get(0).getVG_IsTimeNum() + ""));
-                    etOverdueDate.setText(overTime);
-                    ivOverdueDate.setEnabled(false);
-                } else if (mMemberGrade.get(0).getVG_IsTime() == 1 && mMemberGrade.get(0).getVG_IsTimeNum() == null) {
-                    etOverdueDate.setText("永久");
-                    ivOverdueDate.setEnabled(false);
-                } else {
-                    etOverdueDate.setText("");
-                    ivOverdueDate.setEnabled(true);
-                }
-                mHandler.sendEmptyMessage(2);
+                selectedMemberGrade(mMemberGrade.get(0));
 
                 groupGradeName();//组装会员等级名称集合
                 mHandler.sendEmptyMessage(1);
@@ -849,7 +818,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
             @Override
             public void onClick(View v) {
                 if (mGradeNameList.size() > 0) {
-                    showVipLevelDialog(mGradeNameList, tvVipLevel);
+                    showVipLevelDialog(mGradeNameList);
                 } else {
                     warnDialog("请先添加会员等级！");
                 }
@@ -1078,7 +1047,6 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
         if (mStaffInfo != null) {
             mStaffInfo.clear();
         }
-        mPayWay = "";
 
         for (int i = 0; i < costomfields.size(); i++) {
             costomfields.get(i).setM_ItemsValue("");
@@ -1472,27 +1440,7 @@ public class AddMemberActivity extends BaseActivity implements CustomPopWindow.O
                         groupGradeName();//组装会员等级名称集合
                         mHandler.sendEmptyMessage(1);
 
-                        tvVipLevel.setText(mMemberGrade.get(0).getVG_Name());
-                        mGradeGid = mMemberGrade.get(0).getGID();
-                        mInitMoney = Decima2KeeplUtil.stringToDecimal(mMemberGrade.get(0).getVG_InitialAmount() + "");//会员初始金额
-                        mMoney = mMemberGrade.get(0).getVG_CardAmount();//售卡金额
-                        mInitPoint = (int) mMemberGrade.get(0).getVG_InitialIntegral() + "";//初始积分
-                        initpoint = (int) mMemberGrade.get(0).getVG_InitialIntegral() + "";//初始积分
-
-                        if (mMemberGrade.get(0).getVG_IsTime() == 1 && mMemberGrade.get(0).getVG_IsTimeNum() != null) {
-                            addTime(mMemberGrade.get(0).getVG_IsTimeUnit().toString(), Double.parseDouble(mMemberGrade.get(0).getVG_IsTimeNum() + ""));
-                            etOverdueDate.setText(overTime);
-                            ivOverdueDate.setEnabled(false);
-
-                        } else if (mMemberGrade.get(0).getVG_IsTime() == 1 && mMemberGrade.get(0).getVG_IsTimeNum() == null) {
-                            etOverdueDate.setText("永久");
-                            ivOverdueDate.setEnabled(false);
-
-                        } else {
-                            etOverdueDate.setText("");
-                            ivOverdueDate.setEnabled(true);
-                        }
-                        mHandler.sendEmptyMessage(2);
+                        selectedMemberGrade(mMemberGrade.get(0));
                     }
 
                 } else if (num == 2) {

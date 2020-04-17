@@ -471,11 +471,11 @@ public class YSLMemberInfoBean implements Serializable {
                 this.SM_GID = SM_GID;
             }
 
-            public int getVCH_Fee() {
-                return TextUtils.isEmpty(VCH_Fee) ? 0 : Integer.parseInt(VCH_Fee);
+            public double getVCH_Fee() {
+                return TextUtils.isEmpty(VCH_Fee) ? 0 : Double.parseDouble(VCH_Fee);
             }
 
-            public void setVCH_Fee(int VCH_Fee) {
+            public void setVCH_Fee(double VCH_Fee) {
                 this.VCH_Fee = VCH_Fee + "";
             }
 

@@ -449,11 +449,11 @@ public class AllMemberListBean implements Serializable {
                 this.VCH_Card = VCH_Card;
             }
 
-            public int getVCH_Fee() {
-                return TextUtils.isEmpty(VCH_Fee) ? 0 : Integer.parseInt(VCH_Fee);
+            public double getVCH_Fee() {
+                return TextUtils.isEmpty(VCH_Fee) ? 0 : Double.parseDouble(VCH_Fee);
             }
 
-            public void setVCH_Fee(int VCH_Fee) {
+            public void setVCH_Fee(double VCH_Fee) {
                 this.VCH_Fee = VCH_Fee + "";
             }
 
