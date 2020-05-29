@@ -18,6 +18,7 @@ android {
                 includeCompileClasspath = true
             }
         }
+        
 
         ndk {
             //选择要添加的对应cpu类型的.so库。
