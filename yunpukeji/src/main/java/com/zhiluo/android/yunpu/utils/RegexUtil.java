@@ -1,13 +1,5 @@
 package com.zhiluo.android.yunpu.utils;
 
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.widget.EditText;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 /**
  * 输入格式校验工具类
  * 作者：罗咏哲 on 2017/7/21 13:46.
@@ -40,9 +32,9 @@ public class RegexUtil {
      * 2-11位{0-9任意数字}
      * @param value
      * @return
-//     */
+    //     */
     public static boolean isTelPhoneNumber(String value) {
-        String str  = value.substring(0,1);
+        String str = value.substring(0, 1);
         if (value != null && value.length() == 11 && str.equals("1")) {
             return true;
         }

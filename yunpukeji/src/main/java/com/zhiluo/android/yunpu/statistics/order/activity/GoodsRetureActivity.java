@@ -23,12 +23,9 @@ import com.google.gson.Gson;
 import com.loopj.android.http.RequestParams;
 import com.zhiluo.android.yunpu.R;
 import com.zhiluo.android.yunpu.config.MyApplication;
-import com.zhiluo.android.yunpu.consume.activity.PayConfirmActivity;
-import com.zhiluo.android.yunpu.goods.consume.activity.GoodsConsumeActivity;
 import com.zhiluo.android.yunpu.http.CallBack;
 import com.zhiluo.android.yunpu.http.HttpAPI;
 import com.zhiluo.android.yunpu.http.HttpHelper;
-import com.zhiluo.android.yunpu.member.manager.activity.MemberListActivity;
 import com.zhiluo.android.yunpu.print.util.GetPrintSet;
 import com.zhiluo.android.yunpu.print.util.HttpGetPrintContents;
 import com.zhiluo.android.yunpu.statistics.order.bean.GoodsOrderReportBean;
@@ -94,7 +91,9 @@ public class GoodsRetureActivity extends Activity {
     private String type;
     private GoodsOrderReportBean.DataBean.DataListBean mBean;
     private GoodsOrderReportBean.DataBean.DataListBean.ViewGoodsDetailBean viewBean;
-    /**退款方式默认为空,让用户自已选择 20191021 cy */
+    /**
+     * 退款方式默认为空,让用户自已选择 20191021 cy
+     */
 //    private String cogid, VIP_Card, WayCode = "XJZF";
     private String cogid, VIP_Card, WayCode = "";
     /********************************* 20191021 cy */
@@ -134,10 +133,10 @@ public class GoodsRetureActivity extends Activity {
                     tvRetureNum.setText(viewBean.getPM_Number() + "");
                     tvRetureMoney.setText(viewBean.getDiscountPrice() + "");
                     tvRetureReceivable.setText(viewBean.getGOD_Integral() + "");
-                    if (viewBean.getGOD_Integral()>0){
+                    if (viewBean.getGOD_Integral() > 0) {
                         rlRetureIntegral.setBackground(new ColorDrawable(getResources().getColor(R.color.white)));
                         tvRetureReceivable.setEnabled(true);
-                    }else {
+                    } else {
                         rlRetureIntegral.setBackground(new ColorDrawable(getResources().getColor(R.color.lightgray)));
                         tvRetureReceivable.setEnabled(false);
                     }
@@ -156,12 +155,12 @@ public class GoodsRetureActivity extends Activity {
                     cogid = mBean.getGID();
                     VIP_Card = mBean.getVIP_Card();
                     double reture = mBean.getCO_TotalPrice();
-                    if (mBean.getCO_ConsumeWay().contains("抹零")){
+                    if (mBean.getCO_ConsumeWay().contains("抹零")) {
                         String consWay = mBean.getCO_ConsumeWay();
-                        int index = consWay.indexOf("零")+2;
+                        int index = consWay.indexOf("零") + 2;
                         String lastWay = consWay.substring(index);
-                        double moling = Double.parseDouble(lastWay.substring(0,lastWay.indexOf(")")));
-                        reture = reture-moling;
+                        double moling = Double.parseDouble(lastWay.substring(0, lastWay.indexOf(")")));
+                        reture = reture - moling;
                     }
 
                     tvRetureMoney.setText(reture + "");
@@ -299,6 +298,8 @@ public class GoodsRetureActivity extends Activity {
         params.put("IsCancelCommission", cbRebate.isChecked());
         //备注
         params.put("RO_Remark", etConstomPayDetail.getText().toString());
+        //时间
+        params.put("RO_UpdateTime", tvRetureOrderDate.getText().toString());
 
         CallBack callBack = new CallBack() {
             @Override
@@ -312,14 +313,14 @@ public class GoodsRetureActivity extends Activity {
                     public void onDismiss(DialogInterface dialog) {
                         mSweetAlertDialog.dismiss();
                         if (cbPrint.isChecked()) {
-                            if (MyApplication.mReTureOrder.isEmpty()){
+                            if (MyApplication.mReTureOrder.isEmpty()) {
                                 GetPrintSet.getPrintParamSet();
                             }
                             new HttpGetPrintContents(GoodsRetureActivity.this, MyApplication.SPTH_PRINT_TIMES, bean.getData().getGID()).SPTH(intentHandler);
                         }
                         ActivityManager.getInstance().exit();
 
-                        Intent intent = new Intent(GoodsRetureActivity.this,OrderActivity.class);
+                        Intent intent = new Intent(GoodsRetureActivity.this, OrderActivity.class);
                         startActivity(intent);
                         finish();
 
@@ -339,12 +340,12 @@ public class GoodsRetureActivity extends Activity {
     }
 
 
-    public class  IntentHandler extends Handler {
+    public class IntentHandler extends Handler {
 
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            switch (msg.what){
+            switch (msg.what) {
                 case 1:
 
                     finish();

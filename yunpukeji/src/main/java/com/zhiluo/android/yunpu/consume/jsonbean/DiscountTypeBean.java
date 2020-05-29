@@ -102,7 +102,7 @@ public class DiscountTypeBean implements Serializable{
         private String RP_Creator;
         private String RP_CreateTime;
         private String CY_GID;
-        private Object RP_Remark;
+        private String RP_Remark;
         private boolean isChecked;//是否选中
         private boolean flag;
         private boolean show;
@@ -278,11 +278,11 @@ public class DiscountTypeBean implements Serializable{
             this.CY_GID = CY_GID;
         }
 
-        public Object getRP_Remark() {
+        public String getRP_Remark() {
             return RP_Remark;
         }
 
-        public void setRP_Remark(Object RP_Remark) {
+        public void setRP_Remark(String RP_Remark) {
             this.RP_Remark = RP_Remark;
         }
 

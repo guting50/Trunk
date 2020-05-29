@@ -35,10 +35,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.loopj.android.http.RequestParams;
 import com.maimengmami.waveswiperefreshlayout.WaveSwipeRefreshLayout;
-
 import com.zhiluo.android.yunpu.R;
 import com.zhiluo.android.yunpu.config.MyApplication;
-import com.zhiluo.android.yunpu.consume.activity.PayConfirmActivity;
 import com.zhiluo.android.yunpu.goods.consume.adapter.GoodsConsumeRightAdapter;
 import com.zhiluo.android.yunpu.goods.consume.view.GoodsView;
 import com.zhiluo.android.yunpu.goods.manager.adapter.GoodsTypeExpandAdapter;
@@ -450,7 +448,7 @@ public class IntegralExchangeActivity extends BaseActivity implements GoodsConsu
             @Override
             public void getvipfail(String result) {
                 if (MyApplication.VIP_CARD != null) {
-                    vippresenter.postVip(MyApplication.VIP_CARD,isSearch);
+                    vippresenter.postVip(MyApplication.VIP_CARD, isSearch);
 //                    postVip(MyApplication.VIP_CARD);
                     MyApplication.VIP_CARD = null;
                 } else {
@@ -526,8 +524,8 @@ public class IntegralExchangeActivity extends BaseActivity implements GoodsConsu
             @Override
             public void onSuccess(String responseString, Gson gson) {
                 SmsSwitch bean = CommonFun.JsonToObj(responseString, SmsSwitch.class);
-                for (int i=0;i<bean.getData().size();i++){
-                    if (bean.getData().get(i).getST_Code().equals(code)){
+                for (int i = 0; i < bean.getData().size(); i++) {
+                    if (bean.getData().get(i).getST_Code().equals(code)) {
                         if (bean.getData().get(i).getST_State() == null || !bean.getData().get(i).getST_State().equals("1")) {
                             cbMessage.setOnClickListener(new View.OnClickListener() {
                                 @Override
@@ -607,8 +605,8 @@ public class IntegralExchangeActivity extends BaseActivity implements GoodsConsu
             @Override
             public void onClick(View v) {
 
-                    Intent intent = new Intent(IntegralExchangeActivity.this, HomeActivity.class);
-                    startActivity(intent);
+                Intent intent = new Intent(IntegralExchangeActivity.this, HomeActivity.class);
+                startActivity(intent);
 
                 finish();
             }
@@ -650,7 +648,7 @@ public class IntegralExchangeActivity extends BaseActivity implements GoodsConsu
             @SuppressLint("WrongConstant")
             @Override
             public void onClick(View v) {
-                if (YSLUtils.isFastClick()){
+                if (YSLUtils.isFastClick()) {
                     if (verification()) {
                         if (mPasswordSwitch) {
                             showPasswordDialog();
@@ -922,7 +920,7 @@ public class IntegralExchangeActivity extends BaseActivity implements GoodsConsu
                 tvyue.setText(Decima2KeeplUtil.stringToDecimal(mMemberInfo.getMA_AvailableBalance() + ""));
                 tvjifen.setText(Decima2KeeplUtil.stringToDecimal(mMemberInfo.getMA_AvailableIntegral() + ""));
                 isSearch = false;
-                vippresenter.postVip(mMemberInfo.getVCH_Card(),isSearch);
+                vippresenter.postVip(mMemberInfo.getVCH_Card(), isSearch);
 //                postVip(mMemberInfo.getVCH_Card());
             } else {
                 tvname.setText("无");
@@ -1111,15 +1109,15 @@ public class IntegralExchangeActivity extends BaseActivity implements GoodsConsu
                             if (cbPrint.isChecked()) {
                                 new HttpGetPrintContents(IntegralExchangeActivity.this, MyApplication.JFDH_PRINT_TIMES, bean.getData().getGID()).JFDH();
                             }
-                                mHaveChoosedGoodList.clear();
-                                mGiftNum = 0;
-                                mNeedIntegral = 0.00;
-                                getGoods(1, 20);
-                                tvname.setText("无");
-                                tvcard.setText("无");
-                                tvyue.setText("0.00");
-                                tvjifen.setText("0.00");
-                                mTvChooseMember.setText("选择会员");
+                            mHaveChoosedGoodList.clear();
+                            mGiftNum = 0;
+                            mNeedIntegral = 0.00;
+                            getGoods(1, 20);
+                            tvname.setText("无");
+                            tvcard.setText("无");
+                            tvyue.setText("0.00");
+                            tvjifen.setText("0.00");
+                            mTvChooseMember.setText("选择会员");
                             mSweetAlertDialog.dismiss();
                         }
                     });

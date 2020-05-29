@@ -1,6 +1,5 @@
 package com.zhiluo.android.yunpu.member.consume.activity;
 
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -19,21 +18,15 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.liangmutian.mypicker.DatePickerDialog;
 import com.example.liangmutian.mypicker.DateUtil;
 import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
 import com.zhiluo.android.yunpu.R;
 import com.zhiluo.android.yunpu.config.MyApplication;
-import com.zhiluo.android.yunpu.consume.activity.PayConfirmActivity;
 import com.zhiluo.android.yunpu.consume.activity.StaffCommissionActivity;
 import com.zhiluo.android.yunpu.gift.bean.ChargeListBean;
 import com.zhiluo.android.yunpu.http.CallBack;
@@ -41,9 +34,6 @@ import com.zhiluo.android.yunpu.http.HttpAPI;
 import com.zhiluo.android.yunpu.http.HttpHelper;
 import com.zhiluo.android.yunpu.login.jsonbean.ReportMessageBean;
 import com.zhiluo.android.yunpu.member.consume.adapter.TimesPayAdapter;
-import com.zhiluo.android.yunpu.member.jsonbean.Adduserbean;
-import com.zhiluo.android.yunpu.member.manager.activity.AddMemberActivity;
-import com.zhiluo.android.yunpu.member.manager.activity.MemberListActivity;
 import com.zhiluo.android.yunpu.mvp.model.PasswordVerifyBean;
 import com.zhiluo.android.yunpu.print.bean.JCXF_Success_Bean;
 import com.zhiluo.android.yunpu.print.util.HttpGetPrintContents;
@@ -56,7 +46,6 @@ import com.zhiluo.android.yunpu.utils.DateTimeUtil;
 import com.zhiluo.android.yunpu.yslutils.YSLUtils;
 
 import java.io.Serializable;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -65,7 +54,6 @@ import java.util.Map;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import cn.pedant.SweetAlert.SweetAlertDialog;
-import cz.msebera.android.httpclient.Header;
 
 import static com.zhiluo.android.yunpu.yslutils.LogUtils.Li;
 
@@ -73,7 +61,7 @@ import static com.zhiluo.android.yunpu.yslutils.LogUtils.Li;
  * Created by YSL on 2018-08-16.
  */
 
-public class MemberChargePayActivity extends BaseActivity implements TimesPayAdapter.employeeClick,TimesPayAdapter.imgicClick{
+public class MemberChargePayActivity extends BaseActivity implements TimesPayAdapter.employeeClick, TimesPayAdapter.imgicClick {
 
 
     @Bind(R.id.tv_back_activity)
@@ -107,8 +95,8 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
     private StringBuilder mStaffName;//提成员工姓名
     private int empos;
     private ArrayList<String> mStaffListGid = new ArrayList<>();
-    private Map<String,ArrayList<String>> mStaffListGidList = new HashMap<>();//提成员工GID
-    private Map<String,List<ReportMessageBean.DataBean.EmplistBean>> mStaffInfoList = new HashMap<>();
+    private Map<String, ArrayList<String>> mStaffListGidList = new HashMap<>();//提成员工GID
+    private Map<String, List<ReportMessageBean.DataBean.EmplistBean>> mStaffInfoList = new HashMap<>();
 
     private TimesPayAdapter mTimesPayAdapter;
     private List<ChargeListBean.DataBean> mList = new ArrayList<>();//提交的商品信息
@@ -119,7 +107,7 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
     private boolean isStaff = false;//是否开启员工提成
     private boolean isConsume = false;//是否开启消费密码验证
     private Dialog datesDialog;
-    private int pribean = 0 ;
+    private int pribean = 0;
     private String MDZZ;
     private IntentHandler intentHandler;
 
@@ -148,9 +136,9 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
             @Override
             public void onClick(View v) {
                 if (YSLUtils.isFastClick()) {//防止卡顿多次点击
-                    if (isConsume){
+                    if (isConsume) {
                         showPasswordDialog();
-                    }else {
+                    } else {
                         postusecharge();
                     }
                 }
@@ -189,13 +177,13 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
         cbPrint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (pribean ==1){
-                    if (cbPrint.isChecked()){
+                if (pribean == 1) {
+                    if (cbPrint.isChecked()) {
                         cbPrint.setChecked(true);
-                    }else {
+                    } else {
                         cbPrint.setChecked(false);
                     }
-                }else {
+                } else {
                     CustomToast.makeText(MemberChargePayActivity.this, "打印开关未开启，请设置", Toast.LENGTH_SHORT).show();
                 }
 
@@ -252,6 +240,7 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
         });
         alertDialog.show();
     }
+
     /**
      * @param date      ,
      * @param mTextView ,
@@ -324,7 +313,7 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
                             isConsume = false;
                         }
                     }
-                    Log.d(TAG, "initData: "+i+mSwitchEntity.get(i).getSS_Name());
+                    Log.d(TAG, "initData: " + i + mSwitchEntity.get(i).getSS_Name());
                 }
             }
         }
@@ -333,7 +322,7 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
             if (mTimesPayAdapter != null) {
                 mTimesPayAdapter = null;
             }
-            mTimesPayAdapter = new TimesPayAdapter(MemberChargePayActivity.this, mList,MemberChargePayActivity.this,MemberChargePayActivity.this,isStaff);
+            mTimesPayAdapter = new TimesPayAdapter(MemberChargePayActivity.this, mList, MemberChargePayActivity.this, MemberChargePayActivity.this, isStaff);
             LinearLayoutManager manager = new LinearLayoutManager(this);
             recyclerView.setLayoutManager(manager);
             recyclerView.setAdapter(mTimesPayAdapter);
@@ -362,7 +351,7 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
                 } else {
                     cbShortMessage.setChecked(true);
                 }
-            }else {
+            } else {
                 getSmsSet(code);
             }
 
@@ -379,8 +368,8 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
             @Override
             public void onSuccess(String responseString, Gson gson) {
                 SmsSwitch bean = CommonFun.JsonToObj(responseString, SmsSwitch.class);
-                for (int i=0;i<bean.getData().size();i++){
-                    if (bean.getData().get(i).getST_Code().equals(code)){
+                for (int i = 0; i < bean.getData().size(); i++) {
+                    if (bean.getData().get(i).getST_Code().equals(code)) {
                         if (bean.getData().get(i).getST_State() == null || !bean.getData().get(i).getST_State().equals("1")) {
                             cbShortMessage.setOnClickListener(new View.OnClickListener() {
                                 @Override
@@ -412,7 +401,7 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
      */
     private void setCbPrint() {
         try {
-            if (YSLUtils.getPrints()!=null){
+            if (YSLUtils.getPrints() != null) {
 
                 if (YSLUtils.getPrints().getPS_IsEnabled() != 1) {
                     cbPrint.setChecked(false);
@@ -450,7 +439,7 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
 //                mStaffName.delete(0, mStaffName.length());//清空数据
 
                 ArrayList<String> list = new ArrayList<>();
-                if (mStaffInfo.size()>0){
+                if (mStaffInfo.size() > 0) {
                     for (int i = 0; i < mStaffInfo.size(); i++) {
                         list.add(mStaffInfo.get(i).getGID());
                         if (i == mStaffInfo.size() - 1) {
@@ -459,15 +448,15 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
                             mStaffName.append(mStaffInfo.get(i).getEM_Name() + "、");
                         }
                     }
-                }else {
+                } else {
                     list.add("");
                     mStaffName.append("");
                 }
 
                 mStaffListGid = list;
-                mStaffInfoList.put(String.valueOf(empos),mStaffInfo);
-                mStaffListGidList.put(String.valueOf(empos),mStaffListGid);
-                mList.get(empos).setEmployeeValue(mStaffName+"");
+                mStaffInfoList.put(String.valueOf(empos), mStaffInfo);
+                mStaffListGidList.put(String.valueOf(empos), mStaffListGid);
+                mList.get(empos).setEmployeeValue(mStaffName + "");
                 mTimesPayAdapter.notifyDataSetChanged();
                 mStaffName.delete(0, mStaffName.length());//清空数据
             }
@@ -493,9 +482,9 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
             params.put("wouldOrderDetail[" + j + "][WOD_UseNumber]", mList.get(j).getCount());
             params.put("wouldOrderDetail[" + j + "][WR_GID]", mList.get(j).getWR_GID());
 
-            if (mStaffListGidList.get(String.valueOf(j))!=null){
+            if (mStaffListGidList.get(String.valueOf(j)) != null) {
                 for (int i = 0; i < mStaffListGidList.get(String.valueOf(j)).size(); i++) {//提成员工GID
-                    params.put("wouldOrderDetail[" + j + "][EM_GIDList]["+i+"]", mStaffListGidList.get(String.valueOf(j)).get(i));
+                    params.put("wouldOrderDetail[" + j + "][EM_GIDList][" + i + "]", mStaffListGidList.get(String.valueOf(j)).get(i));
                 }
             }
         }
@@ -506,7 +495,7 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
 //            }
 //        }
         params.put("IS_Sms", cbShortMessage.isChecked());//是否发短信
-        params.put("OrderTime",tvOrderTime.getText().toString());
+        params.put("OrderTime", tvOrderTime.getText().toString());
         params.put("Device", 1);//设备
 
         CallBack callBack = new CallBack() {
@@ -521,11 +510,11 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
                     public void onDismiss(DialogInterface dialogInterface) {
                         if (cbPrint.isChecked()) {
                             //打印小票
-                            new HttpGetPrintContents(MemberChargePayActivity.this, MyApplication.JCXF_PRINT_TIMES, jcxf_success_bean.getData().getGID(),intentHandler).JCXF();
-                        }else {
+                            new HttpGetPrintContents(MemberChargePayActivity.this, MyApplication.JCXF_PRINT_TIMES, jcxf_success_bean.getData().getGID(), intentHandler).JCXF();
+                        } else {
                             Intent intent = new Intent(MemberChargePayActivity.this, MemberChargeManagementActivity.class);
-                            if (MDZZ!=null &&!MDZZ.equals("")){
-                                intent.putExtra("MDZZ",MDZZ);
+                            if (MDZZ != null && !MDZZ.equals("")) {
+                                intent.putExtra("MDZZ", MDZZ);
                             }
                             startActivity(intent);
                             finish();
@@ -541,8 +530,8 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
             public void onFailure(String msg) {
                 mSweetAlertDialog = new SweetAlertDialog(MemberChargePayActivity.this, SweetAlertDialog.WARNING_TYPE);
                 mSweetAlertDialog.setTitleText("发送失败");
-                if (msg.equals("BuySms")) {
-                    mSweetAlertDialog.setContentText("短信不足，请前去pc端购买!");
+                if (msg.contains("BuySms")) {
+                    mSweetAlertDialog.setContentText("计次消费成功，但短信发送失败：企业短信库存不足，请前去pc端购买!");
                 } else {
                     mSweetAlertDialog.setContentText(msg + "!");
                 }
@@ -557,20 +546,21 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
                 mSweetAlertDialog.show();
             }
         };
-        callBack.setLoadingAnimation(this,"提交中...",false);
-        HttpHelper.post(MemberChargePayActivity.this, HttpAPI.API().CHAORDER,params,callBack);
+        callBack.setLoadingAnimation(this, "提交中...", false);
+        HttpHelper.post(MemberChargePayActivity.this, HttpAPI.API().CHAORDER, params, callBack);
     }
-    public class  IntentHandler extends Handler {
+
+    public class IntentHandler extends Handler {
 
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             Intent intent;
-            switch (msg.what){
+            switch (msg.what) {
                 case 1:
                     intent = new Intent(MemberChargePayActivity.this, MemberChargeManagementActivity.class);
-                    if (MDZZ!=null &&!MDZZ.equals("")){
-                        intent.putExtra("MDZZ",MDZZ);
+                    if (MDZZ != null && !MDZZ.equals("")) {
+                        intent.putExtra("MDZZ", MDZZ);
                     }
                     startActivity(intent);
                     finish();
@@ -579,7 +569,6 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
             }
         }
     }
-
 
 
     @Override
@@ -605,8 +594,8 @@ public class MemberChargePayActivity extends BaseActivity implements TimesPayAda
     public void imagicClick(View view) {
 
         int pos = (int) view.getTag();
-        for (int i = 0;i<mList.size();i++){
-            mStaffInfoList.put(String.valueOf(i),mStaffInfoList.get(String.valueOf(pos)));
+        for (int i = 0; i < mList.size(); i++) {
+            mStaffInfoList.put(String.valueOf(i), mStaffInfoList.get(String.valueOf(pos)));
             mList.get(i).setEmployeeValue(mList.get(pos).getEmployeeValue());
         }
         mTimesPayAdapter.notifyDataSetChanged();

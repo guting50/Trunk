@@ -1,5 +1,7 @@
 package com.zhiluo.android.yunpu.member.manager.bean;
 
+import android.text.TextUtils;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -193,7 +195,7 @@ public class AllMemberListBean implements Serializable {
             private int VIP_IsDeleted;
             private int VIP_Percent;
             private String VCH_Card;
-            private int VCH_Fee;
+            private String VCH_Fee;
             private String VG_Name;
             private Object VGC_Code;
             private Object US_Value;
@@ -447,12 +449,12 @@ public class AllMemberListBean implements Serializable {
                 this.VCH_Card = VCH_Card;
             }
 
-            public int getVCH_Fee() {
-                return VCH_Fee;
+            public double getVCH_Fee() {
+                return TextUtils.isEmpty(VCH_Fee) ? 0 : Double.parseDouble(VCH_Fee);
             }
 
-            public void setVCH_Fee(int VCH_Fee) {
-                this.VCH_Fee = VCH_Fee;
+            public void setVCH_Fee(double VCH_Fee) {
+                this.VCH_Fee = VCH_Fee + "";
             }
 
             public String getVG_Name() {

@@ -527,6 +527,7 @@ public class OrdinaryGoodsFragment extends Fragment implements View.OnClickListe
         goodsmodel = edGoodsModel.getText().toString();//商品规格
         mDefaultPrice = edGoodsBidPrice.getText().toString();//商品进价
         mMemberPrice = edGoodsVipPrice.getText().toString();//会员价
+        goodsmetering = edGoodsMetering.getText().toString();//计量单位
     }
 
     @Override

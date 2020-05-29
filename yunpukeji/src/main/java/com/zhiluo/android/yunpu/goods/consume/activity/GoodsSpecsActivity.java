@@ -19,7 +19,6 @@ import com.zhiluo.android.yunpu.goods.consume.NotifyShopCarEvent;
 import com.zhiluo.android.yunpu.goods.consume.adapter.GoodsSprcsAdater;
 import com.zhiluo.android.yunpu.goods.consume.bean.GoodsSpecsListBean;
 import com.zhiluo.android.yunpu.goods.manager.activity.GoodsDetailActivity;
-import com.zhiluo.android.yunpu.goods.manager.activity.GoodsManagerActivity;
 import com.zhiluo.android.yunpu.goods.manager.bean.GoodsCheckResponseByType;
 import com.zhiluo.android.yunpu.http.CallBack;
 import com.zhiluo.android.yunpu.http.HttpAPI;

@@ -1,5 +1,7 @@
 package com.zhiluo.android.yunpu.goods.manager.bean;
 
+import android.text.TextUtils;
+
 import java.io.Serializable;
 
 /**
@@ -19,7 +21,7 @@ public class QuerPayBean implements Serializable {
     private boolean success;
     private String code;
     private String msg;
-    private int data;
+    private QuerPayMsg data;
 
     public boolean isSuccess() {
         return success;
@@ -30,7 +32,7 @@ public class QuerPayBean implements Serializable {
     }
 
     public String getCode() {
-        return code;
+        return TextUtils.isEmpty(code) ? "" : code;
     }
 
     public void setCode(String code) {
@@ -45,11 +47,24 @@ public class QuerPayBean implements Serializable {
         this.msg = msg;
     }
 
-    public int getData() {
+    public QuerPayMsg getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(QuerPayMsg data) {
         this.data = data;
+    }
+
+    public static class QuerPayMsg {
+
+        private String GID;
+
+        public void setGID(String GID) {
+            this.GID = GID;
+        }
+
+        public String getGID() {
+            return GID;
+        }
     }
 }

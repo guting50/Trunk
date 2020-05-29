@@ -1,5 +1,7 @@
 package com.zhiluo.android.yunpu.member.manager.bean;
 
+import android.text.TextUtils;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -54,7 +56,7 @@ public class YSLMemberInfoBean implements Serializable {
         this.data = data;
     }
 
-    public static class DataBean implements Serializable{
+    public static class DataBean implements Serializable {
         /**
          * PageTotal : 18
          * PageSize : 20
@@ -145,7 +147,7 @@ public class YSLMemberInfoBean implements Serializable {
             }
         }
 
-        public static class DataListBean implements Serializable{
+        public static class DataListBean implements Serializable {
             /**
              * GID : d3ac98dc-d5b4-47a7-847d-5804d4fff5b2
              * VIP_RegSource : 2
@@ -227,7 +229,7 @@ public class YSLMemberInfoBean implements Serializable {
             private String VIP_Creator;
             private String SM_Name;
             private String SM_GID;
-            private int VCH_Fee;
+            private String VCH_Fee;
             private Object VIP_OpenID;
             private int VIP_InterCalaryMonth;
             private Object MCA_HowManyDetail;
@@ -469,12 +471,12 @@ public class YSLMemberInfoBean implements Serializable {
                 this.SM_GID = SM_GID;
             }
 
-            public int getVCH_Fee() {
-                return VCH_Fee;
+            public double getVCH_Fee() {
+                return TextUtils.isEmpty(VCH_Fee) ? 0 : Double.parseDouble(VCH_Fee);
             }
 
-            public void setVCH_Fee(int VCH_Fee) {
-                this.VCH_Fee = VCH_Fee;
+            public void setVCH_Fee(double VCH_Fee) {
+                this.VCH_Fee = VCH_Fee + "";
             }
 
             public Object getVIP_OpenID() {
@@ -661,7 +663,7 @@ public class YSLMemberInfoBean implements Serializable {
                 this.CustomeFieldList = CustomeFieldList;
             }
 
-            public static class CustomeFieldListBean implements Serializable{
+            public static class CustomeFieldListBean implements Serializable {
                 /**
                  * CF_GID : c44c90ab-af07-43f9-9764-532d86c83039
                  * CF_FieldName : 卡号

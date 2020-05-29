@@ -28,6 +28,7 @@ public class CommonFun {
             T objData = gson.fromJson(strResult, type);
             return objData;
         } catch (Exception ex){
+            ex.printStackTrace();
              return null;
         }
     }
@@ -37,6 +38,7 @@ public class CommonFun {
             T objData = gson.fromJson(strResult, type);
             return objData;
         } catch (Exception ex){
+            ex.printStackTrace();
             return null;
         }
     }

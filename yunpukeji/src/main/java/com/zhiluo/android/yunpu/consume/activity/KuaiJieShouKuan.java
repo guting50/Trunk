@@ -18,7 +18,6 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.loopj.android.http.RequestParams;
-
 import com.zhiluo.android.yunpu.R;
 import com.zhiluo.android.yunpu.config.MyApplication;
 import com.zhiluo.android.yunpu.consume.bean.FastPayStepOneBean;
@@ -35,7 +34,6 @@ import com.zhiluo.android.yunpu.mvp.presenter.PostVipPresenter;
 import com.zhiluo.android.yunpu.mvp.presenter.SaoMaPayPresntter;
 import com.zhiluo.android.yunpu.mvp.view.IPostVipView;
 import com.zhiluo.android.yunpu.mvp.view.SaoMaPayView;
-
 import com.zhiluo.android.yunpu.print.bean.KSXF_Success_Bean;
 import com.zhiluo.android.yunpu.print.util.HttpGetPrintContents;
 import com.zhiluo.android.yunpu.ui.view.CustomToast;
@@ -59,8 +57,8 @@ import static com.zhiluo.android.yunpu.yslutils.LogUtils.Li;
  * Created by ${YSL} on 2018-05-05.
  */
 
-public class KuaiJieShouKuan extends AppCompatActivity implements View.OnClickListener{
-    private TextView tvBack, tvVipName, tvCard, tvYuE, tvIntergal, tvMoney, tvCostMoney,tvTitle;
+public class KuaiJieShouKuan extends AppCompatActivity implements View.OnClickListener {
+    private TextView tvBack, tvVipName, tvCard, tvYuE, tvIntergal, tvMoney, tvCostMoney, tvTitle;
     private ImageView imgDeletVip, imgMa, imgDownChoise;
     private LinearLayout lVipMessage;
     private TextView rChoiseVip;
@@ -195,15 +193,15 @@ public class KuaiJieShouKuan extends AppCompatActivity implements View.OnClickLi
 
             @Override
             public void barCodeFail(BarCodePayBean entity) {
-                if (entity.getCode().equals("410004")){
+                if (entity.getCode().equals("410004")) {
                     barcodeResultGID = entity.getData().getGID();
                     try {
                         Thread.currentThread().sleep(2500);
-                    }catch (Exception e){
+                    } catch (Exception e) {
 
                     }
                     querPay();
-                }else {
+                } else {
                     CustomToast.makeText(KuaiJieShouKuan.this, entity.getMsg(), Toast.LENGTH_SHORT).show();
                 }
             }
@@ -222,31 +220,32 @@ public class KuaiJieShouKuan extends AppCompatActivity implements View.OnClickLi
                     if (mDialog != null) {
                         LoadingDialogUtil.closeDialog(mDialog);
                     }
-                    fastPayStepTwo();
-                }else {
+//                    fastPayStepTwo();
+                    payComplete(mOrderGID);
+                } else {
                     querPay();
                 }
             }
 
             @Override
             public void querPayFail(QuerPayBean entity) {
-                if (entity.getCode().equals("410004")){
+                if (entity.getCode().equals("410004")) {
                     try {
                         Thread.currentThread().sleep(2500);
-                    }catch (Exception e){
+                    } catch (Exception e) {
 
                     }
                     querPay();
-                }else if (entity.getCode().contains("41000")){
+                } else if (entity.getCode().contains("41000")) {
                     if (mDialog != null) {
                         LoadingDialogUtil.closeDialog(mDialog);
                     }
-                    CustomToast.makeText(KuaiJieShouKuan.this, YSLUtils.payResult(entity.getCode()),Toast.LENGTH_SHORT).show();
-                }else {
+                    CustomToast.makeText(KuaiJieShouKuan.this, YSLUtils.payResult(entity.getCode()), Toast.LENGTH_SHORT).show();
+                } else {
                     if (mDialog != null) {
                         LoadingDialogUtil.closeDialog(mDialog);
                     }
-                    CustomToast.makeText(KuaiJieShouKuan.this,entity.getMsg(),Toast.LENGTH_SHORT).show();
+                    CustomToast.makeText(KuaiJieShouKuan.this, entity.getMsg(), Toast.LENGTH_SHORT).show();
                 }
             }
         };
@@ -410,7 +409,7 @@ public class KuaiJieShouKuan extends AppCompatActivity implements View.OnClickLi
         if (mSwitchEntity != null) {
             if (mSwitchEntity.size() > 0) {
                 for (int i = 0; i < mSwitchEntity.size(); i++) {
-                    Li("开关-----"+mSwitchEntity.get(i).getSS_Code());
+                    Li("开关-----" + mSwitchEntity.get(i).getSS_Code());
                     //扫码支付开关
                     if ("111".equals(mSwitchEntity.get(i).getSS_Code())) {
                         if (mSwitchEntity.get(i).getSS_State() == 1) {
@@ -425,12 +424,12 @@ public class KuaiJieShouKuan extends AppCompatActivity implements View.OnClickLi
     }
 
 
-    private void barCode(){
+    private void barCode() {
         RequestParams params = new RequestParams();
-        params.put("Code",mSmPayCode);//条码
-        params.put("Money",mOrderMoney);//支付金额
-        params.put("OrderGID",mOrderGID);//订单id
-        params.put("OrderType",60);//10商品消费 20充次 30计时消费 40 充值 50 套餐消费 60快速消费
+        params.put("Code", mSmPayCode);//条码
+        params.put("Money", mOrderMoney);//支付金额
+        params.put("OrderGID", mOrderGID);//订单id
+        params.put("OrderType", 60);//10商品消费 20充次 30计时消费 40 充值 50 套餐消费 60快速消费
         params.put("OrderNo", CreateOrder.createOrder("KS"));
         params.put("OrderPayInfo[PayPoint]", 0);
         params.put("OrderPayInfo[PayTotalMoney]", mOrderMoney);
@@ -442,13 +441,12 @@ public class KuaiJieShouKuan extends AppCompatActivity implements View.OnClickLi
         params.put("OrderPayInfo[PayTypeList][0][PayMoney]", mOrderMoney);
 
 
-
         presenter.barCode(params);
     }
 
-    private void querPay(){
+    private void querPay() {
         RequestParams params = new RequestParams();
-        params.put("ResultGID",barcodeResultGID);
+        params.put("ResultGID", barcodeResultGID);
         presenter.querPay(params);
     }
 
@@ -509,47 +507,8 @@ public class KuaiJieShouKuan extends AppCompatActivity implements View.OnClickLi
         CallBack callBack = new CallBack() {
             @Override
             public void onSuccess(String responseString, Gson gson) {
-                try {
-                    final KSXF_Success_Bean ksxf_success_bean = CommonFun.JsonToObj(responseString, KSXF_Success_Bean.class);
-                    mSweetAlertDialog = new SweetAlertDialog(KuaiJieShouKuan.this, SweetAlertDialog.SUCCESS_TYPE);
-                    mSweetAlertDialog.setTitleText("支付成功");
-                    mSweetAlertDialog.setConfirmText("确定");
-                    if (mMemberInfo == null) {
-                        mSweetAlertDialog.setCancelText("添加为会员");
-                    }
-                    mSweetAlertDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-                            mSweetAlertDialog.dismiss();
-                            Intent intent = new Intent(KuaiJieShouKuan.this, AddMemberActivity.class);
-                            startActivity(intent);
-                            finish();
-                        }
-                    });
-                    mSweetAlertDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                        @Override
-                        public void onClick(SweetAlertDialog sweetAlertDialog) {
-                            //打印小票
-                            new HttpGetPrintContents(KuaiJieShouKuan.this, MyApplication.KSXF_PRINT_TIMES,
-                                    ksxf_success_bean.getData().getGID()).KSXF();
-                            mSweetAlertDialog.dismiss();
-//                            startActivity(new Intent(KuaiJieShouKuan.this, KuaiJieShouKuan.class));
-//                            KuaiJieShouKuan.this.finish();
-                        }
-                    });
-                    mSweetAlertDialog.show();
-                } catch (JsonSyntaxException e) {
-                    CustomToast.makeText(KuaiJieShouKuan.this, "打印失败！", Toast.LENGTH_SHORT).show();
-//                    finish();
-                }
-                mTempVar = 0;
-                mYsMoney = 0;
-                mOrderMoney = 0;
-                mEditContentBuilder = new StringBuilder("");
-                tvMoney.setText("");
-                tvCostMoney.setText("");
-                lVipMessage.setVisibility(View.GONE);
-
+                final KSXF_Success_Bean ksxf_success_bean = CommonFun.JsonToObj(responseString, KSXF_Success_Bean.class);
+                payComplete(ksxf_success_bean.getData().getGID());
             }
 
             @Override
@@ -606,6 +565,47 @@ public class KuaiJieShouKuan extends AppCompatActivity implements View.OnClickLi
         HttpHelper.post(this, "ConsumeOrder/PaymentFastReceipt", params, callBack);
     }
 
+    private void payComplete(final String GID) {
+        try {
+            mSweetAlertDialog = new SweetAlertDialog(KuaiJieShouKuan.this, SweetAlertDialog.SUCCESS_TYPE);
+            mSweetAlertDialog.setTitleText("支付成功");
+            mSweetAlertDialog.setConfirmText("确定");
+            if (mMemberInfo == null) {
+                mSweetAlertDialog.setCancelText("添加为会员");
+            }
+            mSweetAlertDialog.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                @Override
+                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                    mSweetAlertDialog.dismiss();
+                    Intent intent = new Intent(KuaiJieShouKuan.this, AddMemberActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+            mSweetAlertDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                @Override
+                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                    //打印小票
+                    new HttpGetPrintContents(KuaiJieShouKuan.this, MyApplication.KSXF_PRINT_TIMES, GID).KSXF();
+                    mSweetAlertDialog.dismiss();
+//                            startActivity(new Intent(KuaiJieShouKuan.this, KuaiJieShouKuan.class));
+//                            KuaiJieShouKuan.this.finish();
+                }
+            });
+            mSweetAlertDialog.show();
+        } catch (JsonSyntaxException e) {
+            CustomToast.makeText(KuaiJieShouKuan.this, "打印失败！", Toast.LENGTH_SHORT).show();
+//                    finish();
+        }
+        mTempVar = 0;
+        mYsMoney = 0;
+        mOrderMoney = 0;
+        mEditContentBuilder = new StringBuilder("");
+        tvMoney.setText("");
+        tvCostMoney.setText("");
+        lVipMessage.setVisibility(View.GONE);
+    }
+
     /**
      * 提示对话框
      *
@@ -634,20 +634,20 @@ public class KuaiJieShouKuan extends AppCompatActivity implements View.OnClickLi
                 if (mMember.getVIP_Name() != null && !"".equals(mMember.getVIP_Name())) {
                     tvVipName.setText(mMember.getVIP_Name());
                     lVipMessage.setVisibility(View.VISIBLE);
-                }else {
+                } else {
                     tvVipName.setText(mMember.getVCH_Card());
                     lVipMessage.setVisibility(View.VISIBLE);
                 }
                 isSearch = false;
-                vippresenter.postVip(mMember.getVCH_Card(),isSearch);
+                vippresenter.postVip(mMember.getVCH_Card(), isSearch);
 //                postVip(mMember.getVCH_Card());
             }
         }
         //扫码返回
-         if (requestCode ==1 &&resultCode == MyApplication.SCAN_RETURN){
+        if (requestCode == 1 && resultCode == MyApplication.SCAN_RETURN) {
             Bundle bundle = data.getExtras();
             mSmPayCode = bundle.getString("result");
-             mDialog = LoadingDialogUtil.createLoadingDialog(KuaiJieShouKuan.this, "支付中...", false);
+            mDialog = LoadingDialogUtil.createLoadingDialog(KuaiJieShouKuan.this, "支付中...", false);
             barCode();
         }
     }

@@ -9,8 +9,8 @@ android {
         applicationId "com.zhiluo.android.yunpu"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 168
-        versionName "1.9.8.8"
+        versionCode 175
+        versionName "1.9.8.15"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         javaCompileOptions {
@@ -18,6 +18,7 @@ android {
                 includeCompileClasspath = true
             }
         }
+        
 
         ndk {
             //选择要添加的对应cpu类型的.so库。

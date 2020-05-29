@@ -139,7 +139,7 @@ public class MemberInfoBean implements Serializable{
         private double DS_Value;
         private double VS_Value;
         private double RS_Value;
-        private Object VGInfo;
+        private List<VGInfo> VGInfo;
         private Object CustomeFieldList;
         private double MA_AvailableBalance;
         private double MA_AggregateAmount;
@@ -476,11 +476,11 @@ public class MemberInfoBean implements Serializable{
             this.RS_Value = RS_Value;
         }
 
-        public Object getVGInfo() {
+        public List<VGInfo> getVGInfo() {
             return VGInfo;
         }
 
-        public void setVGInfo(Object VGInfo) {
+        public void setVGInfo(List<VGInfo> VGInfo) {
             this.VGInfo = VGInfo;
         }
 
@@ -753,6 +753,139 @@ public class MemberInfoBean implements Serializable{
 
             public void setEC_Denomination(double EC_Denomination) {
                 this.EC_Denomination = EC_Denomination;
+            }
+        }
+
+        public static class VGInfo implements Serializable{
+            /*PD_Discount:0
+            PT_GID:"8ddfdbb4-4280-4521-97e3-010b17af7a57"
+            PT_Name:"95#汽油"
+            PT_Parent:""
+            PT_SMList:""
+            PT_SynType:"0"
+            PT_Type:"油品"
+            SM_GID:"3ee72a59-8a90-4e4d-a084-3fcd0ccc4c0a"
+            SM_Name:"默认店铺"
+            VG_GID:"8288d18d-45b1-439a-a938-38ba36ea2fb4"
+            VG_Name:"一等级"
+            VS_CMoney:10
+            VS_Number:0.1*/
+            public int PD_Discount;
+            public String PT_GID;
+            public String PT_Name;
+            public String PT_Parent;
+            public String PT_SMList;
+            public String PT_SynType;
+            public String PT_Type;
+            public String SM_GID;
+            public String SM_Name;
+            public String VG_GID;
+            public String VG_Name;
+            public int VS_CMoney;
+            public double VS_Number;
+
+            public int getPD_Discount() {
+                return PD_Discount;
+            }
+
+            public void setPD_Discount(int PD_Discount) {
+                this.PD_Discount = PD_Discount;
+            }
+
+            public String getPT_GID() {
+                return PT_GID;
+            }
+
+            public void setPT_GID(String PT_GID) {
+                this.PT_GID = PT_GID;
+            }
+
+            public String getPT_Name() {
+                return PT_Name;
+            }
+
+            public void setPT_Name(String PT_Name) {
+                this.PT_Name = PT_Name;
+            }
+
+            public String getPT_Parent() {
+                return PT_Parent;
+            }
+
+            public void setPT_Parent(String PT_Parent) {
+                this.PT_Parent = PT_Parent;
+            }
+
+            public String getPT_SMList() {
+                return PT_SMList;
+            }
+
+            public void setPT_SMList(String PT_SMList) {
+                this.PT_SMList = PT_SMList;
+            }
+
+            public String getPT_SynType() {
+                return PT_SynType;
+            }
+
+            public void setPT_SynType(String PT_SynType) {
+                this.PT_SynType = PT_SynType;
+            }
+
+            public String getPT_Type() {
+                return PT_Type;
+            }
+
+            public void setPT_Type(String PT_Type) {
+                this.PT_Type = PT_Type;
+            }
+
+            public String getSM_GID() {
+                return SM_GID;
+            }
+
+            public void setSM_GID(String SM_GID) {
+                this.SM_GID = SM_GID;
+            }
+
+            public String getSM_Name() {
+                return SM_Name;
+            }
+
+            public void setSM_Name(String SM_Name) {
+                this.SM_Name = SM_Name;
+            }
+
+            public String getVG_GID() {
+                return VG_GID;
+            }
+
+            public void setVG_GID(String VG_GID) {
+                this.VG_GID = VG_GID;
+            }
+
+            public String getVG_Name() {
+                return VG_Name;
+            }
+
+            public void setVG_Name(String VG_Name) {
+                this.VG_Name = VG_Name;
+            }
+
+            public int getVS_CMoney() {
+                return VS_CMoney;
+            }
+
+            public void setVS_CMoney(int VS_CMoney) {
+                this.VS_CMoney = VS_CMoney;
+            }
+
+            public double getVS_Number() {
+                return VS_Number;
+            }
+
+            public void setVS_Number(double VS_Number) {
+                this.VS_Number = VS_Number;
             }
         }
     }
